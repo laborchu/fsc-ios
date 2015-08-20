@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:fsc-ios/Core/VO/FSCClassStudent.h">
+   </FileRef>
+   <FileRef
+      location = "group:fsc-ios/Core/VO/FSCClassStudent.m">
+   </FileRef>
+   <FileRef
+      location = "group:fsc-ios/Core/VO/FSCClassUser.h">
+   </FileRef>
+   <FileRef
+      location = "group:fsc-ios/Core/VO/FSCClassUser.m">
+   </FileRef>
+   <FileRef
+      location = "group:fsc-ios/Core/VO/FSCClass.h">
+   </FileRef>
+   <FileRef
+      location = "group:fsc-ios/Core/VO/FSCClass.m">
+   </FileRef>
+   <FileRef
+      location = "group:fsc-ios/Core/VO/FSCLinkman.h">
+   </FileRef>
+   <FileRef
+      location = "group:fsc-ios/Core/VO/FSCLinkman.m">
+   </FileRef>
+   <FileRef
+      location = "group:fsc-ios/Core/VO/FSCUser.h">
+   </FileRef>
+   <FileRef
+      location = "group:fsc-ios/Core/VO/FSCUser.m">
+   </FileRef>
+   <FileRef
+      location = "group:fsc-ios.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>
