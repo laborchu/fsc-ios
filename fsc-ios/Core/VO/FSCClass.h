@@ -22,7 +22,7 @@
 @property (nonatomic, retain) NSNumber * year;
 @property (nonatomic, retain) NSSet *classUsers;
 @property (nonatomic, retain) NSSet *classStudents;
-@property (nonatomic, retain) FSCUser *whoControl;
+@property (nonatomic, retain) FSCUser *fscUser;
 @end
 
 @interface FSCClass (CoreDataGeneratedAccessors)

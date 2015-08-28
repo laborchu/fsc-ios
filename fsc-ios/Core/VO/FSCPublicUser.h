@@ -2,7 +2,7 @@
 //  FSCPublicUser.h
 //  
 //
-//  Created by laborchu on 15/7/29.
+//  Created by laborchu on 15/8/24.
 //
 //
 
@@ -24,7 +24,7 @@
 @property (nonatomic, retain) NSNumber * modifiedDate;
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSSet *menus;
-@property (nonatomic, retain) FSCUser *whoAdd;
+@property (nonatomic, retain) FSCUser *fscUser;
 @end
 
 @interface FSCPublicUser (CoreDataGeneratedAccessors)

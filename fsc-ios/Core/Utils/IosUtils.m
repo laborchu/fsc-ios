@@ -19,7 +19,7 @@
         NSString *model = [[UIDevice currentDevice] model];
         NSString *appVersion = [dicInfo objectForKey:@"CFBundleShortVersionString"];
         SInt32 osVersion = [[[UIDevice currentDevice] systemVersion] intValue];
-        PhoneInfoPb_Builder *phoneBuilder = [PhoneInfoPb builder];
+        PhoneInfoPbBuilder *phoneBuilder = [PhoneInfoPb builder];
         deviceInfo = [[[[[[[phoneBuilder setDeviceId:deviceId] setSubscriberId:subscruberId] setModel:model]setAppVersion:appVersion]setOsVersion:osVersion] setBrand:@"iPhone"] build];
     }
     return deviceInfo;

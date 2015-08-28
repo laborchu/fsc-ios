@@ -2,7 +2,7 @@
 //  FSCClassRecorder.m
 //  
 //
-//  Created by laborchu on 15/7/29.
+//  Created by laborchu on 15/8/28.
 //
 //
 
@@ -23,6 +23,6 @@
 @dynamic type;
 @dynamic uuid;
 @dynamic voiceLength;
-@dynamic whoChat;
+@dynamic cSession;
 
 @end

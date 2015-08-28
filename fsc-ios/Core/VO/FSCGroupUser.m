@@ -2,7 +2,7 @@
 //  FSCGroupUser.m
 //  
 //
-//  Created by laborchu on 15/7/29.
+//  Created by laborchu on 15/8/26.
 //
 //
 
@@ -19,6 +19,6 @@
 @dynamic status;
 @dynamic timestamp;
 @dynamic userId;
-@dynamic whoJoin;
+@dynamic gSession;
 
 @end

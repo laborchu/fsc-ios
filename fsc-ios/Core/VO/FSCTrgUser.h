@@ -2,7 +2,7 @@
 //  FSCTrgUser.h
 //  
 //
-//  Created by laborchu on 15/7/29.
+//  Created by laborchu on 15/8/28.
 //
 //
 
@@ -24,6 +24,6 @@
 @property (nonatomic, retain) NSNumber * timestamp;
 @property (nonatomic, retain) NSNumber * userId;
 @property (nonatomic, retain) NSNumber * userType;
-@property (nonatomic, retain) FSCTrgSession *whoJoin;
+@property (nonatomic, retain) FSCTrgSession *tSession;
 
 @end

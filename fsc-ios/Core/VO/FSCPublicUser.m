@@ -2,7 +2,7 @@
 //  FSCPublicUser.m
 //  
 //
-//  Created by laborchu on 15/7/29.
+//  Created by laborchu on 15/8/24.
 //
 //
 
@@ -24,6 +24,6 @@
 @dynamic modifiedDate;
 @dynamic name;
 @dynamic menus;
-@dynamic whoAdd;
+@dynamic fscUser;
 
 @end

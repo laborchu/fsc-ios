@@ -55,10 +55,10 @@
         NSArray *userClassArray;
         NSArray *studentArray;
         if (user.userType == USER_TEACHER){
-            userClassArray = user.teacherPb.classPbList;
+            userClassArray = user.teacherPb.classPb;
         }else{
-            userClassArray = user.parentsPb.classPbList;
-            studentArray = user.parentsPb.studentPbList;
+            userClassArray = user.parentsPb.classPb;
+            studentArray = user.parentsPb.studentPb;
         }
         for (FscClassPb *classPb in userClassArray) {
             FSCClass *myclass;

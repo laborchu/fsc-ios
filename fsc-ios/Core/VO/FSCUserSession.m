@@ -2,7 +2,7 @@
 //  FSCUserSession.m
 //  
 //
-//  Created by laborchu on 15/7/29.
+//  Created by laborchu on 15/8/25.
 //
 //
 
@@ -18,7 +18,7 @@
 @dynamic id;
 @dynamic timestamp;
 @dynamic toUserId;
-@dynamic parentSession;
+@dynamic fscSession;
 @dynamic recorders;
 
 @end

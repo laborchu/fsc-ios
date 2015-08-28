@@ -2,7 +2,7 @@
 //  FSCClassStudent.m
 //  
 //
-//  Created by laborchu on 15/8/20.
+//  Created by laborchu on 15/8/25.
 //
 //
 
@@ -18,6 +18,10 @@
 @dynamic id;
 @dynamic modifiedDate;
 @dynamic name;
+@dynamic userType;
+@dynamic gender;
+@dynamic schoolName;
+@dynamic portrait;
 @dynamic fscClass;
 
 @end

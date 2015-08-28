@@ -2,7 +2,7 @@
 //  FSCGroupRecorder.h
 //  
 //
-//  Created by laborchu on 15/7/29.
+//  Created by laborchu on 15/8/26.
 //
 //
 
@@ -24,6 +24,6 @@
 @property (nonatomic, retain) NSNumber * type;
 @property (nonatomic, retain) NSString * uuid;
 @property (nonatomic, retain) NSNumber * voiceLength;
-@property (nonatomic, retain) FSCGroupSession *whoChat;
+@property (nonatomic, retain) FSCGroupSession *gSession;
 
 @end

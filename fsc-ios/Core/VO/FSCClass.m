@@ -23,6 +23,6 @@
 @dynamic year;
 @dynamic classUsers;
 @dynamic classStudents;
-@dynamic whoControl;
+@dynamic fscUser;
 
 @end

@@ -30,7 +30,7 @@
     NSArray *userList = [Scheduler exeLc:cmd];
 
     FSCUser *fscUser = [super getFscUser];
-    LinkmanListPb_Builder *build = [LinkmanListPb builder];
+    LinkmanListPbBuilder *build = [LinkmanListPb builder];
     [build setUserId:[fscUser.id longLongValue]];
     if (userList.count > 0) {
         FSCLinkman *fscLinkman = userList[0];
@@ -49,7 +49,7 @@
 - (void)resp:(CmdSignPb *)sign {
     FSCUser *fscUser = [super getFscUser];
     LinkmanListPb *linkmanListPb = [LinkmanListPb parseFromData:sign.source];
-    for (LinkmanPb *linkmanPb in linkmanListPb.linkmanList) {
+    for (LinkmanPb *linkmanPb in linkmanListPb.linkman) {
         FSCLinkman *fscLinkman = [DataCache getFSCLinkman:@(linkmanPb.id)];
         if (fscLinkman) {
             [PbTransfer pb:linkmanPb vo:fscLinkman fields:LINKMAN_FIELDS];

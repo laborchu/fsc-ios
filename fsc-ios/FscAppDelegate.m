@@ -15,6 +15,10 @@
 #import "FSCUser.h"
 #import "Scheduler.h"
 #import "RsFscLinkmanListCmd.h"
+#import "RsFscClassUserListCmd.h"
+#import "RsFscTeacherListCmd.h"
+#import "RsFscPublicUserListCmd.h"
+#import "RsFscSessionListCmd.h"
 
 @interface FscAppDelegate()
 
@@ -73,6 +77,10 @@
     NSDictionary *userInfo = [notify userInfo];
     if (userInfo == nil) {
         [Scheduler exeRs:[RsFscLinkmanListCmd alloc]];
+        [Scheduler exeRs:[RsFscClassUserListCmd alloc]];
+        [Scheduler exeRs:[RsFscTeacherListCmd alloc]];
+        [Scheduler exeRs:[RsFscPublicUserListCmd alloc]];
+        [Scheduler exeRs:[RsFscSessionListCmd alloc]];
     }
 }
 

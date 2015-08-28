@@ -2,7 +2,7 @@
 //  FSCUserSession.h
 //  
 //
-//  Created by laborchu on 15/7/29.
+//  Created by laborchu on 15/8/25.
 //
 //
 
@@ -18,7 +18,7 @@
 @property (nonatomic, retain) NSNumber * id;
 @property (nonatomic, retain) NSNumber * timestamp;
 @property (nonatomic, retain) NSNumber * toUserId;
-@property (nonatomic, retain) FSCSession *parentSession;
+@property (nonatomic, retain) FSCSession *fscSession;
 @property (nonatomic, retain) NSSet *recorders;
 @end
 

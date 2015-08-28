@@ -2,7 +2,7 @@
 //  FSCTeacher.h
 //  
 //
-//  Created by laborchu on 15/7/29.
+//  Created by laborchu on 15/8/25.
 //
 //
 
@@ -21,6 +21,6 @@
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSString * portrait;
 @property (nonatomic, retain) NSNumber * subjectId;
-@property (nonatomic, retain) FSCUser *whoWorhWith;
+@property (nonatomic, retain) FSCUser *fscUser;
 
 @end

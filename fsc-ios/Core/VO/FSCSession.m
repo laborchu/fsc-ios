@@ -2,7 +2,7 @@
 //  FSCSession.m
 //  
 //
-//  Created by laborchu on 15/7/29.
+//  Created by laborchu on 15/8/26.
 //
 //
 
@@ -30,11 +30,13 @@
 @dynamic timestamp;
 @dynamic type;
 @dynamic userId;
+@dynamic unreadCount;
+@dynamic lastMsg;
 @dynamic csession;
 @dynamic gsession;
 @dynamic psession;
 @dynamic tsession;
 @dynamic usession;
-@dynamic whoChat;
+@dynamic fscUser;
 
 @end

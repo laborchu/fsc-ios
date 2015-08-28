@@ -2,7 +2,7 @@
 //  FSCPublicMenu.h
 //  
 //
-//  Created by laborchu on 15/7/29.
+//  Created by laborchu on 15/8/24.
 //
 //
 
@@ -23,6 +23,6 @@
 @property (nonatomic, retain) NSNumber * modifiedDate;
 @property (nonatomic, retain) NSNumber * parentId;
 @property (nonatomic, retain) NSNumber * publicId;
-@property (nonatomic, retain) FSCPublicUser *whoHave;
+@property (nonatomic, retain) FSCPublicUser *publicUser;
 
 @end

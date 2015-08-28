@@ -2,7 +2,7 @@
 //  FSCTeacher.m
 //  
 //
-//  Created by laborchu on 15/7/29.
+//  Created by laborchu on 15/8/25.
 //
 //
 
@@ -20,6 +20,6 @@
 @dynamic name;
 @dynamic portrait;
 @dynamic subjectId;
-@dynamic whoWorhWith;
+@dynamic fscUser;
 
 @end

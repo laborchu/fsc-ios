@@ -2,7 +2,7 @@
 //  FSCSession.h
 //  
 //
-//  Created by laborchu on 15/7/29.
+//  Created by laborchu on 15/8/26.
 //
 //
 
@@ -26,11 +26,13 @@
 @property (nonatomic, retain) NSNumber * timestamp;
 @property (nonatomic, retain) NSNumber * type;
 @property (nonatomic, retain) NSNumber * userId;
+@property (nonatomic, retain) NSNumber * unreadCount;
+@property (nonatomic, retain) NSString * lastMsg;
 @property (nonatomic, retain) FSCClassSession *csession;
 @property (nonatomic, retain) FSCGroupSession *gsession;
 @property (nonatomic, retain) FSCPublicSession *psession;
 @property (nonatomic, retain) FSCTrgSession *tsession;
 @property (nonatomic, retain) FSCUserSession *usession;
-@property (nonatomic, retain) FSCUser *whoChat;
+@property (nonatomic, retain) FSCUser *fscUser;
 
 @end
