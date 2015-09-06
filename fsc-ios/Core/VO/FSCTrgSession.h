@@ -2,7 +2,7 @@
 //  FSCTrgSession.h
 //  
 //
-//  Created by laborchu on 15/7/29.
+//  Created by laborchu on 15/8/31.
 //
 //
 
@@ -15,7 +15,7 @@
 
 @property (nonatomic, retain) NSNumber * createdDate;
 @property (nonatomic, retain) NSNumber * dataStatus;
-@property (nonatomic, retain) NSNumber * graderId;
+@property (nonatomic, retain) NSNumber * gradeId;
 @property (nonatomic, retain) NSNumber * id;
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSNumber * schoolId;

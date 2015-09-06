@@ -79,4 +79,13 @@
     return [context executeFetchRequest:request error:&error];
 }
 
+-(void) savaData{
+    FscDataManager *manager = [FscDataManager getManager];
+    NSError *error;
+    if(![manager.managedObjectContext save:&error])
+    {
+        NSLog(@"不能保存：%@",[error localizedDescription]);
+    }
+}
+
 @end

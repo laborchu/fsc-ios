@@ -2,7 +2,7 @@
 //  FSCGroupSession.m
 //  
 //
-//  Created by laborchu on 15/7/29.
+//  Created by laborchu on 15/9/1.
 //
 //
 
@@ -15,11 +15,14 @@
 @implementation FSCGroupSession
 
 @dynamic avatar;
-@dynamic createDate;
+@dynamic createdDate;
 @dynamic id;
 @dynamic leaderId;
 @dynamic name;
 @dynamic timestamp;
+@dynamic uuid;
+@dynamic nameStatus;
+@dynamic portrait;
 @dynamic parentSession;
 @dynamic recorders;
 @dynamic users;

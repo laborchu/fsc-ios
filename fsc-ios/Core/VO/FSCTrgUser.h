@@ -2,7 +2,7 @@
 //  FSCTrgUser.h
 //  
 //
-//  Created by laborchu on 15/8/28.
+//  Created by laborchu on 15/8/31.
 //
 //
 
@@ -17,7 +17,7 @@
 @property (nonatomic, retain) NSNumber * gender;
 @property (nonatomic, retain) NSNumber * modifiedDate;
 @property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSString * portait;
+@property (nonatomic, retain) NSString * portrait;
 @property (nonatomic, retain) NSString * schoolName;
 @property (nonatomic, retain) NSNumber * sessionId;
 @property (nonatomic, retain) NSNumber * status;

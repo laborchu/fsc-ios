@@ -36,7 +36,7 @@
 #define CHAT_USER_SESSION_FIELDS @[@"id", @"uuid", @"fromUserId", @"toUserId", @"createdDate", @"timestamp"]
 #define CHAT_USER_RECORDER_FIELDS @[@"id", @"uuid", @"sessionId", @"fromUserId", @"toUserId",@"type", @"message", @"voiceLength", @"createdDate", @"file", @"timestamp"]
 
-#define CHAT_GROUP_SESSION_FIELDS @[@"id", @"name", @"uuid", @"leaderId", @"createdDate", @"timestamp", @"nameStatus", @"portrait", @"file"]
+#define CHAT_GROUP_SESSION_FIELDS @[@"id", @"name", @"uuid", @"leaderId", @"createdDate", @"timestamp", @"nameStatus", @"portrait"]
 #define CHAT_GROUP_USER_FIELDS @[@"sessionId", @"userId", @"inviterId", @"status", @"createdDate", @"modifiedDate", @"timestamp"]
 #define CHAT_GROUP_RECORDER_FIELDS @[@"id", @"uuid", @"sessionId",@"type", @"message", @"voiceLength", @"createdBy", @"createdDate", @"file", @"timestamp"]
 #define CHAT_GROUP_PORTRAIT_FIELDS @[@"id", @"file"]

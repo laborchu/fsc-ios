@@ -2,7 +2,7 @@
 //  FSCUserRecorder.m
 //  
 //
-//  Created by laborchu on 15/8/26.
+//  Created by laborchu on 15/8/31.
 //
 //
 
@@ -12,7 +12,7 @@
 
 @implementation FSCUserRecorder
 
-@dynamic createDate;
+@dynamic createdDate;
 @dynamic file;
 @dynamic fromUserId;
 @dynamic id;

@@ -2,7 +2,7 @@
 //  FSCGroupRecorder.m
 //  
 //
-//  Created by laborchu on 15/8/26.
+//  Created by laborchu on 15/9/6.
 //
 //
 
@@ -12,8 +12,8 @@
 
 @implementation FSCGroupRecorder
 
-@dynamic createBy;
-@dynamic createDate;
+@dynamic createdBy;
+@dynamic createdDate;
 @dynamic file;
 @dynamic id;
 @dynamic message;

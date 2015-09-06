@@ -2,7 +2,7 @@
 //  FSCTrgRecorder.m
 //  
 //
-//  Created by laborchu on 15/7/29.
+//  Created by laborchu on 15/8/31.
 //
 //
 
@@ -12,7 +12,7 @@
 
 @implementation FSCTrgRecorder
 
-@dynamic createBy;
+@dynamic createdBy;
 @dynamic createdDate;
 @dynamic file;
 @dynamic id;

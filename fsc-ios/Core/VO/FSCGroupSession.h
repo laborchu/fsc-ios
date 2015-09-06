@@ -2,7 +2,7 @@
 //  FSCGroupSession.h
 //  
 //
-//  Created by laborchu on 15/7/29.
+//  Created by laborchu on 15/9/1.
 //
 //
 
@@ -14,11 +14,14 @@
 @interface FSCGroupSession : NSManagedObject
 
 @property (nonatomic, retain) NSData * avatar;
-@property (nonatomic, retain) NSNumber * createDate;
+@property (nonatomic, retain) NSNumber * createdDate;
 @property (nonatomic, retain) NSNumber * id;
 @property (nonatomic, retain) NSNumber * leaderId;
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSNumber * timestamp;
+@property (nonatomic, retain) NSString * uuid;
+@property (nonatomic, retain) NSNumber * nameStatus;
+@property (nonatomic, retain) NSString * portrait;
 @property (nonatomic, retain) FSCSession *parentSession;
 @property (nonatomic, retain) NSSet *recorders;
 @property (nonatomic, retain) NSSet *users;

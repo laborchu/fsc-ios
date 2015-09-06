@@ -2,7 +2,7 @@
 //  FSCGroupRecorder.h
 //  
 //
-//  Created by laborchu on 15/8/26.
+//  Created by laborchu on 15/9/6.
 //
 //
 
@@ -13,8 +13,8 @@
 
 @interface FSCGroupRecorder : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * createBy;
-@property (nonatomic, retain) NSNumber * createDate;
+@property (nonatomic, retain) NSNumber * createdBy;
+@property (nonatomic, retain) NSNumber * createdDate;
 @property (nonatomic, retain) NSData * file;
 @property (nonatomic, retain) NSNumber * id;
 @property (nonatomic, retain) NSString * message;

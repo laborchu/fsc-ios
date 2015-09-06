@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14F27" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="FSCActivity" representedClassName="FSCActivity" syncable="YES">
         <attribute name="actName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="actNum" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
@@ -55,8 +55,9 @@
         <relationship name="whoJoin" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FSCClassSession" inverseName="users" inverseEntity="FSCClassSession" syncable="YES"/>
     </entity>
     <entity name="FSCClassRecorder" representedClassName="FSCClassRecorder" syncable="YES">
-        <attribute name="createBy" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <attribute name="createDate" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="createdBy" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="createdDate" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="extendId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="file" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="message" optional="YES" attributeType="String" syncable="YES"/>
@@ -74,6 +75,7 @@
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="timestamp" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="parentSession" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FSCSession" inverseName="csession" inverseEntity="FSCSession" syncable="YES"/>
         <relationship name="recorders" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FSCClassRecorder" inverseName="cSession" inverseEntity="FSCClassRecorder" syncable="YES"/>
         <relationship name="users" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FSCClassChatUser" inverseName="whoJoin" inverseEntity="FSCClassChatUser" syncable="YES"/>
@@ -119,8 +121,8 @@
         <attribute name="userType" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
     </entity>
     <entity name="FSCGroupRecorder" representedClassName="FSCGroupRecorder" syncable="YES">
-        <attribute name="createBy" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <attribute name="createDate" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="createdBy" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="createdDate" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="file" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="message" optional="YES" attributeType="String" syncable="YES"/>
@@ -134,11 +136,14 @@
     </entity>
     <entity name="FSCGroupSession" representedClassName="FSCGroupSession" syncable="YES">
         <attribute name="avatar" optional="YES" attributeType="Binary" syncable="YES"/>
-        <attribute name="createDate" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="createdDate" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="leaderId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nameStatus" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="portrait" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="timestamp" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="parentSession" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FSCSession" inverseName="gsession" inverseEntity="FSCSession" syncable="YES"/>
         <relationship name="recorders" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FSCGroupRecorder" inverseName="gSession" inverseEntity="FSCGroupRecorder" syncable="YES"/>
         <relationship name="users" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FSCGroupUser" inverseName="gSession" inverseEntity="FSCGroupUser" syncable="YES"/>
@@ -196,7 +201,7 @@
         <relationship name="publicUser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FSCPublicUser" inverseName="menus" inverseEntity="FSCPublicUser" syncable="YES"/>
     </entity>
     <entity name="FSCPublicRecorder" representedClassName="FSCPublicRecorder" syncable="YES">
-        <attribute name="createDate" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="createdDate" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="file" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="fromType" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="fromUserId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
@@ -336,7 +341,7 @@
         <relationship name="whoHave" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FSCUser" inverseName="teachPlans" inverseEntity="FSCUser" syncable="YES"/>
     </entity>
     <entity name="FSCTrgRecorder" representedClassName="FSCTrgRecorder" syncable="YES">
-        <attribute name="createBy" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="createdBy" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="createdDate" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="file" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
@@ -352,7 +357,7 @@
     <entity name="FSCTrgSession" representedClassName="FSCTrgSession" syncable="YES">
         <attribute name="createdDate" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="dataStatus" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="graderId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="gradeId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="schoolId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
@@ -371,7 +376,7 @@
         <attribute name="gender" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="modifiedDate" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="portait" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="portrait" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="schoolName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sessionId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="status" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
@@ -419,7 +424,7 @@
         <relationship name="votes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FSCVote" inverseName="whoCanLook" inverseEntity="FSCVote" syncable="YES"/>
     </entity>
     <entity name="FSCUserRecorder" representedClassName="FSCUserRecorder" syncable="YES">
-        <attribute name="createDate" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="createdDate" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="file" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="fromUserId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
@@ -439,6 +444,7 @@
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="timestamp" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="toUserId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="fscSession" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FSCSession" inverseName="usession" inverseEntity="FSCSession" syncable="YES"/>
         <relationship name="recorders" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FSCUserRecorder" inverseName="uSession" inverseEntity="FSCUserRecorder" syncable="YES"/>
     </entity>
@@ -468,13 +474,13 @@
         <element name="FSCApply" positionX="-459" positionY="122" width="128" height="283"/>
         <element name="FSCClass" positionX="-407" positionY="-36" width="128" height="195"/>
         <element name="FSCClassChatUser" positionX="7" positionY="15" width="128" height="165"/>
-        <element name="FSCClassRecorder" positionX="-45" positionY="-36" width="128" height="225"/>
-        <element name="FSCClassSession" positionX="160" positionY="-207" width="128" height="165"/>
+        <element name="FSCClassRecorder" positionX="-45" positionY="-36" width="128" height="240"/>
+        <element name="FSCClassSession" positionX="160" positionY="-207" width="128" height="180"/>
         <element name="FSCClassStudent" positionX="-405" positionY="171" width="128" height="210"/>
         <element name="FSCClassUser" positionX="196" positionY="159" width="128" height="225"/>
         <element name="FSCCustomUser" positionX="-684" positionY="-1692" width="128" height="210"/>
         <element name="FSCGroupRecorder" positionX="-126" positionY="153" width="128" height="225"/>
-        <element name="FSCGroupSession" positionX="133" positionY="291" width="128" height="180"/>
+        <element name="FSCGroupSession" positionX="133" positionY="291" width="128" height="225"/>
         <element name="FSCGroupUser" positionX="124" positionY="-90" width="128" height="165"/>
         <element name="FSCLinkman" positionX="-252" positionY="90" width="128" height="283"/>
         <element name="FSCNotice" positionX="-450" positionY="-1530" width="128" height="178"/>
@@ -490,13 +496,13 @@
         <element name="FSCTeacher" positionX="-288" positionY="-1326" width="128" height="180"/>
         <element name="FSCTeachNode" positionX="-407" positionY="-420" width="128" height="358"/>
         <element name="FSCTeachPlan" positionX="-540" positionY="-1330" width="128" height="90"/>
-        <element name="FSCTrgRecorder" positionX="-848" positionY="-1746" width="128" height="223"/>
-        <element name="FSCTrgSession" positionX="-648" positionY="-1809" width="128" height="268"/>
+        <element name="FSCTrgRecorder" positionX="-848" positionY="-1746" width="128" height="225"/>
+        <element name="FSCTrgSession" positionX="-648" positionY="-1809" width="128" height="270"/>
         <element name="FSCTrgUser" positionX="-641" positionY="-1393" width="128" height="225"/>
         <element name="FSCUnreadRecorder" positionX="-180" positionY="405" width="128" height="120"/>
         <element name="FSCUser" positionX="-353" positionY="-1458" width="128" height="480"/>
         <element name="FSCUserRecorder" positionX="-153" positionY="-99" width="128" height="240"/>
-        <element name="FSCUserSession" positionX="232" positionY="39" width="128" height="150"/>
+        <element name="FSCUserSession" positionX="232" positionY="39" width="128" height="165"/>
         <element name="FSCUserStudent" positionX="-585" positionY="-376" width="128" height="133"/>
         <element name="FSCVote" positionX="-461" positionY="-1836" width="128" height="208"/>
     </elements>

@@ -70,7 +70,7 @@
             recorderArray = dic[key];
         } else {
             recorderArray = [NSMutableArray array];
-            dic[key] = array;
+            dic[key] = recorderArray;
         }
         [recorderArray addObject:recorderPb];
     }
@@ -85,7 +85,7 @@
             userArray = dic[key];
         } else {
             userArray = [NSMutableArray array];
-            dic[key] = array;
+            dic[key] = userArray;
         }
         [userArray addObject:userPb];
     }
@@ -151,7 +151,7 @@
             NSMutableArray *gusersPb = userDic[userKey];
             [self exeGSession:gSessionPb gRecorders:gRecordersPb gUsers:gusersPb fscSession:fscSession];
         } else if (sessionPb.type == SESSION_TYPE_PUBLIC_CHAT) {
-            NSString *userKey = [NSString stringWithFormat:@"pubilc-%d", [@(sessionPb.sessionId) intValue]];
+            NSString *userKey = [NSString stringWithFormat:@"public-%d", [@(sessionPb.sessionId) intValue]];
             PSessionPb *pSessionPb = sessionDic[userKey];
             NSMutableArray *pRecordersPb = recorderDic[userKey];
             [self exePSession:pSessionPb pRecorders:pRecordersPb fscSession:fscSession];
@@ -213,10 +213,10 @@
 
 // 处理群组
 - (void)exeGSession:(GSessionPb *)gSessionPb gRecorders:(NSMutableArray *)gRecorders gUsers:(NSMutableArray *)gUsers fscSession:(FSCSession *)fscSession {
-    if (fscSession.usession) {
+    if (fscSession.gsession) {
         [PbTransfer pb:gSessionPb vo:fscSession.gsession fields:CHAT_GROUP_SESSION_FIELDS];
     } else {
-        fscSession.usession = [PbTransfer pb:gSessionPb entityName:@"FSCGroupSession" fields:CHAT_GROUP_SESSION_FIELDS];
+        fscSession.gsession = [PbTransfer pb:gSessionPb entityName:@"FSCGroupSession" fields:CHAT_GROUP_SESSION_FIELDS];
     }
 
     /*******处理用户******/
@@ -362,10 +362,10 @@
 }
 
 - (void)exeTSession:(TSessionPb *)tSessionPb tRecorders:(NSMutableArray *)tRecorders tUsers:(NSMutableArray *)tUsers fscSession:(FSCSession *)fscSession {
-    if (fscSession.usession) {
+    if (fscSession.tsession) {
         [PbTransfer pb:tSessionPb vo:fscSession.tsession fields:CHAT_TRG_SESSION_FIELDS];
     } else {
-        fscSession.usession = [PbTransfer pb:tSessionPb entityName:@"FSCTrgSession" fields:CHAT_TRG_SESSION_FIELDS];
+        fscSession.tsession = [PbTransfer pb:tSessionPb entityName:@"FSCTrgSession" fields:CHAT_TRG_SESSION_FIELDS];
     }
 
     /*******处理用户******/

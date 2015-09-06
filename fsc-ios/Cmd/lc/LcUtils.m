@@ -8,8 +8,11 @@
 #import "ALcCmd.h"
 #import "LcFscLinkmanListCmd.h"
 #import "Scheduler.h"
+#import "FSCPublicSession.h"
+#import "LcFscSessionListCmd.h"
 
 static NSMutableDictionary *_linkmanDic;
+static NSMutableDictionary *_publicSessionDic;
 @implementation LcUtils {
 
 }
@@ -32,5 +35,6 @@ static NSMutableDictionary *_linkmanDic;
     }
     return fscLinkman;
 }
+
 
 @end

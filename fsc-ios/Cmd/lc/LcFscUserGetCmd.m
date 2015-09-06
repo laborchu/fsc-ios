@@ -31,6 +31,11 @@
     //指定对结果的排序方式
     //执行获取数据请求，返回数组
     NSArray *userList = [context executeFetchRequest:request error:&error];
+//    if(userList.count>0){
+//        [context deleteObject:userList[0]];
+//        [super savaData];
+//        userList = @[];
+//    }
     return userList;
 }
 

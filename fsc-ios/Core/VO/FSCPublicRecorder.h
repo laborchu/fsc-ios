@@ -2,7 +2,7 @@
 //  FSCPublicRecorder.h
 //  
 //
-//  Created by laborchu on 15/7/29.
+//  Created by laborchu on 15/9/1.
 //
 //
 
@@ -13,7 +13,7 @@
 
 @interface FSCPublicRecorder : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * createDate;
+@property (nonatomic, retain) NSNumber * createdDate;
 @property (nonatomic, retain) NSData * file;
 @property (nonatomic, retain) NSNumber * fromType;
 @property (nonatomic, retain) NSNumber * fromUserId;
@@ -25,10 +25,10 @@
 @property (nonatomic, retain) NSNumber * toUserId;
 @property (nonatomic, retain) NSNumber * type;
 @property (nonatomic, retain) NSString * uuid;
+@property (nonatomic, retain) FSCPublicSession *pSession;
 @property (nonatomic, retain) NSSet *whichActivity;
 @property (nonatomic, retain) NSSet *whichNotice;
 @property (nonatomic, retain) NSSet *whichVote;
-@property (nonatomic, retain) FSCPublicSession *whoChat;
 @end
 
 @interface FSCPublicRecorder (CoreDataGeneratedAccessors)

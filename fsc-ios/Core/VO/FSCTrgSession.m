@@ -2,7 +2,7 @@
 //  FSCTrgSession.m
 //  
 //
-//  Created by laborchu on 15/7/29.
+//  Created by laborchu on 15/8/31.
 //
 //
 
@@ -16,7 +16,7 @@
 
 @dynamic createdDate;
 @dynamic dataStatus;
-@dynamic graderId;
+@dynamic gradeId;
 @dynamic id;
 @dynamic name;
 @dynamic schoolId;

@@ -2,7 +2,7 @@
 //  FSCTrgRecorder.h
 //  
 //
-//  Created by laborchu on 15/7/29.
+//  Created by laborchu on 15/8/31.
 //
 //
 
@@ -13,7 +13,7 @@
 
 @interface FSCTrgRecorder : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * createBy;
+@property (nonatomic, retain) NSNumber * createdBy;
 @property (nonatomic, retain) NSNumber * createdDate;
 @property (nonatomic, retain) NSData * file;
 @property (nonatomic, retain) NSNumber * id;

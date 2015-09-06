@@ -2,7 +2,7 @@
 //  FSCPublicRecorder.m
 //  
 //
-//  Created by laborchu on 15/7/29.
+//  Created by laborchu on 15/9/1.
 //
 //
 
@@ -15,7 +15,7 @@
 
 @implementation FSCPublicRecorder
 
-@dynamic createDate;
+@dynamic createdDate;
 @dynamic file;
 @dynamic fromType;
 @dynamic fromUserId;
@@ -27,9 +27,9 @@
 @dynamic toUserId;
 @dynamic type;
 @dynamic uuid;
+@dynamic pSession;
 @dynamic whichActivity;
 @dynamic whichNotice;
 @dynamic whichVote;
-@dynamic whoChat;
 
 @end

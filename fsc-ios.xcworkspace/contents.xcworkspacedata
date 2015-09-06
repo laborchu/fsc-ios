@@ -2,10 +2,16 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:fsc-ios/Core/VO/FSCTrgUser.h">
+      location = "group:fsc-ios/Core/VO/FSCGroupRecorder.h">
    </FileRef>
    <FileRef
-      location = "group:fsc-ios/Core/VO/FSCTrgUser.m">
+      location = "group:fsc-ios/Core/VO/FSCGroupRecorder.m">
+   </FileRef>
+   <FileRef
+      location = "group:fsc-ios/Core/VO/FSCPublicRecorder.h">
+   </FileRef>
+   <FileRef
+      location = "group:fsc-ios/Core/VO/FSCPublicRecorder.m">
    </FileRef>
    <FileRef
       location = "group:fsc-ios/Core/VO/FSCClassRecorder.h">
@@ -14,28 +20,28 @@
       location = "group:fsc-ios/Core/VO/FSCClassRecorder.m">
    </FileRef>
    <FileRef
-      location = "group:fsc-ios/Core/VO/FSCPublicSession.h">
+      location = "group:fsc-ios/Core/VO/FSCGroupSession.h">
    </FileRef>
    <FileRef
-      location = "group:fsc-ios/Core/VO/FSCPublicSession.m">
+      location = "group:fsc-ios/Core/VO/FSCGroupSession.m">
    </FileRef>
    <FileRef
-      location = "group:fsc-ios/Core/VO/FSCGroupUser.h">
+      location = "group:fsc-ios/Core/VO/FSCTrgRecorder.h">
    </FileRef>
    <FileRef
-      location = "group:fsc-ios/Core/VO/FSCGroupUser.m">
+      location = "group:fsc-ios/Core/VO/FSCTrgRecorder.m">
    </FileRef>
    <FileRef
-      location = "group:fsc-ios/Core/VO/FSCGroupRecorder.h">
+      location = "group:fsc-ios/Core/VO/FSCTrgUser.h">
    </FileRef>
    <FileRef
-      location = "group:fsc-ios/Core/VO/FSCGroupRecorder.m">
+      location = "group:fsc-ios/Core/VO/FSCTrgUser.m">
    </FileRef>
    <FileRef
-      location = "group:fsc-ios/Core/VO/FSCSession.h">
+      location = "group:fsc-ios/Core/VO/FSCTrgSession.h">
    </FileRef>
    <FileRef
-      location = "group:fsc-ios/Core/VO/FSCSession.m">
+      location = "group:fsc-ios/Core/VO/FSCTrgSession.m">
    </FileRef>
    <FileRef
       location = "group:fsc-ios/Core/VO/FSCUserRecorder.h">
@@ -48,54 +54,6 @@
    </FileRef>
    <FileRef
       location = "group:fsc-ios/Core/VO/FSCUserSession.m">
-   </FileRef>
-   <FileRef
-      location = "group:fsc-ios/Core/VO/FSCClassStudent.h">
-   </FileRef>
-   <FileRef
-      location = "group:fsc-ios/Core/VO/FSCClassStudent.m">
-   </FileRef>
-   <FileRef
-      location = "group:fsc-ios/Core/VO/FSCTeacher.h">
-   </FileRef>
-   <FileRef
-      location = "group:fsc-ios/Core/VO/FSCTeacher.m">
-   </FileRef>
-   <FileRef
-      location = "group:fsc-ios/Core/VO/FSCPublicMenu.h">
-   </FileRef>
-   <FileRef
-      location = "group:fsc-ios/Core/VO/FSCPublicMenu.m">
-   </FileRef>
-   <FileRef
-      location = "group:fsc-ios/Core/VO/FSCPublicUser.h">
-   </FileRef>
-   <FileRef
-      location = "group:fsc-ios/Core/VO/FSCPublicUser.m">
-   </FileRef>
-   <FileRef
-      location = "group:fsc-ios/Core/VO/FSCClass.h">
-   </FileRef>
-   <FileRef
-      location = "group:fsc-ios/Core/VO/FSCClass.m">
-   </FileRef>
-   <FileRef
-      location = "group:fsc-ios/Core/VO/FSCClassUser.h">
-   </FileRef>
-   <FileRef
-      location = "group:fsc-ios/Core/VO/FSCClassUser.m">
-   </FileRef>
-   <FileRef
-      location = "group:fsc-ios/Core/VO/FSCLinkman.h">
-   </FileRef>
-   <FileRef
-      location = "group:fsc-ios/Core/VO/FSCLinkman.m">
-   </FileRef>
-   <FileRef
-      location = "group:fsc-ios/Core/VO/FSCUser.h">
-   </FileRef>
-   <FileRef
-      location = "group:fsc-ios/Core/VO/FSCUser.m">
    </FileRef>
    <FileRef
       location = "group:fsc-ios.xcodeproj">

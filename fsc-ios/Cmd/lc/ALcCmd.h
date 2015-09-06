@@ -30,4 +30,6 @@
 - (void)clearSort;
 
 - (NSArray *)query:(NSFetchRequest *)request;
+
+- (void)savaData;
 @end

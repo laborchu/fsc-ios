@@ -2,7 +2,7 @@
 //  FSCUserRecorder.h
 //  
 //
-//  Created by laborchu on 15/8/26.
+//  Created by laborchu on 15/8/31.
 //
 //
 
@@ -13,7 +13,7 @@
 
 @interface FSCUserRecorder : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * createDate;
+@property (nonatomic, retain) NSNumber * createdDate;
 @property (nonatomic, retain) NSData * file;
 @property (nonatomic, retain) NSNumber * fromUserId;
 @property (nonatomic, retain) NSNumber * id;

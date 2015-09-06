@@ -2,7 +2,7 @@
 //  FSCTrgUser.m
 //  
 //
-//  Created by laborchu on 15/8/28.
+//  Created by laborchu on 15/8/31.
 //
 //
 
@@ -16,7 +16,7 @@
 @dynamic gender;
 @dynamic modifiedDate;
 @dynamic name;
-@dynamic portait;
+@dynamic portrait;
 @dynamic schoolName;
 @dynamic sessionId;
 @dynamic status;

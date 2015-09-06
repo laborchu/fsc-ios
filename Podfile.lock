@@ -23,6 +23,7 @@ PODS:
   - CocoaAsyncSocket (7.3.5)
   - ExtendNSLog (1.0.1)
   - iOS-QR-Code-Encoder (0.0.1)
+  - JSBadgeView (1.4.1)
   - JSONModel (1.0.2)
   - Masonry (0.6.2)
   - MBProgressHUD (0.9.1)
@@ -30,9 +31,9 @@ PODS:
   - Objection (1.6)
   - ProtocolBuffers (1.9.8)
   - SBJson (3.2)
-  - SDWebImage (3.7.2):
-    - SDWebImage/Core (= 3.7.2)
-  - SDWebImage/Core (3.7.2)
+  - SDWebImage (3.7.3):
+    - SDWebImage/Core (= 3.7.3)
+  - SDWebImage/Core (3.7.3)
   - UIActionSheet+Blocks (0.8.1)
   - UIActivityIndicator-for-SDWebImage (1.0.5):
     - SDWebImage (~> 3.2)
@@ -45,6 +46,7 @@ DEPENDENCIES:
   - CocoaAsyncSocket (~> 7.3.5)
   - ExtendNSLog (~> 1.0.1)
   - iOS-QR-Code-Encoder (~> 0.0.1)
+  - JSBadgeView
   - JSONModel (~> 1.0.1)
   - Masonry (~> 0.6.0)
   - MBProgressHUD (~> 0.9)
@@ -52,7 +54,6 @@ DEPENDENCIES:
   - Objection (= 1.6)
   - ProtocolBuffers (~> 1.9.2)
   - SBJson (~> 3.2)
-  - SDWebImage (~> 3.7)
   - UIActionSheet+Blocks (~> 0.8.1)
   - UIActivityIndicator-for-SDWebImage (~> 1.0.5)
   - UIAlertView+Blocks (~> 0.7)
@@ -64,6 +65,7 @@ SPEC CHECKSUMS:
   CocoaAsyncSocket: 94c582a5bef4bb0f51b6ebf3e1b561d9091a68ba
   ExtendNSLog: 1d9715e7a16c000440764ab0bcb5a1fe1e502c6b
   iOS-QR-Code-Encoder: 5aef73d5d6ecdb2031ced14e0e6eadfb8c637514
+  JSBadgeView: 3861ddee41094284d9468e6d0af5107f703aaac5
   JSONModel: 6ffcb4ffa3659c9e9a2e5d45d6c7705bab187c03
   Masonry: 362e8a1cc0beada4a4c4832d5e863da2a51533be
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
@@ -71,7 +73,7 @@ SPEC CHECKSUMS:
   Objection: 4833664098b86a8418f656bf5d9851a3fa6d7e41
   ProtocolBuffers: 9a4a171c0c7cc8f21dd29aeca4f9ac775d84a880
   SBJson: 9626892a7dc75ccaa2aad207ed4e4f73d6762846
-  SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
+  SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   UIActionSheet+Blocks: 7fdab45fc8f15ac2dc1cd65af1470746600b5f46
   UIActivityIndicator-for-SDWebImage: fdff5bee9b4c362922c51f032490634a09838f0f
   UIAlertView+Blocks: a46c99c5144f6c5dbc7d62fd2a0678daceec89a3

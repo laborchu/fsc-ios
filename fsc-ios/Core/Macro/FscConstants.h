@@ -10,11 +10,13 @@
 #define fsc_ios_FscConstants____FILEEXTENSION___
 
 //服务器地址
-#define DEFAULT_SERVER_IP @"laborc.oicp.net" //测试
+//#define DEFAULT_SERVER_IP @"laborc.oicp.net" //测试
+#define DEFAULT_SERVER_IP @"115.231.93.40" //测试
 //服务器端口号
 #define DEFAULT_SERVER_PORT 41422
 //服务器资源路径
-#define RES_SERVER @"http://laborc.oicp.net:82/"
+//#define RES_SERVER @"http://laborc.oicp.net:82/"
+#define RES_SERVER @"http://res.tourerp.cn/"
 
 #define WEB_SERVER @"http://demo.x16.com"
 
@@ -34,5 +36,12 @@
 #define SESSION_TYPE_PUBLIC_CHAT 3
 #define SESSION_TYPE_CLASS_CHAT 4
 #define SESSION_TYPE_TRG_CHAT 5
+
+#define PUBLIC_SYS_FSC @"SYS_FSC"
+#define PUBLIC_SYS_NOTICE @"SYS_NOTICE"
+#define PUBLIC_SYS_TEACH @"SYS_TEACH"
+#define PUBLIC_SYS_ACT_VOTE  @"SYS_ACT_VOTE"
+#define PUBLIC_SYS_RRT_HELPER @"SYS_RRT_HELPER"
+
 
 #endif

@@ -2,7 +2,7 @@
 //  FSCClassRecorder.h
 //  
 //
-//  Created by laborchu on 15/8/28.
+//  Created by laborchu on 15/9/1.
 //
 //
 
@@ -13,8 +13,8 @@
 
 @interface FSCClassRecorder : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * createBy;
-@property (nonatomic, retain) NSNumber * createDate;
+@property (nonatomic, retain) NSNumber * createdBy;
+@property (nonatomic, retain) NSNumber * createdDate;
 @property (nonatomic, retain) NSData * file;
 @property (nonatomic, retain) NSNumber * id;
 @property (nonatomic, retain) NSString * message;
@@ -24,6 +24,7 @@
 @property (nonatomic, retain) NSNumber * type;
 @property (nonatomic, retain) NSString * uuid;
 @property (nonatomic, retain) NSNumber * voiceLength;
+@property (nonatomic, retain) NSNumber * extendId;
 @property (nonatomic, retain) FSCClassSession *cSession;
 
 @end
