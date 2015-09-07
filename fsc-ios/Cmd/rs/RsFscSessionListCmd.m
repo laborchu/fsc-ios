@@ -35,6 +35,7 @@
 #import "FSCTrgSession.h"
 #import "LcFscChatTrgRecorderListCmd.h"
 #import "FSCTrgRecorder.h"
+#import "MsgCode.h"
 
 
 @implementation RsFscSessionListCmd {
@@ -121,7 +122,7 @@
     [self splitWithDic:sessionDic sessionPbArray:sessionList.trgSessionPb scope:@"trg"];
     [self splitWithDic:recorderDic recorderPbArray:sessionList.trgRecorderPb scope:@"trg"];
     [self splitWithDic:userDic userPbArray:sessionList.trgUserPb scope:@"trg"];
-
+    NSMutableArray *updateSessionArray = [NSMutableArray array];
     for (FscSessionPb *sessionPb in sessionList.messagePb) {
         ALcCmd *cmd = [[[LcFscSessionListCmd alloc] init]
                 addPredicate:@"id==%lld" argumentArray:@[@(sessionPb.id)]];
@@ -139,6 +140,8 @@
             [fscSession setUnreadCount:@0];
             [fscUser addSessionsObject:fscSession];
         }
+        [updateSessionArray addObject:fscSession];
+
         if (sessionPb.type == SESSION_TYPE_USER_CHAT) {
             NSString *userKey = [NSString stringWithFormat:@"user-%d", [@(sessionPb.sessionId) intValue]];
             USessionPb *uSessionPb = sessionDic[userKey];
@@ -168,6 +171,7 @@
             [self exeTSession:tSessionPb tRecorders:tRecordersPb tUsers:tusersPb fscSession:fscSession];
         }
     }
+    [[NSNotificationCenter defaultCenter] postNotificationName:MSG_FSC_SESSION_UPDATE object:updateSessionArray];
     [super savaData];
 }
 

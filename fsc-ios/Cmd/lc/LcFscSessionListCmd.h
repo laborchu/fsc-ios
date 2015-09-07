@@ -8,4 +8,5 @@
 
 
 @interface LcFscSessionListCmd : ALcCmd
+- (LcFscSessionListCmd *)initDefault;
 @end

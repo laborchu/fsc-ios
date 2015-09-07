@@ -27,6 +27,7 @@
     JSBadgeView *_badge;
 }
 
+
 - (void)setCellWithSession:(FSCSession *)session {
     if ([session.isDisturb boolValue]) {
         self.sessionStatusImg.hidden = NO;
@@ -37,10 +38,17 @@
         _badge = [[JSBadgeView alloc] initWithParentView:self.badgeView alignment:JSBadgeViewAlignmentCenter];
         _badge.badgeBackgroundColor = [UIColor colorWithHexString:@"#d3321b"];
     }
-    _badge.badgeText = @"3";
+    if([session.unreadCount intValue] >0){
+        _badge.hidden = NO;
+        _badge.badgeText = [session.unreadCount stringValue];
+    }else{
+        _badge.hidden = YES;
+    }
 
     self.sessionName.text = session.msName;
     self.lastMsg.text = session.lastMsg;
+    self.lastMsg.lineBreakMode = (NSLineBreakByWordWrapping | NSLineBreakByTruncatingTail);
+
     self.lastMsgDate.text = [self stringFromTimestamp:[session.modifiedDate longLongValue]];
 
     switch ([session.type integerValue]) {

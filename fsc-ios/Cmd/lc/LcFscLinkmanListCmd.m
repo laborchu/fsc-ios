@@ -10,6 +10,12 @@
 @implementation LcFscLinkmanListCmd {
 }
 
+- (LcFscLinkmanListCmd *)initDefault{
+    LcFscLinkmanListCmd *cmd = (LcFscLinkmanListCmd *) [super init];
+    [super addPredicate:@"status == %d " argumentArray:@[@(1)]];
+    return cmd;
+}
+
 - (id)execute {
     NSFetchRequest *request = [super buildRequest:@"FSCLinkman" parentPred:nil];
     return [super query:request];

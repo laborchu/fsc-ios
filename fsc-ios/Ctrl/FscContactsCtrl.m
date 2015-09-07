@@ -76,7 +76,7 @@
         [sortedArray addObject:sectionArray];
     }
 
-    NSArray *userList = [Scheduler exeLc:[[LcFscLinkmanListCmd alloc] init]];
+    NSArray *userList = [Scheduler exeLc:[[LcFscLinkmanListCmd alloc] initDefault]];
     for (FSCLinkman *fscLinkman in userList) {
         NSString *letter = [ChineseToPinyin pinyinFromChineseString:fscLinkman.name];
         NSUInteger section;
@@ -108,7 +108,7 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
-    self.tableView.contentInset = UIEdgeInsetsMake(0, -10, 0, 0);
+    self.tableView.contentInset = UIEdgeInsetsMake(0, -6, 0, 0);
     self.tableView.separatorInset = UIEdgeInsetsZero;
 }
 

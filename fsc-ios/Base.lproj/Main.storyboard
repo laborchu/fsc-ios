@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="654321" placeholder="请填写密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fFC-Qt-6e6">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" placeholder="请填写密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fFC-Qt-6e6">
                                 <rect key="frame" x="16" y="62" width="568" height="37"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -26,7 +26,7 @@
                                     <action selector="inputChange:" destination="3S7-YZ-WLJ" eventType="editingChanged" id="YSM-LC-hsg"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="13100000001" placeholder="手机号/学号/教工号" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ln1-L9-Wza">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="13100000004" placeholder="手机号/学号/教工号" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ln1-L9-Wza">
                                 <rect key="frame" x="16" y="26" width="568" height="37"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -164,6 +164,7 @@
                                                 <constraint firstItem="aNf-6B-gIg" firstAttribute="top" secondItem="fMJ-5D-0n8" secondAttribute="topMargin" constant="2" id="fdt-nV-Aly"/>
                                                 <constraint firstItem="HWg-oL-kE3" firstAttribute="leading" secondItem="NxS-0c-ami" secondAttribute="trailing" constant="46" id="hNS-LQ-vER"/>
                                                 <constraint firstItem="HWg-oL-kE3" firstAttribute="trailing" secondItem="fMJ-5D-0n8" secondAttribute="trailingMargin" id="hga-Op-QdZ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="NxS-0c-ami" secondAttribute="trailing" constant="38" id="imV-kl-oKM"/>
                                                 <constraint firstItem="NxS-0c-ami" firstAttribute="top" secondItem="LOR-zr-D1Z" secondAttribute="bottom" constant="5" id="ovo-1x-16U"/>
                                                 <constraint firstItem="aNf-6B-gIg" firstAttribute="leading" secondItem="fMJ-5D-0n8" secondAttribute="leadingMargin" constant="42" id="pjx-8o-ZcW"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="i6f-Rk-0Lk" secondAttribute="bottom" constant="5" id="sOr-Ub-def"/>

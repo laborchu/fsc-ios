@@ -10,13 +10,13 @@
 #define fsc_ios_FscConstants____FILEEXTENSION___
 
 //服务器地址
-//#define DEFAULT_SERVER_IP @"laborc.oicp.net" //测试
-#define DEFAULT_SERVER_IP @"115.231.93.40" //测试
+#define DEFAULT_SERVER_IP @"laborc.oicp.net" //测试
+//#define DEFAULT_SERVER_IP @"115.231.93.40" //测试
 //服务器端口号
 #define DEFAULT_SERVER_PORT 41422
 //服务器资源路径
-//#define RES_SERVER @"http://laborc.oicp.net:82/"
-#define RES_SERVER @"http://res.tourerp.cn/"
+#define RES_SERVER @"http://laborc.oicp.net:82/"
+//#define RES_SERVER @"http://res.tourerp.cn/"
 
 #define WEB_SERVER @"http://demo.x16.com"
 

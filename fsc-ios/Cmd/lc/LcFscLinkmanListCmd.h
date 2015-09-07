@@ -9,4 +9,5 @@
 
 @interface LcFscLinkmanListCmd : ALcCmd
 
+- (LcFscLinkmanListCmd *)initDefault;
 @end
