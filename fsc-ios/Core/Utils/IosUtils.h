@@ -17,6 +17,8 @@ static PhoneInfoPb *deviceInfo  = nil;
 
 + (FscAppDelegate *)getApp;
 
++ (UITabBarController *)getMainTabCtrl;
+
 +(UIView *)getRootView;
 
 @end

@@ -9,7 +9,6 @@
 #import <UIActivityIndicator-for-SDWebImage/UIImageView+UIActivityIndicatorForSDWebImage.h>
 #import "FscSessionCell.h"
 #import "FSCSession.h"
-#import "BadgeLabel.h"
 #import "FscConstants.h"
 #import "LcUtils.h"
 #import "FSCLinkman.h"
@@ -46,6 +45,8 @@
     }
 
     self.sessionName.text = session.msName;
+    self.sessionName.lineBreakMode = (NSLineBreakByWordWrapping | NSLineBreakByTruncatingTail);
+
     self.lastMsg.text = session.lastMsg;
     self.lastMsg.lineBreakMode = (NSLineBreakByWordWrapping | NSLineBreakByTruncatingTail);
 

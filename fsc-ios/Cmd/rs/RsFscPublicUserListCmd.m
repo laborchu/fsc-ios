@@ -15,6 +15,7 @@
 #import "FSCUser.h"
 #import "LcFscPublicMenuListCmd.h"
 #import "FSCPublicMenu.h"
+#import "LcUtils.h"
 
 
 @implementation RsFscPublicUserListCmd {
@@ -38,13 +39,8 @@
     FSCUser *fscUser = [super getFscUser];
     PUserListPb *userListPb = [PUserListPb parseFromData:sign.source];
     for (PUserPb *pUserPb in userListPb.userPb) {
-        ALcCmd *cmd = [[[LcFscPublicUserListCmd alloc] init]
-                addPredicate:@"id==%lld" argumentArray:@[@(pUserPb.id)]];
-        [cmd setFetchLimit:1];
-        NSArray *publicUserArray = [Scheduler exeLc:cmd];
-        FSCPublicUser *fscPublicUser;
-        if(publicUserArray.count>0){
-            fscPublicUser = publicUserArray[0];
+        FSCPublicUser *fscPublicUser = [LcUtils getFscPublicUser:@(pUserPb.id)];
+        if(fscPublicUser){
             [PbTransfer pb:pUserPb vo:fscPublicUser fields:CHAT_PUBLIC_USER_FIELDS];
         }else{
             fscPublicUser = [PbTransfer pb:pUserPb entityName:@"FSCPublicUser" fields:CHAT_PUBLIC_USER_FIELDS];
@@ -52,15 +48,11 @@
         }
 
         for (PMenuPb *pMenuPb in pUserPb.menuPb) {
-            cmd = [[[LcFscPublicMenuListCmd alloc] initWithFscPublicUser:fscPublicUser]
-                    addPredicate:@"id==%lld" argumentArray:@[@(pMenuPb.id)]];
-            [cmd setFetchLimit:1];
-            NSArray *publicMenuArray = [Scheduler exeLc:cmd];
-            if(publicUserArray.count>0){
-                FSCPublicMenu *fscPublicMenu = publicMenuArray[0];
+            FSCPublicMenu *fscPublicMenu = [LcUtils getFscPublicMenu:fscPublicUser menuId:@(pMenuPb.id)];
+            if(fscPublicMenu){
                 [PbTransfer pb:pMenuPb vo:fscPublicMenu fields:CHAT_PUBLIC_MENU_FIELDS];
             }else{
-                FSCPublicMenu *fscPublicMenu = [PbTransfer pb:pMenuPb entityName:@"FSCPublicMenu" fields:CHAT_PUBLIC_MENU_FIELDS];
+                fscPublicMenu = [PbTransfer pb:pMenuPb entityName:@"FSCPublicMenu" fields:CHAT_PUBLIC_MENU_FIELDS];
                 [fscPublicUser addMenusObject:fscPublicMenu];
             }
         }

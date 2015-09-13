@@ -30,6 +30,11 @@
     return delegate;
 }
 
++(UITabBarController *)getMainTabCtrl{
+    FscAppDelegate *delegate = [IosUtils getApp];
+    return (UITabBarController *) delegate.window.rootViewController;
+}
+
 + (UIView *)getRootView {
     UIViewController *topController = [UIApplication sharedApplication].keyWindow.rootViewController;
     while (topController.presentedViewController){

@@ -6,9 +6,15 @@
 #import <Foundation/Foundation.h>
 
 @class FSCLinkman;
+@class FSCPublicUser;
+@class FSCPublicMenu;
 
 
 @interface LcUtils : NSObject
 
 + (FSCLinkman *)getFscLinkman:(NSNumber *)linkmanId;
+
++ (FSCPublicUser *)getFscPublicUser:(NSNumber *)userId;
+
++ (FSCPublicMenu *)getFscPublicMenu:(FSCPublicUser *)publicUser menuId:(NSNumber *)menuId;
 @end
