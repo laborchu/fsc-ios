@@ -22,11 +22,20 @@
     self = [super initWithCoder:decoder];
     if (self) {
         chatRecorderArray = [NSMutableArray array];
-        FscChatRecorder *recorder = [[FscChatRecorder alloc] init];
-        recorder.type = @(RECORDER_TYPE_TIP);
-        recorder.message = @"22:22";
-        [chatRecorderArray addObject:recorder];
-        [chatRecorderArray addObject:recorder];
+        FscChatRecorder *recorder1 = [[FscChatRecorder alloc] init];
+        recorder1.type = @(RECORDER_TYPE_MSG);
+        recorder1.message = @"自从iPhone6和6plus出了之";
+        [chatRecorderArray addObject:recorder1];
+
+        FscChatRecorder *recorder2 = [[FscChatRecorder alloc] init];
+        recorder2.type = @(RECORDER_TYPE_MSG);
+        recorder2.message = @"自从iPhone6和6plus出了之后，可以说iPhone进入到了";
+        [chatRecorderArray addObject:recorder2];
+
+        FscChatRecorder *recorder3 = [[FscChatRecorder alloc] init];
+        recorder3.type = @(RECORDER_TYPE_MSG);
+        recorder3.message = @"自从iPhone6和6plus出了之后，可以说iPhone进入到了大屏时代。在小屏的时代，常";
+        [chatRecorderArray addObject:recorder3];
     }
     return self;
 }
@@ -55,13 +64,15 @@
 }
 
 
-static NSString *tipCell = @"ChatTipCell";
+static NSString *chatTipCell = @"ChatTipCell";
+static NSString *chatTextLeftCell = @"ChatTextLeftCell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     FscChatRecorder *recorder = chatRecorderArray[indexPath.row];
     ChatCell *cell;
     switch([recorder.type intValue]){
         //文字
         case RECORDER_TYPE_MSG:
+            cell = [self getChatCell:chatTextLeftCell tableView:tableView];
             break;
             //图片
         case RECORDER_TYPE_IMG:
@@ -74,7 +85,8 @@ static NSString *tipCell = @"ChatTipCell";
             break;
             //提示
         case RECORDER_TYPE_TIP:
-            cell = [self getChatCell:tipCell tableView:tableView];
+            cell = [self getChatCell:chatTipCell tableView:tableView];
+            break;
             //学习计划
         case RECORDER_TYPE_TEACH:
             break;
@@ -99,7 +111,7 @@ static NSString *tipCell = @"ChatTipCell";
 
 
 -(ChatCell *)getChatCell:(NSString *)key tableView:(UITableView *)tableView{
-    ChatCell *cell = [tableView dequeueReusableCellWithIdentifier:tipCell];
+    ChatCell *cell = [tableView dequeueReusableCellWithIdentifier:chatTipCell];
     if(!cell){
         cell = (ChatCell*)[[NSBundle mainBundle] loadNibNamed:key owner:self options:nil].lastObject;
     }
@@ -108,8 +120,10 @@ static NSString *tipCell = @"ChatTipCell";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     ChatCell *cell= (ChatCell *)[self tableView: tableView cellForRowAtIndexPath: indexPath];
-    CGFloat height= [cell getView].frame.size.height;
-    return height;
+    CGSize size = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+
+//    CGFloat height= [cell getHeight];
+    return 1+size.height;
 }
 
 @end

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1DDC506A1BA5295700F61BA0 /* ChatTextLeftCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDC50681BA5295700F61BA0 /* ChatTextLeftCell.m */; };
+		1DDC506B1BA5295700F61BA0 /* ChatTextLeftCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDC50691BA5295700F61BA0 /* ChatTextLeftCell.xib */; };
 		35BDDC147454FB045910B76F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E0C2F16B0D3DDCDC44C7A07 /* libPods.a */; };
 		BDD0801E23A62D43000AA023 /* FscScore.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08EA34B80A134AE85DB0F /* FscScore.pb.m */; };
 		BDD08028A63F9FD4CFE234E5 /* LcFscChatTrgUserListCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD083E0AEF1B271C47A481F /* LcFscChatTrgUserListCmd.m */; };
@@ -153,6 +155,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1DDC50671BA5295700F61BA0 /* ChatTextLeftCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatTextLeftCell.h; sourceTree = "<group>"; };
+		1DDC50681BA5295700F61BA0 /* ChatTextLeftCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatTextLeftCell.m; sourceTree = "<group>"; };
+		1DDC50691BA5295700F61BA0 /* ChatTextLeftCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatTextLeftCell.xib; sourceTree = "<group>"; };
 		2BE8CF184B233F6E0E5D3EB7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8E0C2F16B0D3DDCDC44C7A07 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ED53C2CCB98B6FBE21FF1E8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -881,6 +886,9 @@
 				BDD085C89CAA154C4F27C286 /* ChatTipCell.m */,
 				BDD081586306E96F84E3E2FF /* ChatTipCell.h */,
 				BDD081344832DC3E1F8A9516 /* ChatTipCell.xib */,
+				1DDC50671BA5295700F61BA0 /* ChatTextLeftCell.h */,
+				1DDC50681BA5295700F61BA0 /* ChatTextLeftCell.m */,
+				1DDC50691BA5295700F61BA0 /* ChatTextLeftCell.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -988,6 +996,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDD08907818595D74F705559 /* Images.xcassets in Resources */,
+				1DDC506B1BA5295700F61BA0 /* ChatTextLeftCell.xib in Resources */,
 				BDD084E3D52DFE144C07C182 /* LaunchScreen.xib in Resources */,
 				BDD0898207D78CE23AFD09E2 /* Main.storyboard in Resources */,
 				BDD08D215B0F676A66AF7A90 /* ChatTipCell.xib in Resources */,
@@ -1034,6 +1043,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DDC506A1BA5295700F61BA0 /* ChatTextLeftCell.m in Sources */,
 				BDD08472CFCDEEB9AE5F92C6 /* main.m in Sources */,
 				BDD081DC33E7421E4A568731 /* FscAppDelegate.m in Sources */,
 				BDD082D5143F04584B4339F3 /* FscSocketClient.m in Sources */,

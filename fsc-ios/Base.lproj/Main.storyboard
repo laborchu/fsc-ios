@@ -26,7 +26,7 @@
                                     <action selector="inputChange:" destination="3S7-YZ-WLJ" eventType="editingChanged" id="YSM-LC-hsg"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="13100000001" placeholder="手机号/学号/教工号" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ln1-L9-Wza">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="13100000002" placeholder="手机号/学号/教工号" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ln1-L9-Wza">
                                 <rect key="frame" x="16" y="26" width="568" height="37"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>

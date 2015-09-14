@@ -20,8 +20,8 @@
 -(void)setRecorder:(FscChatRecorder *)recorder{
 }
 
--(UIView *)getView{
-    return nil;
+-(CGFloat)getHeight{
+    return 0;
 }
 
 @end

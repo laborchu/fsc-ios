@@ -27,8 +27,9 @@
     _tipLabel.text = recorder.message;
 }
 
--(UIView *)getView{
-    return _tipLabel;
+-(CGFloat)getHeight{
+    CGFloat height = _tipLabel.frame.size.height;
+    return height;
 }
 
 @end
