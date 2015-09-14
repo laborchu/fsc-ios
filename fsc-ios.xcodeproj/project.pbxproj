@@ -56,6 +56,7 @@
 		BDD0859EA9290342775BBDF2 /* FSCPublicRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0802E70945E64E80A5D94 /* FSCPublicRecorder.m */; };
 		BDD085B5FC4F4792228D76F7 /* FSCPublicMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0841F010B3989063D1108 /* FSCPublicMenu.m */; };
 		BDD085F6B5B20E126F84342A /* FscQues.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08F8DCF8060D2F77E6582 /* FscQues.pb.m */; };
+		BDD085FE430B29C8B20BD9B1 /* FSCChatLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08D00E0D10A6D5B6757AA /* FSCChatLabel.m */; };
 		BDD08623307920163FB43F00 /* LcFscChatUserRecorderListCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08A2DFFA25B2C881E55AB /* LcFscChatUserRecorderListCmd.m */; };
 		BDD08642F0AEAED313EBEBBA /* FSCApply.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08F5EDC41F8A9E665675A /* FSCApply.m */; };
 		BDD0864F998C53E0E3E25EBE /* LcFscChatClassRecorderListCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08945C20CD366D8FD29D3 /* LcFscChatClassRecorderListCmd.m */; };
@@ -309,6 +310,7 @@
 		BDD08900A92C4DDD25AB499B /* LcFscChatTrgUserListCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LcFscChatTrgUserListCmd.h; sourceTree = "<group>"; };
 		BDD08907A7D01DA215AA48BA /* CmdCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CmdCode.h; sourceTree = "<group>"; };
 		BDD0891AC7E8B0DFBAA6FF9C /* FscTimetable.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscTimetable.pb.m; sourceTree = "<group>"; };
+		BDD0893C68F716AC2CAFEAAB /* FSCChatLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCChatLabel.h; sourceTree = "<group>"; };
 		BDD08945B07A27FD093E4587 /* FscSessionList.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscSessionList.pb.h; sourceTree = "<group>"; };
 		BDD08945C20CD366D8FD29D3 /* LcFscChatClassRecorderListCmd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LcFscChatClassRecorderListCmd.m; sourceTree = "<group>"; };
 		BDD089567F5E35AE665E6445 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -383,6 +385,7 @@
 		BDD08CC59B2CB747DBB08C29 /* FSCLoginViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCLoginViewCtrl.h; sourceTree = "<group>"; };
 		BDD08CE58B71162E5E62F890 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		BDD08CE9A301FE549FA34E0C /* LcFscChatUserRecorderListCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LcFscChatUserRecorderListCmd.h; sourceTree = "<group>"; };
+		BDD08D00E0D10A6D5B6757AA /* FSCChatLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCChatLabel.m; sourceTree = "<group>"; };
 		BDD08D01608876D045BBFA71 /* FscChatTrg.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscChatTrg.pb.m; sourceTree = "<group>"; };
 		BDD08D2FEE66D900859363AB /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		BDD08D43EE871701F190E893 /* User.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.pb.m; sourceTree = "<group>"; };
@@ -809,6 +812,8 @@
 				BDD08F654E58A81DC28BA704 /* cell */,
 				BDD08D747F3EE05BFDCD0068 /* TipLabel.m */,
 				BDD08A0A9C885134AE73B0AB /* TipLabel.h */,
+				BDD08D00E0D10A6D5B6757AA /* FSCChatLabel.m */,
+				BDD0893C68F716AC2CAFEAAB /* FSCChatLabel.h */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -1164,6 +1169,7 @@
 				BDD08C4A1BF19815AAE03963 /* ChatTipCell.m in Sources */,
 				BDD0838C926A0DFD8E84A63D /* FscChatRecorder.m in Sources */,
 				BDD086FB38C7A6804F6A903C /* TipLabel.m in Sources */,
+				BDD085FE430B29C8B20BD9B1 /* FSCChatLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,18 +18,12 @@
 - (id)initWithCoder:(NSCoder *)decoder {
     self = [super initWithCoder:decoder];
     if (self) {
-//        self.backgroundColor = [UIColor redColor];
     }
     return self;
 }
 
 -(void)setRecorder:(FscChatRecorder *)recorder{
     _tipLabel.text = recorder.message;
-}
-
--(CGFloat)getHeight{
-    CGFloat height = _tipLabel.frame.size.height;
-    return height;
 }
 
 @end

@@ -8,13 +8,13 @@
 
 #import "ChatTextLeftCell.h"
 #import "FscChatRecorder.h"
+#import "FSCChatLabel.h"
 
 
 @interface ChatTextLeftCell ()
 @property(weak, nonatomic) IBOutlet UIImageView *avatarImg;
 @property(weak, nonatomic) IBOutlet UILabel *nameLabel;
-@property(weak, nonatomic) IBOutlet UILabel *msgLabel;
-@property(weak, nonatomic) IBOutlet UIImageView *bubbleImg;
+@property(weak, nonatomic) IBOutlet FSCChatLabel *msgLabel;
 
 @end
 
@@ -37,19 +37,7 @@
 - (void)setRecorder:(FscChatRecorder *)recorder {
     [self.avatarImg setImage:[UIImage imageNamed:@"default_avatar"]];
     self.nameLabel.text = @"张三";
-    self.msgLabel.lineBreakMode = NSLineBreakByWordWrapping;
     self.msgLabel.text = recorder.message;
-    [self.msgLabel sizeToFit];
-//    self.contentView.backgroundColor = [UIColor redColor];
-}
-
--(CGFloat)getHeight{
-//    CGFloat height = self.contentView.frame.size.height;
-//    if(height>200){
-//        height-=150;
-//    }
-    CGFloat height = [self.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
-    return height;
 }
 
 @end

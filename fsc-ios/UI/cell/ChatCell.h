@@ -9,5 +9,4 @@
 
 @interface ChatCell : UITableViewCell
 - (void)setRecorder:(FscChatRecorder *)recorder;
--(CGFloat)getHeight;
 @end

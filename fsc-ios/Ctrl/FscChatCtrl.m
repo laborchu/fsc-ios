@@ -10,7 +10,7 @@
 #import "ChatTipCell.h"
 
 @interface FscChatCtrl () <UITableViewDataSource, UITableViewDelegate>
-@property (weak, nonatomic) IBOutlet UITableView *chatTableView;
+@property(weak, nonatomic) IBOutlet UITableView *chatTableView;
 
 @end
 
@@ -34,7 +34,7 @@
 
         FscChatRecorder *recorder3 = [[FscChatRecorder alloc] init];
         recorder3.type = @(RECORDER_TYPE_MSG);
-        recorder3.message = @"自从iPhone6和6plus出了之后，可以说iPhone进入到了大屏时代。在小屏的时代，常";
+        recorder3.message = @"自从iPhone6和6plus出了之后，可以说iPhone进入到了大屏时代。在小屏的时代，常可以说iPhone进入到了大屏时代。在小屏的时代，常可以说iPhone进入到了大屏时代。在小屏的时代，常可以说iPhone进入到了大屏时代。在小屏的时代，常可以说iPhone进入到了大屏时代。在小屏的时代，常可以说iPhone进入到了大屏时代。在小屏的时代，常";
         [chatRecorderArray addObject:recorder3];
     }
     return self;
@@ -66,10 +66,27 @@
 
 static NSString *chatTipCell = @"ChatTipCell";
 static NSString *chatTextLeftCell = @"ChatTextLeftCell";
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     FscChatRecorder *recorder = chatRecorderArray[indexPath.row];
+    ChatCell *cell = [self getChatCell:tableView recorder:recorder];
+    [cell setRecorder:recorder];
+    return cell;
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    FscChatRecorder *recorder = chatRecorderArray[indexPath.row];
+    ChatCell *cell = [self getChatCell:tableView recorder:recorder];
+    [cell setRecorder:recorder];
+    [cell layoutSubviews];
+    CGSize size = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+    return size.height;
+}
+
+- (ChatCell *)getChatCell:(UITableView *)tableView recorder:(FscChatRecorder *)recorder {
     ChatCell *cell;
-    switch([recorder.type intValue]){
+    switch ([recorder.type intValue]) {
         //文字
         case RECORDER_TYPE_MSG:
             cell = [self getChatCell:chatTextLeftCell tableView:tableView];
@@ -105,25 +122,16 @@ static NSString *chatTextLeftCell = @"ChatTextLeftCell";
         case RECORDER_TYPE_WEB_VIEW:
             break;
     }
-    [cell setRecorder:recorder];
     return cell;
 }
 
 
--(ChatCell *)getChatCell:(NSString *)key tableView:(UITableView *)tableView{
-    ChatCell *cell = [tableView dequeueReusableCellWithIdentifier:chatTipCell];
-    if(!cell){
-        cell = (ChatCell*)[[NSBundle mainBundle] loadNibNamed:key owner:self options:nil].lastObject;
+- (ChatCell *)getChatCell:(NSString *)key tableView:(UITableView *)tableView {
+    ChatCell *cell = [tableView dequeueReusableCellWithIdentifier:key];
+    if (!cell) {
+        cell = (ChatCell *) [[NSBundle mainBundle] loadNibNamed:key owner:self options:nil].lastObject;
     }
     return cell;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    ChatCell *cell= (ChatCell *)[self tableView: tableView cellForRowAtIndexPath: indexPath];
-    CGSize size = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
-
-//    CGFloat height= [cell getHeight];
-    return 1+size.height;
 }
 
 @end
