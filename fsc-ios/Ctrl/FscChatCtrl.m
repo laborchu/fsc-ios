@@ -8,6 +8,9 @@
 #import "FscChatRecorder.h"
 #import "FscConstants.h"
 #import "ChatTipCell.h"
+#import "IosUtils.h"
+#import "FscAppDelegate.h"
+#import "FSCUser.h"
 
 @interface FscChatCtrl () <UITableViewDataSource, UITableViewDelegate>
 @property(weak, nonatomic) IBOutlet UITableView *chatTableView;
@@ -16,6 +19,7 @@
 
 @implementation FscChatCtrl {
     NSMutableArray *chatRecorderArray;
+    FSCUser *_fscUser;
 }
 
 - (id)initWithCoder:(NSCoder *)decoder {
@@ -25,17 +29,23 @@
         FscChatRecorder *recorder1 = [[FscChatRecorder alloc] init];
         recorder1.type = @(RECORDER_TYPE_MSG);
         recorder1.message = @"自从iPhone6和6plus出了之";
+        recorder1.createdBy = @(179);
         [chatRecorderArray addObject:recorder1];
 
         FscChatRecorder *recorder2 = [[FscChatRecorder alloc] init];
         recorder2.type = @(RECORDER_TYPE_MSG);
         recorder2.message = @"自从iPhone6和6plus出了之后，可以说iPhone进入到了";
+        recorder2.createdBy = @(178);
         [chatRecorderArray addObject:recorder2];
 
         FscChatRecorder *recorder3 = [[FscChatRecorder alloc] init];
         recorder3.type = @(RECORDER_TYPE_MSG);
         recorder3.message = @"自从iPhone6和6plus出了之后，可以说iPhone进入到了大屏时代。在小屏的时代，常可以说iPhone进入到了大屏时代。在小屏的时代，常可以说iPhone进入到了大屏时代。在小屏的时代，常可以说iPhone进入到了大屏时代。在小屏的时代，常可以说iPhone进入到了大屏时代。在小屏的时代，常可以说iPhone进入到了大屏时代。在小屏的时代，常";
+        recorder3.createdBy = @(179);
         [chatRecorderArray addObject:recorder3];
+
+        FscAppDelegate *fscAppDelegate = [IosUtils getApp];
+        _fscUser = fscAppDelegate.fscUser;
     }
     return self;
 }
@@ -66,6 +76,7 @@
 
 static NSString *chatTipCell = @"ChatTipCell";
 static NSString *chatTextLeftCell = @"ChatTextLeftCell";
+static NSString *chatTextRightCell = @"ChatTextRightCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     FscChatRecorder *recorder = chatRecorderArray[indexPath.row];
@@ -89,7 +100,11 @@ static NSString *chatTextLeftCell = @"ChatTextLeftCell";
     switch ([recorder.type intValue]) {
         //文字
         case RECORDER_TYPE_MSG:
-            cell = [self getChatCell:chatTextLeftCell tableView:tableView];
+            if([_fscUser.id intValue] == [recorder.createdBy intValue]){
+                cell = [self getChatCell:chatTextRightCell tableView:tableView];
+            }else{
+                cell = [self getChatCell:chatTextLeftCell tableView:tableView];
+            }
             break;
             //图片
         case RECORDER_TYPE_IMG:

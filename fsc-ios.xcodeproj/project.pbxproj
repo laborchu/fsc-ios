@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		1DDC506A1BA5295700F61BA0 /* ChatTextLeftCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDC50681BA5295700F61BA0 /* ChatTextLeftCell.m */; };
 		1DDC506B1BA5295700F61BA0 /* ChatTextLeftCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDC50691BA5295700F61BA0 /* ChatTextLeftCell.xib */; };
+		1DDC506F1BA838D200F61BA0 /* ChatTextRightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDC506D1BA838D200F61BA0 /* ChatTextRightCell.m */; };
+		1DDC50701BA838D200F61BA0 /* ChatTextRightCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDC506E1BA838D200F61BA0 /* ChatTextRightCell.xib */; };
+		1DDC50741BA84B7000F61BA0 /* ChatImgLeftCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDC50721BA84B7000F61BA0 /* ChatImgLeftCell.m */; };
+		1DDC50751BA84B7000F61BA0 /* ChatImgLeftCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDC50731BA84B7000F61BA0 /* ChatImgLeftCell.xib */; };
 		35BDDC147454FB045910B76F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E0C2F16B0D3DDCDC44C7A07 /* libPods.a */; };
 		BDD0801E23A62D43000AA023 /* FscScore.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08EA34B80A134AE85DB0F /* FscScore.pb.m */; };
 		BDD08028A63F9FD4CFE234E5 /* LcFscChatTrgUserListCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD083E0AEF1B271C47A481F /* LcFscChatTrgUserListCmd.m */; };
@@ -159,6 +163,12 @@
 		1DDC50671BA5295700F61BA0 /* ChatTextLeftCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatTextLeftCell.h; sourceTree = "<group>"; };
 		1DDC50681BA5295700F61BA0 /* ChatTextLeftCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatTextLeftCell.m; sourceTree = "<group>"; };
 		1DDC50691BA5295700F61BA0 /* ChatTextLeftCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatTextLeftCell.xib; sourceTree = "<group>"; };
+		1DDC506C1BA838D200F61BA0 /* ChatTextRightCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatTextRightCell.h; sourceTree = "<group>"; };
+		1DDC506D1BA838D200F61BA0 /* ChatTextRightCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatTextRightCell.m; sourceTree = "<group>"; };
+		1DDC506E1BA838D200F61BA0 /* ChatTextRightCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatTextRightCell.xib; sourceTree = "<group>"; };
+		1DDC50711BA84B7000F61BA0 /* ChatImgLeftCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatImgLeftCell.h; sourceTree = "<group>"; };
+		1DDC50721BA84B7000F61BA0 /* ChatImgLeftCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatImgLeftCell.m; sourceTree = "<group>"; };
+		1DDC50731BA84B7000F61BA0 /* ChatImgLeftCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatImgLeftCell.xib; sourceTree = "<group>"; };
 		2BE8CF184B233F6E0E5D3EB7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8E0C2F16B0D3DDCDC44C7A07 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ED53C2CCB98B6FBE21FF1E8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -894,6 +904,12 @@
 				1DDC50671BA5295700F61BA0 /* ChatTextLeftCell.h */,
 				1DDC50681BA5295700F61BA0 /* ChatTextLeftCell.m */,
 				1DDC50691BA5295700F61BA0 /* ChatTextLeftCell.xib */,
+				1DDC506C1BA838D200F61BA0 /* ChatTextRightCell.h */,
+				1DDC506D1BA838D200F61BA0 /* ChatTextRightCell.m */,
+				1DDC506E1BA838D200F61BA0 /* ChatTextRightCell.xib */,
+				1DDC50711BA84B7000F61BA0 /* ChatImgLeftCell.h */,
+				1DDC50721BA84B7000F61BA0 /* ChatImgLeftCell.m */,
+				1DDC50731BA84B7000F61BA0 /* ChatImgLeftCell.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -1002,7 +1018,9 @@
 			files = (
 				BDD08907818595D74F705559 /* Images.xcassets in Resources */,
 				1DDC506B1BA5295700F61BA0 /* ChatTextLeftCell.xib in Resources */,
+				1DDC50751BA84B7000F61BA0 /* ChatImgLeftCell.xib in Resources */,
 				BDD084E3D52DFE144C07C182 /* LaunchScreen.xib in Resources */,
+				1DDC50701BA838D200F61BA0 /* ChatTextRightCell.xib in Resources */,
 				BDD0898207D78CE23AFD09E2 /* Main.storyboard in Resources */,
 				BDD08D215B0F676A66AF7A90 /* ChatTipCell.xib in Resources */,
 			);
@@ -1052,6 +1070,7 @@
 				BDD08472CFCDEEB9AE5F92C6 /* main.m in Sources */,
 				BDD081DC33E7421E4A568731 /* FscAppDelegate.m in Sources */,
 				BDD082D5143F04584B4339F3 /* FscSocketClient.m in Sources */,
+				1DDC50741BA84B7000F61BA0 /* ChatImgLeftCell.m in Sources */,
 				BDD08F0E8A31F678993BAD95 /* IosUtils.m in Sources */,
 				BDD0812AEE497810DF6B4A5F /* FSCLoginViewCtrl.m in Sources */,
 				BDD08E38601696C4F0414CCC /* UIColor+Hex.m in Sources */,
@@ -1078,6 +1097,7 @@
 				BDD080B3D50A1AD4008A4500 /* FSCSession.m in Sources */,
 				BDD083608FAC3919C8094E6D /* FSCNotice.m in Sources */,
 				BDD088F47039EF337A9DEF68 /* FSCClassSession.m in Sources */,
+				1DDC506F1BA838D200F61BA0 /* ChatTextRightCell.m in Sources */,
 				BDD085770245FAF6CEBF4927 /* FSCUserRecorder.m in Sources */,
 				BDD084735F480105AEFE963E /* FSCSnsMsg.m in Sources */,
 				BDD084F36C6FE56C21CA2EEB /* FSCClassStudent.m in Sources */,
