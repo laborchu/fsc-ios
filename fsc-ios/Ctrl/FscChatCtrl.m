@@ -39,7 +39,7 @@
         [chatRecorderArray addObject:recorder2];
 
         FscChatRecorder *recorder3 = [[FscChatRecorder alloc] init];
-        recorder3.type = @(RECORDER_TYPE_MSG);
+        recorder3.type = @(RECORDER_TYPE_IMG);
         recorder3.message = @"自从iPhone6和6plus出了之后，可以说iPhone进入到了大屏时代。在小屏的时代，常可以说iPhone进入到了大屏时代。在小屏的时代，常可以说iPhone进入到了大屏时代。在小屏的时代，常可以说iPhone进入到了大屏时代。在小屏的时代，常可以说iPhone进入到了大屏时代。在小屏的时代，常可以说iPhone进入到了大屏时代。在小屏的时代，常";
         recorder3.createdBy = @(179);
         [chatRecorderArray addObject:recorder3];
@@ -77,6 +77,7 @@
 static NSString *chatTipCell = @"ChatTipCell";
 static NSString *chatTextLeftCell = @"ChatTextLeftCell";
 static NSString *chatTextRightCell = @"ChatTextRightCell";
+static NSString *chatImgLeftCell = @"ChatImgLeftCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     FscChatRecorder *recorder = chatRecorderArray[indexPath.row];
@@ -108,6 +109,7 @@ static NSString *chatTextRightCell = @"ChatTextRightCell";
             break;
             //图片
         case RECORDER_TYPE_IMG:
+            cell = [self getChatCell:chatImgLeftCell tableView:tableView];
             break;
             //语音
         case RECORDER_TYPE_VOICE:
