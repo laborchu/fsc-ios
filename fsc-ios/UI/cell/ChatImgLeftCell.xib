@@ -18,15 +18,15 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="InH-NB-1bn">
                         <rect key="frame" x="8" y="8" width="40" height="40"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="40" id="0IQ-AZ-pZU"/>
-                            <constraint firstAttribute="width" constant="40" id="6CY-Zk-sj5"/>
+                            <constraint firstAttribute="height" constant="40" id="89M-mN-5KN"/>
+                            <constraint firstAttribute="width" constant="40" id="hXX-tS-qpP"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Df4-xC-haO">
                         <rect key="frame" x="56" y="8" width="42" height="21"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="42" id="0gt-Mt-ArU"/>
-                            <constraint firstAttribute="height" constant="21" id="rFb-Tv-skY"/>
+                            <constraint firstAttribute="height" constant="21" id="Ozb-jl-Rmn"/>
+                            <constraint firstAttribute="width" constant="42" id="Zra-KZ-wIb"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
@@ -35,26 +35,28 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tnu-AP-prC">
                         <rect key="frame" x="56" y="32" width="70" height="40"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="70" id="rxo-L9-bih"/>
+                            <constraint firstAttribute="width" constant="70" id="v4A-gP-CLF"/>
                         </constraints>
                         <string key="image" base64-UTF8="YES">
 CQ
 </string>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="rxo-L9-bih"/>
-                            </mask>
-                        </variation>
                     </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Df4-xC-haO" firstAttribute="top" secondItem="3TE-0f-D5h" secondAttribute="topMargin" id="6Ta-bl-Xlc"/>
-                    <constraint firstItem="Df4-xC-haO" firstAttribute="top" secondItem="InH-NB-1bn" secondAttribute="top" id="7xa-Ov-hl9"/>
-                    <constraint firstItem="Df4-xC-haO" firstAttribute="leading" secondItem="InH-NB-1bn" secondAttribute="trailing" constant="8" symbolic="YES" id="86c-Jo-Ytg"/>
-                    <constraint firstItem="tnu-AP-prC" firstAttribute="leading" secondItem="InH-NB-1bn" secondAttribute="trailing" constant="8" id="BSK-wU-xg8"/>
-                    <constraint firstItem="tnu-AP-prC" firstAttribute="top" secondItem="Df4-xC-haO" secondAttribute="bottom" constant="3" id="v8P-Iw-Tyz"/>
-                    <constraint firstItem="InH-NB-1bn" firstAttribute="leading" secondItem="3TE-0f-D5h" secondAttribute="leadingMargin" constant="-7" id="wTN-mk-osC"/>
+                    <constraint firstItem="InH-NB-1bn" firstAttribute="top" secondItem="3TE-0f-D5h" secondAttribute="topMargin" id="22G-Kh-JoT"/>
+                    <constraint firstItem="tnu-AP-prC" firstAttribute="top" secondItem="Df4-xC-haO" secondAttribute="bottom" constant="3" id="JJe-0m-eV4"/>
+                    <constraint firstItem="tnu-AP-prC" firstAttribute="leading" secondItem="Df4-xC-haO" secondAttribute="leading" id="Q0H-jw-suS"/>
+                    <constraint firstItem="InH-NB-1bn" firstAttribute="top" secondItem="Df4-xC-haO" secondAttribute="top" id="aeT-WQ-7h0"/>
+                    <constraint firstItem="InH-NB-1bn" firstAttribute="leading" secondItem="3TE-0f-D5h" secondAttribute="leadingMargin" constant="-7" id="b40-bj-SbW"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="tnu-AP-prC" secondAttribute="bottom" constant="4" id="b4C-Gv-PYL"/>
+                    <constraint firstItem="Df4-xC-haO" firstAttribute="leading" secondItem="InH-NB-1bn" secondAttribute="trailing" constant="8" symbolic="YES" id="fdv-4q-vry"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="InH-NB-1bn" secondAttribute="bottom" constant="28" id="nEs-Lh-1oS"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="nEs-Lh-1oS"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="avatarImg" destination="InH-NB-1bn" id="jsW-NO-VBi"/>

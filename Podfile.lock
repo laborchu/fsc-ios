@@ -38,6 +38,7 @@ PODS:
   - UIActivityIndicator-for-SDWebImage (1.0.5):
     - SDWebImage (~> 3.2)
   - UIAlertView+Blocks (0.9)
+  - UITableView+FDTemplateLayoutCell (1.3)
   - XXNibBridge (2.1)
   - ZBarSDK (1.3.1)
 
@@ -57,6 +58,7 @@ DEPENDENCIES:
   - UIActionSheet+Blocks (~> 0.8.1)
   - UIActivityIndicator-for-SDWebImage (~> 1.0.5)
   - UIAlertView+Blocks (~> 0.7)
+  - UITableView+FDTemplateLayoutCell (= 1.3)
   - XXNibBridge (~> 2.1)
   - ZBarSDK (~> 1.3.1)
 
@@ -77,6 +79,7 @@ SPEC CHECKSUMS:
   UIActionSheet+Blocks: 7fdab45fc8f15ac2dc1cd65af1470746600b5f46
   UIActivityIndicator-for-SDWebImage: fdff5bee9b4c362922c51f032490634a09838f0f
   UIAlertView+Blocks: a46c99c5144f6c5dbc7d62fd2a0678daceec89a3
+  UITableView+FDTemplateLayoutCell: d5be6056b5060313f5955a2590ecd33142ad713d
   XXNibBridge: 04ce6b4f8a2e33857396f1c369581436c390cb7d
   ZBarSDK: 4c1b5daeb7d6cc67dc9355e690af0230a661f6ec
 

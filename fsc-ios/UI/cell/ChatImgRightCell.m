@@ -1,26 +1,25 @@
 //
-//  ChatImgLeftCell.m
+//  ChatImgRightCell.m
 //  fsc-ios
 //
-//  Created by laborchu on 15/9/15.
+//  Created by laborchu on 15/9/17.
 //  Copyright (c) 2015年 laborc. All rights reserved.
 //
 
-#import "ChatImgLeftCell.h"
+#import "ChatImgRightCell.h"
 
-
-@interface ChatImgLeftCell ()
+@interface ChatImgRightCell ()
 @property(weak, nonatomic) IBOutlet UIImageView *avatarImg;
 @property(weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property(weak, nonatomic) IBOutlet UIImageView *msgImg;
 @end
 
-@implementation ChatImgLeftCell{
+@implementation ChatImgRightCell{
     UIImage *_mask;
 }
 
 - (void)awakeFromNib {
-    _mask = [ [UIImage imageNamed:@"chat_left_mask"] resizableImageWithCapInsets:UIEdgeInsetsMake(30, 10, 10, 10)];
+    _mask = [ [UIImage imageNamed:@"chat_right_mask"] resizableImageWithCapInsets:UIEdgeInsetsMake(30, 10, 10, 15)];
     _mask = [super dealWithImage:_mask];
 }
 
@@ -38,7 +37,6 @@
     UIImage *maskedImage = [super maskImage:image withMask:_mask];
     [self.msgImg setImage:maskedImage];
 }
-
 
 
 @end
