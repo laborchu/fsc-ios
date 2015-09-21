@@ -7,44 +7,31 @@
 #import "ChatCell.h"
 #import "FscChatRecorder.h"
 #import "FscConstants.h"
-#import "ChatTipCell.h"
+#import "FSCSession.h"
 #import "IosUtils.h"
 #import "FscAppDelegate.h"
 #import "FSCUser.h"
 #import "UITableView+FDTemplateLayoutCell.h"
+#import "AChatHandler.h"
+#import "UserChatHandler.h"
+#import "GroupChatHandler.h"
+#import "ClassChatHandler.h"
+#import "TrgChatHandler.h"
+#import "PublicChatHandler.h"
 
 @interface FscChatCtrl () <UITableViewDataSource, UITableViewDelegate>
 @property(weak, nonatomic) IBOutlet UITableView *chatTableView;
-
 @end
 
 @implementation FscChatCtrl {
     NSMutableArray *chatRecorderArray;
     FSCUser *_fscUser;
+    AChatHandler *_chatHandler;
 }
 
 - (id)initWithCoder:(NSCoder *)decoder {
     self = [super initWithCoder:decoder];
     if (self) {
-        chatRecorderArray = [NSMutableArray array];
-        FscChatRecorder *recorder1 = [[FscChatRecorder alloc] init];
-        recorder1.type = @(RECORDER_TYPE_MSG);
-        recorder1.message = @"自从iPhone6和6plus出了之";
-        recorder1.createdBy = @(178);
-        [chatRecorderArray addObject:recorder1];
-
-        FscChatRecorder *recorder2 = [[FscChatRecorder alloc] init];
-        recorder2.type = @(RECORDER_TYPE_IMG);
-        recorder2.message = @"自从iPhone6和6plus出了之后，可以说iPhone进入到了";
-        recorder2.createdBy = @(178);
-        [chatRecorderArray addObject:recorder2];
-
-        FscChatRecorder *recorder3 = [[FscChatRecorder alloc] init];
-        recorder3.type = @(RECORDER_TYPE_IMG);
-        recorder3.message = @"自从iPhone6和6plus出了之后，可以说iPhone进入到了大屏时代。在小屏的时代，常可以说iPhone进入到了大屏时代。在小屏的时代，常可以说iPhone进入到了大屏时代。在小屏的时代，常可以说iPhone进入到了大屏时代。在小屏的时代，常可以说iPhone进入到了大屏时代。在小屏的时代，常可以说iPhone进入到了大屏时代。在小屏的时代，常";
-        recorder3.createdBy = @(179);
-        [chatRecorderArray addObject:recorder3];
-
         FscAppDelegate *fscAppDelegate = [IosUtils getApp];
         _fscUser = fscAppDelegate.fscUser;
     }
@@ -56,12 +43,15 @@ static NSString *chatTextLeftCell = @"ChatTextLeftCell";
 static NSString *chatTextRightCell = @"ChatTextRightCell";
 static NSString *chatImgLeftCell = @"ChatImgLeftCell";
 static NSString *chatImgRightCell = @"ChatImgRightCell";
+static NSString *chatVoiceLeftCell = @"ChatVoiceLeftCell";
+static NSString *chatVoiceRightCell = @"ChatVoiceRightCell";
 - (void)viewDidLayoutSubviews {
     self.chatTableView.delegate = self;
     self.chatTableView.dataSource = self;
     self.chatTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.chatTableView.allowsSelection = NO;
-    NSArray *cellArray = @[chatTipCell,chatTextLeftCell,chatTextRightCell,chatImgLeftCell,chatImgRightCell];
+    NSArray *cellArray = @[chatTipCell,chatTextLeftCell,chatTextRightCell,chatImgLeftCell,
+            chatImgRightCell,chatVoiceLeftCell,chatVoiceRightCell];
     for (NSString *nibName in cellArray) {
         [self.chatTableView registerNib:[UINib nibWithNibName:nibName bundle:nil]
                  forCellReuseIdentifier:nibName];
@@ -70,6 +60,25 @@ static NSString *chatImgRightCell = @"ChatImgRightCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    if([self.fscSession.type isEqualToNumber:@(SESSION_TYPE_USER_CHAT)]){
+        _chatHandler = [[UserChatHandler alloc] init];
+    }else if([self.fscSession.type isEqualToNumber:@(SESSION_TYPE_GROUP_CHAT)]){
+        _chatHandler = [[GroupChatHandler alloc] init];
+    }else if([self.fscSession.type isEqualToNumber:@(SESSION_TYPE_CLASS_CHAT)]){
+        _chatHandler = [[ClassChatHandler alloc] init];
+    }else if([self.fscSession.type isEqualToNumber:@(SESSION_TYPE_TRG_CHAT)]){
+        _chatHandler = [[TrgChatHandler alloc] init];
+    }else if([self.fscSession.type isEqualToNumber:@(SESSION_TYPE_PUBLIC_CHAT)]){
+        _chatHandler = [[PublicChatHandler alloc] init];
+    }
+    _chatHandler.fscSession = self.fscSession;
+    chatRecorderArray = [NSMutableArray array];
+    NSArray *recorders = [_chatHandler getRecorderList:nil];
+    for (id recorder in recorders) {
+        FscChatRecorder *chatRecorder = [_chatHandler buildChatRecorder:recorder];
+        [chatRecorderArray addObject:chatRecorder];
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -96,9 +105,6 @@ static NSString *chatImgRightCell = @"ChatImgRightCell";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     FscChatRecorder *recorder = chatRecorderArray[indexPath.row];
-//    return [tableView fd_heightForCellWithIdentifier:[self getChatCellIdentifier:recorder] cacheByIndexPath:indexPath configuration:^(ChatCell *cell) {
-//        [cell setRecorder:recorder];
-//    }];
     return [tableView fd_heightForCellWithIdentifier:[self getChatCellIdentifier:recorder] configuration:^(ChatCell *cell) {
         [cell setRecorder:recorder];
     }];
@@ -134,7 +140,11 @@ static NSString *chatImgRightCell = @"ChatImgRightCell";
             }
             //语音
         case RECORDER_TYPE_VOICE:
-            break;
+            if([_fscUser.id intValue] == [recorder.createdBy intValue]){
+                return chatVoiceRightCell;
+            }else{
+                return chatVoiceLeftCell;
+            }
             //时间
         case RECORDER_TYPE_TIME:
             break;

@@ -5,6 +5,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class FSCSession;
+
 
 @interface FscChatCtrl : UIViewController
+@property (nonatomic, retain) FSCSession *fscSession;
 @end

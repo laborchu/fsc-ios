@@ -129,6 +129,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     FSCSession *session = _sessionSource[indexPath.row];
     FscChatCtrl *fscChatCtrl = [self.storyboard instantiateViewControllerWithIdentifier:@"FscChatCtrl"];
+    fscChatCtrl.fscSession = session;
     [self.navigationController pushViewController:fscChatCtrl animated:YES];
 
 }
