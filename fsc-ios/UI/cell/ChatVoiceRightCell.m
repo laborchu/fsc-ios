@@ -7,17 +7,25 @@
 //
 
 #import "ChatVoiceRightCell.h"
+#import "ChatCell+Right.h"
+
+@interface ChatVoiceRightCell ()
+
+@property(weak, nonatomic) IBOutlet UIImageView *avatarImg;
+
+@end
 
 @implementation ChatVoiceRightCell
 
 - (void)awakeFromNib {
-    // Initialization code
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
+}
 
-    // Configure the view for the selected state
+- (void)setRecorder:(FscChatRecorder *)recorder {
+    [ChatCell setRecorder:recorder avatar:self.avatarImg];
 }
 
 @end

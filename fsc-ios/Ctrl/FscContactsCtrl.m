@@ -38,8 +38,7 @@
     self = [super initWithCoder:decoder];
     if (self) {
         _otherGroupSource = [[NSMutableArray alloc] initWithCapacity:3];
-        FscAppDelegate *fscAppDelegate = [IosUtils getApp];
-        FSCUser *fscUser = fscAppDelegate.fscUser;
+        FSCUser *fscUser = [IosUtils getFscUser];
         if ([fscUser.userType isEqualToNumber:@(USER_TEACHER)]) {
             [_otherGroupSource addObject:@{@"name" : @"公众服务", @"icon" : @"contact_service"}];
             [_otherGroupSource addObject:@{@"name" : @"教师组", @"icon" : @"contact_teacher"}];

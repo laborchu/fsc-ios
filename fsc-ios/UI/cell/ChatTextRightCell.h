@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ChatCell.h"
+#import "ChatCell.h"
 
 @interface ChatTextRightCell : ChatCell
 

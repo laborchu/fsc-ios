@@ -1,16 +1,27 @@
 //
-// Created by laborchu on 15/9/17.
+// Created by laborchu on 15/9/23.
 // Copyright (c) 2015 laborc. All rights reserved.
 //
 
-#import "ChatImgCell.h"
+#import <UIActivityIndicator-for-SDWebImage/UIImageView+UIActivityIndicatorForSDWebImage.h>
+#import "ChatCell+Img.h"
 
 
-@implementation ChatImgCell {
+@implementation ChatCell (Img)
 
++(void) setImg:(NSURL *)imgUrl mask:(UIImage *)mask imgView:(UIImageView *)imgView {
+    UIImageView *imageView = [[UIImageView alloc] init];
+    [imageView setImageWithURL:imgUrl placeholderImage:[UIImage imageNamed:@"chat_default_image"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
+        if (!error) {
+            UIImage *img = [ChatCell dealWithImage:image];
+            UIImage *resizeMask = [ChatCell scaleToSize:mask size:img.size];
+            UIImage *maskedImage = [ChatCell maskImage:img withMask:resizeMask];
+            [imgView setImage:maskedImage];
+        }
+    } usingActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
 }
 
-- (UIImage*) maskImage:(UIImage *)image withMask:(UIImage *)maskImage {
++ (UIImage*) maskImage:(UIImage *)image withMask:(UIImage *)maskImage {
 
     CGImageRef maskRef = maskImage.CGImage;
 
@@ -32,13 +43,13 @@
 }
 
 //处理图片
-- (UIImage *)dealWithImage:(UIImage *)image
++ (UIImage *)dealWithImage:(UIImage *)image
 {
-    return [self scaleToSize:image size:CGSizeMake(image.size.width * 150 / image.size.height,150 )];
+    return [self scaleToSize:image size:CGSizeMake(image.size.width * 100 / image.size.height,100 )];
 }
 
 //压缩图片
-- (UIImage *)scaleToSize:(UIImage *)img size:(CGSize)size{
++ (UIImage *)scaleToSize:(UIImage *)img size:(CGSize)size{
     // 设置成为当前正在使用的context
     UIGraphicsBeginImageContext(size);
     // 绘制改变大小的图片

@@ -25,4 +25,8 @@
     return @"";
 }
 
++(NSURL *)getResImgUrl:(NSString *)imgPath{
+    return [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", RES_SERVER, imgPath]];
+}
+
 @end

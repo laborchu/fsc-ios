@@ -21,6 +21,7 @@
 		1DDC507A1BAADF2500F61BA0 /* ChatImgRightCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDC50781BAADF2500F61BA0 /* ChatImgRightCell.xib */; };
 		35BDDC147454FB045910B76F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E0C2F16B0D3DDCDC44C7A07 /* libPods.a */; };
 		BDD0801E23A62D43000AA023 /* FscScore.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08EA34B80A134AE85DB0F /* FscScore.pb.m */; };
+		BDD080240BFF0B19D65A4149 /* ChatCell+Right.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08032ABBCADB8542E2ADF /* ChatCell+Right.m */; };
 		BDD08028A63F9FD4CFE234E5 /* LcFscChatTrgUserListCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD083E0AEF1B271C47A481F /* LcFscChatTrgUserListCmd.m */; };
 		BDD0806710596A57BC8F0736 /* User.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08D43EE871701F190E893 /* User.pb.m */; };
 		BDD0806BEE44166A6CC55E92 /* FSCUserSession.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0823A4BA9732E8B825F2F /* FSCUserSession.m */; };
@@ -62,6 +63,7 @@
 		BDD08511C5A4767364C20E2C /* LcFscClassListCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0899DA313D49FC9861858 /* LcFscClassListCmd.m */; };
 		BDD08559504D9B243D32D39B /* FSCPublicUser.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08E646AA3340F05F923DB /* FSCPublicUser.m */; };
 		BDD0856D0672AAB00B7C99A5 /* LcFscUserGetCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD082C2250C3EC8C44C23F4 /* LcFscUserGetCmd.m */; };
+		BDD085712A11A7A943CA8194 /* ChatCell+Img.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0895D8EB8B4FA646D2C2E /* ChatCell+Img.m */; };
 		BDD085770245FAF6CEBF4927 /* FSCUserRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD088C0AE9006A8F87ACB8D /* FSCUserRecorder.m */; };
 		BDD0858344E456072BE46801 /* LcFscChatGroupRecorderListCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08BBEF5E610CF53D0ED32 /* LcFscChatGroupRecorderListCmd.m */; };
 		BDD0859A41282A90C5CDE505 /* AChatHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08C10CA28018DE832CAFC /* AChatHandler.m */; };
@@ -118,7 +120,6 @@
 		BDD08B092AA0BEF188E9DDE8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD088CF1631B5363C603182 /* AVFoundation.framework */; };
 		BDD08B0B0A523CE195333C08 /* FSCTrgUser.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08AC7B2F1E190F3564D41 /* FSCTrgUser.m */; };
 		BDD08B2F905824817487B3C9 /* LcFscClassUserListCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD080C907134A3971EA4C65 /* LcFscClassUserListCmd.m */; };
-		BDD08B65BCF255CC27127993 /* ChatImgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD084763CE841FE6B622862 /* ChatImgCell.m */; };
 		BDD08B880FC19E4FBCC9FF64 /* RsSessionPostCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08812DFEB9E9B3DA6EEB4 /* RsSessionPostCmd.m */; };
 		BDD08B88555F0D5BEB30FC74 /* FscDiskFile.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08C109BCE4E1D1AD93BBC /* FscDiskFile.pb.m */; };
 		BDD08B98776A0468ED7E29F0 /* LcFscChatPublicRecorderListCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD081234B23A18BCBB134BB /* LcFscChatPublicRecorderListCmd.m */; };
@@ -196,6 +197,7 @@
 		8ED53C2CCB98B6FBE21FF1E8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BDD0802E70945E64E80A5D94 /* FSCPublicRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCPublicRecorder.m; sourceTree = "<group>"; };
 		BDD080300C86BB069FBA9471 /* RsFscLinkmanListCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RsFscLinkmanListCmd.h; sourceTree = "<group>"; };
+		BDD08032ABBCADB8542E2ADF /* ChatCell+Right.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ChatCell+Right.m"; sourceTree = "<group>"; };
 		BDD080444C4CADCB0AF72003 /* GroupChatHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupChatHandler.m; sourceTree = "<group>"; };
 		BDD080674D1455B49B0968F4 /* FscAnswer.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscAnswer.pb.m; sourceTree = "<group>"; };
 		BDD0806BA50648A47022224B /* FSCSnsMsg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCSnsMsg.m; sourceTree = "<group>"; };
@@ -269,7 +271,6 @@
 		BDD0843E240435CBAD6D5D7A /* LcFscClassStudentListCmd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LcFscClassStudentListCmd.m; sourceTree = "<group>"; };
 		BDD0844F65FA9CB6EB961155 /* FSCTrgRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCTrgRecorder.m; sourceTree = "<group>"; };
 		BDD08466085EC9E8FE93277D /* UserChatHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserChatHandler.h; sourceTree = "<group>"; };
-		BDD084763CE841FE6B622862 /* ChatImgCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatImgCell.m; sourceTree = "<group>"; };
 		BDD0847A2CA16B25AEED89AE /* FscSocketClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscSocketClient.m; sourceTree = "<group>"; };
 		BDD0848C1E250C9549579801 /* RsFscLinkmanListCmd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RsFscLinkmanListCmd.m; sourceTree = "<group>"; };
 		BDD084940428BA20D28434FA /* FSCGroupSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCGroupSession.m; sourceTree = "<group>"; };
@@ -279,6 +280,7 @@
 		BDD084B2102CDA4903ACE892 /* LcFscChatClassRecorderListCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LcFscChatClassRecorderListCmd.h; sourceTree = "<group>"; };
 		BDD084B87CFFD23223DEB103 /* FscLinkman.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscLinkman.pb.h; sourceTree = "<group>"; };
 		BDD084BEE4D6D522700510D9 /* FSCTrgRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCTrgRecorder.h; sourceTree = "<group>"; };
+		BDD084CB447F69A17C6212C6 /* ChatCell+Img.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ChatCell+Img.h"; sourceTree = "<group>"; };
 		BDD084CED772E25CF19DA200 /* FscLinkman.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscLinkman.pb.m; sourceTree = "<group>"; };
 		BDD084E569C2B5670E653E58 /* FSCActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCActivity.m; sourceTree = "<group>"; };
 		BDD084EB7764DAF524E085DA /* PbTransfer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PbTransfer.h; sourceTree = "<group>"; };
@@ -296,7 +298,6 @@
 		BDD085A1ABF3D102FB704430 /* ChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatCell.m; sourceTree = "<group>"; };
 		BDD085AB3BAD2C8A0943B76C /* LcFscClassListCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LcFscClassListCmd.h; sourceTree = "<group>"; };
 		BDD085B8E94B95BFA2159345 /* FscTeachPlan.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscTeachPlan.pb.m; sourceTree = "<group>"; };
-		BDD085C0EFEBF07688EC9F90 /* ChatImgCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatImgCell.h; sourceTree = "<group>"; };
 		BDD085C89CAA154C4F27C286 /* ChatTipCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatTipCell.m; sourceTree = "<group>"; };
 		BDD085F1A793817C24EA61BD /* FSCGroupRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCGroupRecorder.h; sourceTree = "<group>"; };
 		BDD085F99754D6C0B50DE0D3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -356,6 +357,7 @@
 		BDD08945C20CD366D8FD29D3 /* LcFscChatClassRecorderListCmd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LcFscChatClassRecorderListCmd.m; sourceTree = "<group>"; };
 		BDD089567F5E35AE665E6445 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BDD08957A6C8E1CA377492C8 /* FscTestMsg.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscTestMsg.pb.h; sourceTree = "<group>"; };
+		BDD0895D8EB8B4FA646D2C2E /* ChatCell+Img.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ChatCell+Img.m"; sourceTree = "<group>"; };
 		BDD08961B51EDE35865C6DAE /* FSCUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCUser.h; sourceTree = "<group>"; };
 		BDD0898F9E82413FD2249A04 /* PbTransfer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PbTransfer.m; sourceTree = "<group>"; };
 		BDD0899DA313D49FC9861858 /* LcFscClassListCmd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LcFscClassListCmd.m; sourceTree = "<group>"; };
@@ -448,6 +450,7 @@
 		BDD08E0F721BF4E93A7BC930 /* FSCTeachPlan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCTeachPlan.m; sourceTree = "<group>"; };
 		BDD08E5A373575401D557B09 /* FSCGroupRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCGroupRecorder.m; sourceTree = "<group>"; };
 		BDD08E646AA3340F05F923DB /* FSCPublicUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCPublicUser.m; sourceTree = "<group>"; };
+		BDD08E6D3C2E84F23690A424 /* ChatCell+Right.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ChatCell+Right.h"; sourceTree = "<group>"; };
 		BDD08E8E3EB4946F6343452C /* FSCClassChatUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCClassChatUser.h; sourceTree = "<group>"; };
 		BDD08E9BE8BD2A36C79B74C8 /* FSCActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCActivity.h; sourceTree = "<group>"; };
 		BDD08EA34B80A134AE85DB0F /* FscScore.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscScore.pb.m; sourceTree = "<group>"; };
@@ -718,6 +721,17 @@
 			path = Cat;
 			sourceTree = "<group>";
 		};
+		BDD0875D9E0F12CDDB9860EA /* cat */ = {
+			isa = PBXGroup;
+			children = (
+				BDD08032ABBCADB8542E2ADF /* ChatCell+Right.m */,
+				BDD08E6D3C2E84F23690A424 /* ChatCell+Right.h */,
+				BDD0895D8EB8B4FA646D2C2E /* ChatCell+Img.m */,
+				BDD084CB447F69A17C6212C6 /* ChatCell+Img.h */,
+			);
+			path = cat;
+			sourceTree = "<group>";
+		};
 		BDD0887FA7DB1ABDB11CF918 /* VO */ = {
 			isa = PBXGroup;
 			children = (
@@ -969,14 +983,13 @@
 				1DDC50761BAADF2500F61BA0 /* ChatImgRightCell.h */,
 				1DDC50771BAADF2500F61BA0 /* ChatImgRightCell.m */,
 				1DDC50781BAADF2500F61BA0 /* ChatImgRightCell.xib */,
-				BDD084763CE841FE6B622862 /* ChatImgCell.m */,
-				BDD085C0EFEBF07688EC9F90 /* ChatImgCell.h */,
 				1DB3D6051BB01F4300886405 /* ChatVoiceLeftCell.h */,
 				1DB3D6061BB01F4300886405 /* ChatVoiceLeftCell.m */,
 				1DB3D6071BB01F4300886405 /* ChatVoiceLeftCell.xib */,
 				1DB3D60A1BB023EE00886405 /* ChatVoiceRightCell.h */,
 				1DB3D60B1BB023EE00886405 /* ChatVoiceRightCell.m */,
 				1DB3D60C1BB023EE00886405 /* ChatVoiceRightCell.xib */,
+				BDD0875D9E0F12CDDB9860EA /* cat */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -1263,13 +1276,14 @@
 				BDD0838C926A0DFD8E84A63D /* FscChatRecorder.m in Sources */,
 				BDD086FB38C7A6804F6A903C /* TipLabel.m in Sources */,
 				BDD085FE430B29C8B20BD9B1 /* FSCChatLabel.m in Sources */,
-				BDD08B65BCF255CC27127993 /* ChatImgCell.m in Sources */,
 				BDD0859A41282A90C5CDE505 /* AChatHandler.m in Sources */,
 				BDD08A135A647845B47C477A /* UserChatHandler.m in Sources */,
 				BDD08E19EDCB0DB65AADD054 /* GroupChatHandler.m in Sources */,
 				BDD0822205358FBD7B608A44 /* ClassChatHandler.m in Sources */,
 				BDD088BA0733C3F525291B52 /* TrgChatHandler.m in Sources */,
 				BDD0865044F67CF9F48BCF9D /* PublicChatHandler.m in Sources */,
+				BDD080240BFF0B19D65A4149 /* ChatCell+Right.m in Sources */,
+				BDD085712A11A7A943CA8194 /* ChatCell+Img.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

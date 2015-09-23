@@ -32,8 +32,7 @@
 - (id)initWithCoder:(NSCoder *)decoder {
     self = [super initWithCoder:decoder];
     if (self) {
-        FscAppDelegate *fscAppDelegate = [IosUtils getApp];
-        _fscUser = fscAppDelegate.fscUser;
+        _fscUser = [IosUtils getFscUser];
     }
     return self;
 }
@@ -45,13 +44,14 @@ static NSString *chatImgLeftCell = @"ChatImgLeftCell";
 static NSString *chatImgRightCell = @"ChatImgRightCell";
 static NSString *chatVoiceLeftCell = @"ChatVoiceLeftCell";
 static NSString *chatVoiceRightCell = @"ChatVoiceRightCell";
+
 - (void)viewDidLayoutSubviews {
     self.chatTableView.delegate = self;
     self.chatTableView.dataSource = self;
     self.chatTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.chatTableView.allowsSelection = NO;
-    NSArray *cellArray = @[chatTipCell,chatTextLeftCell,chatTextRightCell,chatImgLeftCell,
-            chatImgRightCell,chatVoiceLeftCell,chatVoiceRightCell];
+    NSArray *cellArray = @[chatTipCell, chatTextLeftCell, chatTextRightCell, chatImgLeftCell,
+            chatImgRightCell, chatVoiceLeftCell, chatVoiceRightCell];
     for (NSString *nibName in cellArray) {
         [self.chatTableView registerNib:[UINib nibWithNibName:nibName bundle:nil]
                  forCellReuseIdentifier:nibName];
@@ -61,15 +61,15 @@ static NSString *chatVoiceRightCell = @"ChatVoiceRightCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    if([self.fscSession.type isEqualToNumber:@(SESSION_TYPE_USER_CHAT)]){
+    if ([self.fscSession.type isEqualToNumber:@(SESSION_TYPE_USER_CHAT)]) {
         _chatHandler = [[UserChatHandler alloc] init];
-    }else if([self.fscSession.type isEqualToNumber:@(SESSION_TYPE_GROUP_CHAT)]){
+    } else if ([self.fscSession.type isEqualToNumber:@(SESSION_TYPE_GROUP_CHAT)]) {
         _chatHandler = [[GroupChatHandler alloc] init];
-    }else if([self.fscSession.type isEqualToNumber:@(SESSION_TYPE_CLASS_CHAT)]){
+    } else if ([self.fscSession.type isEqualToNumber:@(SESSION_TYPE_CLASS_CHAT)]) {
         _chatHandler = [[ClassChatHandler alloc] init];
-    }else if([self.fscSession.type isEqualToNumber:@(SESSION_TYPE_TRG_CHAT)]){
+    } else if ([self.fscSession.type isEqualToNumber:@(SESSION_TYPE_TRG_CHAT)]) {
         _chatHandler = [[TrgChatHandler alloc] init];
-    }else if([self.fscSession.type isEqualToNumber:@(SESSION_TYPE_PUBLIC_CHAT)]){
+    } else if ([self.fscSession.type isEqualToNumber:@(SESSION_TYPE_PUBLIC_CHAT)]) {
         _chatHandler = [[PublicChatHandler alloc] init];
     }
     _chatHandler.fscSession = self.fscSession;
@@ -83,7 +83,14 @@ static NSString *chatVoiceRightCell = @"ChatVoiceRightCell";
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
+    if (chatRecorderArray.count > 0) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t) (0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            NSIndexPath *ipath = [NSIndexPath indexPathForRow:chatRecorderArray.count - 1 inSection:0];
+            [self.chatTableView scrollToRowAtIndexPath:ipath atScrollPosition:UITableViewScrollPositionTop animated:NO];
+        });
+    }
 }
+
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:YES];
@@ -92,7 +99,6 @@ static NSString *chatVoiceRightCell = @"ChatVoiceRightCell";
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return chatRecorderArray.count;
 }
-
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -122,27 +128,27 @@ static NSString *chatVoiceRightCell = @"ChatVoiceRightCell";
     return cell;
 }
 
--(NSString *)getChatCellIdentifier:(FscChatRecorder *)recorder{
+- (NSString *)getChatCellIdentifier:(FscChatRecorder *)recorder {
     switch ([recorder.type intValue]) {
         //文字
         case RECORDER_TYPE_MSG:
-            if([_fscUser.id intValue] == [recorder.createdBy intValue]){
+            if ([_fscUser.id intValue] == [recorder.createdBy intValue]) {
                 return chatTextRightCell;
-            }else{
+            } else {
                 return chatTextLeftCell;
             }
             //图片
         case RECORDER_TYPE_IMG:
-            if([_fscUser.id intValue] == [recorder.createdBy intValue]){
+            if ([_fscUser.id intValue] == [recorder.createdBy intValue]) {
                 return chatImgRightCell;
-            }else{
+            } else {
                 return chatImgLeftCell;
             }
             //语音
         case RECORDER_TYPE_VOICE:
-            if([_fscUser.id intValue] == [recorder.createdBy intValue]){
+            if ([_fscUser.id intValue] == [recorder.createdBy intValue]) {
                 return chatVoiceRightCell;
-            }else{
+            } else {
                 return chatVoiceLeftCell;
             }
             //时间

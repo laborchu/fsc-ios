@@ -8,6 +8,7 @@
 
 @class PhoneInfoPb;
 @class FscAppDelegate;
+@class FSCUser;
 
 static PhoneInfoPb *deviceInfo  = nil;
 
@@ -16,6 +17,8 @@ static PhoneInfoPb *deviceInfo  = nil;
 +(PhoneInfoPb *) getDeviceInfo;
 
 + (FscAppDelegate *)getApp;
+
++ (FSCUser *)getFscUser;
 
 + (UITabBarController *)getMainTabCtrl;
 

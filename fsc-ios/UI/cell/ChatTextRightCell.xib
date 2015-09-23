@@ -15,11 +15,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WvQ-Ru-eac">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WvQ-Ru-eac">
                         <rect key="frame" x="268" y="8" width="40" height="40"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="40" id="RjB-DP-A9c"/>
-                            <constraint firstAttribute="width" constant="40" id="kJB-Hw-ZR8"/>
+                            <constraint firstAttribute="width" constant="40" id="YLs-uU-ep5"/>
+                            <constraint firstAttribute="height" constant="40" id="bLn-4m-h49"/>
                         </constraints>
                     </imageView>
                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ltl-GT-RJF">
@@ -37,41 +37,36 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="zCZ-04-ESo" firstAttribute="leading" secondItem="Ltl-GT-RJF" secondAttribute="leading" id="02V-1W-ing"/>
-                            <constraint firstAttribute="bottom" secondItem="zCZ-04-ESo" secondAttribute="bottom" id="2Y8-nO-rm8"/>
-                            <constraint firstItem="KLH-VU-cZI" firstAttribute="top" secondItem="Ltl-GT-RJF" secondAttribute="top" constant="5" id="F88-bu-EI6"/>
-                            <constraint firstItem="zCZ-04-ESo" firstAttribute="top" secondItem="Ltl-GT-RJF" secondAttribute="top" id="Q34-of-dfh"/>
-                            <constraint firstAttribute="trailing" secondItem="KLH-VU-cZI" secondAttribute="trailing" constant="15" id="SZL-2l-ycr"/>
-                            <constraint firstItem="KLH-VU-cZI" firstAttribute="leading" secondItem="Ltl-GT-RJF" secondAttribute="leading" constant="10" id="a6E-qD-fbs"/>
-                            <constraint firstAttribute="trailing" secondItem="zCZ-04-ESo" secondAttribute="trailing" id="nG2-hM-9zE"/>
-                            <constraint firstAttribute="bottom" secondItem="KLH-VU-cZI" secondAttribute="bottom" constant="5" id="qOU-wm-wZx"/>
+                            <constraint firstItem="KLH-VU-cZI" firstAttribute="top" secondItem="Ltl-GT-RJF" secondAttribute="top" constant="5" id="7cw-MO-qQa"/>
+                            <constraint firstAttribute="bottom" secondItem="KLH-VU-cZI" secondAttribute="bottom" constant="5" id="AeH-AN-jGz"/>
+                            <constraint firstAttribute="trailing" secondItem="KLH-VU-cZI" secondAttribute="trailing" constant="15" id="Dhg-OJ-8TK"/>
+                            <constraint firstItem="zCZ-04-ESo" firstAttribute="leading" secondItem="Ltl-GT-RJF" secondAttribute="leading" id="aLv-ao-iLN"/>
+                            <constraint firstAttribute="bottom" secondItem="zCZ-04-ESo" secondAttribute="bottom" id="aav-6S-Ed8"/>
+                            <constraint firstAttribute="trailing" secondItem="zCZ-04-ESo" secondAttribute="trailing" id="bll-CW-41Z"/>
+                            <constraint firstItem="zCZ-04-ESo" firstAttribute="top" secondItem="Ltl-GT-RJF" secondAttribute="top" id="d9E-UF-CE8"/>
+                            <constraint firstItem="KLH-VU-cZI" firstAttribute="leading" secondItem="Ltl-GT-RJF" secondAttribute="leading" constant="10" id="fHD-aw-eoJ"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4oo-eh-mhp">
-                        <rect key="frame" x="214" y="8" width="42" height="21"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="21" id="NGj-Wu-RIk"/>
-                            <constraint firstAttribute="width" constant="42" id="TUG-hq-1HV"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="WvQ-Ru-eac" firstAttribute="leading" secondItem="Ltl-GT-RJF" secondAttribute="trailing" constant="9" id="Ywx-iC-sJK"/>
-                    <constraint firstItem="WvQ-Ru-eac" firstAttribute="leading" secondItem="4oo-eh-mhp" secondAttribute="trailing" constant="12" id="Z8L-mI-OI3"/>
-                    <constraint firstItem="WvQ-Ru-eac" firstAttribute="top" secondItem="4oo-eh-mhp" secondAttribute="top" id="aXd-U1-DeM"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="Ltl-GT-RJF" secondAttribute="bottom" id="oUy-WG-eP4"/>
-                    <constraint firstItem="WvQ-Ru-eac" firstAttribute="top" secondItem="eb3-px-cWc" secondAttribute="topMargin" id="poy-Ke-Zn3"/>
-                    <constraint firstItem="Ltl-GT-RJF" firstAttribute="top" secondItem="4oo-eh-mhp" secondAttribute="bottom" constant="4" id="ufT-9d-3YF"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="WvQ-Ru-eac" secondAttribute="trailing" constant="4" id="xyj-d2-J8x"/>
+                    <constraint firstItem="Ltl-GT-RJF" firstAttribute="top" secondItem="eb3-px-cWc" secondAttribute="topMargin" constant="25" id="4eP-Bh-BXd"/>
+                    <constraint firstItem="WvQ-Ru-eac" firstAttribute="top" secondItem="eb3-px-cWc" secondAttribute="topMargin" id="Ek8-qa-dYv"/>
+                    <constraint firstItem="Ltl-GT-RJF" firstAttribute="leading" secondItem="eb3-px-cWc" secondAttribute="leading" constant="193" id="Pet-E7-tJv"/>
+                    <constraint firstItem="WvQ-Ru-eac" firstAttribute="leading" secondItem="Ltl-GT-RJF" secondAttribute="trailing" constant="5" id="g54-KI-CAn"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="WvQ-Ru-eac" secondAttribute="bottom" constant="28" id="mEi-af-HMh"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Ltl-GT-RJF" secondAttribute="bottom" constant="3" id="nvS-nN-gJ7"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="WvQ-Ru-eac" secondAttribute="trailing" constant="-3" id="qOA-Y7-ggb"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="Pet-E7-tJv"/>
+                        <exclude reference="mEi-af-HMh"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="avatarImg" destination="WvQ-Ru-eac" id="SoU-j6-9Vq"/>
                 <outlet property="msgLabel" destination="KLH-VU-cZI" id="PK8-YW-7vY"/>
-                <outlet property="nameLabel" destination="4oo-eh-mhp" id="FRN-I6-Bzp"/>
             </connections>
             <point key="canvasLocation" x="473" y="368.5"/>
         </tableViewCell>

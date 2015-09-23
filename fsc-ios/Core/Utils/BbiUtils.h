@@ -10,4 +10,6 @@
 @interface BbiUtils : NSObject
 
 + (NSString *)getPublicIcon:(NSString *)code;
+
++ (NSURL *)getResImgUrl:(NSString *)imgPath;
 @end

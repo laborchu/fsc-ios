@@ -6,6 +6,7 @@
 #import "IosUtils.h"
 #import "PhoneInfo.pb.h"
 #import "FscAppDelegate.h"
+#import "FSCUser.h"
 
 @implementation IosUtils {
 
@@ -28,6 +29,10 @@
 +(FscAppDelegate *)getApp{
     FscAppDelegate *delegate = [[UIApplication sharedApplication] delegate];
     return delegate;
+}
+
++(FSCUser *)getFscUser{
+    return [IosUtils getApp].fscUser;
 }
 
 +(UITabBarController *)getMainTabCtrl{

@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ChatImgCell.h"
+#import "ChatCell.h"
 
-@interface ChatImgRightCell : ChatImgCell
+@interface ChatImgRightCell : ChatCell
 
 @end

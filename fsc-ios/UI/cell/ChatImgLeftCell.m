@@ -6,7 +6,11 @@
 //  Copyright (c) 2015年 laborc. All rights reserved.
 //
 
+#import <UIActivityIndicator-for-SDWebImage/UIImageView+UIActivityIndicatorForSDWebImage.h>
 #import "ChatImgLeftCell.h"
+#import "FscChatRecorder.h"
+#import "ChatCell+Img.h"
+#import "BbiUtils.h"
 
 
 @interface ChatImgLeftCell ()
@@ -20,23 +24,19 @@
 }
 
 - (void)awakeFromNib {
-    _mask = [ [UIImage imageNamed:@"chat_left_mask"] resizableImageWithCapInsets:UIEdgeInsetsMake(30, 10, 10, 10)];
-    _mask = [super dealWithImage:_mask];
+    _mask = [ [UIImage imageNamed:@"chat_left_mask"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 5, 5, 5)];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state chat_left_bubble
 }
 
 - (void)setRecorder:(FscChatRecorder *)recorder {
     [self.avatarImg setImage:[UIImage imageNamed:@"default_avatar"]];
     self.nameLabel.text = @"李四";
 
-    UIImage *image = [super dealWithImage:[UIImage imageNamed:@"msg_tmp@2x.jpg"]];
-    UIImage *maskedImage = [super maskImage:image withMask:_mask];
-    [self.msgImg setImage:maskedImage];
+    NSURL *address = [BbiUtils getResImgUrl:recorder.message];
+    [ChatCell setImg:address mask:_mask imgView:_msgImg];
 }
 
 
