@@ -25,6 +25,7 @@
 
 - (void)awakeFromNib {
     _mask = [ [UIImage imageNamed:@"chat_left_mask"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 5, 5, 5)];
+    NSLog(@"");
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
