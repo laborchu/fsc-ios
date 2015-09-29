@@ -16,10 +16,20 @@
 #import "LcFscPublicUserListCmd.h"
 #import "FSCPublicMenu.h"
 #import "LcFscPublicMenuListCmd.h"
+#import "FSCClass.h"
+#import "FSCClassUser.h"
+#import "LcFscClassListCmd.h"
+#import "LcFscClassUserListCmd.h"
+#import "FSCTrgSession.h"
+#import "LcFscChatTrgUserListCmd.h"
+#import "FSCTrgUser.h"
 
 static NSMutableDictionary *_linkmanDic;
 static NSMutableDictionary *_publicUserDic;
 static NSMutableDictionary *_publicMenuDic;
+static NSMutableDictionary *_classDic;
+static NSMutableDictionary *_classUserDic;
+static NSMutableDictionary *_trgUserDic;
 
 @implementation LcUtils {
 
@@ -92,6 +102,76 @@ static NSMutableDictionary *_publicMenuDic;
         }
     }
     return publicMenu;
+}
+
+/**
+ * 获取班级
+ */
++(FSCClass *)getFscClass:(NSNumber *)classId{
+    if (!_classDic) {
+        _classDic = [NSMutableDictionary dictionary];
+    }
+
+    FSCClass *fscClass;
+    if (_classDic[classId]) {
+        fscClass = _classDic[classId];
+    } else {
+        ALcCmd *cmd = [[[LcFscClassListCmd alloc] init]
+                addPredicate:@"id==%lld" argumentArray:@[classId]];
+        [cmd setFetchLimit:1];
+        NSArray *fscClassList = [Scheduler exeLc:cmd];
+        if (fscClassList.count > 0) {
+            fscClass = fscClassList[0];
+            _classDic[classId] = fscClass;
+        }
+    }
+    return fscClass;
+}
+
+/**
+* 获取班级用户
+*/
++ (FSCClassUser *)getFscClassUser:(NSNumber *)userId fscClass:(FSCClass *)fscClass{
+    if (!_classUserDic) {
+        _classUserDic = [NSMutableDictionary dictionary];
+    }
+    FSCClassUser *fscClassUser;
+    if (_classUserDic[userId]) {
+        fscClassUser = _classUserDic[userId];
+    } else {
+        ALcCmd *cmd = [[[LcFscClassUserListCmd alloc] initWithFscClass:fscClass]
+                addPredicate:@"id==%lld" argumentArray:@[userId]];
+        [cmd setFetchLimit:1];
+        NSArray *fscClassUserList = [Scheduler exeLc:cmd];
+        if(fscClassUserList.count>0){
+            fscClassUser = fscClassUserList[0];
+            _classUserDic[userId] = fscClassUser;
+        }
+    }
+    return fscClassUser;
+}
+
+/**
+* 获取教研组用户
+*/
++ (FSCTrgUser *)getFscTrgUser:(NSNumber *)userId fscClass:(FSCTrgSession *)trgSession{
+    if (!_trgUserDic) {
+        _trgUserDic = [NSMutableDictionary dictionary];
+    }
+    FSCTrgUser *fscTrgUser;
+    if (_trgUserDic[userId]) {
+        fscTrgUser = _trgUserDic[userId];
+    } else {
+        ALcCmd *cmd = [[[LcFscChatTrgUserListCmd alloc] initWithFscTSession:trgSession]
+                addPredicate:@"userId==%lld" argumentArray:@[userId]];
+        [cmd setFetchLimit:1];
+        NSArray *userArray = [Scheduler exeLc:cmd];
+        if(userArray.count>0){
+            fscTrgUser = userArray[0];
+            _trgUserDic[userId] = fscTrgUser;
+        }
+    }
+    return fscTrgUser;
 }
 
 

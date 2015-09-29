@@ -6,7 +6,10 @@
 #import <UIKit/UIKit.h>
 
 @class FscChatRecorder;
+@class AChatHandler;
 
 @interface ChatCell : UITableViewCell
+@property(nonatomic, strong) AChatHandler *chatHandler;
+
 - (void)setRecorder:(FscChatRecorder *)recorder;
 @end

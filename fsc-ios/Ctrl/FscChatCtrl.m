@@ -44,14 +44,19 @@ static NSString *chatImgLeftCell = @"ChatImgLeftCell";
 static NSString *chatImgRightCell = @"ChatImgRightCell";
 static NSString *chatVoiceLeftCell = @"ChatVoiceLeftCell";
 static NSString *chatVoiceRightCell = @"ChatVoiceRightCell";
+static NSString *chatFileLeftCell = @"ChatFileLeftCell";
+static NSString *chatFileRightCell = @"ChatFileRightCell";
+static NSString *chatMapLeftCell = @"ChatMapLeftCell";
+static NSString *chatMapRightCell = @"ChatMapRightCell";
 
 - (void)viewDidLayoutSubviews {
     self.chatTableView.delegate = self;
     self.chatTableView.dataSource = self;
     self.chatTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.chatTableView.allowsSelection = NO;
-    NSArray *cellArray = @[chatTipCell, chatTextLeftCell, chatTextRightCell, chatImgLeftCell,
-            chatImgRightCell, chatVoiceLeftCell, chatVoiceRightCell];
+    NSArray *cellArray = @[chatTipCell, chatTextLeftCell, chatTextRightCell,
+            chatImgLeftCell, chatImgRightCell, chatVoiceLeftCell, chatVoiceRightCell,
+            chatFileLeftCell, chatFileRightCell, chatMapLeftCell, chatMapRightCell];
     for (NSString *nibName in cellArray) {
         [self.chatTableView registerNib:[UINib nibWithNibName:nibName bundle:nil]
                  forCellReuseIdentifier:nibName];
@@ -104,6 +109,7 @@ static NSString *chatVoiceRightCell = @"ChatVoiceRightCell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     FscChatRecorder *recorder = chatRecorderArray[indexPath.row];
     ChatCell *cell = [self getChatCell:tableView recorder:recorder];
+    cell.chatHandler = _chatHandler;
     [cell setRecorder:recorder];
     return cell;
 }
@@ -112,6 +118,7 @@ static NSString *chatVoiceRightCell = @"ChatVoiceRightCell";
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     FscChatRecorder *recorder = chatRecorderArray[indexPath.row];
     return [tableView fd_heightForCellWithIdentifier:[self getChatCellIdentifier:recorder] configuration:^(ChatCell *cell) {
+        cell.chatHandler = _chatHandler;
         [cell setRecorder:recorder];
     }];
 }
@@ -153,7 +160,7 @@ static NSString *chatVoiceRightCell = @"ChatVoiceRightCell";
             }
             //时间
         case RECORDER_TYPE_TIME:
-            break;
+            return chatTipCell;
             //提示
         case RECORDER_TYPE_TIP:
             return chatTipCell;
@@ -163,14 +170,20 @@ static NSString *chatVoiceRightCell = @"ChatVoiceRightCell";
             //图文消息(通知公告、活动投票)
         case RECORDER_TYPE_IMG_TXT:
             break;
-        case RECORDER_TYPE_P_MSG:
-            break;
             //网盘文件
         case RECORDER_TYPE_DISK_FILE:
-            break;
+            if ([_fscUser.id intValue] == [recorder.createdBy intValue]) {
+                return chatFileRightCell;
+            } else {
+                return chatFileLeftCell;
+            }
             //位置信息
         case RECORDER_TYPE_MAP:
-            break;
+            if ([_fscUser.id intValue] == [recorder.createdBy intValue]) {
+                return chatMapRightCell;
+            } else {
+                return chatMapLeftCell;
+            }
             //网页内容
         case RECORDER_TYPE_WEB_VIEW:
             break;

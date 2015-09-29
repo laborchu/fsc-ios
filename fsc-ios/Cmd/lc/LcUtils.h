@@ -8,6 +8,10 @@
 @class FSCLinkman;
 @class FSCPublicUser;
 @class FSCPublicMenu;
+@class FSCClass;
+@class FSCClassUser;
+@class FSCTrgUser;
+@class FSCTrgSession;
 
 
 @interface LcUtils : NSObject
@@ -17,4 +21,10 @@
 + (FSCPublicUser *)getFscPublicUser:(NSNumber *)userId;
 
 + (FSCPublicMenu *)getFscPublicMenu:(FSCPublicUser *)publicUser menuId:(NSNumber *)menuId;
+
++ (FSCClass *)getFscClass:(NSNumber *)classId;
+
++ (FSCClassUser *)getFscClassUser:(NSNumber *)userId fscClass:(FSCClass *)fscClass;
+
++ (FSCTrgUser *)getFscTrgUser:(NSNumber *)userId fscClass:(FSCTrgSession *)trgSession;
 @end

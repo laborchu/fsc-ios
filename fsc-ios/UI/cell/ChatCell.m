@@ -5,10 +5,10 @@
 
 #import "ChatCell.h"
 #import "FscChatRecorder.h"
+#import "AChatHandler.h"
 
 
 @implementation ChatCell {
-
 }
 
 - (void)setFrame:(CGRect)frame
@@ -17,7 +17,7 @@
     [super setFrame:frame];
 }
 
--(void)setRecorder:(FscChatRecorder *)recorder{
+-(void)setRecorder:(FscChatRecorder *)recorder {
 }
 
 -(CGFloat)getHeight{

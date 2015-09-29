@@ -374,12 +374,8 @@
 
     /*******处理用户******/
     for (TUserPb *tUserPb in tUsers) {
-        ALcCmd *cmd = [[[LcFscChatTrgUserListCmd alloc] initWithFscTSession:fscSession.tsession]
-                addPredicate:@"userId==%lld" argumentArray:@[@(tUserPb.userId)]];
-        NSArray *userArray = [Scheduler exeLc:cmd];
-        FSCTrgUser *trgUser;
-        if (userArray.count > 0) {
-            trgUser = userArray[0];
+        FSCTrgUser *trgUser = [LcUtils getFscTrgUser:@(tUserPb.userId) fscClass:fscSession.tsession];
+        if (trgUser) {
             [PbTransfer pb:tUserPb vo:trgUser fields:CHAT_TRG_USER_FIELDS];
         } else {
             trgUser = [PbTransfer pb:tUserPb entityName:@"FSCTrgUser" fields:CHAT_TRG_USER_FIELDS];
@@ -430,8 +426,6 @@
             return @"[语音]";
         case RECORDER_TYPE_IMG:
             return @"[图片]";
-        case RECORDER_TYPE_P_MSG:
-            return @"[三通两平台消息]";
         case RECORDER_TYPE_DISK_FILE:
             return @"[文件]";
         case RECORDER_TYPE_MAP:

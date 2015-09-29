@@ -3,6 +3,7 @@
 // Copyright (c) 2015 laborc. All rights reserved.
 //
 
+#import <UIActivityIndicator-for-SDWebImage/UIImageView+UIActivityIndicatorForSDWebImage.h>
 #import "TrgChatHandler.h"
 #import "ALcCmd.h"
 #import "LcFscChatTrgRecorderListCmd.h"
@@ -10,6 +11,10 @@
 #import "Scheduler.h"
 #import "FSCTrgRecorder.h"
 #import "FscChatRecorder.h"
+#import "LcUtils.h"
+#import "FSCLinkman.h"
+#import "FSCTrgUser.h"
+#import "BbiUtils.h"
 
 
 @implementation TrgChatHandler {
@@ -38,6 +43,25 @@
     recorder.createdDate = fscRecorder.createdDate;
     recorder.status = fscRecorder.status;
     return recorder;
+}
+/**
+ * 获取创建者头像
+ */
+-(id)setRecorder:(FscChatRecorder *)recorder{
+    return [LcUtils getFscTrgUser:recorder.createdBy fscClass:self.fscSession.tsession];
+}
+
+/**
+ * 设置头像和名字
+ */
+-(void)setRecorder:(FscChatRecorder *)recorder avatarImg:(UIImageView *)avatarImg nameLabel:(UILabel *)nameLabel{
+    FSCTrgUser *fscTrgUser = [LcUtils getFscTrgUser:recorder.createdBy fscClass:self.fscSession.tsession];
+    NSString *portrait;
+    if(fscTrgUser){
+        portrait = fscTrgUser.portrait;
+        nameLabel.text = fscTrgUser.name;
+    }
+    [avatarImg setImageWithURL:[BbiUtils getResImgUrl:portrait] placeholderImage:[UIImage imageNamed:@"default_avatar"] usingActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
 }
 
 @end

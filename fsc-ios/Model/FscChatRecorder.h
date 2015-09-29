@@ -13,6 +13,7 @@
 @property (nonatomic, retain) NSNumber * createdBy;
 @property (nonatomic, retain) NSNumber * createdDate;
 @property (nonatomic, retain) NSNumber * type;
+@property (nonatomic, retain) NSNumber * msId;
 @property (nonatomic, retain) NSNumber * voiceLength;
 @property (nonatomic, retain) NSString * message;
 @property (nonatomic, retain) NSNumber * fromType;

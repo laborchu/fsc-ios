@@ -10,6 +10,9 @@
 #import "FSCSession.h"
 #import "FSCPublicRecorder.h"
 #import "FscChatRecorder.h"
+#import "LcUtils.h"
+#import "BbiUtils.h"
+#import "FSCPublicSession.h"
 
 
 @implementation PublicChatHandler {
@@ -40,6 +43,13 @@
     recorder.timestamp = fscRecorder.timestamp;
     recorder.status = fscRecorder.status;
     return recorder;
+}
+
+/**
+ * 设置头像和名字
+ */
+-(void)setRecorder:(FscChatRecorder *)recorder avatarImg:(UIImageView *)avatarImg nameLabel:(UILabel *)nameLabel{
+    avatarImg.image = [UIImage imageNamed:[BbiUtils getPublicIcon:self.fscSession.psession.publicCode]];
 }
 
 @end

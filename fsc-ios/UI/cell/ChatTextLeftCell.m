@@ -9,6 +9,7 @@
 #import "ChatTextLeftCell.h"
 #import "FscChatRecorder.h"
 #import "FSCChatLabel.h"
+#import "AChatHandler.h"
 
 
 @interface ChatTextLeftCell ()
@@ -23,20 +24,12 @@
 - (void)awakeFromNib {
 }
 
-- (id)initWithCoder:(NSCoder *)decoder {
-    self = [super initWithCoder:decoder];
-    if (self) {
-    }
-    return self;
-}
-
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 }
 
 - (void)setRecorder:(FscChatRecorder *)recorder {
-    [self.avatarImg setImage:[UIImage imageNamed:@"default_avatar"]];
-    self.nameLabel.text = @"张三";
+    [self.chatHandler setRecorder:recorder avatarImg:_avatarImg nameLabel:_nameLabel];
     self.msgLabel.text = recorder.message;
 }
 

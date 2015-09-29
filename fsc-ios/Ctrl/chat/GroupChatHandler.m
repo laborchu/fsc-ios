@@ -3,6 +3,7 @@
 // Copyright (c) 2015 laborc. All rights reserved.
 //
 
+#import <UIActivityIndicator-for-SDWebImage/UIImageView+UIActivityIndicatorForSDWebImage.h>
 #import "GroupChatHandler.h"
 #import "ALcCmd.h"
 #import "LcFscChatGroupRecorderListCmd.h"
@@ -11,6 +12,9 @@
 #import "FSCPublicRecorder.h"
 #import "FscChatRecorder.h"
 #import "FSCGroupRecorder.h"
+#import "LcUtils.h"
+#import "FSCLinkman.h"
+#import "BbiUtils.h"
 
 
 @implementation GroupChatHandler {
@@ -40,6 +44,20 @@
     recorder.createdDate = fscRecorder.createdDate;
     recorder.status = fscRecorder.status;
     return recorder;
+}
+
+/**
+ * 设置头像和名字
+ */
+-(void)setRecorder:(FscChatRecorder *)recorder avatarImg:(UIImageView *)avatarImg nameLabel:(UILabel *)nameLabel{
+    FSCLinkman *fscLinkman = [LcUtils getFscLinkman:recorder.createdBy];
+    NSString *portrait;
+    if(fscLinkman){
+        portrait = fscLinkman.portrait;
+        nameLabel.text = fscLinkman.name;
+    }
+    [avatarImg setImageWithURL:[BbiUtils getResImgUrl:portrait] placeholderImage:[UIImage imageNamed:@"default_avatar"] usingActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+
 }
 
 @end

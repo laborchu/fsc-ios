@@ -17,6 +17,7 @@
 #import "LcFscClassListCmd.h"
 #import "PbTransfer.h"
 #import "PbFieldDefine.h"
+#import "LcUtils.h"
 
 
 @implementation RsFscClassUserListCmd {
@@ -68,26 +69,18 @@
     //classUser
     for (ClassUserPb *classUserPb in classUserList.classUser) {
         //找到所属班级
-        ALcCmd *cmd = [[[LcFscClassListCmd alloc] init]
-                addPredicate:@"id==%lld" argumentArray:@[@(classUserPb.classId)]];
-        NSArray *fscClassList = [Scheduler exeLc:cmd];
-
-        if (fscClassList.count>0) {
-            FSCClass *userClass = fscClassList[0];
-
-            ALcCmd *fscClassUserListCmd = [[[LcFscClassUserListCmd alloc] initWithFscClass:userClass]
-                    addPredicate:@"id==%lld" argumentArray:@[@(classUserPb.id)]];
-            NSArray *fscClassUserList = [Scheduler exeLc:fscClassUserListCmd];
-
-            if (fscClassUserList.count>0) {
-                FSCClassUser *findUser = fscClassUserList[0];
+        FSCClass *userClass = [LcUtils getFscClass:@(classUserPb.classId)];
+        if(userClass){
+            FSCClassUser *findUser = [LcUtils getFscClassUser:@(classUserPb.id) fscClass:userClass];
+            if (findUser) {
                 [PbTransfer pb:classUserPb vo:findUser fields:FSC_CLASS_USER_FIELDS];
             }else{
-                FSCClassUser *findUser = [PbTransfer pb:classUserPb entityName:@"FSCClassUser" fields:FSC_CLASS_USER_FIELDS];
+                findUser = [PbTransfer pb:classUserPb entityName:@"FSCClassUser" fields:FSC_CLASS_USER_FIELDS];
                 [userClass addClassUsersObject:findUser];
             }
         }
     }
+
     //classStudent
     for (ClassStudentPb *classStudentPb in classUserList.classStudent) {
         ALcCmd *cmd = [[[LcFscClassListCmd alloc] init]

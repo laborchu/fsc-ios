@@ -3,6 +3,7 @@
 // Copyright (c) 2015 laborc. All rights reserved.
 //
 
+#import <UIActivityIndicator-for-SDWebImage/UIImageView+UIActivityIndicatorForSDWebImage.h>
 #import "ClassChatHandler.h"
 #import "ALcCmd.h"
 #import "LcFscChatClassRecorderListCmd.h"
@@ -10,6 +11,10 @@
 #import "Scheduler.h"
 #import "FSCClassRecorder.h"
 #import "FscChatRecorder.h"
+#import "FSCClass.h"
+#import "LcUtils.h"
+#import "FSCClassUser.h"
+#import "BbiUtils.h"
 
 
 @implementation ClassChatHandler {
@@ -41,5 +46,18 @@
     return recorder;
 }
 
+/**
+ * 设置头像和名字
+ */
+-(void)setRecorder:(FscChatRecorder *)recorder avatarImg:(UIImageView *)avatarImg nameLabel:(UILabel *)nameLabel{
+    FSCClass *userClass = [LcUtils getFscClass:self.fscSession.msId];
+    NSString *portrait;
+    if(userClass){
+        FSCClassUser *fscClassUser = [LcUtils getFscClassUser:recorder.createdBy fscClass:userClass];
+        portrait = fscClassUser.portrait;
+        nameLabel.text = fscClassUser.name;
+    }
+    [avatarImg setImageWithURL:[BbiUtils getResImgUrl:portrait] placeholderImage:[UIImage imageNamed:@"default_avatar"] usingActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+}
 
 @end

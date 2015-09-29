@@ -11,6 +11,7 @@
 #import "FscChatRecorder.h"
 #import "ChatCell+Img.h"
 #import "BbiUtils.h"
+#import "AChatHandler.h"
 
 
 @interface ChatImgLeftCell ()
@@ -25,7 +26,6 @@
 
 - (void)awakeFromNib {
     _mask = [ [UIImage imageNamed:@"chat_left_mask"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 5, 5, 5)];
-    NSLog(@"");
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -33,8 +33,7 @@
 }
 
 - (void)setRecorder:(FscChatRecorder *)recorder {
-    [self.avatarImg setImage:[UIImage imageNamed:@"default_avatar"]];
-    self.nameLabel.text = @"李四";
+    [self.chatHandler setRecorder:recorder avatarImg:_avatarImg nameLabel:_nameLabel];
 
     NSURL *address = [BbiUtils getResImgUrl:recorder.message];
     [ChatCell setImg:address mask:_mask imgView:_msgImg];

@@ -1,4 +1,4 @@
-	//
+//
 //  ChatVoiceLeftCell.m
 //  fsc-ios
 //
@@ -7,17 +7,24 @@
 //
 
 #import "ChatVoiceLeftCell.h"
+#import "AChatHandler.h"
+
+@interface ChatVoiceLeftCell ()
+@property(weak, nonatomic) IBOutlet UIImageView *avatarImg;
+@property(weak, nonatomic) IBOutlet UILabel *nameLabel;
+@end
 
 @implementation ChatVoiceLeftCell
 
 - (void)awakeFromNib {
-    // Initialization code
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
+}
 
-    // Configure the view for the selected state
+- (void)setRecorder:(FscChatRecorder *)recorder {
+    [self.chatHandler setRecorder:recorder avatarImg:_avatarImg nameLabel:_nameLabel];
 }
 
 @end

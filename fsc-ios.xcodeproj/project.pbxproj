@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D0A3BFB1BB4303A004FDE7A /* ChatFileLeftCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0A3BF91BB4303A004FDE7A /* ChatFileLeftCell.m */; };
+		1D0A3BFC1BB4303A004FDE7A /* ChatFileLeftCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D0A3BFA1BB4303A004FDE7A /* ChatFileLeftCell.xib */; };
+		1D0A3C001BB434C6004FDE7A /* ChatFileRightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0A3BFE1BB434C6004FDE7A /* ChatFileRightCell.m */; };
+		1D0A3C011BB434C6004FDE7A /* ChatFileRightCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D0A3BFF1BB434C6004FDE7A /* ChatFileRightCell.xib */; };
+		1D1028471BB97C6000243661 /* ChatMapLeftCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1028451BB97C6000243661 /* ChatMapLeftCell.m */; settings = {ASSET_TAGS = (); }; };
+		1D1028481BB97C6000243661 /* ChatMapLeftCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D1028461BB97C6000243661 /* ChatMapLeftCell.xib */; settings = {ASSET_TAGS = (); }; };
+		1D10284C1BB9800500243661 /* ChatMapRightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D10284A1BB9800500243661 /* ChatMapRightCell.m */; settings = {ASSET_TAGS = (); }; };
+		1D10284D1BB9800500243661 /* ChatMapRightCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D10284B1BB9800500243661 /* ChatMapRightCell.xib */; settings = {ASSET_TAGS = (); }; };
 		1DB3D6081BB01F4300886405 /* ChatVoiceLeftCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB3D6061BB01F4300886405 /* ChatVoiceLeftCell.m */; };
 		1DB3D6091BB01F4300886405 /* ChatVoiceLeftCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DB3D6071BB01F4300886405 /* ChatVoiceLeftCell.xib */; };
 		1DB3D60D1BB023EE00886405 /* ChatVoiceRightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB3D60B1BB023EE00886405 /* ChatVoiceRightCell.m */; };
@@ -109,6 +117,7 @@
 		BDD0896EFE7AAA97310C8164 /* FscUser.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08C7B5EE3773E35A3931F /* FscUser.pb.m */; };
 		BDD0898207D78CE23AFD09E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD083ECD0E1FB33846F0F24 /* Main.storyboard */; };
 		BDD089C77BB00E6B4639D85F /* FSCActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD084E569C2B5670E653E58 /* FSCActivity.m */; };
+		BDD089E58465C2A4E0E81C60 /* ChatCell+Left.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD083FEB836AB8E33AD235E /* ChatCell+Left.m */; };
 		BDD08A00B882F9606C301C67 /* FscError.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0835507BCC6EF720628D1 /* FscError.pb.m */; };
 		BDD08A135A647845B47C477A /* UserChatHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08D5908CC5DDCF371F868 /* UserChatHandler.m */; };
 		BDD08A211EC2400DD878762C /* FscLinkman.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD084CED772E25CF19DA200 /* FscLinkman.pb.m */; };
@@ -174,6 +183,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D0A3BF81BB4303A004FDE7A /* ChatFileLeftCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatFileLeftCell.h; sourceTree = "<group>"; };
+		1D0A3BF91BB4303A004FDE7A /* ChatFileLeftCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatFileLeftCell.m; sourceTree = "<group>"; };
+		1D0A3BFA1BB4303A004FDE7A /* ChatFileLeftCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatFileLeftCell.xib; sourceTree = "<group>"; };
+		1D0A3BFD1BB434C6004FDE7A /* ChatFileRightCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatFileRightCell.h; sourceTree = "<group>"; };
+		1D0A3BFE1BB434C6004FDE7A /* ChatFileRightCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatFileRightCell.m; sourceTree = "<group>"; };
+		1D0A3BFF1BB434C6004FDE7A /* ChatFileRightCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatFileRightCell.xib; sourceTree = "<group>"; };
+		1D1028441BB97C6000243661 /* ChatMapLeftCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatMapLeftCell.h; sourceTree = "<group>"; };
+		1D1028451BB97C6000243661 /* ChatMapLeftCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatMapLeftCell.m; sourceTree = "<group>"; };
+		1D1028461BB97C6000243661 /* ChatMapLeftCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatMapLeftCell.xib; sourceTree = "<group>"; };
+		1D1028491BB9800500243661 /* ChatMapRightCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatMapRightCell.h; sourceTree = "<group>"; };
+		1D10284A1BB9800500243661 /* ChatMapRightCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatMapRightCell.m; sourceTree = "<group>"; };
+		1D10284B1BB9800500243661 /* ChatMapRightCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatMapRightCell.xib; sourceTree = "<group>"; };
 		1DB3D6051BB01F4300886405 /* ChatVoiceLeftCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatVoiceLeftCell.h; sourceTree = "<group>"; };
 		1DB3D6061BB01F4300886405 /* ChatVoiceLeftCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatVoiceLeftCell.m; sourceTree = "<group>"; };
 		1DB3D6071BB01F4300886405 /* ChatVoiceLeftCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatVoiceLeftCell.xib; sourceTree = "<group>"; };
@@ -199,6 +220,7 @@
 		BDD080300C86BB069FBA9471 /* RsFscLinkmanListCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RsFscLinkmanListCmd.h; sourceTree = "<group>"; };
 		BDD08032ABBCADB8542E2ADF /* ChatCell+Right.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ChatCell+Right.m"; sourceTree = "<group>"; };
 		BDD080444C4CADCB0AF72003 /* GroupChatHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupChatHandler.m; sourceTree = "<group>"; };
+		BDD0805FEE656F07CA0FAD01 /* ChatCell+Left.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ChatCell+Left.h"; sourceTree = "<group>"; };
 		BDD080674D1455B49B0968F4 /* FscAnswer.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscAnswer.pb.m; sourceTree = "<group>"; };
 		BDD0806BA50648A47022224B /* FSCSnsMsg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCSnsMsg.m; sourceTree = "<group>"; };
 		BDD08080CDD216787E15691A /* DataCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataCache.h; sourceTree = "<group>"; };
@@ -266,6 +288,7 @@
 		BDD083D6E351CC53A2EE84F7 /* FSCSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCSession.m; sourceTree = "<group>"; };
 		BDD083DD54992059A53B6C3A /* FscTestMsg.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscTestMsg.pb.m; sourceTree = "<group>"; };
 		BDD083E0AEF1B271C47A481F /* LcFscChatTrgUserListCmd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LcFscChatTrgUserListCmd.m; sourceTree = "<group>"; };
+		BDD083FEB836AB8E33AD235E /* ChatCell+Left.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ChatCell+Left.m"; sourceTree = "<group>"; };
 		BDD08410F9BD5770FDE744D2 /* FscMsg.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscMsg.pb.m; sourceTree = "<group>"; };
 		BDD0841F010B3989063D1108 /* FSCPublicMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCPublicMenu.m; sourceTree = "<group>"; };
 		BDD0843E240435CBAD6D5D7A /* LcFscClassStudentListCmd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LcFscClassStudentListCmd.m; sourceTree = "<group>"; };
@@ -728,6 +751,8 @@
 				BDD08E6D3C2E84F23690A424 /* ChatCell+Right.h */,
 				BDD0895D8EB8B4FA646D2C2E /* ChatCell+Img.m */,
 				BDD084CB447F69A17C6212C6 /* ChatCell+Img.h */,
+				BDD083FEB836AB8E33AD235E /* ChatCell+Left.m */,
+				BDD0805FEE656F07CA0FAD01 /* ChatCell+Left.h */,
 			);
 			path = cat;
 			sourceTree = "<group>";
@@ -962,6 +987,9 @@
 		BDD08F654E58A81DC28BA704 /* cell */ = {
 			isa = PBXGroup;
 			children = (
+				1D0A3BFD1BB434C6004FDE7A /* ChatFileRightCell.h */,
+				1D0A3BFE1BB434C6004FDE7A /* ChatFileRightCell.m */,
+				1D0A3BFF1BB434C6004FDE7A /* ChatFileRightCell.xib */,
 				BDD08C903A2F503D4DE9FAEE /* FscSessionCell.h */,
 				BDD08BC0AB9D4F5F44BFD991 /* FscSessionCell.m */,
 				BDD081304624227E0885D16E /* ContactsCell.m */,
@@ -990,6 +1018,15 @@
 				1DB3D60B1BB023EE00886405 /* ChatVoiceRightCell.m */,
 				1DB3D60C1BB023EE00886405 /* ChatVoiceRightCell.xib */,
 				BDD0875D9E0F12CDDB9860EA /* cat */,
+				1D0A3BF81BB4303A004FDE7A /* ChatFileLeftCell.h */,
+				1D0A3BF91BB4303A004FDE7A /* ChatFileLeftCell.m */,
+				1D0A3BFA1BB4303A004FDE7A /* ChatFileLeftCell.xib */,
+				1D1028441BB97C6000243661 /* ChatMapLeftCell.h */,
+				1D1028451BB97C6000243661 /* ChatMapLeftCell.m */,
+				1D1028461BB97C6000243661 /* ChatMapLeftCell.xib */,
+				1D1028491BB9800500243661 /* ChatMapRightCell.h */,
+				1D10284A1BB9800500243661 /* ChatMapRightCell.m */,
+				1D10284B1BB9800500243661 /* ChatMapRightCell.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -1099,13 +1136,17 @@
 				1DDC507A1BAADF2500F61BA0 /* ChatImgRightCell.xib in Resources */,
 				BDD08907818595D74F705559 /* Images.xcassets in Resources */,
 				1DDC506B1BA5295700F61BA0 /* ChatTextLeftCell.xib in Resources */,
+				1D0A3BFC1BB4303A004FDE7A /* ChatFileLeftCell.xib in Resources */,
+				1D0A3C011BB434C6004FDE7A /* ChatFileRightCell.xib in Resources */,
 				1DDC50751BA84B7000F61BA0 /* ChatImgLeftCell.xib in Resources */,
+				1D1028481BB97C6000243661 /* ChatMapLeftCell.xib in Resources */,
 				BDD084E3D52DFE144C07C182 /* LaunchScreen.xib in Resources */,
 				1DDC50701BA838D200F61BA0 /* ChatTextRightCell.xib in Resources */,
 				1DB3D6091BB01F4300886405 /* ChatVoiceLeftCell.xib in Resources */,
 				BDD0898207D78CE23AFD09E2 /* Main.storyboard in Resources */,
 				BDD08D215B0F676A66AF7A90 /* ChatTipCell.xib in Resources */,
 				1DB3D60E1BB023EE00886405 /* ChatVoiceRightCell.xib in Resources */,
+				1D10284D1BB9800500243661 /* ChatMapRightCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1150,6 +1191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DDC506A1BA5295700F61BA0 /* ChatTextLeftCell.m in Sources */,
+				1D0A3C001BB434C6004FDE7A /* ChatFileRightCell.m in Sources */,
 				BDD08472CFCDEEB9AE5F92C6 /* main.m in Sources */,
 				BDD081DC33E7421E4A568731 /* FscAppDelegate.m in Sources */,
 				BDD082D5143F04584B4339F3 /* FscSocketClient.m in Sources */,
@@ -1245,6 +1287,7 @@
 				BDD08FC4579838536197D70F /* FscChatClass.pb.m in Sources */,
 				BDD08EB0B8CA1D5E8BC3C983 /* FscChatTrg.pb.m in Sources */,
 				BDD0896EFE7AAA97310C8164 /* FscUser.pb.m in Sources */,
+				1D0A3BFB1BB4303A004FDE7A /* ChatFileLeftCell.m in Sources */,
 				BDD0876FC3C39895282B8A30 /* FscTeachPlan.pb.m in Sources */,
 				BDD08A00B882F9606C301C67 /* FscError.pb.m in Sources */,
 				BDD08511C5A4767364C20E2C /* LcFscClassListCmd.m in Sources */,
@@ -1282,8 +1325,11 @@
 				BDD0822205358FBD7B608A44 /* ClassChatHandler.m in Sources */,
 				BDD088BA0733C3F525291B52 /* TrgChatHandler.m in Sources */,
 				BDD0865044F67CF9F48BCF9D /* PublicChatHandler.m in Sources */,
+				1D10284C1BB9800500243661 /* ChatMapRightCell.m in Sources */,
 				BDD080240BFF0B19D65A4149 /* ChatCell+Right.m in Sources */,
 				BDD085712A11A7A943CA8194 /* ChatCell+Img.m in Sources */,
+				1D1028471BB97C6000243661 /* ChatMapLeftCell.m in Sources */,
+				BDD089E58465C2A4E0E81C60 /* ChatCell+Left.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1371,7 +1417,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -1443,7 +1489,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
