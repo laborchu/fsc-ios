@@ -11,18 +11,18 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="85" id="tYz-vK-IDY" customClass="ChatImgLeftCell">
             <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tYz-vK-IDY" id="3TE-0f-D5h">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="tYz-vK-IDY" id="3TE-0f-D5h">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="InH-NB-1bn">
-                        <rect key="frame" x="8" y="8" width="40" height="40"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="InH-NB-1bn">
+                        <rect key="frame" x="10" y="8" width="40" height="40"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="89M-mN-5KN"/>
                             <constraint firstAttribute="width" constant="40" id="hXX-tS-qpP"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Df4-xC-haO">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Df4-xC-haO">
                         <rect key="frame" x="56" y="8" width="42" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="Ozb-jl-Rmn"/>
@@ -32,19 +32,20 @@
                         <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tnu-AP-prC">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tnu-AP-prC">
                         <rect key="frame" x="56" y="32" width="70" height="40"/>
                         <constraints>
+                            <constraint firstAttribute="height" constant="100" id="DNP-RR-6Sn"/>
                             <constraint firstAttribute="width" constant="70" id="v4A-gP-CLF"/>
                         </constraints>
                     </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="InH-NB-1bn" firstAttribute="top" secondItem="3TE-0f-D5h" secondAttribute="topMargin" id="22G-Kh-JoT"/>
-                    <constraint firstItem="tnu-AP-prC" firstAttribute="top" secondItem="Df4-xC-haO" secondAttribute="bottom" constant="3" id="JJe-0m-eV4"/>
+                    <constraint firstItem="tnu-AP-prC" firstAttribute="top" secondItem="Df4-xC-haO" secondAttribute="bottom" constant="5" id="JJe-0m-eV4"/>
                     <constraint firstItem="tnu-AP-prC" firstAttribute="leading" secondItem="Df4-xC-haO" secondAttribute="leading" id="Q0H-jw-suS"/>
                     <constraint firstItem="InH-NB-1bn" firstAttribute="top" secondItem="Df4-xC-haO" secondAttribute="top" id="aeT-WQ-7h0"/>
-                    <constraint firstItem="InH-NB-1bn" firstAttribute="leading" secondItem="3TE-0f-D5h" secondAttribute="leadingMargin" constant="-7" id="b40-bj-SbW"/>
+                    <constraint firstItem="InH-NB-1bn" firstAttribute="leading" secondItem="3TE-0f-D5h" secondAttribute="leadingMargin" id="b40-bj-SbW"/>
                     <constraint firstAttribute="bottomMargin" secondItem="tnu-AP-prC" secondAttribute="bottom" constant="4" id="b4C-Gv-PYL"/>
                     <constraint firstItem="Df4-xC-haO" firstAttribute="leading" secondItem="InH-NB-1bn" secondAttribute="trailing" constant="8" symbolic="YES" id="fdv-4q-vry"/>
                     <constraint firstAttribute="bottomMargin" secondItem="InH-NB-1bn" secondAttribute="bottom" constant="28" id="nEs-Lh-1oS"/>

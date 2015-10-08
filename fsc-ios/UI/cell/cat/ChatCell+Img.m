@@ -10,8 +10,10 @@
 @implementation ChatCell (Img)
 
 +(void) setImg:(NSURL *)imgUrl mask:(UIImage *)mask imgView:(UIImageView *)imgView {
-    UIImageView *imageView = [[UIImageView alloc] init];
-    [imageView setImageWithURL:imgUrl placeholderImage:[UIImage imageNamed:@"chat_default_image"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
+//    UIImageView *imageView = [[UIImageView alloc] init];
+    [imgView setImageWithURL:imgUrl
+               placeholderImage:[UIImage imageNamed:@"chat_default_image"]
+                     completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
         if (!error) {
             UIImage *img = [ChatCell dealWithImage:image];
             UIImage *resizeMask = [ChatCell scaleToSize:mask size:img.size];

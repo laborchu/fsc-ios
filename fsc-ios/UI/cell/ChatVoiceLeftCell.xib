@@ -15,15 +15,15 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zlo-oe-RFX">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zlo-oe-RFX">
                         <rect key="frame" x="8" y="8" width="40" height="40"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="C6j-gf-IcN"/>
                             <constraint firstAttribute="width" constant="40" id="fHi-NL-Hpk"/>
                         </constraints>
                     </imageView>
-                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="COD-fc-1W3">
-                        <rect key="frame" x="55" y="33" width="70" height="30"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="COD-fc-1W3">
+                        <rect key="frame" x="55" y="46" width="70" height="30"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat_left_bubble" translatesAutoresizingMaskIntoConstraints="NO" id="uUU-QT-6UV">
                                 <rect key="frame" x="0.0" y="0.0" width="70" height="30"/>
@@ -62,8 +62,8 @@
                             </mask>
                         </variation>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dzm-im-Zfb">
-                        <rect key="frame" x="56" y="8" width="42" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dzm-im-Zfb">
+                        <rect key="frame" x="56" y="8" width="42" height="33"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="42" id="bpy-bM-oEC"/>
                         </constraints>
@@ -73,16 +73,16 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Zlo-oe-RFX" firstAttribute="leading" secondItem="vjf-Vy-UyJ" secondAttribute="leadingMargin" constant="-7" id="36z-sa-sgo"/>
+                    <constraint firstItem="Zlo-oe-RFX" firstAttribute="leading" secondItem="vjf-Vy-UyJ" secondAttribute="leadingMargin" id="36z-sa-sgo"/>
                     <constraint firstItem="COD-fc-1W3" firstAttribute="leading" secondItem="Zlo-oe-RFX" secondAttribute="trailing" constant="7" id="3d0-eB-j57"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="COD-fc-1W3" secondAttribute="bottom" constant="13" id="6ss-AD-Xk9"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="COD-fc-1W3" secondAttribute="bottom" id="6ss-AD-Xk9"/>
                     <constraint firstAttribute="bottomMargin" secondItem="Zlo-oe-RFX" secondAttribute="bottom" constant="28" id="9oc-px-Rqh"/>
                     <constraint firstAttribute="bottomMargin" secondItem="Zlo-oe-RFX" secondAttribute="bottom" constant="28" id="Tgq-eJ-OCX"/>
                     <constraint firstItem="Zlo-oe-RFX" firstAttribute="top" secondItem="vjf-Vy-UyJ" secondAttribute="topMargin" id="V9a-2t-UbP"/>
                     <constraint firstItem="Dzm-im-Zfb" firstAttribute="leading" secondItem="Zlo-oe-RFX" secondAttribute="trailing" constant="8" symbolic="YES" id="YOE-lI-IxA"/>
                     <constraint firstAttribute="trailing" secondItem="COD-fc-1W3" secondAttribute="trailing" constant="195" id="ZvH-s7-1OJ"/>
                     <constraint firstItem="Zlo-oe-RFX" firstAttribute="top" secondItem="Dzm-im-Zfb" secondAttribute="top" id="gh5-CT-HgG"/>
-                    <constraint firstItem="COD-fc-1W3" firstAttribute="top" secondItem="Dzm-im-Zfb" secondAttribute="bottom" constant="4" id="x3G-uz-NYv"/>
+                    <constraint firstItem="COD-fc-1W3" firstAttribute="top" secondItem="Dzm-im-Zfb" secondAttribute="bottom" constant="5" id="x3G-uz-NYv"/>
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">

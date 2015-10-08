@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -22,8 +23,9 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="centerX" secondItem="lFA-TL-hFd" secondAttribute="centerX" id="ELE-gU-4O4"/>
-                    <constraint firstAttribute="centerY" secondItem="lFA-TL-hFd" secondAttribute="centerY" id="Qem-U3-aYL"/>
+                    <constraint firstItem="lFA-TL-hFd" firstAttribute="centerY" secondItem="mn9-2Q-EAx" secondAttribute="centerY" id="9EM-sa-dEd"/>
+                    <constraint firstItem="lFA-TL-hFd" firstAttribute="top" secondItem="mn9-2Q-EAx" secondAttribute="topMargin" constant="-4" id="CXu-w7-DIZ"/>
+                    <constraint firstItem="lFA-TL-hFd" firstAttribute="centerX" secondItem="mn9-2Q-EAx" secondAttribute="centerX" id="LCx-NT-9jL"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

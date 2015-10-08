@@ -15,51 +15,47 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YY9-0A-mRv">
-                        <rect key="frame" x="268" y="8" width="40" height="40"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YY9-0A-mRv">
+                        <rect key="frame" x="272" y="8" width="40" height="40"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="40" id="13F-PT-KFV"/>
-                            <constraint firstAttribute="width" constant="40" id="Ocs-lE-rv3"/>
+                            <constraint firstAttribute="width" constant="40" id="Ct6-5d-Jcc"/>
+                            <constraint firstAttribute="height" constant="40" id="ZLJ-WZ-pHZ"/>
                         </constraints>
                     </imageView>
-                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="neE-kb-jPa">
-                        <rect key="frame" x="193" y="33" width="70" height="30"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="neE-kb-jPa">
+                        <rect key="frame" x="197" y="33" width="70" height="40"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="chat_right_bubble" translatesAutoresizingMaskIntoConstraints="NO" id="Z4h-dm-rP2">
-                                <rect key="frame" x="0.0" y="0.0" width="70" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat_right_bubble" translatesAutoresizingMaskIntoConstraints="NO" id="Z4h-dm-rP2">
+                                <rect key="frame" x="0.0" y="0.0" width="70" height="40"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="sound_left_max" translatesAutoresizingMaskIntoConstraints="NO" id="ivO-Kl-2o1">
-                                <rect key="frame" x="32" y="0.0" width="30" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sound_left_max" translatesAutoresizingMaskIntoConstraints="NO" id="ivO-Kl-2o1">
+                                <rect key="frame" x="32" y="0.0" width="30" height="40"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ivO-Kl-2o1" firstAttribute="bottom" secondItem="Z4h-dm-rP2" secondAttribute="bottom" id="5YF-fJ-xam"/>
-                            <constraint firstItem="ivO-Kl-2o1" firstAttribute="top" secondItem="Z4h-dm-rP2" secondAttribute="top" id="jCP-Hr-lKf"/>
-                            <constraint firstItem="ivO-Kl-2o1" firstAttribute="leading" secondItem="neE-kb-jPa" secondAttribute="leading" constant="32" id="vuK-D6-0i5"/>
+                            <constraint firstItem="ivO-Kl-2o1" firstAttribute="leading" secondItem="neE-kb-jPa" secondAttribute="leading" constant="32" id="8ks-be-fHN"/>
+                            <constraint firstItem="ivO-Kl-2o1" firstAttribute="trailing" secondItem="neE-kb-jPa" secondAttribute="trailingMargin" id="EJm-iY-09k"/>
+                            <constraint firstItem="Z4h-dm-rP2" firstAttribute="leading" secondItem="neE-kb-jPa" secondAttribute="leading" id="PIT-YH-Vap"/>
+                            <constraint firstAttribute="bottom" secondItem="Z4h-dm-rP2" secondAttribute="bottom" id="PY2-PZ-p7t"/>
+                            <constraint firstAttribute="trailing" secondItem="Z4h-dm-rP2" secondAttribute="trailing" id="TGm-xh-kqn"/>
+                            <constraint firstItem="Z4h-dm-rP2" firstAttribute="top" secondItem="ivO-Kl-2o1" secondAttribute="top" id="U9m-Ot-4bQ"/>
+                            <constraint firstItem="ivO-Kl-2o1" firstAttribute="bottom" secondItem="Z4h-dm-rP2" secondAttribute="bottom" id="brH-zq-fl4"/>
+                            <constraint firstItem="Z4h-dm-rP2" firstAttribute="top" secondItem="neE-kb-jPa" secondAttribute="top" id="s3a-iw-rWl"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="vuK-D6-0i5"/>
-                            </mask>
-                        </variation>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="neE-kb-jPa" firstAttribute="leading" secondItem="Ca3-wj-y7B" secondAttribute="leading" constant="193" id="3aT-MC-hgb"/>
-                    <constraint firstAttribute="trailing" secondItem="neE-kb-jPa" secondAttribute="trailing" constant="57" id="95m-eS-gwx"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="YY9-0A-mRv" secondAttribute="trailing" constant="-3" id="KbC-Zo-NP2"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="YY9-0A-mRv" secondAttribute="bottom" constant="28" id="VwO-eU-7ns"/>
-                    <constraint firstItem="neE-kb-jPa" firstAttribute="leading" secondItem="Ca3-wj-y7B" secondAttribute="leading" constant="193" id="ZPZ-Dv-BP8"/>
-                    <constraint firstItem="neE-kb-jPa" firstAttribute="top" secondItem="Ca3-wj-y7B" secondAttribute="topMargin" constant="25" id="fKs-H9-89K"/>
-                    <constraint firstItem="YY9-0A-mRv" firstAttribute="leading" secondItem="neE-kb-jPa" secondAttribute="trailing" constant="5" id="hvq-om-yB6"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="neE-kb-jPa" secondAttribute="bottom" constant="13" id="sf9-JT-3pU"/>
+                    <constraint firstItem="YY9-0A-mRv" firstAttribute="top" secondItem="Ca3-wj-y7B" secondAttribute="topMargin" id="766-g0-70g"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="YY9-0A-mRv" secondAttribute="trailing" id="DTE-0H-l5e"/>
+                    <constraint firstItem="neE-kb-jPa" firstAttribute="top" secondItem="Ca3-wj-y7B" secondAttribute="topMargin" constant="25" id="KM8-35-opj"/>
+                    <constraint firstItem="YY9-0A-mRv" firstAttribute="leading" secondItem="neE-kb-jPa" secondAttribute="trailing" constant="5" id="UFX-0n-qeF"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="neE-kb-jPa" secondAttribute="bottom" constant="3" id="W1z-cm-NPF"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="YY9-0A-mRv" secondAttribute="bottom" constant="28" id="sAO-4e-flz"/>
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">
-                        <exclude reference="3aT-MC-hgb"/>
-                        <exclude reference="ZPZ-Dv-BP8"/>
-                        <exclude reference="VwO-eU-7ns"/>
+                        <exclude reference="sAO-4e-flz"/>
                     </mask>
                 </variation>
             </tableViewCellContentView>

@@ -15,18 +15,18 @@
                 <rect key="frame" x="0.0" y="0.0" width="399" height="139"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wf4-Z7-PCM">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wf4-Z7-PCM">
                         <rect key="frame" x="8" y="8" width="40" height="40"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="40" id="Lsg-mk-tlS"/>
                             <constraint firstAttribute="height" constant="40" id="nfi-xN-MWK"/>
                         </constraints>
                     </imageView>
-                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EUe-8B-NWp">
-                        <rect key="frame" x="55" y="33" width="250" height="90"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EUe-8B-NWp">
+                        <rect key="frame" x="55" y="34" width="250" height="89"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat_left_bubble" translatesAutoresizingMaskIntoConstraints="NO" id="W1N-sd-SKI">
-                                <rect key="frame" x="0.0" y="0.0" width="250" height="90"/>
+                                <rect key="frame" x="0.0" y="0.0" width="250" height="89"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="BpV-gy-ag7"/>
                                     <constraint firstAttribute="width" constant="70" id="Uor-f3-47t"/>
@@ -39,7 +39,7 @@
                                 </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WRw-QY-hQe">
-                                <rect key="frame" x="15" y="12" width="60" height="66"/>
+                                <rect key="frame" x="15" y="12" width="60" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="3PG-Bd-sFG"/>
                                 </constraints>
@@ -54,7 +54,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.50MB" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2z-w6-2Jt">
-                                <rect key="frame" x="83" y="62" width="60" height="21"/>
+                                <rect key="frame" x="83" y="62" width="60" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="nfr-6W-dbq"/>
                                 </constraints>
@@ -88,7 +88,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GuY-Xa-frV">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GuY-Xa-frV">
                         <rect key="frame" x="56" y="8" width="42" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="8UQ-XC-KE0"/>
@@ -102,12 +102,12 @@
                 <constraints>
                     <constraint firstItem="EUe-8B-NWp" firstAttribute="leading" secondItem="wf4-Z7-PCM" secondAttribute="trailing" constant="7" id="DeZ-lk-6OY"/>
                     <constraint firstAttribute="bottomMargin" secondItem="EUe-8B-NWp" secondAttribute="bottom" constant="8" id="KuY-Fl-ylJ"/>
-                    <constraint firstItem="EUe-8B-NWp" firstAttribute="top" secondItem="GuY-Xa-frV" secondAttribute="bottom" constant="4" id="Vg9-JE-wHp"/>
+                    <constraint firstItem="EUe-8B-NWp" firstAttribute="top" secondItem="GuY-Xa-frV" secondAttribute="bottom" constant="5" id="Vg9-JE-wHp"/>
                     <constraint firstAttribute="bottomMargin" secondItem="wf4-Z7-PCM" secondAttribute="bottom" constant="83" id="Wpp-vm-FSd"/>
                     <constraint firstItem="GuY-Xa-frV" firstAttribute="leading" secondItem="wf4-Z7-PCM" secondAttribute="trailing" constant="8" symbolic="YES" id="gTF-SJ-gaK"/>
                     <constraint firstItem="wf4-Z7-PCM" firstAttribute="top" secondItem="VXz-Mm-pYc" secondAttribute="topMargin" id="nbz-y7-Bsz"/>
                     <constraint firstAttribute="trailingMargin" secondItem="EUe-8B-NWp" secondAttribute="trailing" constant="79" id="ryP-gV-kTA"/>
-                    <constraint firstItem="wf4-Z7-PCM" firstAttribute="leading" secondItem="VXz-Mm-pYc" secondAttribute="leadingMargin" constant="-7" id="x8n-7S-o2r"/>
+                    <constraint firstItem="wf4-Z7-PCM" firstAttribute="leading" secondItem="VXz-Mm-pYc" secondAttribute="leadingMargin" id="x8n-7S-o2r"/>
                     <constraint firstItem="GuY-Xa-frV" firstAttribute="top" secondItem="wf4-Z7-PCM" secondAttribute="top" id="yPl-Ue-Zgc"/>
                 </constraints>
                 <variation key="default">

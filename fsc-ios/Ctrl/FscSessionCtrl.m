@@ -13,6 +13,7 @@
 #import "LcUtils.h"
 #import "FSCPublicUser.h"
 #import "FscChatCtrl.h"
+#import "SDWebImageManager.h"
 
 @interface FscSessionCtrl () <UITableViewDataSource, UITableViewDelegate>
 @property(weak, nonatomic) IBOutlet UITableView *tableView;
@@ -29,6 +30,8 @@
     if (self) {
         _sessionSource = [[NSMutableArray alloc] initWithCapacity:3];
         _sessionDicCache = [[NSMutableDictionary alloc] init];
+//        [[[SDWebImageManager sharedManager] imageCache] clearDisk];
+//        [[[SDWebImageManager sharedManager] imageCache] clearMemory];
     }
     return self;
 }

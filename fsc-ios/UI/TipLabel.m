@@ -26,7 +26,7 @@
 
 -(CGSize)intrinsicContentSize{
     CGSize contentSize = [super intrinsicContentSize];
-    return CGSizeMake(contentSize.width + 10, contentSize.height);
+    return CGSizeMake(contentSize.width + 10, contentSize.height+6);
 }
 
 - (void) drawTextInRect:(CGRect)rect
