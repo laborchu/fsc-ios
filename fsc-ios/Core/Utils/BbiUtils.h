@@ -11,5 +11,7 @@
 
 + (NSString *)getPublicIcon:(NSString *)code;
 
++ (NSString *)getFileIcon:(NSString *)fileType;
+
 + (NSURL *)getResImgUrl:(NSString *)imgPath;
 @end

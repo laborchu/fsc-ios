@@ -133,6 +133,7 @@
     FSCSession *session = _sessionSource[indexPath.row];
     FscChatCtrl *fscChatCtrl = [self.storyboard instantiateViewControllerWithIdentifier:@"FscChatCtrl"];
     fscChatCtrl.fscSession = session;
+    fscChatCtrl.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:fscChatCtrl animated:YES];
 
 }

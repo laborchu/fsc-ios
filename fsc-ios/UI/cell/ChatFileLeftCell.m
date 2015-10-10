@@ -8,10 +8,16 @@
 
 #import "ChatFileLeftCell.h"
 #import "AChatHandler.h"
+#import "ChatFileModel.h"
+#import "FscChatRecorder.h"
+#import "BbiUtils.h"
 
 @interface ChatFileLeftCell ()
 @property(weak, nonatomic) IBOutlet UIImageView *avatarImg;
 @property(weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property(weak, nonatomic) IBOutlet UILabel *fileNameLabel;
+@property(weak, nonatomic) IBOutlet UILabel *fileSizeLabel;
+@property(weak, nonatomic) IBOutlet UIImageView *fileIcon;
 @end
 
 
@@ -26,6 +32,14 @@
 
 - (void)setRecorder:(FscChatRecorder *)recorder {
     [self.chatHandler setRecorder:recorder avatarImg:_avatarImg nameLabel:_nameLabel];
+    
+    NSError* err = nil;
+    ChatFileModel *fileModel = [[ChatFileModel alloc] initWithString:recorder.message error:&err];
+    if(!err){
+        _fileNameLabel.text = fileModel.fileName;
+        _fileSizeLabel.text =  [@(fileModel.fileSize) stringValue];
+        _fileIcon.image = [UIImage imageNamed:[BbiUtils getFileIcon:fileModel.fileType]];
+    }
 }
 
 

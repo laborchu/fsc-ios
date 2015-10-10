@@ -49,6 +49,7 @@
  * 设置头像和名字
  */
 -(void)setRecorder:(FscChatRecorder *)recorder avatarImg:(UIImageView *)avatarImg nameLabel:(UILabel *)nameLabel{
+    nameLabel.hidden = YES;
     FSCLinkman *fscLinkman = [LcUtils getFscLinkman:recorder.createdBy];
     NSString *portrait;
     if(fscLinkman){

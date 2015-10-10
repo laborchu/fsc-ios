@@ -8,10 +8,13 @@
 
 #import "ChatMapLeftCell.h"
 #import "AChatHandler.h"
+#import "FscChatRecorder.h"
+#import "LocationModel.h"
 
 @interface ChatMapLeftCell ()
 @property(weak, nonatomic) IBOutlet UIImageView *avatarImg;
 @property(weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property(weak, nonatomic) IBOutlet UILabel *mapLabel;
 @end
 
 @implementation ChatMapLeftCell
@@ -28,6 +31,11 @@
 
 - (void)setRecorder:(FscChatRecorder *)recorder {
     [self.chatHandler setRecorder:recorder avatarImg:_avatarImg nameLabel:_nameLabel];
+    NSError* err = nil;
+    LocationModel * locationModel = [[LocationModel alloc] initWithString:recorder.message error:&err];
+    if(!err){
+        _mapLabel.text = locationModel.locationAddress;
+    }
 }
 
 

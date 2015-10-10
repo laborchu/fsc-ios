@@ -8,21 +8,21 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="155" id="rCV-1Y-pgQ" customClass="ChatTextLeftCell">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="155" id="rCV-1Y-pgQ" customClass="ChatMapLeftCell">
             <rect key="frame" x="0.0" y="0.0" width="399" height="155"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rCV-1Y-pgQ" id="9ve-Kv-b4G">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="rCV-1Y-pgQ" id="9ve-Kv-b4G">
                 <rect key="frame" x="0.0" y="0.0" width="399" height="154"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KEk-GJ-7dM">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KEk-GJ-7dM">
                         <rect key="frame" x="8" y="8" width="40" height="40"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="40" id="VwH-hN-Nhc"/>
                             <constraint firstAttribute="height" constant="40" id="fNW-tD-HjL"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="姓名" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kg5-Oc-TLY">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="姓名" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kg5-Oc-TLY">
                         <rect key="frame" x="56" y="8" width="42" height="17"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="42" id="4Hb-Qx-Ty3"/>
@@ -32,13 +32,19 @@
                         <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat_map" translatesAutoresizingMaskIntoConstraints="NO" id="96z-bX-0EW">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="chat_map" translatesAutoresizingMaskIntoConstraints="NO" id="96z-bX-0EW">
                         <rect key="frame" x="58" y="30" width="161" height="100"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="161" id="QB5-Jh-fWW"/>
                             <constraint firstAttribute="height" constant="100" id="TIp-aa-UMK"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HP0-NU-xIa">
+                        <rect key="frame" x="69" y="107" width="139" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Kg5-Oc-TLY" firstAttribute="top" secondItem="KEk-GJ-7dM" secondAttribute="top" id="7AR-xQ-69w"/>
@@ -46,6 +52,8 @@
                     <constraint firstAttribute="bottomMargin" secondItem="KEk-GJ-7dM" secondAttribute="bottom" constant="98" id="GIc-hy-OkA"/>
                     <constraint firstItem="Kg5-Oc-TLY" firstAttribute="leading" secondItem="KEk-GJ-7dM" secondAttribute="trailing" constant="8" symbolic="YES" id="Lvz-sD-oX3"/>
                     <constraint firstItem="96z-bX-0EW" firstAttribute="top" secondItem="Kg5-Oc-TLY" secondAttribute="bottom" constant="5" id="ZMi-YI-FYg"/>
+                    <constraint firstItem="HP0-NU-xIa" firstAttribute="leading" secondItem="KEk-GJ-7dM" secondAttribute="trailing" constant="18" id="dvy-tn-UiY"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="HP0-NU-xIa" secondAttribute="bottom" constant="10" id="e8X-Nn-bga"/>
                     <constraint firstItem="KEk-GJ-7dM" firstAttribute="top" secondItem="9ve-Kv-b4G" secondAttribute="topMargin" id="hjl-Es-CuL"/>
                     <constraint firstAttribute="bottomMargin" secondItem="96z-bX-0EW" secondAttribute="bottom" constant="4" id="wdh-PE-SHX"/>
                     <constraint firstItem="KEk-GJ-7dM" firstAttribute="leading" secondItem="9ve-Kv-b4G" secondAttribute="leadingMargin" id="xOf-lU-2Mw"/>
@@ -58,6 +66,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="avatarImg" destination="KEk-GJ-7dM" id="Mxn-uF-uMQ"/>
+                <outlet property="mapLabel" destination="HP0-NU-xIa" id="hKC-PV-E5M"/>
                 <outlet property="nameLabel" destination="Kg5-Oc-TLY" id="Q8f-RN-wPz"/>
             </connections>
             <point key="canvasLocation" x="575.5" y="469.5"/>
