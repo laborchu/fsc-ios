@@ -13,6 +13,7 @@ static PBExtensionRegistry* extensionRegistry = nil;
   if (self == [FscTeachPlanRoot class]) {
     PBMutableExtensionRegistry* registry = [PBMutableExtensionRegistry registry];
     [self registerAllExtensions:registry];
+    [FscTeachNodeRoot registerAllExtensions:registry];
     extensionRegistry = registry;
   }
 }
@@ -276,16 +277,25 @@ static TeachPlanPb* defaultTeachPlanPbInstance = nil;
 @end
 
 @interface TeachPlanNodePb ()
+@property SInt64 id;
 @property (strong) NSString* classIds;
 @property SInt64 nodeDate;
-@property (strong) NSString* text;
 @property (strong) NSString* title;
+@property (strong) NSMutableArray * nodeContentPbArray;
 @property (strong) NSMutableArray * teachPlanImgPbArray;
 @property (strong) NSData* teachPlanVoice;
+@property (strong) NSString* imgPath;
 @end
 
 @implementation TeachPlanNodePb
 
+- (BOOL) hasId {
+  return !!hasId_;
+}
+- (void) setHasId:(BOOL) _value_ {
+  hasId_ = !!_value_;
+}
+@synthesize id;
 - (BOOL) hasClassIds {
   return !!hasClassIds_;
 }
@@ -300,13 +310,6 @@ static TeachPlanPb* defaultTeachPlanPbInstance = nil;
   hasNodeDate_ = !!_value_;
 }
 @synthesize nodeDate;
-- (BOOL) hasText {
-  return !!hasText_;
-}
-- (void) setHasText:(BOOL) _value_ {
-  hasText_ = !!_value_;
-}
-@synthesize text;
 - (BOOL) hasTitle {
   return !!hasTitle_;
 }
@@ -314,6 +317,8 @@ static TeachPlanPb* defaultTeachPlanPbInstance = nil;
   hasTitle_ = !!_value_;
 }
 @synthesize title;
+@synthesize nodeContentPbArray;
+@dynamic nodeContentPb;
 @synthesize teachPlanImgPbArray;
 @dynamic teachPlanImgPb;
 - (BOOL) hasTeachPlanVoice {
@@ -323,13 +328,21 @@ static TeachPlanPb* defaultTeachPlanPbInstance = nil;
   hasTeachPlanVoice_ = !!_value_;
 }
 @synthesize teachPlanVoice;
+- (BOOL) hasImgPath {
+  return !!hasImgPath_;
+}
+- (void) setHasImgPath:(BOOL) _value_ {
+  hasImgPath_ = !!_value_;
+}
+@synthesize imgPath;
 - (instancetype) init {
   if ((self = [super init])) {
+    self.id = 0L;
     self.classIds = @"";
     self.nodeDate = 0L;
-    self.text = @"";
     self.title = @"";
     self.teachPlanVoice = [NSData data];
+    self.imgPath = @"";
   }
   return self;
 }
@@ -345,6 +358,12 @@ static TeachPlanNodePb* defaultTeachPlanNodePbInstance = nil;
 - (instancetype) defaultInstance {
   return defaultTeachPlanNodePbInstance;
 }
+- (NSArray *)nodeContentPb {
+  return nodeContentPbArray;
+}
+- (TeachNodeContentPb*)nodeContentPbAtIndex:(NSUInteger)index {
+  return [nodeContentPbArray objectAtIndex:index];
+}
 - (NSArray *)teachPlanImgPb {
   return teachPlanImgPbArray;
 }
@@ -355,23 +374,29 @@ static TeachPlanNodePb* defaultTeachPlanNodePbInstance = nil;
   return YES;
 }
 - (void) writeToCodedOutputStream:(PBCodedOutputStream*) output {
+  if (self.hasId) {
+    [output writeInt64:1 value:self.id];
+  }
   if (self.hasClassIds) {
-    [output writeString:1 value:self.classIds];
+    [output writeString:2 value:self.classIds];
   }
   if (self.hasNodeDate) {
-    [output writeInt64:2 value:self.nodeDate];
-  }
-  if (self.hasText) {
-    [output writeString:3 value:self.text];
+    [output writeInt64:3 value:self.nodeDate];
   }
   if (self.hasTitle) {
     [output writeString:4 value:self.title];
   }
-  [self.teachPlanImgPbArray enumerateObjectsUsingBlock:^(TeachPlanImgPb *element, NSUInteger idx, BOOL *stop) {
+  [self.nodeContentPbArray enumerateObjectsUsingBlock:^(TeachNodeContentPb *element, NSUInteger idx, BOOL *stop) {
     [output writeMessage:5 value:element];
   }];
+  [self.teachPlanImgPbArray enumerateObjectsUsingBlock:^(TeachPlanImgPb *element, NSUInteger idx, BOOL *stop) {
+    [output writeMessage:6 value:element];
+  }];
   if (self.hasTeachPlanVoice) {
-    [output writeData:6 value:self.teachPlanVoice];
+    [output writeData:7 value:self.teachPlanVoice];
+  }
+  if (self.hasImgPath) {
+    [output writeString:8 value:self.imgPath];
   }
   [self.unknownFields writeToCodedOutputStream:output];
 }
@@ -382,23 +407,29 @@ static TeachPlanNodePb* defaultTeachPlanNodePbInstance = nil;
   }
 
   size_ = 0;
+  if (self.hasId) {
+    size_ += computeInt64Size(1, self.id);
+  }
   if (self.hasClassIds) {
-    size_ += computeStringSize(1, self.classIds);
+    size_ += computeStringSize(2, self.classIds);
   }
   if (self.hasNodeDate) {
-    size_ += computeInt64Size(2, self.nodeDate);
-  }
-  if (self.hasText) {
-    size_ += computeStringSize(3, self.text);
+    size_ += computeInt64Size(3, self.nodeDate);
   }
   if (self.hasTitle) {
     size_ += computeStringSize(4, self.title);
   }
-  [self.teachPlanImgPbArray enumerateObjectsUsingBlock:^(TeachPlanImgPb *element, NSUInteger idx, BOOL *stop) {
+  [self.nodeContentPbArray enumerateObjectsUsingBlock:^(TeachNodeContentPb *element, NSUInteger idx, BOOL *stop) {
     size_ += computeMessageSize(5, element);
   }];
+  [self.teachPlanImgPbArray enumerateObjectsUsingBlock:^(TeachPlanImgPb *element, NSUInteger idx, BOOL *stop) {
+    size_ += computeMessageSize(6, element);
+  }];
   if (self.hasTeachPlanVoice) {
-    size_ += computeDataSize(6, self.teachPlanVoice);
+    size_ += computeDataSize(7, self.teachPlanVoice);
+  }
+  if (self.hasImgPath) {
+    size_ += computeStringSize(8, self.imgPath);
   }
   size_ += self.unknownFields.serializedSize;
   memoizedSerializedSize = size_;
@@ -435,18 +466,24 @@ static TeachPlanNodePb* defaultTeachPlanNodePbInstance = nil;
   return [TeachPlanNodePb builderWithPrototype:self];
 }
 - (void) writeDescriptionTo:(NSMutableString*) output withIndent:(NSString*) indent {
+  if (self.hasId) {
+    [output appendFormat:@"%@%@: %@\n", indent, @"id", [NSNumber numberWithLongLong:self.id]];
+  }
   if (self.hasClassIds) {
     [output appendFormat:@"%@%@: %@\n", indent, @"classIds", self.classIds];
   }
   if (self.hasNodeDate) {
     [output appendFormat:@"%@%@: %@\n", indent, @"nodeDate", [NSNumber numberWithLongLong:self.nodeDate]];
   }
-  if (self.hasText) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"text", self.text];
-  }
   if (self.hasTitle) {
     [output appendFormat:@"%@%@: %@\n", indent, @"title", self.title];
   }
+  [self.nodeContentPbArray enumerateObjectsUsingBlock:^(TeachNodeContentPb *element, NSUInteger idx, BOOL *stop) {
+    [output appendFormat:@"%@%@ {\n", indent, @"nodeContentPb"];
+    [element writeDescriptionTo:output
+                     withIndent:[NSString stringWithFormat:@"%@  ", indent]];
+    [output appendFormat:@"%@}\n", indent];
+  }];
   [self.teachPlanImgPbArray enumerateObjectsUsingBlock:^(TeachPlanImgPb *element, NSUInteger idx, BOOL *stop) {
     [output appendFormat:@"%@%@ {\n", indent, @"teachPlanImgPb"];
     [element writeDescriptionTo:output
@@ -456,20 +493,28 @@ static TeachPlanNodePb* defaultTeachPlanNodePbInstance = nil;
   if (self.hasTeachPlanVoice) {
     [output appendFormat:@"%@%@: %@\n", indent, @"teachPlanVoice", self.teachPlanVoice];
   }
+  if (self.hasImgPath) {
+    [output appendFormat:@"%@%@: %@\n", indent, @"imgPath", self.imgPath];
+  }
   [self.unknownFields writeDescriptionTo:output withIndent:indent];
 }
 - (void) storeInDictionary:(NSMutableDictionary *)dictionary {
+  if (self.hasId) {
+    [dictionary setObject: [NSNumber numberWithLongLong:self.id] forKey: @"id"];
+  }
   if (self.hasClassIds) {
     [dictionary setObject: self.classIds forKey: @"classIds"];
   }
   if (self.hasNodeDate) {
     [dictionary setObject: [NSNumber numberWithLongLong:self.nodeDate] forKey: @"nodeDate"];
   }
-  if (self.hasText) {
-    [dictionary setObject: self.text forKey: @"text"];
-  }
   if (self.hasTitle) {
     [dictionary setObject: self.title forKey: @"title"];
+  }
+  for (TeachNodeContentPb* element in self.nodeContentPbArray) {
+    NSMutableDictionary *elementDictionary = [NSMutableDictionary dictionary];
+    [element storeInDictionary:elementDictionary];
+    [dictionary setObject:[NSDictionary dictionaryWithDictionary:elementDictionary] forKey:@"nodeContentPb"];
   }
   for (TeachPlanImgPb* element in self.teachPlanImgPbArray) {
     NSMutableDictionary *elementDictionary = [NSMutableDictionary dictionary];
@@ -478,6 +523,9 @@ static TeachPlanNodePb* defaultTeachPlanNodePbInstance = nil;
   }
   if (self.hasTeachPlanVoice) {
     [dictionary setObject: self.teachPlanVoice forKey: @"teachPlanVoice"];
+  }
+  if (self.hasImgPath) {
+    [dictionary setObject: self.imgPath forKey: @"imgPath"];
   }
   [self.unknownFields storeInDictionary:dictionary];
 }
@@ -490,38 +538,47 @@ static TeachPlanNodePb* defaultTeachPlanNodePbInstance = nil;
   }
   TeachPlanNodePb *otherMessage = other;
   return
+      self.hasId == otherMessage.hasId &&
+      (!self.hasId || self.id == otherMessage.id) &&
       self.hasClassIds == otherMessage.hasClassIds &&
       (!self.hasClassIds || [self.classIds isEqual:otherMessage.classIds]) &&
       self.hasNodeDate == otherMessage.hasNodeDate &&
       (!self.hasNodeDate || self.nodeDate == otherMessage.nodeDate) &&
-      self.hasText == otherMessage.hasText &&
-      (!self.hasText || [self.text isEqual:otherMessage.text]) &&
       self.hasTitle == otherMessage.hasTitle &&
       (!self.hasTitle || [self.title isEqual:otherMessage.title]) &&
+      [self.nodeContentPbArray isEqualToArray:otherMessage.nodeContentPbArray] &&
       [self.teachPlanImgPbArray isEqualToArray:otherMessage.teachPlanImgPbArray] &&
       self.hasTeachPlanVoice == otherMessage.hasTeachPlanVoice &&
       (!self.hasTeachPlanVoice || [self.teachPlanVoice isEqual:otherMessage.teachPlanVoice]) &&
+      self.hasImgPath == otherMessage.hasImgPath &&
+      (!self.hasImgPath || [self.imgPath isEqual:otherMessage.imgPath]) &&
       (self.unknownFields == otherMessage.unknownFields || (self.unknownFields != nil && [self.unknownFields isEqual:otherMessage.unknownFields]));
 }
 - (NSUInteger) hash {
   __block NSUInteger hashCode = 7;
+  if (self.hasId) {
+    hashCode = hashCode * 31 + [[NSNumber numberWithLongLong:self.id] hash];
+  }
   if (self.hasClassIds) {
     hashCode = hashCode * 31 + [self.classIds hash];
   }
   if (self.hasNodeDate) {
     hashCode = hashCode * 31 + [[NSNumber numberWithLongLong:self.nodeDate] hash];
   }
-  if (self.hasText) {
-    hashCode = hashCode * 31 + [self.text hash];
-  }
   if (self.hasTitle) {
     hashCode = hashCode * 31 + [self.title hash];
   }
+  [self.nodeContentPbArray enumerateObjectsUsingBlock:^(TeachNodeContentPb *element, NSUInteger idx, BOOL *stop) {
+    hashCode = hashCode * 31 + [element hash];
+  }];
   [self.teachPlanImgPbArray enumerateObjectsUsingBlock:^(TeachPlanImgPb *element, NSUInteger idx, BOOL *stop) {
     hashCode = hashCode * 31 + [element hash];
   }];
   if (self.hasTeachPlanVoice) {
     hashCode = hashCode * 31 + [self.teachPlanVoice hash];
+  }
+  if (self.hasImgPath) {
+    hashCode = hashCode * 31 + [self.imgPath hash];
   }
   hashCode = hashCode * 31 + [self.unknownFields hash];
   return hashCode;
@@ -566,17 +623,24 @@ static TeachPlanNodePb* defaultTeachPlanNodePbInstance = nil;
   if (other == [TeachPlanNodePb defaultInstance]) {
     return self;
   }
+  if (other.hasId) {
+    [self setId:other.id];
+  }
   if (other.hasClassIds) {
     [self setClassIds:other.classIds];
   }
   if (other.hasNodeDate) {
     [self setNodeDate:other.nodeDate];
   }
-  if (other.hasText) {
-    [self setText:other.text];
-  }
   if (other.hasTitle) {
     [self setTitle:other.title];
+  }
+  if (other.nodeContentPbArray.count > 0) {
+    if (resultTeachPlanNodePb.nodeContentPbArray == nil) {
+      resultTeachPlanNodePb.nodeContentPbArray = [[NSMutableArray alloc] initWithArray:other.nodeContentPbArray];
+    } else {
+      [resultTeachPlanNodePb.nodeContentPbArray addObjectsFromArray:other.nodeContentPbArray];
+    }
   }
   if (other.teachPlanImgPbArray.count > 0) {
     if (resultTeachPlanNodePb.teachPlanImgPbArray == nil) {
@@ -587,6 +651,9 @@ static TeachPlanNodePb* defaultTeachPlanNodePbInstance = nil;
   }
   if (other.hasTeachPlanVoice) {
     [self setTeachPlanVoice:other.teachPlanVoice];
+  }
+  if (other.hasImgPath) {
+    [self setImgPath:other.imgPath];
   }
   [self mergeUnknownFields:other.unknownFields];
   return self;
@@ -609,16 +676,16 @@ static TeachPlanNodePb* defaultTeachPlanNodePbInstance = nil;
         }
         break;
       }
-      case 10: {
+      case 8: {
+        [self setId:[input readInt64]];
+        break;
+      }
+      case 18: {
         [self setClassIds:[input readString]];
         break;
       }
-      case 16: {
+      case 24: {
         [self setNodeDate:[input readInt64]];
-        break;
-      }
-      case 26: {
-        [self setText:[input readString]];
         break;
       }
       case 34: {
@@ -626,17 +693,43 @@ static TeachPlanNodePb* defaultTeachPlanNodePbInstance = nil;
         break;
       }
       case 42: {
+        TeachNodeContentPbBuilder* subBuilder = [TeachNodeContentPb builder];
+        [input readMessage:subBuilder extensionRegistry:extensionRegistry];
+        [self addNodeContentPb:[subBuilder buildPartial]];
+        break;
+      }
+      case 50: {
         TeachPlanImgPbBuilder* subBuilder = [TeachPlanImgPb builder];
         [input readMessage:subBuilder extensionRegistry:extensionRegistry];
         [self addTeachPlanImgPb:[subBuilder buildPartial]];
         break;
       }
-      case 50: {
+      case 58: {
         [self setTeachPlanVoice:[input readData]];
+        break;
+      }
+      case 66: {
+        [self setImgPath:[input readString]];
         break;
       }
     }
   }
+}
+- (BOOL) hasId {
+  return resultTeachPlanNodePb.hasId;
+}
+- (SInt64) id {
+  return resultTeachPlanNodePb.id;
+}
+- (TeachPlanNodePbBuilder*) setId:(SInt64) value {
+  resultTeachPlanNodePb.hasId = YES;
+  resultTeachPlanNodePb.id = value;
+  return self;
+}
+- (TeachPlanNodePbBuilder*) clearId {
+  resultTeachPlanNodePb.hasId = NO;
+  resultTeachPlanNodePb.id = 0L;
+  return self;
 }
 - (BOOL) hasClassIds {
   return resultTeachPlanNodePb.hasClassIds;
@@ -670,22 +763,6 @@ static TeachPlanNodePb* defaultTeachPlanNodePbInstance = nil;
   resultTeachPlanNodePb.nodeDate = 0L;
   return self;
 }
-- (BOOL) hasText {
-  return resultTeachPlanNodePb.hasText;
-}
-- (NSString*) text {
-  return resultTeachPlanNodePb.text;
-}
-- (TeachPlanNodePbBuilder*) setText:(NSString*) value {
-  resultTeachPlanNodePb.hasText = YES;
-  resultTeachPlanNodePb.text = value;
-  return self;
-}
-- (TeachPlanNodePbBuilder*) clearText {
-  resultTeachPlanNodePb.hasText = NO;
-  resultTeachPlanNodePb.text = @"";
-  return self;
-}
 - (BOOL) hasTitle {
   return resultTeachPlanNodePb.hasTitle;
 }
@@ -700,6 +777,27 @@ static TeachPlanNodePb* defaultTeachPlanNodePbInstance = nil;
 - (TeachPlanNodePbBuilder*) clearTitle {
   resultTeachPlanNodePb.hasTitle = NO;
   resultTeachPlanNodePb.title = @"";
+  return self;
+}
+- (NSMutableArray *)nodeContentPb {
+  return resultTeachPlanNodePb.nodeContentPbArray;
+}
+- (TeachNodeContentPb*)nodeContentPbAtIndex:(NSUInteger)index {
+  return [resultTeachPlanNodePb nodeContentPbAtIndex:index];
+}
+- (TeachPlanNodePbBuilder *)addNodeContentPb:(TeachNodeContentPb*)value {
+  if (resultTeachPlanNodePb.nodeContentPbArray == nil) {
+    resultTeachPlanNodePb.nodeContentPbArray = [[NSMutableArray alloc]init];
+  }
+  [resultTeachPlanNodePb.nodeContentPbArray addObject:value];
+  return self;
+}
+- (TeachPlanNodePbBuilder *)setNodeContentPbArray:(NSArray *)array {
+  resultTeachPlanNodePb.nodeContentPbArray = [[NSMutableArray alloc]initWithArray:array];
+  return self;
+}
+- (TeachPlanNodePbBuilder *)clearNodeContentPb {
+  resultTeachPlanNodePb.nodeContentPbArray = nil;
   return self;
 }
 - (NSMutableArray *)teachPlanImgPb {
@@ -737,6 +835,22 @@ static TeachPlanNodePb* defaultTeachPlanNodePbInstance = nil;
 - (TeachPlanNodePbBuilder*) clearTeachPlanVoice {
   resultTeachPlanNodePb.hasTeachPlanVoice = NO;
   resultTeachPlanNodePb.teachPlanVoice = [NSData data];
+  return self;
+}
+- (BOOL) hasImgPath {
+  return resultTeachPlanNodePb.hasImgPath;
+}
+- (NSString*) imgPath {
+  return resultTeachPlanNodePb.imgPath;
+}
+- (TeachPlanNodePbBuilder*) setImgPath:(NSString*) value {
+  resultTeachPlanNodePb.hasImgPath = YES;
+  resultTeachPlanNodePb.imgPath = value;
+  return self;
+}
+- (TeachPlanNodePbBuilder*) clearImgPath {
+  resultTeachPlanNodePb.hasImgPath = NO;
+  resultTeachPlanNodePb.imgPath = @"";
   return self;
 }
 @end

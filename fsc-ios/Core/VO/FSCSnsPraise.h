@@ -2,7 +2,7 @@
 //  FSCSnsPraise.h
 //  
 //
-//  Created by laborchu on 15/7/29.
+//  Created by laborchu on 15/10/11.
 //
 //
 
@@ -11,13 +11,14 @@
 
 @class FSCSnsMsg;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface FSCSnsPraise : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * dataStatus;
-@property (nonatomic, retain) NSNumber * id;
-@property (nonatomic, retain) NSNumber * msgId;
-@property (nonatomic, retain) NSNumber * timestamp;
-@property (nonatomic, retain) NSNumber * userId;
-@property (nonatomic, retain) FSCSnsMsg *whoGet;
+// Insert code here to declare functionality of your managed object subclass
 
 @end
+
+NS_ASSUME_NONNULL_END
+
+#import "FSCSnsPraise+CoreDataProperties.h"

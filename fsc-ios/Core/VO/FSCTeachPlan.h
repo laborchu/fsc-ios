@@ -2,7 +2,7 @@
 //  FSCTeachPlan.h
 //  
 //
-//  Created by laborchu on 15/7/29.
+//  Created by laborchu on 15/10/11.
 //
 //
 
@@ -11,10 +11,14 @@
 
 @class FSCUser;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface FSCTeachPlan : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * id;
-@property (nonatomic, retain) NSString * planName;
-@property (nonatomic, retain) FSCUser *whoHave;
+// Insert code here to declare functionality of your managed object subclass
 
 @end
+
+NS_ASSUME_NONNULL_END
+
+#import "FSCTeachPlan+CoreDataProperties.h"

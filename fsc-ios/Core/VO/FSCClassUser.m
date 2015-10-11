@@ -2,27 +2,15 @@
 //  FSCClassUser.m
 //  
 //
-//  Created by laborchu on 15/8/20.
+//  Created by laborchu on 15/10/11.
 //
 //
 
 #import "FSCClassUser.h"
 #import "FSCClass.h"
 
-
 @implementation FSCClassUser
 
-@dynamic classId;
-@dynamic gender;
-@dynamic id;
-@dynamic modifiedDate;
-@dynamic name;
-@dynamic portrait;
-@dynamic schoolName;
-@dynamic studentName;
-@dynamic username;
-@dynamic userStatus;
-@dynamic userType;
-@dynamic fscClass;
+// Insert code here to add functionality to your managed object subclass
 
 @end

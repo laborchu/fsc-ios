@@ -2,7 +2,7 @@
 //  FSCUserSession.h
 //  
 //
-//  Created by laborchu on 15/8/31.
+//  Created by laborchu on 15/10/11.
 //
 //
 
@@ -11,23 +11,14 @@
 
 @class FSCSession, FSCUserRecorder;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface FSCUserSession : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * createdDate;
-@property (nonatomic, retain) NSNumber * fromUserId;
-@property (nonatomic, retain) NSNumber * id;
-@property (nonatomic, retain) NSNumber * timestamp;
-@property (nonatomic, retain) NSNumber * toUserId;
-@property (nonatomic, retain) NSString * uuid;
-@property (nonatomic, retain) FSCSession *fscSession;
-@property (nonatomic, retain) NSSet *recorders;
-@end
-
-@interface FSCUserSession (CoreDataGeneratedAccessors)
-
-- (void)addRecordersObject:(FSCUserRecorder *)value;
-- (void)removeRecordersObject:(FSCUserRecorder *)value;
-- (void)addRecorders:(NSSet *)values;
-- (void)removeRecorders:(NSSet *)values;
+// Insert code here to declare functionality of your managed object subclass
 
 @end
+
+NS_ASSUME_NONNULL_END
+
+#import "FSCUserSession+CoreDataProperties.h"

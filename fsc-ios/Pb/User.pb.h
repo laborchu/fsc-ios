@@ -18,6 +18,14 @@
 @class SchoolPbBuilder;
 @class StudentPb;
 @class StudentPbBuilder;
+@class TeachNodeContentPb;
+@class TeachNodeContentPbBuilder;
+@class TeachNodeDetailsPb;
+@class TeachNodeDetailsPbBuilder;
+@class TeachNodeListPb;
+@class TeachNodeListPbBuilder;
+@class TeachNodePb;
+@class TeachNodePbBuilder;
 @class TeachPlanImgPb;
 @class TeachPlanImgPbBuilder;
 @class TeachPlanNodePb;
@@ -56,6 +64,7 @@
 #define UserPb_teacherPb @"teacherPb"
 #define UserPb_schoolPb @"schoolPb"
 #define UserPb_funcCtrlPb @"funcCtrlPb"
+#define UserPb_hasInitPwd @"hasInitPwd"
 @interface UserPb : PBGeneratedMessage<GeneratedMessageProtocol> {
 @private
   BOOL hasId_:1;
@@ -63,6 +72,7 @@
   BOOL hasPhaseId_:1;
   BOOL hasUserType_:1;
   BOOL hasGender_:1;
+  BOOL hasHasInitPwd_:1;
   BOOL hasUuid_:1;
   BOOL hasUsername_:1;
   BOOL hasPassword_:1;
@@ -81,6 +91,7 @@
   SInt64 phaseId;
   SInt32 userType;
   SInt32 gender;
+  SInt32 hasInitPwd;
   NSString* uuid;
   NSString* username;
   NSString* password;
@@ -114,6 +125,7 @@
 - (BOOL) hasParentsPb;
 - (BOOL) hasTeacherPb;
 - (BOOL) hasSchoolPb;
+- (BOOL) hasHasInitPwd;
 @property (readonly) SInt64 id;
 @property (readonly) SInt64 schoolId;
 @property (readonly, strong) NSString* uuid;
@@ -133,6 +145,7 @@
 @property (readonly, strong) TeacherPb* teacherPb;
 @property (readonly, strong) SchoolPb* schoolPb;
 @property (readonly, strong) NSArray * funcCtrlPb;
+@property (readonly) SInt32 hasInitPwd;
 - (FuncCtrlPb*)funcCtrlPbAtIndex:(NSUInteger)index;
 
 + (instancetype) defaultInstance;
@@ -271,9 +284,15 @@
 - (UserPbBuilder *)addFuncCtrlPb:(FuncCtrlPb*)value;
 - (UserPbBuilder *)setFuncCtrlPbArray:(NSArray *)array;
 - (UserPbBuilder *)clearFuncCtrlPb;
+
+- (BOOL) hasHasInitPwd;
+- (SInt32) hasInitPwd;
+- (UserPbBuilder*) setHasInitPwd:(SInt32) value;
+- (UserPbBuilder*) clearHasInitPwd;
 @end
 
 #define SchoolPb_id @"id"
+#define SchoolPb_domain @"domain"
 #define SchoolPb_name @"name"
 #define SchoolPb_year @"year"
 #define SchoolPb_semester @"semester"
@@ -282,17 +301,21 @@
   BOOL hasId_:1;
   BOOL hasYear_:1;
   BOOL hasSemester_:1;
+  BOOL hasDomain_:1;
   BOOL hasName_:1;
   SInt64 id;
   SInt64 year;
   SInt32 semester;
+  NSString* domain;
   NSString* name;
 }
 - (BOOL) hasId;
+- (BOOL) hasDomain;
 - (BOOL) hasName;
 - (BOOL) hasYear;
 - (BOOL) hasSemester;
 @property (readonly) SInt64 id;
+@property (readonly, strong) NSString* domain;
 @property (readonly, strong) NSString* name;
 @property (readonly) SInt64 year;
 @property (readonly) SInt32 semester;
@@ -336,6 +359,11 @@
 - (SInt64) id;
 - (SchoolPbBuilder*) setId:(SInt64) value;
 - (SchoolPbBuilder*) clearId;
+
+- (BOOL) hasDomain;
+- (NSString*) domain;
+- (SchoolPbBuilder*) setDomain:(NSString*) value;
+- (SchoolPbBuilder*) clearDomain;
 
 - (BOOL) hasName;
 - (NSString*) name;
@@ -594,6 +622,7 @@
 @end
 
 #define StudentPb_id @"id"
+#define StudentPb_uuid @"uuid"
 #define StudentPb_name @"name"
 #define StudentPb_classId @"classId"
 #define StudentPb_gradeId @"gradeId"
@@ -602,17 +631,21 @@
   BOOL hasId_:1;
   BOOL hasClassId_:1;
   BOOL hasGradeId_:1;
+  BOOL hasUuid_:1;
   BOOL hasName_:1;
   SInt64 id;
   SInt64 classId;
   SInt64 gradeId;
+  NSString* uuid;
   NSString* name;
 }
 - (BOOL) hasId;
+- (BOOL) hasUuid;
 - (BOOL) hasName;
 - (BOOL) hasClassId;
 - (BOOL) hasGradeId;
 @property (readonly) SInt64 id;
+@property (readonly, strong) NSString* uuid;
 @property (readonly, strong) NSString* name;
 @property (readonly) SInt64 classId;
 @property (readonly) SInt64 gradeId;
@@ -656,6 +689,11 @@
 - (SInt64) id;
 - (StudentPbBuilder*) setId:(SInt64) value;
 - (StudentPbBuilder*) clearId;
+
+- (BOOL) hasUuid;
+- (NSString*) uuid;
+- (StudentPbBuilder*) setUuid:(NSString*) value;
+- (StudentPbBuilder*) clearUuid;
 
 - (BOOL) hasName;
 - (NSString*) name;

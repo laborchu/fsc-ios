@@ -2,7 +2,7 @@
 //  FSCPublicSession.m
 //  
 //
-//  Created by laborchu on 15/8/28.
+//  Created by laborchu on 15/10/11.
 //
 //
 
@@ -10,16 +10,8 @@
 #import "FSCPublicRecorder.h"
 #import "FSCSession.h"
 
-
 @implementation FSCPublicSession
 
-@dynamic createdDate;
-@dynamic id;
-@dynamic publicCode;
-@dynamic publicId;
-@dynamic timestamp;
-@dynamic userId;
-@dynamic parentSession;
-@dynamic recorders;
+// Insert code here to add functionality to your managed object subclass
 
 @end

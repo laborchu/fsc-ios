@@ -2,23 +2,15 @@
 //  FSCSnsComment.m
 //  
 //
-//  Created by laborchu on 15/7/29.
+//  Created by laborchu on 15/10/11.
 //
 //
 
 #import "FSCSnsComment.h"
 #import "FSCSnsMsg.h"
 
-
 @implementation FSCSnsComment
 
-@dynamic comment;
-@dynamic dataStatus;
-@dynamic fromUser;
-@dynamic id;
-@dynamic msgId;
-@dynamic timestamp;
-@dynamic toUser;
-@dynamic whoHave;
+// Insert code here to add functionality to your managed object subclass
 
 @end

@@ -2,7 +2,7 @@
 //  FSCPublicUser.m
 //  
 //
-//  Created by laborchu on 15/8/24.
+//  Created by laborchu on 15/10/11.
 //
 //
 
@@ -10,20 +10,8 @@
 #import "FSCPublicMenu.h"
 #import "FSCUser.h"
 
-
 @implementation FSCPublicUser
 
-@dynamic code;
-@dynamic dataStatus;
-@dynamic groupCode;
-@dynamic id;
-@dynamic inputMenu;
-@dynamic inputMsg;
-@dynamic introduce;
-@dynamic isGroup;
-@dynamic modifiedDate;
-@dynamic name;
-@dynamic menus;
-@dynamic fscUser;
+// Insert code here to add functionality to your managed object subclass
 
 @end

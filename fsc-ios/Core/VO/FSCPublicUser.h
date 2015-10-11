@@ -2,7 +2,7 @@
 //  FSCPublicUser.h
 //  
 //
-//  Created by laborchu on 15/8/24.
+//  Created by laborchu on 15/10/11.
 //
 //
 
@@ -11,27 +11,14 @@
 
 @class FSCPublicMenu, FSCUser;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface FSCPublicUser : NSManagedObject
 
-@property (nonatomic, retain) NSString * code;
-@property (nonatomic, retain) NSNumber * dataStatus;
-@property (nonatomic, retain) NSString * groupCode;
-@property (nonatomic, retain) NSNumber * id;
-@property (nonatomic, retain) NSNumber * inputMenu;
-@property (nonatomic, retain) NSNumber * inputMsg;
-@property (nonatomic, retain) NSString * introduce;
-@property (nonatomic, retain) NSNumber * isGroup;
-@property (nonatomic, retain) NSNumber * modifiedDate;
-@property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSSet *menus;
-@property (nonatomic, retain) FSCUser *fscUser;
-@end
-
-@interface FSCPublicUser (CoreDataGeneratedAccessors)
-
-- (void)addMenusObject:(FSCPublicMenu *)value;
-- (void)removeMenusObject:(FSCPublicMenu *)value;
-- (void)addMenus:(NSSet *)values;
-- (void)removeMenus:(NSSet *)values;
+// Insert code here to declare functionality of your managed object subclass
 
 @end
+
+NS_ASSUME_NONNULL_END
+
+#import "FSCPublicUser+CoreDataProperties.h"

@@ -20,6 +20,8 @@
 #import "FSCUserStudent.h"
 #import "MsgCode.h"
 #import "FscAppDelegate.h"
+#import "FSCSchool.h"
+#import "FSCUser+CoreDataProperties.h"
 
 @implementation RsSessionPostCmd
 
@@ -49,8 +51,11 @@
         if(userList.count>0){
             fscUser = userList.firstObject;
             [PbTransfer pb:user vo:fscUser fields:PB_USER_FIELDS];
+            [PbTransfer pb:user.schoolPb vo:fscUser.school fields:PB_SCHOOL_FIELDS];
         }else{
             fscUser = [PbTransfer pb:user entityName:@"FSCUser" fields:PB_USER_FIELDS];
+            FSCSchool *fscSchool = [PbTransfer pb:user.schoolPb entityName:@"FSCSchool" fields:PB_SCHOOL_FIELDS];
+            fscUser.school = fscSchool;
         }
         NSArray *userClassArray;
         NSArray *studentArray;

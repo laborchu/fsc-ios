@@ -2,7 +2,7 @@
 //  FSCClass.m
 //  
 //
-//  Created by laborchu on 15/8/20.
+//  Created by laborchu on 15/10/11.
 //
 //
 
@@ -11,18 +11,8 @@
 #import "FSCClassUser.h"
 #import "FSCUser.h"
 
-
 @implementation FSCClass
 
-@dynamic classname;
-@dynamic gradeId;
-@dynamic gradeName;
-@dynamic id;
-@dynamic monitorUrl;
-@dynamic semester;
-@dynamic year;
-@dynamic classUsers;
-@dynamic classStudents;
-@dynamic fscUser;
+// Insert code here to add functionality to your managed object subclass
 
 @end

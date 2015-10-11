@@ -64,7 +64,6 @@
 }
 
 - (void)resp:(CmdSignPb *)sign {
-    FSCUser *fscUser = [self getFscUser];
     ClassUserListPb *classUserList = [ClassUserListPb parseFromData:sign.source];
     //classUser
     for (ClassUserPb *classUserPb in classUserList.classUser) {

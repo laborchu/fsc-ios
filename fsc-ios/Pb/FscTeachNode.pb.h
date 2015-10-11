@@ -4,6 +4,8 @@
 
 // @@protoc_insertion_point(imports)
 
+@class TeachNodeContentPb;
+@class TeachNodeContentPbBuilder;
 @class TeachNodeDetailsPb;
 @class TeachNodeDetailsPbBuilder;
 @class TeachNodeListPb;
@@ -21,15 +23,19 @@
 
 #define TeachNodeListPb_teachNode @"teachNode"
 #define TeachNodeListPb_teachNodeDetails @"teachNodeDetails"
+#define TeachNodeListPb_teachNodeContent @"teachNodeContent"
 @interface TeachNodeListPb : PBGeneratedMessage<GeneratedMessageProtocol> {
 @private
   NSMutableArray * teachNodeArray;
   NSMutableArray * teachNodeDetailsArray;
+  NSMutableArray * teachNodeContentArray;
 }
 @property (readonly, strong) NSArray * teachNode;
 @property (readonly, strong) NSArray * teachNodeDetails;
+@property (readonly, strong) NSArray * teachNodeContent;
 - (TeachNodePb*)teachNodeAtIndex:(NSUInteger)index;
 - (TeachNodeDetailsPb*)teachNodeDetailsAtIndex:(NSUInteger)index;
+- (TeachNodeContentPb*)teachNodeContentAtIndex:(NSUInteger)index;
 
 + (instancetype) defaultInstance;
 - (instancetype) defaultInstance;
@@ -77,6 +83,12 @@
 - (TeachNodeListPbBuilder *)addTeachNodeDetails:(TeachNodeDetailsPb*)value;
 - (TeachNodeListPbBuilder *)setTeachNodeDetailsArray:(NSArray *)array;
 - (TeachNodeListPbBuilder *)clearTeachNodeDetails;
+
+- (NSMutableArray *)teachNodeContent;
+- (TeachNodeContentPb*)teachNodeContentAtIndex:(NSUInteger)index;
+- (TeachNodeListPbBuilder *)addTeachNodeContent:(TeachNodeContentPb*)value;
+- (TeachNodeListPbBuilder *)setTeachNodeContentArray:(NSArray *)array;
+- (TeachNodeListPbBuilder *)clearTeachNodeContent;
 @end
 
 #define TeachNodePb_id @"id"
@@ -86,7 +98,7 @@
 #define TeachNodePb_step @"step"
 #define TeachNodePb_type @"type"
 #define TeachNodePb_resId @"resId"
-#define TeachNodePb_startTime @"startTime"
+#define TeachNodePb_nodeTime @"nodeTime"
 #define TeachNodePb_modifiedDate @"modifiedDate"
 #define TeachNodePb_studentId @"studentId"
 #define TeachNodePb_teacherName @"teacherName"
@@ -94,7 +106,7 @@
 #define TeachNodePb_score @"score"
 #define TeachNodePb_dataStatus @"dataStatus"
 #define TeachNodePb_imgText @"imgText"
-#define TeachNodePb_classId @"classId"
+#define TeachNodePb_classIds @"classIds"
 #define TeachNodePb_correctCount @"correctCount"
 #define TeachNodePb_submitCount @"submitCount"
 #define TeachNodePb_total @"total"
@@ -109,10 +121,9 @@
   BOOL hasSchoolId_:1;
   BOOL hasSubjectId_:1;
   BOOL hasResId_:1;
-  BOOL hasStartTime_:1;
+  BOOL hasNodeTime_:1;
   BOOL hasModifiedDate_:1;
   BOOL hasStudentId_:1;
-  BOOL hasClassId_:1;
   BOOL hasCorrectCount_:1;
   BOOL hasSubmitCount_:1;
   BOOL hasTotal_:1;
@@ -126,6 +137,7 @@
   BOOL hasTeacherName_:1;
   BOOL hasNodeStatus_:1;
   BOOL hasImgText_:1;
+  BOOL hasClassIds_:1;
   BOOL hasPicture_:1;
   BOOL hasVoice_:1;
   BOOL hasFile_:1;
@@ -133,10 +145,9 @@
   SInt64 schoolId;
   SInt64 subjectId;
   SInt64 resId;
-  SInt64 startTime;
+  SInt64 nodeTime;
   SInt64 modifiedDate;
   SInt64 studentId;
-  SInt64 classId;
   SInt64 correctCount;
   SInt64 submitCount;
   SInt64 total;
@@ -150,6 +161,7 @@
   NSString* teacherName;
   NSString* nodeStatus;
   NSString* imgText;
+  NSString* classIds;
   NSString* picture;
   NSString* voice;
   NSData* file;
@@ -161,7 +173,7 @@
 - (BOOL) hasStep;
 - (BOOL) hasType;
 - (BOOL) hasResId;
-- (BOOL) hasStartTime;
+- (BOOL) hasNodeTime;
 - (BOOL) hasModifiedDate;
 - (BOOL) hasStudentId;
 - (BOOL) hasTeacherName;
@@ -169,7 +181,7 @@
 - (BOOL) hasScore;
 - (BOOL) hasDataStatus;
 - (BOOL) hasImgText;
-- (BOOL) hasClassId;
+- (BOOL) hasClassIds;
 - (BOOL) hasCorrectCount;
 - (BOOL) hasSubmitCount;
 - (BOOL) hasTotal;
@@ -185,7 +197,7 @@
 @property (readonly) SInt32 step;
 @property (readonly) SInt32 type;
 @property (readonly) SInt64 resId;
-@property (readonly) SInt64 startTime;
+@property (readonly) SInt64 nodeTime;
 @property (readonly) SInt64 modifiedDate;
 @property (readonly) SInt64 studentId;
 @property (readonly, strong) NSString* teacherName;
@@ -193,7 +205,7 @@
 @property (readonly) SInt32 score;
 @property (readonly) SInt32 dataStatus;
 @property (readonly, strong) NSString* imgText;
-@property (readonly) SInt64 classId;
+@property (readonly, strong) NSString* classIds;
 @property (readonly) SInt64 correctCount;
 @property (readonly) SInt64 submitCount;
 @property (readonly) SInt64 total;
@@ -273,10 +285,10 @@
 - (TeachNodePbBuilder*) setResId:(SInt64) value;
 - (TeachNodePbBuilder*) clearResId;
 
-- (BOOL) hasStartTime;
-- (SInt64) startTime;
-- (TeachNodePbBuilder*) setStartTime:(SInt64) value;
-- (TeachNodePbBuilder*) clearStartTime;
+- (BOOL) hasNodeTime;
+- (SInt64) nodeTime;
+- (TeachNodePbBuilder*) setNodeTime:(SInt64) value;
+- (TeachNodePbBuilder*) clearNodeTime;
 
 - (BOOL) hasModifiedDate;
 - (SInt64) modifiedDate;
@@ -313,10 +325,10 @@
 - (TeachNodePbBuilder*) setImgText:(NSString*) value;
 - (TeachNodePbBuilder*) clearImgText;
 
-- (BOOL) hasClassId;
-- (SInt64) classId;
-- (TeachNodePbBuilder*) setClassId:(SInt64) value;
-- (TeachNodePbBuilder*) clearClassId;
+- (BOOL) hasClassIds;
+- (NSString*) classIds;
+- (TeachNodePbBuilder*) setClassIds:(NSString*) value;
+- (TeachNodePbBuilder*) clearClassIds;
 
 - (BOOL) hasCorrectCount;
 - (SInt64) correctCount;
@@ -364,8 +376,10 @@
 #define TeachNodeDetailsPb_studentId @"studentId"
 #define TeachNodeDetailsPb_studentName @"studentName"
 #define TeachNodeDetailsPb_totalScore @"totalScore"
-#define TeachNodeDetailsPb_workStatus @"workStatus"
-#define TeachNodeDetailsPb_dataStatus @"dataStatus"
+#define TeachNodeDetailsPb_isRead @"isRead"
+#define TeachNodeDetailsPb_isSubmit @"isSubmit"
+#define TeachNodeDetailsPb_isCorrect @"isCorrect"
+#define TeachNodeDetailsPb_isFinish @"isFinish"
 #define TeachNodeDetailsPb_modifiedDate @"modifiedDate"
 @interface TeachNodeDetailsPb : PBGeneratedMessage<GeneratedMessageProtocol> {
 @private
@@ -374,16 +388,20 @@
   BOOL hasStudentId_:1;
   BOOL hasTotalScore_:1;
   BOOL hasModifiedDate_:1;
-  BOOL hasWorkStatus_:1;
-  BOOL hasDataStatus_:1;
+  BOOL hasIsRead_:1;
+  BOOL hasIsSubmit_:1;
+  BOOL hasIsCorrect_:1;
+  BOOL hasIsFinish_:1;
   BOOL hasStudentName_:1;
   SInt64 planNodeId;
   SInt64 classId;
   SInt64 studentId;
   SInt64 totalScore;
   SInt64 modifiedDate;
-  SInt32 workStatus;
-  SInt32 dataStatus;
+  SInt32 isRead;
+  SInt32 isSubmit;
+  SInt32 isCorrect;
+  SInt32 isFinish;
   NSString* studentName;
 }
 - (BOOL) hasPlanNodeId;
@@ -391,16 +409,20 @@
 - (BOOL) hasStudentId;
 - (BOOL) hasStudentName;
 - (BOOL) hasTotalScore;
-- (BOOL) hasWorkStatus;
-- (BOOL) hasDataStatus;
+- (BOOL) hasIsRead;
+- (BOOL) hasIsSubmit;
+- (BOOL) hasIsCorrect;
+- (BOOL) hasIsFinish;
 - (BOOL) hasModifiedDate;
 @property (readonly) SInt64 planNodeId;
 @property (readonly) SInt64 classId;
 @property (readonly) SInt64 studentId;
 @property (readonly, strong) NSString* studentName;
 @property (readonly) SInt64 totalScore;
-@property (readonly) SInt32 workStatus;
-@property (readonly) SInt32 dataStatus;
+@property (readonly) SInt32 isRead;
+@property (readonly) SInt32 isSubmit;
+@property (readonly) SInt32 isCorrect;
+@property (readonly) SInt32 isFinish;
 @property (readonly) SInt64 modifiedDate;
 
 + (instancetype) defaultInstance;
@@ -463,20 +485,120 @@
 - (TeachNodeDetailsPbBuilder*) setTotalScore:(SInt64) value;
 - (TeachNodeDetailsPbBuilder*) clearTotalScore;
 
-- (BOOL) hasWorkStatus;
-- (SInt32) workStatus;
-- (TeachNodeDetailsPbBuilder*) setWorkStatus:(SInt32) value;
-- (TeachNodeDetailsPbBuilder*) clearWorkStatus;
+- (BOOL) hasIsRead;
+- (SInt32) isRead;
+- (TeachNodeDetailsPbBuilder*) setIsRead:(SInt32) value;
+- (TeachNodeDetailsPbBuilder*) clearIsRead;
 
-- (BOOL) hasDataStatus;
-- (SInt32) dataStatus;
-- (TeachNodeDetailsPbBuilder*) setDataStatus:(SInt32) value;
-- (TeachNodeDetailsPbBuilder*) clearDataStatus;
+- (BOOL) hasIsSubmit;
+- (SInt32) isSubmit;
+- (TeachNodeDetailsPbBuilder*) setIsSubmit:(SInt32) value;
+- (TeachNodeDetailsPbBuilder*) clearIsSubmit;
+
+- (BOOL) hasIsCorrect;
+- (SInt32) isCorrect;
+- (TeachNodeDetailsPbBuilder*) setIsCorrect:(SInt32) value;
+- (TeachNodeDetailsPbBuilder*) clearIsCorrect;
+
+- (BOOL) hasIsFinish;
+- (SInt32) isFinish;
+- (TeachNodeDetailsPbBuilder*) setIsFinish:(SInt32) value;
+- (TeachNodeDetailsPbBuilder*) clearIsFinish;
 
 - (BOOL) hasModifiedDate;
 - (SInt64) modifiedDate;
 - (TeachNodeDetailsPbBuilder*) setModifiedDate:(SInt64) value;
 - (TeachNodeDetailsPbBuilder*) clearModifiedDate;
+@end
+
+#define TeachNodeContentPb_id @"id"
+#define TeachNodeContentPb_nodeId @"nodeId"
+#define TeachNodeContentPb_content @"content"
+#define TeachNodeContentPb_dataStatus @"dataStatus"
+#define TeachNodeContentPb_modifiedDate @"modifiedDate"
+@interface TeachNodeContentPb : PBGeneratedMessage<GeneratedMessageProtocol> {
+@private
+  BOOL hasId_:1;
+  BOOL hasNodeId_:1;
+  BOOL hasModifiedDate_:1;
+  BOOL hasDataStatus_:1;
+  BOOL hasContent_:1;
+  SInt64 id;
+  SInt64 nodeId;
+  SInt64 modifiedDate;
+  SInt32 dataStatus;
+  NSString* content;
+}
+- (BOOL) hasId;
+- (BOOL) hasNodeId;
+- (BOOL) hasContent;
+- (BOOL) hasDataStatus;
+- (BOOL) hasModifiedDate;
+@property (readonly) SInt64 id;
+@property (readonly) SInt64 nodeId;
+@property (readonly, strong) NSString* content;
+@property (readonly) SInt32 dataStatus;
+@property (readonly) SInt64 modifiedDate;
+
++ (instancetype) defaultInstance;
+- (instancetype) defaultInstance;
+
+- (BOOL) isInitialized;
+- (void) writeToCodedOutputStream:(PBCodedOutputStream*) output;
+- (TeachNodeContentPbBuilder*) builder;
++ (TeachNodeContentPbBuilder*) builder;
++ (TeachNodeContentPbBuilder*) builderWithPrototype:(TeachNodeContentPb*) prototype;
+- (TeachNodeContentPbBuilder*) toBuilder;
+
++ (TeachNodeContentPb*) parseFromData:(NSData*) data;
++ (TeachNodeContentPb*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
++ (TeachNodeContentPb*) parseFromInputStream:(NSInputStream*) input;
++ (TeachNodeContentPb*) parseFromInputStream:(NSInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
++ (TeachNodeContentPb*) parseFromCodedInputStream:(PBCodedInputStream*) input;
++ (TeachNodeContentPb*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
+@end
+
+@interface TeachNodeContentPbBuilder : PBGeneratedMessageBuilder {
+@private
+  TeachNodeContentPb* resultTeachNodeContentPb;
+}
+
+- (TeachNodeContentPb*) defaultInstance;
+
+- (TeachNodeContentPbBuilder*) clear;
+- (TeachNodeContentPbBuilder*) clone;
+
+- (TeachNodeContentPb*) build;
+- (TeachNodeContentPb*) buildPartial;
+
+- (TeachNodeContentPbBuilder*) mergeFrom:(TeachNodeContentPb*) other;
+- (TeachNodeContentPbBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
+- (TeachNodeContentPbBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
+
+- (BOOL) hasId;
+- (SInt64) id;
+- (TeachNodeContentPbBuilder*) setId:(SInt64) value;
+- (TeachNodeContentPbBuilder*) clearId;
+
+- (BOOL) hasNodeId;
+- (SInt64) nodeId;
+- (TeachNodeContentPbBuilder*) setNodeId:(SInt64) value;
+- (TeachNodeContentPbBuilder*) clearNodeId;
+
+- (BOOL) hasContent;
+- (NSString*) content;
+- (TeachNodeContentPbBuilder*) setContent:(NSString*) value;
+- (TeachNodeContentPbBuilder*) clearContent;
+
+- (BOOL) hasDataStatus;
+- (SInt32) dataStatus;
+- (TeachNodeContentPbBuilder*) setDataStatus:(SInt32) value;
+- (TeachNodeContentPbBuilder*) clearDataStatus;
+
+- (BOOL) hasModifiedDate;
+- (SInt64) modifiedDate;
+- (TeachNodeContentPbBuilder*) setModifiedDate:(SInt64) value;
+- (TeachNodeContentPbBuilder*) clearModifiedDate;
 @end
 
 

@@ -26,6 +26,7 @@ static PBExtensionRegistry* extensionRegistry = nil;
 @property (strong) NSString* password;
 @property (strong) NSString* token;
 @property (strong) PhoneInfoPb* phoneInfo;
+@property (strong) NSString* name;
 @end
 
 @implementation LoginPb
@@ -58,12 +59,20 @@ static PBExtensionRegistry* extensionRegistry = nil;
   hasPhoneInfo_ = !!_value_;
 }
 @synthesize phoneInfo;
+- (BOOL) hasName {
+  return !!hasName_;
+}
+- (void) setHasName:(BOOL) _value_ {
+  hasName_ = !!_value_;
+}
+@synthesize name;
 - (instancetype) init {
   if ((self = [super init])) {
     self.loginName = @"";
     self.password = @"";
     self.token = @"";
     self.phoneInfo = [PhoneInfoPb defaultInstance];
+    self.name = @"";
   }
   return self;
 }
@@ -101,6 +110,9 @@ static LoginPb* defaultLoginPbInstance = nil;
   if (self.hasPhoneInfo) {
     [output writeMessage:4 value:self.phoneInfo];
   }
+  if (self.hasName) {
+    [output writeString:5 value:self.name];
+  }
   [self.unknownFields writeToCodedOutputStream:output];
 }
 - (SInt32) serializedSize {
@@ -121,6 +133,9 @@ static LoginPb* defaultLoginPbInstance = nil;
   }
   if (self.hasPhoneInfo) {
     size_ += computeMessageSize(4, self.phoneInfo);
+  }
+  if (self.hasName) {
+    size_ += computeStringSize(5, self.name);
   }
   size_ += self.unknownFields.serializedSize;
   memoizedSerializedSize = size_;
@@ -172,6 +187,9 @@ static LoginPb* defaultLoginPbInstance = nil;
                          withIndent:[NSString stringWithFormat:@"%@  ", indent]];
     [output appendFormat:@"%@}\n", indent];
   }
+  if (self.hasName) {
+    [output appendFormat:@"%@%@: %@\n", indent, @"name", self.name];
+  }
   [self.unknownFields writeDescriptionTo:output withIndent:indent];
 }
 - (void) storeInDictionary:(NSMutableDictionary *)dictionary {
@@ -188,6 +206,9 @@ static LoginPb* defaultLoginPbInstance = nil;
    NSMutableDictionary *messageDictionary = [NSMutableDictionary dictionary]; 
    [self.phoneInfo storeInDictionary:messageDictionary];
    [dictionary setObject:[NSDictionary dictionaryWithDictionary:messageDictionary] forKey:@"phoneInfo"];
+  }
+  if (self.hasName) {
+    [dictionary setObject: self.name forKey: @"name"];
   }
   [self.unknownFields storeInDictionary:dictionary];
 }
@@ -208,6 +229,8 @@ static LoginPb* defaultLoginPbInstance = nil;
       (!self.hasToken || [self.token isEqual:otherMessage.token]) &&
       self.hasPhoneInfo == otherMessage.hasPhoneInfo &&
       (!self.hasPhoneInfo || [self.phoneInfo isEqual:otherMessage.phoneInfo]) &&
+      self.hasName == otherMessage.hasName &&
+      (!self.hasName || [self.name isEqual:otherMessage.name]) &&
       (self.unknownFields == otherMessage.unknownFields || (self.unknownFields != nil && [self.unknownFields isEqual:otherMessage.unknownFields]));
 }
 - (NSUInteger) hash {
@@ -223,6 +246,9 @@ static LoginPb* defaultLoginPbInstance = nil;
   }
   if (self.hasPhoneInfo) {
     hashCode = hashCode * 31 + [self.phoneInfo hash];
+  }
+  if (self.hasName) {
+    hashCode = hashCode * 31 + [self.name hash];
   }
   hashCode = hashCode * 31 + [self.unknownFields hash];
   return hashCode;
@@ -279,6 +305,9 @@ static LoginPb* defaultLoginPbInstance = nil;
   if (other.hasPhoneInfo) {
     [self mergePhoneInfo:other.phoneInfo];
   }
+  if (other.hasName) {
+    [self setName:other.name];
+  }
   [self mergeUnknownFields:other.unknownFields];
   return self;
 }
@@ -319,6 +348,10 @@ static LoginPb* defaultLoginPbInstance = nil;
         }
         [input readMessage:subBuilder extensionRegistry:extensionRegistry];
         [self setPhoneInfo:[subBuilder buildPartial]];
+        break;
+      }
+      case 42: {
+        [self setName:[input readString]];
         break;
       }
     }
@@ -400,6 +433,22 @@ static LoginPb* defaultLoginPbInstance = nil;
 - (LoginPbBuilder*) clearPhoneInfo {
   resultLoginPb.hasPhoneInfo = NO;
   resultLoginPb.phoneInfo = [PhoneInfoPb defaultInstance];
+  return self;
+}
+- (BOOL) hasName {
+  return resultLoginPb.hasName;
+}
+- (NSString*) name {
+  return resultLoginPb.name;
+}
+- (LoginPbBuilder*) setName:(NSString*) value {
+  resultLoginPb.hasName = YES;
+  resultLoginPb.name = value;
+  return self;
+}
+- (LoginPbBuilder*) clearName {
+  resultLoginPb.hasName = NO;
+  resultLoginPb.name = @"";
   return self;
 }
 @end

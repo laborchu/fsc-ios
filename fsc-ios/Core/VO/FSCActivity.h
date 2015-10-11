@@ -2,7 +2,7 @@
 //  FSCActivity.h
 //  
 //
-//  Created by laborchu on 15/7/29.
+//  Created by laborchu on 15/10/11.
 //
 //
 
@@ -11,19 +11,14 @@
 
 @class FSCPublicRecorder, FSCUser;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface FSCActivity : NSManagedObject
 
-@property (nonatomic, retain) NSString * actName;
-@property (nonatomic, retain) NSNumber * actNum;
-@property (nonatomic, retain) NSString * coverImg;
-@property (nonatomic, retain) NSNumber * deadline;
-@property (nonatomic, retain) NSString * desc;
-@property (nonatomic, retain) NSNumber * endTime;
-@property (nonatomic, retain) NSNumber * id;
-@property (nonatomic, retain) NSNumber * modifiedDate;
-@property (nonatomic, retain) NSNumber * startTime;
-@property (nonatomic, retain) NSNumber * status;
-@property (nonatomic, retain) FSCPublicRecorder *whichPubRecorder;
-@property (nonatomic, retain) FSCUser *whoCanLook;
+// Insert code here to declare functionality of your managed object subclass
 
 @end
+
+NS_ASSUME_NONNULL_END
+
+#import "FSCActivity+CoreDataProperties.h"

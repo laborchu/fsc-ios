@@ -2,7 +2,7 @@
 //  FSCPublicSession.h
 //  
 //
-//  Created by laborchu on 15/8/28.
+//  Created by laborchu on 15/10/11.
 //
 //
 
@@ -11,23 +11,14 @@
 
 @class FSCPublicRecorder, FSCSession;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface FSCPublicSession : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * createdDate;
-@property (nonatomic, retain) NSNumber * id;
-@property (nonatomic, retain) NSString * publicCode;
-@property (nonatomic, retain) NSNumber * publicId;
-@property (nonatomic, retain) NSNumber * timestamp;
-@property (nonatomic, retain) NSNumber * userId;
-@property (nonatomic, retain) FSCSession *parentSession;
-@property (nonatomic, retain) NSSet *recorders;
-@end
-
-@interface FSCPublicSession (CoreDataGeneratedAccessors)
-
-- (void)addRecordersObject:(FSCPublicRecorder *)value;
-- (void)removeRecordersObject:(FSCPublicRecorder *)value;
-- (void)addRecorders:(NSSet *)values;
-- (void)removeRecorders:(NSSet *)values;
+// Insert code here to declare functionality of your managed object subclass
 
 @end
+
+NS_ASSUME_NONNULL_END
+
+#import "FSCPublicSession+CoreDataProperties.h"

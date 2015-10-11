@@ -23,6 +23,7 @@ static PBExtensionRegistry* extensionRegistry = nil;
 @interface TeachNodeListPb ()
 @property (strong) NSMutableArray * teachNodeArray;
 @property (strong) NSMutableArray * teachNodeDetailsArray;
+@property (strong) NSMutableArray * teachNodeContentArray;
 @end
 
 @implementation TeachNodeListPb
@@ -31,6 +32,8 @@ static PBExtensionRegistry* extensionRegistry = nil;
 @dynamic teachNode;
 @synthesize teachNodeDetailsArray;
 @dynamic teachNodeDetails;
+@synthesize teachNodeContentArray;
+@dynamic teachNodeContent;
 - (instancetype) init {
   if ((self = [super init])) {
   }
@@ -60,6 +63,12 @@ static TeachNodeListPb* defaultTeachNodeListPbInstance = nil;
 - (TeachNodeDetailsPb*)teachNodeDetailsAtIndex:(NSUInteger)index {
   return [teachNodeDetailsArray objectAtIndex:index];
 }
+- (NSArray *)teachNodeContent {
+  return teachNodeContentArray;
+}
+- (TeachNodeContentPb*)teachNodeContentAtIndex:(NSUInteger)index {
+  return [teachNodeContentArray objectAtIndex:index];
+}
 - (BOOL) isInitialized {
   return YES;
 }
@@ -69,6 +78,9 @@ static TeachNodeListPb* defaultTeachNodeListPbInstance = nil;
   }];
   [self.teachNodeDetailsArray enumerateObjectsUsingBlock:^(TeachNodeDetailsPb *element, NSUInteger idx, BOOL *stop) {
     [output writeMessage:2 value:element];
+  }];
+  [self.teachNodeContentArray enumerateObjectsUsingBlock:^(TeachNodeContentPb *element, NSUInteger idx, BOOL *stop) {
+    [output writeMessage:3 value:element];
   }];
   [self.unknownFields writeToCodedOutputStream:output];
 }
@@ -84,6 +96,9 @@ static TeachNodeListPb* defaultTeachNodeListPbInstance = nil;
   }];
   [self.teachNodeDetailsArray enumerateObjectsUsingBlock:^(TeachNodeDetailsPb *element, NSUInteger idx, BOOL *stop) {
     size_ += computeMessageSize(2, element);
+  }];
+  [self.teachNodeContentArray enumerateObjectsUsingBlock:^(TeachNodeContentPb *element, NSUInteger idx, BOOL *stop) {
+    size_ += computeMessageSize(3, element);
   }];
   size_ += self.unknownFields.serializedSize;
   memoizedSerializedSize = size_;
@@ -132,6 +147,12 @@ static TeachNodeListPb* defaultTeachNodeListPbInstance = nil;
                      withIndent:[NSString stringWithFormat:@"%@  ", indent]];
     [output appendFormat:@"%@}\n", indent];
   }];
+  [self.teachNodeContentArray enumerateObjectsUsingBlock:^(TeachNodeContentPb *element, NSUInteger idx, BOOL *stop) {
+    [output appendFormat:@"%@%@ {\n", indent, @"teachNodeContent"];
+    [element writeDescriptionTo:output
+                     withIndent:[NSString stringWithFormat:@"%@  ", indent]];
+    [output appendFormat:@"%@}\n", indent];
+  }];
   [self.unknownFields writeDescriptionTo:output withIndent:indent];
 }
 - (void) storeInDictionary:(NSMutableDictionary *)dictionary {
@@ -144,6 +165,11 @@ static TeachNodeListPb* defaultTeachNodeListPbInstance = nil;
     NSMutableDictionary *elementDictionary = [NSMutableDictionary dictionary];
     [element storeInDictionary:elementDictionary];
     [dictionary setObject:[NSDictionary dictionaryWithDictionary:elementDictionary] forKey:@"teachNodeDetails"];
+  }
+  for (TeachNodeContentPb* element in self.teachNodeContentArray) {
+    NSMutableDictionary *elementDictionary = [NSMutableDictionary dictionary];
+    [element storeInDictionary:elementDictionary];
+    [dictionary setObject:[NSDictionary dictionaryWithDictionary:elementDictionary] forKey:@"teachNodeContent"];
   }
   [self.unknownFields storeInDictionary:dictionary];
 }
@@ -158,6 +184,7 @@ static TeachNodeListPb* defaultTeachNodeListPbInstance = nil;
   return
       [self.teachNodeArray isEqualToArray:otherMessage.teachNodeArray] &&
       [self.teachNodeDetailsArray isEqualToArray:otherMessage.teachNodeDetailsArray] &&
+      [self.teachNodeContentArray isEqualToArray:otherMessage.teachNodeContentArray] &&
       (self.unknownFields == otherMessage.unknownFields || (self.unknownFields != nil && [self.unknownFields isEqual:otherMessage.unknownFields]));
 }
 - (NSUInteger) hash {
@@ -166,6 +193,9 @@ static TeachNodeListPb* defaultTeachNodeListPbInstance = nil;
     hashCode = hashCode * 31 + [element hash];
   }];
   [self.teachNodeDetailsArray enumerateObjectsUsingBlock:^(TeachNodeDetailsPb *element, NSUInteger idx, BOOL *stop) {
+    hashCode = hashCode * 31 + [element hash];
+  }];
+  [self.teachNodeContentArray enumerateObjectsUsingBlock:^(TeachNodeContentPb *element, NSUInteger idx, BOOL *stop) {
     hashCode = hashCode * 31 + [element hash];
   }];
   hashCode = hashCode * 31 + [self.unknownFields hash];
@@ -225,6 +255,13 @@ static TeachNodeListPb* defaultTeachNodeListPbInstance = nil;
       [resultTeachNodeListPb.teachNodeDetailsArray addObjectsFromArray:other.teachNodeDetailsArray];
     }
   }
+  if (other.teachNodeContentArray.count > 0) {
+    if (resultTeachNodeListPb.teachNodeContentArray == nil) {
+      resultTeachNodeListPb.teachNodeContentArray = [[NSMutableArray alloc] initWithArray:other.teachNodeContentArray];
+    } else {
+      [resultTeachNodeListPb.teachNodeContentArray addObjectsFromArray:other.teachNodeContentArray];
+    }
+  }
   [self mergeUnknownFields:other.unknownFields];
   return self;
 }
@@ -256,6 +293,12 @@ static TeachNodeListPb* defaultTeachNodeListPbInstance = nil;
         TeachNodeDetailsPbBuilder* subBuilder = [TeachNodeDetailsPb builder];
         [input readMessage:subBuilder extensionRegistry:extensionRegistry];
         [self addTeachNodeDetails:[subBuilder buildPartial]];
+        break;
+      }
+      case 26: {
+        TeachNodeContentPbBuilder* subBuilder = [TeachNodeContentPb builder];
+        [input readMessage:subBuilder extensionRegistry:extensionRegistry];
+        [self addTeachNodeContent:[subBuilder buildPartial]];
         break;
       }
     }
@@ -303,6 +346,27 @@ static TeachNodeListPb* defaultTeachNodeListPbInstance = nil;
   resultTeachNodeListPb.teachNodeDetailsArray = nil;
   return self;
 }
+- (NSMutableArray *)teachNodeContent {
+  return resultTeachNodeListPb.teachNodeContentArray;
+}
+- (TeachNodeContentPb*)teachNodeContentAtIndex:(NSUInteger)index {
+  return [resultTeachNodeListPb teachNodeContentAtIndex:index];
+}
+- (TeachNodeListPbBuilder *)addTeachNodeContent:(TeachNodeContentPb*)value {
+  if (resultTeachNodeListPb.teachNodeContentArray == nil) {
+    resultTeachNodeListPb.teachNodeContentArray = [[NSMutableArray alloc]init];
+  }
+  [resultTeachNodeListPb.teachNodeContentArray addObject:value];
+  return self;
+}
+- (TeachNodeListPbBuilder *)setTeachNodeContentArray:(NSArray *)array {
+  resultTeachNodeListPb.teachNodeContentArray = [[NSMutableArray alloc]initWithArray:array];
+  return self;
+}
+- (TeachNodeListPbBuilder *)clearTeachNodeContent {
+  resultTeachNodeListPb.teachNodeContentArray = nil;
+  return self;
+}
 @end
 
 @interface TeachNodePb ()
@@ -313,7 +377,7 @@ static TeachNodeListPb* defaultTeachNodeListPbInstance = nil;
 @property SInt32 step;
 @property SInt32 type;
 @property SInt64 resId;
-@property SInt64 startTime;
+@property SInt64 nodeTime;
 @property SInt64 modifiedDate;
 @property SInt64 studentId;
 @property (strong) NSString* teacherName;
@@ -321,7 +385,7 @@ static TeachNodeListPb* defaultTeachNodeListPbInstance = nil;
 @property SInt32 score;
 @property SInt32 dataStatus;
 @property (strong) NSString* imgText;
-@property SInt64 classId;
+@property (strong) NSString* classIds;
 @property SInt64 correctCount;
 @property SInt64 submitCount;
 @property SInt64 total;
@@ -383,13 +447,13 @@ static TeachNodeListPb* defaultTeachNodeListPbInstance = nil;
   hasResId_ = !!_value_;
 }
 @synthesize resId;
-- (BOOL) hasStartTime {
-  return !!hasStartTime_;
+- (BOOL) hasNodeTime {
+  return !!hasNodeTime_;
 }
-- (void) setHasStartTime:(BOOL) _value_ {
-  hasStartTime_ = !!_value_;
+- (void) setHasNodeTime:(BOOL) _value_ {
+  hasNodeTime_ = !!_value_;
 }
-@synthesize startTime;
+@synthesize nodeTime;
 - (BOOL) hasModifiedDate {
   return !!hasModifiedDate_;
 }
@@ -439,13 +503,13 @@ static TeachNodeListPb* defaultTeachNodeListPbInstance = nil;
   hasImgText_ = !!_value_;
 }
 @synthesize imgText;
-- (BOOL) hasClassId {
-  return !!hasClassId_;
+- (BOOL) hasClassIds {
+  return !!hasClassIds_;
 }
-- (void) setHasClassId:(BOOL) _value_ {
-  hasClassId_ = !!_value_;
+- (void) setHasClassIds:(BOOL) _value_ {
+  hasClassIds_ = !!_value_;
 }
-@synthesize classId;
+@synthesize classIds;
 - (BOOL) hasCorrectCount {
   return !!hasCorrectCount_;
 }
@@ -511,7 +575,7 @@ static TeachNodeListPb* defaultTeachNodeListPbInstance = nil;
     self.step = 0;
     self.type = 0;
     self.resId = 0L;
-    self.startTime = 0L;
+    self.nodeTime = 0L;
     self.modifiedDate = 0L;
     self.studentId = 0L;
     self.teacherName = @"";
@@ -519,7 +583,7 @@ static TeachNodeListPb* defaultTeachNodeListPbInstance = nil;
     self.score = 0;
     self.dataStatus = 0;
     self.imgText = @"";
-    self.classId = 0L;
+    self.classIds = @"";
     self.correctCount = 0L;
     self.submitCount = 0L;
     self.total = 0L;
@@ -568,8 +632,8 @@ static TeachNodePb* defaultTeachNodePbInstance = nil;
   if (self.hasResId) {
     [output writeInt64:7 value:self.resId];
   }
-  if (self.hasStartTime) {
-    [output writeInt64:8 value:self.startTime];
+  if (self.hasNodeTime) {
+    [output writeInt64:8 value:self.nodeTime];
   }
   if (self.hasModifiedDate) {
     [output writeInt64:9 value:self.modifiedDate];
@@ -592,8 +656,8 @@ static TeachNodePb* defaultTeachNodePbInstance = nil;
   if (self.hasImgText) {
     [output writeString:15 value:self.imgText];
   }
-  if (self.hasClassId) {
-    [output writeInt64:16 value:self.classId];
+  if (self.hasClassIds) {
+    [output writeString:16 value:self.classIds];
   }
   if (self.hasCorrectCount) {
     [output writeInt64:17 value:self.correctCount];
@@ -649,8 +713,8 @@ static TeachNodePb* defaultTeachNodePbInstance = nil;
   if (self.hasResId) {
     size_ += computeInt64Size(7, self.resId);
   }
-  if (self.hasStartTime) {
-    size_ += computeInt64Size(8, self.startTime);
+  if (self.hasNodeTime) {
+    size_ += computeInt64Size(8, self.nodeTime);
   }
   if (self.hasModifiedDate) {
     size_ += computeInt64Size(9, self.modifiedDate);
@@ -673,8 +737,8 @@ static TeachNodePb* defaultTeachNodePbInstance = nil;
   if (self.hasImgText) {
     size_ += computeStringSize(15, self.imgText);
   }
-  if (self.hasClassId) {
-    size_ += computeInt64Size(16, self.classId);
+  if (self.hasClassIds) {
+    size_ += computeStringSize(16, self.classIds);
   }
   if (self.hasCorrectCount) {
     size_ += computeInt64Size(17, self.correctCount);
@@ -756,8 +820,8 @@ static TeachNodePb* defaultTeachNodePbInstance = nil;
   if (self.hasResId) {
     [output appendFormat:@"%@%@: %@\n", indent, @"resId", [NSNumber numberWithLongLong:self.resId]];
   }
-  if (self.hasStartTime) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"startTime", [NSNumber numberWithLongLong:self.startTime]];
+  if (self.hasNodeTime) {
+    [output appendFormat:@"%@%@: %@\n", indent, @"nodeTime", [NSNumber numberWithLongLong:self.nodeTime]];
   }
   if (self.hasModifiedDate) {
     [output appendFormat:@"%@%@: %@\n", indent, @"modifiedDate", [NSNumber numberWithLongLong:self.modifiedDate]];
@@ -780,8 +844,8 @@ static TeachNodePb* defaultTeachNodePbInstance = nil;
   if (self.hasImgText) {
     [output appendFormat:@"%@%@: %@\n", indent, @"imgText", self.imgText];
   }
-  if (self.hasClassId) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"classId", [NSNumber numberWithLongLong:self.classId]];
+  if (self.hasClassIds) {
+    [output appendFormat:@"%@%@: %@\n", indent, @"classIds", self.classIds];
   }
   if (self.hasCorrectCount) {
     [output appendFormat:@"%@%@: %@\n", indent, @"correctCount", [NSNumber numberWithLongLong:self.correctCount]];
@@ -831,8 +895,8 @@ static TeachNodePb* defaultTeachNodePbInstance = nil;
   if (self.hasResId) {
     [dictionary setObject: [NSNumber numberWithLongLong:self.resId] forKey: @"resId"];
   }
-  if (self.hasStartTime) {
-    [dictionary setObject: [NSNumber numberWithLongLong:self.startTime] forKey: @"startTime"];
+  if (self.hasNodeTime) {
+    [dictionary setObject: [NSNumber numberWithLongLong:self.nodeTime] forKey: @"nodeTime"];
   }
   if (self.hasModifiedDate) {
     [dictionary setObject: [NSNumber numberWithLongLong:self.modifiedDate] forKey: @"modifiedDate"];
@@ -855,8 +919,8 @@ static TeachNodePb* defaultTeachNodePbInstance = nil;
   if (self.hasImgText) {
     [dictionary setObject: self.imgText forKey: @"imgText"];
   }
-  if (self.hasClassId) {
-    [dictionary setObject: [NSNumber numberWithLongLong:self.classId] forKey: @"classId"];
+  if (self.hasClassIds) {
+    [dictionary setObject: self.classIds forKey: @"classIds"];
   }
   if (self.hasCorrectCount) {
     [dictionary setObject: [NSNumber numberWithLongLong:self.correctCount] forKey: @"correctCount"];
@@ -907,8 +971,8 @@ static TeachNodePb* defaultTeachNodePbInstance = nil;
       (!self.hasType || self.type == otherMessage.type) &&
       self.hasResId == otherMessage.hasResId &&
       (!self.hasResId || self.resId == otherMessage.resId) &&
-      self.hasStartTime == otherMessage.hasStartTime &&
-      (!self.hasStartTime || self.startTime == otherMessage.startTime) &&
+      self.hasNodeTime == otherMessage.hasNodeTime &&
+      (!self.hasNodeTime || self.nodeTime == otherMessage.nodeTime) &&
       self.hasModifiedDate == otherMessage.hasModifiedDate &&
       (!self.hasModifiedDate || self.modifiedDate == otherMessage.modifiedDate) &&
       self.hasStudentId == otherMessage.hasStudentId &&
@@ -923,8 +987,8 @@ static TeachNodePb* defaultTeachNodePbInstance = nil;
       (!self.hasDataStatus || self.dataStatus == otherMessage.dataStatus) &&
       self.hasImgText == otherMessage.hasImgText &&
       (!self.hasImgText || [self.imgText isEqual:otherMessage.imgText]) &&
-      self.hasClassId == otherMessage.hasClassId &&
-      (!self.hasClassId || self.classId == otherMessage.classId) &&
+      self.hasClassIds == otherMessage.hasClassIds &&
+      (!self.hasClassIds || [self.classIds isEqual:otherMessage.classIds]) &&
       self.hasCorrectCount == otherMessage.hasCorrectCount &&
       (!self.hasCorrectCount || self.correctCount == otherMessage.correctCount) &&
       self.hasSubmitCount == otherMessage.hasSubmitCount &&
@@ -966,8 +1030,8 @@ static TeachNodePb* defaultTeachNodePbInstance = nil;
   if (self.hasResId) {
     hashCode = hashCode * 31 + [[NSNumber numberWithLongLong:self.resId] hash];
   }
-  if (self.hasStartTime) {
-    hashCode = hashCode * 31 + [[NSNumber numberWithLongLong:self.startTime] hash];
+  if (self.hasNodeTime) {
+    hashCode = hashCode * 31 + [[NSNumber numberWithLongLong:self.nodeTime] hash];
   }
   if (self.hasModifiedDate) {
     hashCode = hashCode * 31 + [[NSNumber numberWithLongLong:self.modifiedDate] hash];
@@ -990,8 +1054,8 @@ static TeachNodePb* defaultTeachNodePbInstance = nil;
   if (self.hasImgText) {
     hashCode = hashCode * 31 + [self.imgText hash];
   }
-  if (self.hasClassId) {
-    hashCode = hashCode * 31 + [[NSNumber numberWithLongLong:self.classId] hash];
+  if (self.hasClassIds) {
+    hashCode = hashCode * 31 + [self.classIds hash];
   }
   if (self.hasCorrectCount) {
     hashCode = hashCode * 31 + [[NSNumber numberWithLongLong:self.correctCount] hash];
@@ -1081,8 +1145,8 @@ static TeachNodePb* defaultTeachNodePbInstance = nil;
   if (other.hasResId) {
     [self setResId:other.resId];
   }
-  if (other.hasStartTime) {
-    [self setStartTime:other.startTime];
+  if (other.hasNodeTime) {
+    [self setNodeTime:other.nodeTime];
   }
   if (other.hasModifiedDate) {
     [self setModifiedDate:other.modifiedDate];
@@ -1105,8 +1169,8 @@ static TeachNodePb* defaultTeachNodePbInstance = nil;
   if (other.hasImgText) {
     [self setImgText:other.imgText];
   }
-  if (other.hasClassId) {
-    [self setClassId:other.classId];
+  if (other.hasClassIds) {
+    [self setClassIds:other.classIds];
   }
   if (other.hasCorrectCount) {
     [self setCorrectCount:other.correctCount];
@@ -1182,7 +1246,7 @@ static TeachNodePb* defaultTeachNodePbInstance = nil;
         break;
       }
       case 64: {
-        [self setStartTime:[input readInt64]];
+        [self setNodeTime:[input readInt64]];
         break;
       }
       case 72: {
@@ -1213,8 +1277,8 @@ static TeachNodePb* defaultTeachNodePbInstance = nil;
         [self setImgText:[input readString]];
         break;
       }
-      case 128: {
-        [self setClassId:[input readInt64]];
+      case 130: {
+        [self setClassIds:[input readString]];
         break;
       }
       case 136: {
@@ -1364,20 +1428,20 @@ static TeachNodePb* defaultTeachNodePbInstance = nil;
   resultTeachNodePb.resId = 0L;
   return self;
 }
-- (BOOL) hasStartTime {
-  return resultTeachNodePb.hasStartTime;
+- (BOOL) hasNodeTime {
+  return resultTeachNodePb.hasNodeTime;
 }
-- (SInt64) startTime {
-  return resultTeachNodePb.startTime;
+- (SInt64) nodeTime {
+  return resultTeachNodePb.nodeTime;
 }
-- (TeachNodePbBuilder*) setStartTime:(SInt64) value {
-  resultTeachNodePb.hasStartTime = YES;
-  resultTeachNodePb.startTime = value;
+- (TeachNodePbBuilder*) setNodeTime:(SInt64) value {
+  resultTeachNodePb.hasNodeTime = YES;
+  resultTeachNodePb.nodeTime = value;
   return self;
 }
-- (TeachNodePbBuilder*) clearStartTime {
-  resultTeachNodePb.hasStartTime = NO;
-  resultTeachNodePb.startTime = 0L;
+- (TeachNodePbBuilder*) clearNodeTime {
+  resultTeachNodePb.hasNodeTime = NO;
+  resultTeachNodePb.nodeTime = 0L;
   return self;
 }
 - (BOOL) hasModifiedDate {
@@ -1492,20 +1556,20 @@ static TeachNodePb* defaultTeachNodePbInstance = nil;
   resultTeachNodePb.imgText = @"";
   return self;
 }
-- (BOOL) hasClassId {
-  return resultTeachNodePb.hasClassId;
+- (BOOL) hasClassIds {
+  return resultTeachNodePb.hasClassIds;
 }
-- (SInt64) classId {
-  return resultTeachNodePb.classId;
+- (NSString*) classIds {
+  return resultTeachNodePb.classIds;
 }
-- (TeachNodePbBuilder*) setClassId:(SInt64) value {
-  resultTeachNodePb.hasClassId = YES;
-  resultTeachNodePb.classId = value;
+- (TeachNodePbBuilder*) setClassIds:(NSString*) value {
+  resultTeachNodePb.hasClassIds = YES;
+  resultTeachNodePb.classIds = value;
   return self;
 }
-- (TeachNodePbBuilder*) clearClassId {
-  resultTeachNodePb.hasClassId = NO;
-  resultTeachNodePb.classId = 0L;
+- (TeachNodePbBuilder*) clearClassIds {
+  resultTeachNodePb.hasClassIds = NO;
+  resultTeachNodePb.classIds = @"";
   return self;
 }
 - (BOOL) hasCorrectCount {
@@ -1644,8 +1708,10 @@ static TeachNodePb* defaultTeachNodePbInstance = nil;
 @property SInt64 studentId;
 @property (strong) NSString* studentName;
 @property SInt64 totalScore;
-@property SInt32 workStatus;
-@property SInt32 dataStatus;
+@property SInt32 isRead;
+@property SInt32 isSubmit;
+@property SInt32 isCorrect;
+@property SInt32 isFinish;
 @property SInt64 modifiedDate;
 @end
 
@@ -1686,20 +1752,34 @@ static TeachNodePb* defaultTeachNodePbInstance = nil;
   hasTotalScore_ = !!_value_;
 }
 @synthesize totalScore;
-- (BOOL) hasWorkStatus {
-  return !!hasWorkStatus_;
+- (BOOL) hasIsRead {
+  return !!hasIsRead_;
 }
-- (void) setHasWorkStatus:(BOOL) _value_ {
-  hasWorkStatus_ = !!_value_;
+- (void) setHasIsRead:(BOOL) _value_ {
+  hasIsRead_ = !!_value_;
 }
-@synthesize workStatus;
-- (BOOL) hasDataStatus {
-  return !!hasDataStatus_;
+@synthesize isRead;
+- (BOOL) hasIsSubmit {
+  return !!hasIsSubmit_;
 }
-- (void) setHasDataStatus:(BOOL) _value_ {
-  hasDataStatus_ = !!_value_;
+- (void) setHasIsSubmit:(BOOL) _value_ {
+  hasIsSubmit_ = !!_value_;
 }
-@synthesize dataStatus;
+@synthesize isSubmit;
+- (BOOL) hasIsCorrect {
+  return !!hasIsCorrect_;
+}
+- (void) setHasIsCorrect:(BOOL) _value_ {
+  hasIsCorrect_ = !!_value_;
+}
+@synthesize isCorrect;
+- (BOOL) hasIsFinish {
+  return !!hasIsFinish_;
+}
+- (void) setHasIsFinish:(BOOL) _value_ {
+  hasIsFinish_ = !!_value_;
+}
+@synthesize isFinish;
 - (BOOL) hasModifiedDate {
   return !!hasModifiedDate_;
 }
@@ -1714,8 +1794,10 @@ static TeachNodePb* defaultTeachNodePbInstance = nil;
     self.studentId = 0L;
     self.studentName = @"";
     self.totalScore = 0L;
-    self.workStatus = 0;
-    self.dataStatus = 0;
+    self.isRead = 0;
+    self.isSubmit = 0;
+    self.isCorrect = 0;
+    self.isFinish = 0;
     self.modifiedDate = 0L;
   }
   return self;
@@ -1751,14 +1833,20 @@ static TeachNodeDetailsPb* defaultTeachNodeDetailsPbInstance = nil;
   if (self.hasTotalScore) {
     [output writeInt64:5 value:self.totalScore];
   }
-  if (self.hasWorkStatus) {
-    [output writeInt32:6 value:self.workStatus];
+  if (self.hasIsRead) {
+    [output writeInt32:6 value:self.isRead];
   }
-  if (self.hasDataStatus) {
-    [output writeInt32:7 value:self.dataStatus];
+  if (self.hasIsSubmit) {
+    [output writeInt32:7 value:self.isSubmit];
+  }
+  if (self.hasIsCorrect) {
+    [output writeInt32:8 value:self.isCorrect];
+  }
+  if (self.hasIsFinish) {
+    [output writeInt32:9 value:self.isFinish];
   }
   if (self.hasModifiedDate) {
-    [output writeInt64:8 value:self.modifiedDate];
+    [output writeInt64:10 value:self.modifiedDate];
   }
   [self.unknownFields writeToCodedOutputStream:output];
 }
@@ -1784,14 +1872,20 @@ static TeachNodeDetailsPb* defaultTeachNodeDetailsPbInstance = nil;
   if (self.hasTotalScore) {
     size_ += computeInt64Size(5, self.totalScore);
   }
-  if (self.hasWorkStatus) {
-    size_ += computeInt32Size(6, self.workStatus);
+  if (self.hasIsRead) {
+    size_ += computeInt32Size(6, self.isRead);
   }
-  if (self.hasDataStatus) {
-    size_ += computeInt32Size(7, self.dataStatus);
+  if (self.hasIsSubmit) {
+    size_ += computeInt32Size(7, self.isSubmit);
+  }
+  if (self.hasIsCorrect) {
+    size_ += computeInt32Size(8, self.isCorrect);
+  }
+  if (self.hasIsFinish) {
+    size_ += computeInt32Size(9, self.isFinish);
   }
   if (self.hasModifiedDate) {
-    size_ += computeInt64Size(8, self.modifiedDate);
+    size_ += computeInt64Size(10, self.modifiedDate);
   }
   size_ += self.unknownFields.serializedSize;
   memoizedSerializedSize = size_;
@@ -1843,11 +1937,17 @@ static TeachNodeDetailsPb* defaultTeachNodeDetailsPbInstance = nil;
   if (self.hasTotalScore) {
     [output appendFormat:@"%@%@: %@\n", indent, @"totalScore", [NSNumber numberWithLongLong:self.totalScore]];
   }
-  if (self.hasWorkStatus) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"workStatus", [NSNumber numberWithInteger:self.workStatus]];
+  if (self.hasIsRead) {
+    [output appendFormat:@"%@%@: %@\n", indent, @"isRead", [NSNumber numberWithInteger:self.isRead]];
   }
-  if (self.hasDataStatus) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"dataStatus", [NSNumber numberWithInteger:self.dataStatus]];
+  if (self.hasIsSubmit) {
+    [output appendFormat:@"%@%@: %@\n", indent, @"isSubmit", [NSNumber numberWithInteger:self.isSubmit]];
+  }
+  if (self.hasIsCorrect) {
+    [output appendFormat:@"%@%@: %@\n", indent, @"isCorrect", [NSNumber numberWithInteger:self.isCorrect]];
+  }
+  if (self.hasIsFinish) {
+    [output appendFormat:@"%@%@: %@\n", indent, @"isFinish", [NSNumber numberWithInteger:self.isFinish]];
   }
   if (self.hasModifiedDate) {
     [output appendFormat:@"%@%@: %@\n", indent, @"modifiedDate", [NSNumber numberWithLongLong:self.modifiedDate]];
@@ -1870,11 +1970,17 @@ static TeachNodeDetailsPb* defaultTeachNodeDetailsPbInstance = nil;
   if (self.hasTotalScore) {
     [dictionary setObject: [NSNumber numberWithLongLong:self.totalScore] forKey: @"totalScore"];
   }
-  if (self.hasWorkStatus) {
-    [dictionary setObject: [NSNumber numberWithInteger:self.workStatus] forKey: @"workStatus"];
+  if (self.hasIsRead) {
+    [dictionary setObject: [NSNumber numberWithInteger:self.isRead] forKey: @"isRead"];
   }
-  if (self.hasDataStatus) {
-    [dictionary setObject: [NSNumber numberWithInteger:self.dataStatus] forKey: @"dataStatus"];
+  if (self.hasIsSubmit) {
+    [dictionary setObject: [NSNumber numberWithInteger:self.isSubmit] forKey: @"isSubmit"];
+  }
+  if (self.hasIsCorrect) {
+    [dictionary setObject: [NSNumber numberWithInteger:self.isCorrect] forKey: @"isCorrect"];
+  }
+  if (self.hasIsFinish) {
+    [dictionary setObject: [NSNumber numberWithInteger:self.isFinish] forKey: @"isFinish"];
   }
   if (self.hasModifiedDate) {
     [dictionary setObject: [NSNumber numberWithLongLong:self.modifiedDate] forKey: @"modifiedDate"];
@@ -1900,10 +2006,14 @@ static TeachNodeDetailsPb* defaultTeachNodeDetailsPbInstance = nil;
       (!self.hasStudentName || [self.studentName isEqual:otherMessage.studentName]) &&
       self.hasTotalScore == otherMessage.hasTotalScore &&
       (!self.hasTotalScore || self.totalScore == otherMessage.totalScore) &&
-      self.hasWorkStatus == otherMessage.hasWorkStatus &&
-      (!self.hasWorkStatus || self.workStatus == otherMessage.workStatus) &&
-      self.hasDataStatus == otherMessage.hasDataStatus &&
-      (!self.hasDataStatus || self.dataStatus == otherMessage.dataStatus) &&
+      self.hasIsRead == otherMessage.hasIsRead &&
+      (!self.hasIsRead || self.isRead == otherMessage.isRead) &&
+      self.hasIsSubmit == otherMessage.hasIsSubmit &&
+      (!self.hasIsSubmit || self.isSubmit == otherMessage.isSubmit) &&
+      self.hasIsCorrect == otherMessage.hasIsCorrect &&
+      (!self.hasIsCorrect || self.isCorrect == otherMessage.isCorrect) &&
+      self.hasIsFinish == otherMessage.hasIsFinish &&
+      (!self.hasIsFinish || self.isFinish == otherMessage.isFinish) &&
       self.hasModifiedDate == otherMessage.hasModifiedDate &&
       (!self.hasModifiedDate || self.modifiedDate == otherMessage.modifiedDate) &&
       (self.unknownFields == otherMessage.unknownFields || (self.unknownFields != nil && [self.unknownFields isEqual:otherMessage.unknownFields]));
@@ -1925,11 +2035,17 @@ static TeachNodeDetailsPb* defaultTeachNodeDetailsPbInstance = nil;
   if (self.hasTotalScore) {
     hashCode = hashCode * 31 + [[NSNumber numberWithLongLong:self.totalScore] hash];
   }
-  if (self.hasWorkStatus) {
-    hashCode = hashCode * 31 + [[NSNumber numberWithInteger:self.workStatus] hash];
+  if (self.hasIsRead) {
+    hashCode = hashCode * 31 + [[NSNumber numberWithInteger:self.isRead] hash];
   }
-  if (self.hasDataStatus) {
-    hashCode = hashCode * 31 + [[NSNumber numberWithInteger:self.dataStatus] hash];
+  if (self.hasIsSubmit) {
+    hashCode = hashCode * 31 + [[NSNumber numberWithInteger:self.isSubmit] hash];
+  }
+  if (self.hasIsCorrect) {
+    hashCode = hashCode * 31 + [[NSNumber numberWithInteger:self.isCorrect] hash];
+  }
+  if (self.hasIsFinish) {
+    hashCode = hashCode * 31 + [[NSNumber numberWithInteger:self.isFinish] hash];
   }
   if (self.hasModifiedDate) {
     hashCode = hashCode * 31 + [[NSNumber numberWithLongLong:self.modifiedDate] hash];
@@ -1992,11 +2108,17 @@ static TeachNodeDetailsPb* defaultTeachNodeDetailsPbInstance = nil;
   if (other.hasTotalScore) {
     [self setTotalScore:other.totalScore];
   }
-  if (other.hasWorkStatus) {
-    [self setWorkStatus:other.workStatus];
+  if (other.hasIsRead) {
+    [self setIsRead:other.isRead];
   }
-  if (other.hasDataStatus) {
-    [self setDataStatus:other.dataStatus];
+  if (other.hasIsSubmit) {
+    [self setIsSubmit:other.isSubmit];
+  }
+  if (other.hasIsCorrect) {
+    [self setIsCorrect:other.isCorrect];
+  }
+  if (other.hasIsFinish) {
+    [self setIsFinish:other.isFinish];
   }
   if (other.hasModifiedDate) {
     [self setModifiedDate:other.modifiedDate];
@@ -2043,14 +2165,22 @@ static TeachNodeDetailsPb* defaultTeachNodeDetailsPbInstance = nil;
         break;
       }
       case 48: {
-        [self setWorkStatus:[input readInt32]];
+        [self setIsRead:[input readInt32]];
         break;
       }
       case 56: {
-        [self setDataStatus:[input readInt32]];
+        [self setIsSubmit:[input readInt32]];
         break;
       }
       case 64: {
+        [self setIsCorrect:[input readInt32]];
+        break;
+      }
+      case 72: {
+        [self setIsFinish:[input readInt32]];
+        break;
+      }
+      case 80: {
         [self setModifiedDate:[input readInt64]];
         break;
       }
@@ -2137,36 +2267,68 @@ static TeachNodeDetailsPb* defaultTeachNodeDetailsPbInstance = nil;
   resultTeachNodeDetailsPb.totalScore = 0L;
   return self;
 }
-- (BOOL) hasWorkStatus {
-  return resultTeachNodeDetailsPb.hasWorkStatus;
+- (BOOL) hasIsRead {
+  return resultTeachNodeDetailsPb.hasIsRead;
 }
-- (SInt32) workStatus {
-  return resultTeachNodeDetailsPb.workStatus;
+- (SInt32) isRead {
+  return resultTeachNodeDetailsPb.isRead;
 }
-- (TeachNodeDetailsPbBuilder*) setWorkStatus:(SInt32) value {
-  resultTeachNodeDetailsPb.hasWorkStatus = YES;
-  resultTeachNodeDetailsPb.workStatus = value;
+- (TeachNodeDetailsPbBuilder*) setIsRead:(SInt32) value {
+  resultTeachNodeDetailsPb.hasIsRead = YES;
+  resultTeachNodeDetailsPb.isRead = value;
   return self;
 }
-- (TeachNodeDetailsPbBuilder*) clearWorkStatus {
-  resultTeachNodeDetailsPb.hasWorkStatus = NO;
-  resultTeachNodeDetailsPb.workStatus = 0;
+- (TeachNodeDetailsPbBuilder*) clearIsRead {
+  resultTeachNodeDetailsPb.hasIsRead = NO;
+  resultTeachNodeDetailsPb.isRead = 0;
   return self;
 }
-- (BOOL) hasDataStatus {
-  return resultTeachNodeDetailsPb.hasDataStatus;
+- (BOOL) hasIsSubmit {
+  return resultTeachNodeDetailsPb.hasIsSubmit;
 }
-- (SInt32) dataStatus {
-  return resultTeachNodeDetailsPb.dataStatus;
+- (SInt32) isSubmit {
+  return resultTeachNodeDetailsPb.isSubmit;
 }
-- (TeachNodeDetailsPbBuilder*) setDataStatus:(SInt32) value {
-  resultTeachNodeDetailsPb.hasDataStatus = YES;
-  resultTeachNodeDetailsPb.dataStatus = value;
+- (TeachNodeDetailsPbBuilder*) setIsSubmit:(SInt32) value {
+  resultTeachNodeDetailsPb.hasIsSubmit = YES;
+  resultTeachNodeDetailsPb.isSubmit = value;
   return self;
 }
-- (TeachNodeDetailsPbBuilder*) clearDataStatus {
-  resultTeachNodeDetailsPb.hasDataStatus = NO;
-  resultTeachNodeDetailsPb.dataStatus = 0;
+- (TeachNodeDetailsPbBuilder*) clearIsSubmit {
+  resultTeachNodeDetailsPb.hasIsSubmit = NO;
+  resultTeachNodeDetailsPb.isSubmit = 0;
+  return self;
+}
+- (BOOL) hasIsCorrect {
+  return resultTeachNodeDetailsPb.hasIsCorrect;
+}
+- (SInt32) isCorrect {
+  return resultTeachNodeDetailsPb.isCorrect;
+}
+- (TeachNodeDetailsPbBuilder*) setIsCorrect:(SInt32) value {
+  resultTeachNodeDetailsPb.hasIsCorrect = YES;
+  resultTeachNodeDetailsPb.isCorrect = value;
+  return self;
+}
+- (TeachNodeDetailsPbBuilder*) clearIsCorrect {
+  resultTeachNodeDetailsPb.hasIsCorrect = NO;
+  resultTeachNodeDetailsPb.isCorrect = 0;
+  return self;
+}
+- (BOOL) hasIsFinish {
+  return resultTeachNodeDetailsPb.hasIsFinish;
+}
+- (SInt32) isFinish {
+  return resultTeachNodeDetailsPb.isFinish;
+}
+- (TeachNodeDetailsPbBuilder*) setIsFinish:(SInt32) value {
+  resultTeachNodeDetailsPb.hasIsFinish = YES;
+  resultTeachNodeDetailsPb.isFinish = value;
+  return self;
+}
+- (TeachNodeDetailsPbBuilder*) clearIsFinish {
+  resultTeachNodeDetailsPb.hasIsFinish = NO;
+  resultTeachNodeDetailsPb.isFinish = 0;
   return self;
 }
 - (BOOL) hasModifiedDate {
@@ -2183,6 +2345,408 @@ static TeachNodeDetailsPb* defaultTeachNodeDetailsPbInstance = nil;
 - (TeachNodeDetailsPbBuilder*) clearModifiedDate {
   resultTeachNodeDetailsPb.hasModifiedDate = NO;
   resultTeachNodeDetailsPb.modifiedDate = 0L;
+  return self;
+}
+@end
+
+@interface TeachNodeContentPb ()
+@property SInt64 id;
+@property SInt64 nodeId;
+@property (strong) NSString* content;
+@property SInt32 dataStatus;
+@property SInt64 modifiedDate;
+@end
+
+@implementation TeachNodeContentPb
+
+- (BOOL) hasId {
+  return !!hasId_;
+}
+- (void) setHasId:(BOOL) _value_ {
+  hasId_ = !!_value_;
+}
+@synthesize id;
+- (BOOL) hasNodeId {
+  return !!hasNodeId_;
+}
+- (void) setHasNodeId:(BOOL) _value_ {
+  hasNodeId_ = !!_value_;
+}
+@synthesize nodeId;
+- (BOOL) hasContent {
+  return !!hasContent_;
+}
+- (void) setHasContent:(BOOL) _value_ {
+  hasContent_ = !!_value_;
+}
+@synthesize content;
+- (BOOL) hasDataStatus {
+  return !!hasDataStatus_;
+}
+- (void) setHasDataStatus:(BOOL) _value_ {
+  hasDataStatus_ = !!_value_;
+}
+@synthesize dataStatus;
+- (BOOL) hasModifiedDate {
+  return !!hasModifiedDate_;
+}
+- (void) setHasModifiedDate:(BOOL) _value_ {
+  hasModifiedDate_ = !!_value_;
+}
+@synthesize modifiedDate;
+- (instancetype) init {
+  if ((self = [super init])) {
+    self.id = 0L;
+    self.nodeId = 0L;
+    self.content = @"";
+    self.dataStatus = 0;
+    self.modifiedDate = 0L;
+  }
+  return self;
+}
+static TeachNodeContentPb* defaultTeachNodeContentPbInstance = nil;
++ (void) initialize {
+  if (self == [TeachNodeContentPb class]) {
+    defaultTeachNodeContentPbInstance = [[TeachNodeContentPb alloc] init];
+  }
+}
++ (instancetype) defaultInstance {
+  return defaultTeachNodeContentPbInstance;
+}
+- (instancetype) defaultInstance {
+  return defaultTeachNodeContentPbInstance;
+}
+- (BOOL) isInitialized {
+  return YES;
+}
+- (void) writeToCodedOutputStream:(PBCodedOutputStream*) output {
+  if (self.hasId) {
+    [output writeInt64:1 value:self.id];
+  }
+  if (self.hasNodeId) {
+    [output writeInt64:2 value:self.nodeId];
+  }
+  if (self.hasContent) {
+    [output writeString:3 value:self.content];
+  }
+  if (self.hasDataStatus) {
+    [output writeInt32:4 value:self.dataStatus];
+  }
+  if (self.hasModifiedDate) {
+    [output writeInt64:5 value:self.modifiedDate];
+  }
+  [self.unknownFields writeToCodedOutputStream:output];
+}
+- (SInt32) serializedSize {
+  __block SInt32 size_ = memoizedSerializedSize;
+  if (size_ != -1) {
+    return size_;
+  }
+
+  size_ = 0;
+  if (self.hasId) {
+    size_ += computeInt64Size(1, self.id);
+  }
+  if (self.hasNodeId) {
+    size_ += computeInt64Size(2, self.nodeId);
+  }
+  if (self.hasContent) {
+    size_ += computeStringSize(3, self.content);
+  }
+  if (self.hasDataStatus) {
+    size_ += computeInt32Size(4, self.dataStatus);
+  }
+  if (self.hasModifiedDate) {
+    size_ += computeInt64Size(5, self.modifiedDate);
+  }
+  size_ += self.unknownFields.serializedSize;
+  memoizedSerializedSize = size_;
+  return size_;
+}
++ (TeachNodeContentPb*) parseFromData:(NSData*) data {
+  return (TeachNodeContentPb*)[[[TeachNodeContentPb builder] mergeFromData:data] build];
+}
++ (TeachNodeContentPb*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry {
+  return (TeachNodeContentPb*)[[[TeachNodeContentPb builder] mergeFromData:data extensionRegistry:extensionRegistry] build];
+}
++ (TeachNodeContentPb*) parseFromInputStream:(NSInputStream*) input {
+  return (TeachNodeContentPb*)[[[TeachNodeContentPb builder] mergeFromInputStream:input] build];
+}
++ (TeachNodeContentPb*) parseFromInputStream:(NSInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry {
+  return (TeachNodeContentPb*)[[[TeachNodeContentPb builder] mergeFromInputStream:input extensionRegistry:extensionRegistry] build];
+}
++ (TeachNodeContentPb*) parseFromCodedInputStream:(PBCodedInputStream*) input {
+  return (TeachNodeContentPb*)[[[TeachNodeContentPb builder] mergeFromCodedInputStream:input] build];
+}
++ (TeachNodeContentPb*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry {
+  return (TeachNodeContentPb*)[[[TeachNodeContentPb builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
+}
++ (TeachNodeContentPbBuilder*) builder {
+  return [[TeachNodeContentPbBuilder alloc] init];
+}
++ (TeachNodeContentPbBuilder*) builderWithPrototype:(TeachNodeContentPb*) prototype {
+  return [[TeachNodeContentPb builder] mergeFrom:prototype];
+}
+- (TeachNodeContentPbBuilder*) builder {
+  return [TeachNodeContentPb builder];
+}
+- (TeachNodeContentPbBuilder*) toBuilder {
+  return [TeachNodeContentPb builderWithPrototype:self];
+}
+- (void) writeDescriptionTo:(NSMutableString*) output withIndent:(NSString*) indent {
+  if (self.hasId) {
+    [output appendFormat:@"%@%@: %@\n", indent, @"id", [NSNumber numberWithLongLong:self.id]];
+  }
+  if (self.hasNodeId) {
+    [output appendFormat:@"%@%@: %@\n", indent, @"nodeId", [NSNumber numberWithLongLong:self.nodeId]];
+  }
+  if (self.hasContent) {
+    [output appendFormat:@"%@%@: %@\n", indent, @"content", self.content];
+  }
+  if (self.hasDataStatus) {
+    [output appendFormat:@"%@%@: %@\n", indent, @"dataStatus", [NSNumber numberWithInteger:self.dataStatus]];
+  }
+  if (self.hasModifiedDate) {
+    [output appendFormat:@"%@%@: %@\n", indent, @"modifiedDate", [NSNumber numberWithLongLong:self.modifiedDate]];
+  }
+  [self.unknownFields writeDescriptionTo:output withIndent:indent];
+}
+- (void) storeInDictionary:(NSMutableDictionary *)dictionary {
+  if (self.hasId) {
+    [dictionary setObject: [NSNumber numberWithLongLong:self.id] forKey: @"id"];
+  }
+  if (self.hasNodeId) {
+    [dictionary setObject: [NSNumber numberWithLongLong:self.nodeId] forKey: @"nodeId"];
+  }
+  if (self.hasContent) {
+    [dictionary setObject: self.content forKey: @"content"];
+  }
+  if (self.hasDataStatus) {
+    [dictionary setObject: [NSNumber numberWithInteger:self.dataStatus] forKey: @"dataStatus"];
+  }
+  if (self.hasModifiedDate) {
+    [dictionary setObject: [NSNumber numberWithLongLong:self.modifiedDate] forKey: @"modifiedDate"];
+  }
+  [self.unknownFields storeInDictionary:dictionary];
+}
+- (BOOL) isEqual:(id)other {
+  if (other == self) {
+    return YES;
+  }
+  if (![other isKindOfClass:[TeachNodeContentPb class]]) {
+    return NO;
+  }
+  TeachNodeContentPb *otherMessage = other;
+  return
+      self.hasId == otherMessage.hasId &&
+      (!self.hasId || self.id == otherMessage.id) &&
+      self.hasNodeId == otherMessage.hasNodeId &&
+      (!self.hasNodeId || self.nodeId == otherMessage.nodeId) &&
+      self.hasContent == otherMessage.hasContent &&
+      (!self.hasContent || [self.content isEqual:otherMessage.content]) &&
+      self.hasDataStatus == otherMessage.hasDataStatus &&
+      (!self.hasDataStatus || self.dataStatus == otherMessage.dataStatus) &&
+      self.hasModifiedDate == otherMessage.hasModifiedDate &&
+      (!self.hasModifiedDate || self.modifiedDate == otherMessage.modifiedDate) &&
+      (self.unknownFields == otherMessage.unknownFields || (self.unknownFields != nil && [self.unknownFields isEqual:otherMessage.unknownFields]));
+}
+- (NSUInteger) hash {
+  __block NSUInteger hashCode = 7;
+  if (self.hasId) {
+    hashCode = hashCode * 31 + [[NSNumber numberWithLongLong:self.id] hash];
+  }
+  if (self.hasNodeId) {
+    hashCode = hashCode * 31 + [[NSNumber numberWithLongLong:self.nodeId] hash];
+  }
+  if (self.hasContent) {
+    hashCode = hashCode * 31 + [self.content hash];
+  }
+  if (self.hasDataStatus) {
+    hashCode = hashCode * 31 + [[NSNumber numberWithInteger:self.dataStatus] hash];
+  }
+  if (self.hasModifiedDate) {
+    hashCode = hashCode * 31 + [[NSNumber numberWithLongLong:self.modifiedDate] hash];
+  }
+  hashCode = hashCode * 31 + [self.unknownFields hash];
+  return hashCode;
+}
+@end
+
+@interface TeachNodeContentPbBuilder()
+@property (strong) TeachNodeContentPb* resultTeachNodeContentPb;
+@end
+
+@implementation TeachNodeContentPbBuilder
+@synthesize resultTeachNodeContentPb;
+- (instancetype) init {
+  if ((self = [super init])) {
+    self.resultTeachNodeContentPb = [[TeachNodeContentPb alloc] init];
+  }
+  return self;
+}
+- (PBGeneratedMessage*) internalGetResult {
+  return resultTeachNodeContentPb;
+}
+- (TeachNodeContentPbBuilder*) clear {
+  self.resultTeachNodeContentPb = [[TeachNodeContentPb alloc] init];
+  return self;
+}
+- (TeachNodeContentPbBuilder*) clone {
+  return [TeachNodeContentPb builderWithPrototype:resultTeachNodeContentPb];
+}
+- (TeachNodeContentPb*) defaultInstance {
+  return [TeachNodeContentPb defaultInstance];
+}
+- (TeachNodeContentPb*) build {
+  [self checkInitialized];
+  return [self buildPartial];
+}
+- (TeachNodeContentPb*) buildPartial {
+  TeachNodeContentPb* returnMe = resultTeachNodeContentPb;
+  self.resultTeachNodeContentPb = nil;
+  return returnMe;
+}
+- (TeachNodeContentPbBuilder*) mergeFrom:(TeachNodeContentPb*) other {
+  if (other == [TeachNodeContentPb defaultInstance]) {
+    return self;
+  }
+  if (other.hasId) {
+    [self setId:other.id];
+  }
+  if (other.hasNodeId) {
+    [self setNodeId:other.nodeId];
+  }
+  if (other.hasContent) {
+    [self setContent:other.content];
+  }
+  if (other.hasDataStatus) {
+    [self setDataStatus:other.dataStatus];
+  }
+  if (other.hasModifiedDate) {
+    [self setModifiedDate:other.modifiedDate];
+  }
+  [self mergeUnknownFields:other.unknownFields];
+  return self;
+}
+- (TeachNodeContentPbBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input {
+  return [self mergeFromCodedInputStream:input extensionRegistry:[PBExtensionRegistry emptyRegistry]];
+}
+- (TeachNodeContentPbBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry {
+  PBUnknownFieldSetBuilder* unknownFields = [PBUnknownFieldSet builderWithUnknownFields:self.unknownFields];
+  while (YES) {
+    SInt32 tag = [input readTag];
+    switch (tag) {
+      case 0:
+        [self setUnknownFields:[unknownFields build]];
+        return self;
+      default: {
+        if (![self parseUnknownField:input unknownFields:unknownFields extensionRegistry:extensionRegistry tag:tag]) {
+          [self setUnknownFields:[unknownFields build]];
+          return self;
+        }
+        break;
+      }
+      case 8: {
+        [self setId:[input readInt64]];
+        break;
+      }
+      case 16: {
+        [self setNodeId:[input readInt64]];
+        break;
+      }
+      case 26: {
+        [self setContent:[input readString]];
+        break;
+      }
+      case 32: {
+        [self setDataStatus:[input readInt32]];
+        break;
+      }
+      case 40: {
+        [self setModifiedDate:[input readInt64]];
+        break;
+      }
+    }
+  }
+}
+- (BOOL) hasId {
+  return resultTeachNodeContentPb.hasId;
+}
+- (SInt64) id {
+  return resultTeachNodeContentPb.id;
+}
+- (TeachNodeContentPbBuilder*) setId:(SInt64) value {
+  resultTeachNodeContentPb.hasId = YES;
+  resultTeachNodeContentPb.id = value;
+  return self;
+}
+- (TeachNodeContentPbBuilder*) clearId {
+  resultTeachNodeContentPb.hasId = NO;
+  resultTeachNodeContentPb.id = 0L;
+  return self;
+}
+- (BOOL) hasNodeId {
+  return resultTeachNodeContentPb.hasNodeId;
+}
+- (SInt64) nodeId {
+  return resultTeachNodeContentPb.nodeId;
+}
+- (TeachNodeContentPbBuilder*) setNodeId:(SInt64) value {
+  resultTeachNodeContentPb.hasNodeId = YES;
+  resultTeachNodeContentPb.nodeId = value;
+  return self;
+}
+- (TeachNodeContentPbBuilder*) clearNodeId {
+  resultTeachNodeContentPb.hasNodeId = NO;
+  resultTeachNodeContentPb.nodeId = 0L;
+  return self;
+}
+- (BOOL) hasContent {
+  return resultTeachNodeContentPb.hasContent;
+}
+- (NSString*) content {
+  return resultTeachNodeContentPb.content;
+}
+- (TeachNodeContentPbBuilder*) setContent:(NSString*) value {
+  resultTeachNodeContentPb.hasContent = YES;
+  resultTeachNodeContentPb.content = value;
+  return self;
+}
+- (TeachNodeContentPbBuilder*) clearContent {
+  resultTeachNodeContentPb.hasContent = NO;
+  resultTeachNodeContentPb.content = @"";
+  return self;
+}
+- (BOOL) hasDataStatus {
+  return resultTeachNodeContentPb.hasDataStatus;
+}
+- (SInt32) dataStatus {
+  return resultTeachNodeContentPb.dataStatus;
+}
+- (TeachNodeContentPbBuilder*) setDataStatus:(SInt32) value {
+  resultTeachNodeContentPb.hasDataStatus = YES;
+  resultTeachNodeContentPb.dataStatus = value;
+  return self;
+}
+- (TeachNodeContentPbBuilder*) clearDataStatus {
+  resultTeachNodeContentPb.hasDataStatus = NO;
+  resultTeachNodeContentPb.dataStatus = 0;
+  return self;
+}
+- (BOOL) hasModifiedDate {
+  return resultTeachNodeContentPb.hasModifiedDate;
+}
+- (SInt64) modifiedDate {
+  return resultTeachNodeContentPb.modifiedDate;
+}
+- (TeachNodeContentPbBuilder*) setModifiedDate:(SInt64) value {
+  resultTeachNodeContentPb.hasModifiedDate = YES;
+  resultTeachNodeContentPb.modifiedDate = value;
+  return self;
+}
+- (TeachNodeContentPbBuilder*) clearModifiedDate {
+  resultTeachNodeContentPb.hasModifiedDate = NO;
+  resultTeachNodeContentPb.modifiedDate = 0L;
   return self;
 }
 @end

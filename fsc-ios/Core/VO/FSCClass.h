@@ -2,7 +2,7 @@
 //  FSCClass.h
 //  
 //
-//  Created by laborchu on 15/8/20.
+//  Created by laborchu on 15/10/11.
 //
 //
 
@@ -11,30 +11,14 @@
 
 @class FSCClassStudent, FSCClassUser, FSCUser;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface FSCClass : NSManagedObject
 
-@property (nonatomic, retain) NSString * classname;
-@property (nonatomic, retain) NSNumber * gradeId;
-@property (nonatomic, retain) NSString * gradeName;
-@property (nonatomic, retain) NSNumber * id;
-@property (nonatomic, retain) NSString * monitorUrl;
-@property (nonatomic, retain) NSNumber * semester;
-@property (nonatomic, retain) NSNumber * year;
-@property (nonatomic, retain) NSSet *classUsers;
-@property (nonatomic, retain) NSSet *classStudents;
-@property (nonatomic, retain) FSCUser *fscUser;
-@end
-
-@interface FSCClass (CoreDataGeneratedAccessors)
-
-- (void)addClassUsersObject:(FSCClassUser *)value;
-- (void)removeClassUsersObject:(FSCClassUser *)value;
-- (void)addClassUsers:(NSSet *)values;
-- (void)removeClassUsers:(NSSet *)values;
-
-- (void)addClassStudentsObject:(FSCClassStudent *)value;
-- (void)removeClassStudentsObject:(FSCClassStudent *)value;
-- (void)addClassStudents:(NSSet *)values;
-- (void)removeClassStudents:(NSSet *)values;
+// Insert code here to declare functionality of your managed object subclass
 
 @end
+
+NS_ASSUME_NONNULL_END
+
+#import "FSCClass+CoreDataProperties.h"

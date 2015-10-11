@@ -42,6 +42,7 @@ static PBExtensionRegistry* extensionRegistry = nil;
 @property (strong) TeacherPb* teacherPb;
 @property (strong) SchoolPb* schoolPb;
 @property (strong) NSMutableArray * funcCtrlPbArray;
+@property SInt32 hasInitPwd;
 @end
 
 @implementation UserPb
@@ -174,6 +175,13 @@ static PBExtensionRegistry* extensionRegistry = nil;
 @synthesize schoolPb;
 @synthesize funcCtrlPbArray;
 @dynamic funcCtrlPb;
+- (BOOL) hasHasInitPwd {
+  return !!hasHasInitPwd_;
+}
+- (void) setHasHasInitPwd:(BOOL) _value_ {
+  hasHasInitPwd_ = !!_value_;
+}
+@synthesize hasInitPwd;
 - (instancetype) init {
   if ((self = [super init])) {
     self.id = 0L;
@@ -194,6 +202,7 @@ static PBExtensionRegistry* extensionRegistry = nil;
     self.parentsPb = [ParentsPb defaultInstance];
     self.teacherPb = [TeacherPb defaultInstance];
     self.schoolPb = [SchoolPb defaultInstance];
+    self.hasInitPwd = 0;
   }
   return self;
 }
@@ -276,6 +285,9 @@ static UserPb* defaultUserPbInstance = nil;
   [self.funcCtrlPbArray enumerateObjectsUsingBlock:^(FuncCtrlPb *element, NSUInteger idx, BOOL *stop) {
     [output writeMessage:19 value:element];
   }];
+  if (self.hasHasInitPwd) {
+    [output writeInt32:20 value:self.hasInitPwd];
+  }
   [self.unknownFields writeToCodedOutputStream:output];
 }
 - (SInt32) serializedSize {
@@ -342,6 +354,9 @@ static UserPb* defaultUserPbInstance = nil;
   [self.funcCtrlPbArray enumerateObjectsUsingBlock:^(FuncCtrlPb *element, NSUInteger idx, BOOL *stop) {
     size_ += computeMessageSize(19, element);
   }];
+  if (self.hasHasInitPwd) {
+    size_ += computeInt32Size(20, self.hasInitPwd);
+  }
   size_ += self.unknownFields.serializedSize;
   memoizedSerializedSize = size_;
   return size_;
@@ -446,6 +461,9 @@ static UserPb* defaultUserPbInstance = nil;
                      withIndent:[NSString stringWithFormat:@"%@  ", indent]];
     [output appendFormat:@"%@}\n", indent];
   }];
+  if (self.hasHasInitPwd) {
+    [output appendFormat:@"%@%@: %@\n", indent, @"hasInitPwd", [NSNumber numberWithInteger:self.hasInitPwd]];
+  }
   [self.unknownFields writeDescriptionTo:output withIndent:indent];
 }
 - (void) storeInDictionary:(NSMutableDictionary *)dictionary {
@@ -514,6 +532,9 @@ static UserPb* defaultUserPbInstance = nil;
     [element storeInDictionary:elementDictionary];
     [dictionary setObject:[NSDictionary dictionaryWithDictionary:elementDictionary] forKey:@"funcCtrlPb"];
   }
+  if (self.hasHasInitPwd) {
+    [dictionary setObject: [NSNumber numberWithInteger:self.hasInitPwd] forKey: @"hasInitPwd"];
+  }
   [self.unknownFields storeInDictionary:dictionary];
 }
 - (BOOL) isEqual:(id)other {
@@ -562,6 +583,8 @@ static UserPb* defaultUserPbInstance = nil;
       self.hasSchoolPb == otherMessage.hasSchoolPb &&
       (!self.hasSchoolPb || [self.schoolPb isEqual:otherMessage.schoolPb]) &&
       [self.funcCtrlPbArray isEqualToArray:otherMessage.funcCtrlPbArray] &&
+      self.hasHasInitPwd == otherMessage.hasHasInitPwd &&
+      (!self.hasHasInitPwd || self.hasInitPwd == otherMessage.hasInitPwd) &&
       (self.unknownFields == otherMessage.unknownFields || (self.unknownFields != nil && [self.unknownFields isEqual:otherMessage.unknownFields]));
 }
 - (NSUInteger) hash {
@@ -623,6 +646,9 @@ static UserPb* defaultUserPbInstance = nil;
   [self.funcCtrlPbArray enumerateObjectsUsingBlock:^(FuncCtrlPb *element, NSUInteger idx, BOOL *stop) {
     hashCode = hashCode * 31 + [element hash];
   }];
+  if (self.hasHasInitPwd) {
+    hashCode = hashCode * 31 + [[NSNumber numberWithInteger:self.hasInitPwd] hash];
+  }
   hashCode = hashCode * 31 + [self.unknownFields hash];
   return hashCode;
 }
@@ -726,6 +752,9 @@ static UserPb* defaultUserPbInstance = nil;
     } else {
       [resultUserPb.funcCtrlPbArray addObjectsFromArray:other.funcCtrlPbArray];
     }
+  }
+  if (other.hasHasInitPwd) {
+    [self setHasInitPwd:other.hasInitPwd];
   }
   [self mergeUnknownFields:other.unknownFields];
   return self;
@@ -839,6 +868,10 @@ static UserPb* defaultUserPbInstance = nil;
         FuncCtrlPbBuilder* subBuilder = [FuncCtrlPb builder];
         [input readMessage:subBuilder extensionRegistry:extensionRegistry];
         [self addFuncCtrlPb:[subBuilder buildPartial]];
+        break;
+      }
+      case 160: {
+        [self setHasInitPwd:[input readInt32]];
         break;
       }
     }
@@ -1195,10 +1228,27 @@ static UserPb* defaultUserPbInstance = nil;
   resultUserPb.funcCtrlPbArray = nil;
   return self;
 }
+- (BOOL) hasHasInitPwd {
+  return resultUserPb.hasHasInitPwd;
+}
+- (SInt32) hasInitPwd {
+  return resultUserPb.hasInitPwd;
+}
+- (UserPbBuilder*) setHasInitPwd:(SInt32) value {
+  resultUserPb.hasHasInitPwd = YES;
+  resultUserPb.hasInitPwd = value;
+  return self;
+}
+- (UserPbBuilder*) clearHasInitPwd {
+  resultUserPb.hasHasInitPwd = NO;
+  resultUserPb.hasInitPwd = 0;
+  return self;
+}
 @end
 
 @interface SchoolPb ()
 @property SInt64 id;
+@property (strong) NSString* domain;
 @property (strong) NSString* name;
 @property SInt64 year;
 @property SInt32 semester;
@@ -1213,6 +1263,13 @@ static UserPb* defaultUserPbInstance = nil;
   hasId_ = !!_value_;
 }
 @synthesize id;
+- (BOOL) hasDomain {
+  return !!hasDomain_;
+}
+- (void) setHasDomain:(BOOL) _value_ {
+  hasDomain_ = !!_value_;
+}
+@synthesize domain;
 - (BOOL) hasName {
   return !!hasName_;
 }
@@ -1237,6 +1294,7 @@ static UserPb* defaultUserPbInstance = nil;
 - (instancetype) init {
   if ((self = [super init])) {
     self.id = 0L;
+    self.domain = @"";
     self.name = @"";
     self.year = 0L;
     self.semester = 0;
@@ -1262,14 +1320,17 @@ static SchoolPb* defaultSchoolPbInstance = nil;
   if (self.hasId) {
     [output writeInt64:1 value:self.id];
   }
+  if (self.hasDomain) {
+    [output writeString:2 value:self.domain];
+  }
   if (self.hasName) {
-    [output writeString:2 value:self.name];
+    [output writeString:3 value:self.name];
   }
   if (self.hasYear) {
-    [output writeInt64:3 value:self.year];
+    [output writeInt64:4 value:self.year];
   }
   if (self.hasSemester) {
-    [output writeInt32:4 value:self.semester];
+    [output writeInt32:5 value:self.semester];
   }
   [self.unknownFields writeToCodedOutputStream:output];
 }
@@ -1283,14 +1344,17 @@ static SchoolPb* defaultSchoolPbInstance = nil;
   if (self.hasId) {
     size_ += computeInt64Size(1, self.id);
   }
+  if (self.hasDomain) {
+    size_ += computeStringSize(2, self.domain);
+  }
   if (self.hasName) {
-    size_ += computeStringSize(2, self.name);
+    size_ += computeStringSize(3, self.name);
   }
   if (self.hasYear) {
-    size_ += computeInt64Size(3, self.year);
+    size_ += computeInt64Size(4, self.year);
   }
   if (self.hasSemester) {
-    size_ += computeInt32Size(4, self.semester);
+    size_ += computeInt32Size(5, self.semester);
   }
   size_ += self.unknownFields.serializedSize;
   memoizedSerializedSize = size_;
@@ -1330,6 +1394,9 @@ static SchoolPb* defaultSchoolPbInstance = nil;
   if (self.hasId) {
     [output appendFormat:@"%@%@: %@\n", indent, @"id", [NSNumber numberWithLongLong:self.id]];
   }
+  if (self.hasDomain) {
+    [output appendFormat:@"%@%@: %@\n", indent, @"domain", self.domain];
+  }
   if (self.hasName) {
     [output appendFormat:@"%@%@: %@\n", indent, @"name", self.name];
   }
@@ -1344,6 +1411,9 @@ static SchoolPb* defaultSchoolPbInstance = nil;
 - (void) storeInDictionary:(NSMutableDictionary *)dictionary {
   if (self.hasId) {
     [dictionary setObject: [NSNumber numberWithLongLong:self.id] forKey: @"id"];
+  }
+  if (self.hasDomain) {
+    [dictionary setObject: self.domain forKey: @"domain"];
   }
   if (self.hasName) {
     [dictionary setObject: self.name forKey: @"name"];
@@ -1367,6 +1437,8 @@ static SchoolPb* defaultSchoolPbInstance = nil;
   return
       self.hasId == otherMessage.hasId &&
       (!self.hasId || self.id == otherMessage.id) &&
+      self.hasDomain == otherMessage.hasDomain &&
+      (!self.hasDomain || [self.domain isEqual:otherMessage.domain]) &&
       self.hasName == otherMessage.hasName &&
       (!self.hasName || [self.name isEqual:otherMessage.name]) &&
       self.hasYear == otherMessage.hasYear &&
@@ -1379,6 +1451,9 @@ static SchoolPb* defaultSchoolPbInstance = nil;
   __block NSUInteger hashCode = 7;
   if (self.hasId) {
     hashCode = hashCode * 31 + [[NSNumber numberWithLongLong:self.id] hash];
+  }
+  if (self.hasDomain) {
+    hashCode = hashCode * 31 + [self.domain hash];
   }
   if (self.hasName) {
     hashCode = hashCode * 31 + [self.name hash];
@@ -1435,6 +1510,9 @@ static SchoolPb* defaultSchoolPbInstance = nil;
   if (other.hasId) {
     [self setId:other.id];
   }
+  if (other.hasDomain) {
+    [self setDomain:other.domain];
+  }
   if (other.hasName) {
     [self setName:other.name];
   }
@@ -1470,14 +1548,18 @@ static SchoolPb* defaultSchoolPbInstance = nil;
         break;
       }
       case 18: {
+        [self setDomain:[input readString]];
+        break;
+      }
+      case 26: {
         [self setName:[input readString]];
         break;
       }
-      case 24: {
+      case 32: {
         [self setYear:[input readInt64]];
         break;
       }
-      case 32: {
+      case 40: {
         [self setSemester:[input readInt32]];
         break;
       }
@@ -1498,6 +1580,22 @@ static SchoolPb* defaultSchoolPbInstance = nil;
 - (SchoolPbBuilder*) clearId {
   resultSchoolPb.hasId = NO;
   resultSchoolPb.id = 0L;
+  return self;
+}
+- (BOOL) hasDomain {
+  return resultSchoolPb.hasDomain;
+}
+- (NSString*) domain {
+  return resultSchoolPb.domain;
+}
+- (SchoolPbBuilder*) setDomain:(NSString*) value {
+  resultSchoolPb.hasDomain = YES;
+  resultSchoolPb.domain = value;
+  return self;
+}
+- (SchoolPbBuilder*) clearDomain {
+  resultSchoolPb.hasDomain = NO;
+  resultSchoolPb.domain = @"";
   return self;
 }
 - (BOOL) hasName {
@@ -2671,6 +2769,7 @@ static TeacherPb* defaultTeacherPbInstance = nil;
 
 @interface StudentPb ()
 @property SInt64 id;
+@property (strong) NSString* uuid;
 @property (strong) NSString* name;
 @property SInt64 classId;
 @property SInt64 gradeId;
@@ -2685,6 +2784,13 @@ static TeacherPb* defaultTeacherPbInstance = nil;
   hasId_ = !!_value_;
 }
 @synthesize id;
+- (BOOL) hasUuid {
+  return !!hasUuid_;
+}
+- (void) setHasUuid:(BOOL) _value_ {
+  hasUuid_ = !!_value_;
+}
+@synthesize uuid;
 - (BOOL) hasName {
   return !!hasName_;
 }
@@ -2709,6 +2815,7 @@ static TeacherPb* defaultTeacherPbInstance = nil;
 - (instancetype) init {
   if ((self = [super init])) {
     self.id = 0L;
+    self.uuid = @"";
     self.name = @"";
     self.classId = 0L;
     self.gradeId = 0L;
@@ -2734,14 +2841,17 @@ static StudentPb* defaultStudentPbInstance = nil;
   if (self.hasId) {
     [output writeInt64:1 value:self.id];
   }
+  if (self.hasUuid) {
+    [output writeString:2 value:self.uuid];
+  }
   if (self.hasName) {
-    [output writeString:2 value:self.name];
+    [output writeString:3 value:self.name];
   }
   if (self.hasClassId) {
-    [output writeInt64:3 value:self.classId];
+    [output writeInt64:4 value:self.classId];
   }
   if (self.hasGradeId) {
-    [output writeInt64:4 value:self.gradeId];
+    [output writeInt64:5 value:self.gradeId];
   }
   [self.unknownFields writeToCodedOutputStream:output];
 }
@@ -2755,14 +2865,17 @@ static StudentPb* defaultStudentPbInstance = nil;
   if (self.hasId) {
     size_ += computeInt64Size(1, self.id);
   }
+  if (self.hasUuid) {
+    size_ += computeStringSize(2, self.uuid);
+  }
   if (self.hasName) {
-    size_ += computeStringSize(2, self.name);
+    size_ += computeStringSize(3, self.name);
   }
   if (self.hasClassId) {
-    size_ += computeInt64Size(3, self.classId);
+    size_ += computeInt64Size(4, self.classId);
   }
   if (self.hasGradeId) {
-    size_ += computeInt64Size(4, self.gradeId);
+    size_ += computeInt64Size(5, self.gradeId);
   }
   size_ += self.unknownFields.serializedSize;
   memoizedSerializedSize = size_;
@@ -2802,6 +2915,9 @@ static StudentPb* defaultStudentPbInstance = nil;
   if (self.hasId) {
     [output appendFormat:@"%@%@: %@\n", indent, @"id", [NSNumber numberWithLongLong:self.id]];
   }
+  if (self.hasUuid) {
+    [output appendFormat:@"%@%@: %@\n", indent, @"uuid", self.uuid];
+  }
   if (self.hasName) {
     [output appendFormat:@"%@%@: %@\n", indent, @"name", self.name];
   }
@@ -2816,6 +2932,9 @@ static StudentPb* defaultStudentPbInstance = nil;
 - (void) storeInDictionary:(NSMutableDictionary *)dictionary {
   if (self.hasId) {
     [dictionary setObject: [NSNumber numberWithLongLong:self.id] forKey: @"id"];
+  }
+  if (self.hasUuid) {
+    [dictionary setObject: self.uuid forKey: @"uuid"];
   }
   if (self.hasName) {
     [dictionary setObject: self.name forKey: @"name"];
@@ -2839,6 +2958,8 @@ static StudentPb* defaultStudentPbInstance = nil;
   return
       self.hasId == otherMessage.hasId &&
       (!self.hasId || self.id == otherMessage.id) &&
+      self.hasUuid == otherMessage.hasUuid &&
+      (!self.hasUuid || [self.uuid isEqual:otherMessage.uuid]) &&
       self.hasName == otherMessage.hasName &&
       (!self.hasName || [self.name isEqual:otherMessage.name]) &&
       self.hasClassId == otherMessage.hasClassId &&
@@ -2851,6 +2972,9 @@ static StudentPb* defaultStudentPbInstance = nil;
   __block NSUInteger hashCode = 7;
   if (self.hasId) {
     hashCode = hashCode * 31 + [[NSNumber numberWithLongLong:self.id] hash];
+  }
+  if (self.hasUuid) {
+    hashCode = hashCode * 31 + [self.uuid hash];
   }
   if (self.hasName) {
     hashCode = hashCode * 31 + [self.name hash];
@@ -2907,6 +3031,9 @@ static StudentPb* defaultStudentPbInstance = nil;
   if (other.hasId) {
     [self setId:other.id];
   }
+  if (other.hasUuid) {
+    [self setUuid:other.uuid];
+  }
   if (other.hasName) {
     [self setName:other.name];
   }
@@ -2942,14 +3069,18 @@ static StudentPb* defaultStudentPbInstance = nil;
         break;
       }
       case 18: {
+        [self setUuid:[input readString]];
+        break;
+      }
+      case 26: {
         [self setName:[input readString]];
         break;
       }
-      case 24: {
+      case 32: {
         [self setClassId:[input readInt64]];
         break;
       }
-      case 32: {
+      case 40: {
         [self setGradeId:[input readInt64]];
         break;
       }
@@ -2970,6 +3101,22 @@ static StudentPb* defaultStudentPbInstance = nil;
 - (StudentPbBuilder*) clearId {
   resultStudentPb.hasId = NO;
   resultStudentPb.id = 0L;
+  return self;
+}
+- (BOOL) hasUuid {
+  return resultStudentPb.hasUuid;
+}
+- (NSString*) uuid {
+  return resultStudentPb.uuid;
+}
+- (StudentPbBuilder*) setUuid:(NSString*) value {
+  resultStudentPb.hasUuid = YES;
+  resultStudentPb.uuid = value;
+  return self;
+}
+- (StudentPbBuilder*) clearUuid {
+  resultStudentPb.hasUuid = NO;
+  resultStudentPb.uuid = @"";
   return self;
 }
 - (BOOL) hasName {

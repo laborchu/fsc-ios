@@ -2,7 +2,7 @@
 //  FSCTeacher.h
 //  
 //
-//  Created by laborchu on 15/8/25.
+//  Created by laborchu on 15/10/11.
 //
 //
 
@@ -11,16 +11,14 @@
 
 @class FSCUser;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface FSCTeacher : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * dataStatus;
-@property (nonatomic, retain) NSNumber * gender;
-@property (nonatomic, retain) NSNumber * id;
-@property (nonatomic, retain) NSString * mobile;
-@property (nonatomic, retain) NSNumber * modifiedDate;
-@property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSString * portrait;
-@property (nonatomic, retain) NSNumber * subjectId;
-@property (nonatomic, retain) FSCUser *fscUser;
+// Insert code here to declare functionality of your managed object subclass
 
 @end
+
+NS_ASSUME_NONNULL_END
+
+#import "FSCTeacher+CoreDataProperties.h"

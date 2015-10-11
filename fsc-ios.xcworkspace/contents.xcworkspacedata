@@ -2,60 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:fsc-ios/Core/VO/FSCGroupRecorder.h">
-   </FileRef>
-   <FileRef
-      location = "group:fsc-ios/Core/VO/FSCGroupRecorder.m">
-   </FileRef>
-   <FileRef
-      location = "group:fsc-ios/Core/VO/FSCPublicRecorder.h">
-   </FileRef>
-   <FileRef
-      location = "group:fsc-ios/Core/VO/FSCPublicRecorder.m">
-   </FileRef>
-   <FileRef
-      location = "group:fsc-ios/Core/VO/FSCClassRecorder.h">
-   </FileRef>
-   <FileRef
-      location = "group:fsc-ios/Core/VO/FSCClassRecorder.m">
-   </FileRef>
-   <FileRef
-      location = "group:fsc-ios/Core/VO/FSCGroupSession.h">
-   </FileRef>
-   <FileRef
-      location = "group:fsc-ios/Core/VO/FSCGroupSession.m">
-   </FileRef>
-   <FileRef
-      location = "group:fsc-ios/Core/VO/FSCTrgRecorder.h">
-   </FileRef>
-   <FileRef
-      location = "group:fsc-ios/Core/VO/FSCTrgRecorder.m">
-   </FileRef>
-   <FileRef
-      location = "group:fsc-ios/Core/VO/FSCTrgUser.h">
-   </FileRef>
-   <FileRef
-      location = "group:fsc-ios/Core/VO/FSCTrgUser.m">
-   </FileRef>
-   <FileRef
-      location = "group:fsc-ios/Core/VO/FSCTrgSession.h">
-   </FileRef>
-   <FileRef
-      location = "group:fsc-ios/Core/VO/FSCTrgSession.m">
-   </FileRef>
-   <FileRef
-      location = "group:fsc-ios/Core/VO/FSCUserRecorder.h">
-   </FileRef>
-   <FileRef
-      location = "group:fsc-ios/Core/VO/FSCUserRecorder.m">
-   </FileRef>
-   <FileRef
-      location = "group:fsc-ios/Core/VO/FSCUserSession.h">
-   </FileRef>
-   <FileRef
-      location = "group:fsc-ios/Core/VO/FSCUserSession.m">
-   </FileRef>
-   <FileRef
       location = "group:fsc-ios.xcodeproj">
    </FileRef>
    <FileRef

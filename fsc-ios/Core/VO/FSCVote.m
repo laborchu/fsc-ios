@@ -2,7 +2,7 @@
 //  FSCVote.m
 //  
 //
-//  Created by laborchu on 15/7/29.
+//  Created by laborchu on 15/10/11.
 //
 //
 
@@ -10,19 +10,8 @@
 #import "FSCPublicRecorder.h"
 #import "FSCUser.h"
 
-
 @implementation FSCVote
 
-@dynamic coverImg;
-@dynamic deadline;
-@dynamic id;
-@dynamic modifiedDate;
-@dynamic quesList;
-@dynamic status;
-@dynamic voteData;
-@dynamic voteName;
-@dynamic voteNum;
-@dynamic whichRecorder;
-@dynamic whoCanLook;
+// Insert code here to add functionality to your managed object subclass
 
 @end

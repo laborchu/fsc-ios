@@ -50,6 +50,8 @@
 @class TSessionPbBuilder;
 @class TUserPb;
 @class TUserPbBuilder;
+@class TeachNodeContentPb;
+@class TeachNodeContentPbBuilder;
 @class TeachNodeDetailsPb;
 @class TeachNodeDetailsPbBuilder;
 @class TeachNodeListPb;

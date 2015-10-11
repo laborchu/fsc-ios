@@ -880,7 +880,9 @@ static FscSnsSinaMsgListPb* defaultFscSnsSinaMsgListPbInstance = nil;
 @property (strong) NSString* msg;
 @property (strong) NSString* resPath;
 @property SInt64 praiseCount;
+@property SInt64 praiseRead;
 @property SInt64 commentCount;
+@property SInt64 commentRead;
 @property SInt32 dataStatus;
 @property SInt64 createdDate;
 @property SInt64 createdBy;
@@ -929,6 +931,13 @@ static FscSnsSinaMsgListPb* defaultFscSnsSinaMsgListPbInstance = nil;
   hasPraiseCount_ = !!_value_;
 }
 @synthesize praiseCount;
+- (BOOL) hasPraiseRead {
+  return !!hasPraiseRead_;
+}
+- (void) setHasPraiseRead:(BOOL) _value_ {
+  hasPraiseRead_ = !!_value_;
+}
+@synthesize praiseRead;
 - (BOOL) hasCommentCount {
   return !!hasCommentCount_;
 }
@@ -936,6 +945,13 @@ static FscSnsSinaMsgListPb* defaultFscSnsSinaMsgListPbInstance = nil;
   hasCommentCount_ = !!_value_;
 }
 @synthesize commentCount;
+- (BOOL) hasCommentRead {
+  return !!hasCommentRead_;
+}
+- (void) setHasCommentRead:(BOOL) _value_ {
+  hasCommentRead_ = !!_value_;
+}
+@synthesize commentRead;
 - (BOOL) hasDataStatus {
   return !!hasDataStatus_;
 }
@@ -991,7 +1007,9 @@ static FscSnsSinaMsgListPb* defaultFscSnsSinaMsgListPbInstance = nil;
     self.msg = @"";
     self.resPath = @"";
     self.praiseCount = 0L;
+    self.praiseRead = 0L;
     self.commentCount = 0L;
+    self.commentRead = 0L;
     self.dataStatus = 0;
     self.createdDate = 0L;
     self.createdBy = 0L;
@@ -1050,35 +1068,41 @@ static FscSnsMsgPb* defaultFscSnsMsgPbInstance = nil;
   if (self.hasPraiseCount) {
     [output writeInt64:5 value:self.praiseCount];
   }
+  if (self.hasPraiseRead) {
+    [output writeInt64:6 value:self.praiseRead];
+  }
   if (self.hasCommentCount) {
-    [output writeInt64:6 value:self.commentCount];
+    [output writeInt64:7 value:self.commentCount];
+  }
+  if (self.hasCommentRead) {
+    [output writeInt64:8 value:self.commentRead];
   }
   if (self.hasDataStatus) {
-    [output writeInt32:7 value:self.dataStatus];
+    [output writeInt32:9 value:self.dataStatus];
   }
   if (self.hasCreatedDate) {
-    [output writeInt64:8 value:self.createdDate];
+    [output writeInt64:10 value:self.createdDate];
   }
   if (self.hasCreatedBy) {
-    [output writeInt64:9 value:self.createdBy];
+    [output writeInt64:11 value:self.createdBy];
   }
   if (self.hasTimestamp) {
-    [output writeInt64:10 value:self.timestamp];
+    [output writeInt64:12 value:self.timestamp];
   }
   [self.fscSnsPraisePbArray enumerateObjectsUsingBlock:^(FscSnsPraisePb *element, NSUInteger idx, BOOL *stop) {
-    [output writeMessage:11 value:element];
-  }];
-  [self.fscSnsCommentPbArray enumerateObjectsUsingBlock:^(FscSnsCommentPb *element, NSUInteger idx, BOOL *stop) {
-    [output writeMessage:12 value:element];
-  }];
-  [self.fscSnsMsgImgPbArray enumerateObjectsUsingBlock:^(FscSnsMsgImgPb *element, NSUInteger idx, BOOL *stop) {
     [output writeMessage:13 value:element];
   }];
+  [self.fscSnsCommentPbArray enumerateObjectsUsingBlock:^(FscSnsCommentPb *element, NSUInteger idx, BOOL *stop) {
+    [output writeMessage:14 value:element];
+  }];
+  [self.fscSnsMsgImgPbArray enumerateObjectsUsingBlock:^(FscSnsMsgImgPb *element, NSUInteger idx, BOOL *stop) {
+    [output writeMessage:15 value:element];
+  }];
   if (self.hasSinaId) {
-    [output writeInt64:14 value:self.sinaId];
+    [output writeInt64:16 value:self.sinaId];
   }
   if (self.hasSource) {
-    [output writeString:15 value:self.source];
+    [output writeString:17 value:self.source];
   }
   [self.unknownFields writeToCodedOutputStream:output];
 }
@@ -1104,35 +1128,41 @@ static FscSnsMsgPb* defaultFscSnsMsgPbInstance = nil;
   if (self.hasPraiseCount) {
     size_ += computeInt64Size(5, self.praiseCount);
   }
+  if (self.hasPraiseRead) {
+    size_ += computeInt64Size(6, self.praiseRead);
+  }
   if (self.hasCommentCount) {
-    size_ += computeInt64Size(6, self.commentCount);
+    size_ += computeInt64Size(7, self.commentCount);
+  }
+  if (self.hasCommentRead) {
+    size_ += computeInt64Size(8, self.commentRead);
   }
   if (self.hasDataStatus) {
-    size_ += computeInt32Size(7, self.dataStatus);
+    size_ += computeInt32Size(9, self.dataStatus);
   }
   if (self.hasCreatedDate) {
-    size_ += computeInt64Size(8, self.createdDate);
+    size_ += computeInt64Size(10, self.createdDate);
   }
   if (self.hasCreatedBy) {
-    size_ += computeInt64Size(9, self.createdBy);
+    size_ += computeInt64Size(11, self.createdBy);
   }
   if (self.hasTimestamp) {
-    size_ += computeInt64Size(10, self.timestamp);
+    size_ += computeInt64Size(12, self.timestamp);
   }
   [self.fscSnsPraisePbArray enumerateObjectsUsingBlock:^(FscSnsPraisePb *element, NSUInteger idx, BOOL *stop) {
-    size_ += computeMessageSize(11, element);
-  }];
-  [self.fscSnsCommentPbArray enumerateObjectsUsingBlock:^(FscSnsCommentPb *element, NSUInteger idx, BOOL *stop) {
-    size_ += computeMessageSize(12, element);
-  }];
-  [self.fscSnsMsgImgPbArray enumerateObjectsUsingBlock:^(FscSnsMsgImgPb *element, NSUInteger idx, BOOL *stop) {
     size_ += computeMessageSize(13, element);
   }];
+  [self.fscSnsCommentPbArray enumerateObjectsUsingBlock:^(FscSnsCommentPb *element, NSUInteger idx, BOOL *stop) {
+    size_ += computeMessageSize(14, element);
+  }];
+  [self.fscSnsMsgImgPbArray enumerateObjectsUsingBlock:^(FscSnsMsgImgPb *element, NSUInteger idx, BOOL *stop) {
+    size_ += computeMessageSize(15, element);
+  }];
   if (self.hasSinaId) {
-    size_ += computeInt64Size(14, self.sinaId);
+    size_ += computeInt64Size(16, self.sinaId);
   }
   if (self.hasSource) {
-    size_ += computeStringSize(15, self.source);
+    size_ += computeStringSize(17, self.source);
   }
   size_ += self.unknownFields.serializedSize;
   memoizedSerializedSize = size_;
@@ -1184,8 +1214,14 @@ static FscSnsMsgPb* defaultFscSnsMsgPbInstance = nil;
   if (self.hasPraiseCount) {
     [output appendFormat:@"%@%@: %@\n", indent, @"praiseCount", [NSNumber numberWithLongLong:self.praiseCount]];
   }
+  if (self.hasPraiseRead) {
+    [output appendFormat:@"%@%@: %@\n", indent, @"praiseRead", [NSNumber numberWithLongLong:self.praiseRead]];
+  }
   if (self.hasCommentCount) {
     [output appendFormat:@"%@%@: %@\n", indent, @"commentCount", [NSNumber numberWithLongLong:self.commentCount]];
+  }
+  if (self.hasCommentRead) {
+    [output appendFormat:@"%@%@: %@\n", indent, @"commentRead", [NSNumber numberWithLongLong:self.commentRead]];
   }
   if (self.hasDataStatus) {
     [output appendFormat:@"%@%@: %@\n", indent, @"dataStatus", [NSNumber numberWithInteger:self.dataStatus]];
@@ -1241,8 +1277,14 @@ static FscSnsMsgPb* defaultFscSnsMsgPbInstance = nil;
   if (self.hasPraiseCount) {
     [dictionary setObject: [NSNumber numberWithLongLong:self.praiseCount] forKey: @"praiseCount"];
   }
+  if (self.hasPraiseRead) {
+    [dictionary setObject: [NSNumber numberWithLongLong:self.praiseRead] forKey: @"praiseRead"];
+  }
   if (self.hasCommentCount) {
     [dictionary setObject: [NSNumber numberWithLongLong:self.commentCount] forKey: @"commentCount"];
+  }
+  if (self.hasCommentRead) {
+    [dictionary setObject: [NSNumber numberWithLongLong:self.commentRead] forKey: @"commentRead"];
   }
   if (self.hasDataStatus) {
     [dictionary setObject: [NSNumber numberWithInteger:self.dataStatus] forKey: @"dataStatus"];
@@ -1298,8 +1340,12 @@ static FscSnsMsgPb* defaultFscSnsMsgPbInstance = nil;
       (!self.hasResPath || [self.resPath isEqual:otherMessage.resPath]) &&
       self.hasPraiseCount == otherMessage.hasPraiseCount &&
       (!self.hasPraiseCount || self.praiseCount == otherMessage.praiseCount) &&
+      self.hasPraiseRead == otherMessage.hasPraiseRead &&
+      (!self.hasPraiseRead || self.praiseRead == otherMessage.praiseRead) &&
       self.hasCommentCount == otherMessage.hasCommentCount &&
       (!self.hasCommentCount || self.commentCount == otherMessage.commentCount) &&
+      self.hasCommentRead == otherMessage.hasCommentRead &&
+      (!self.hasCommentRead || self.commentRead == otherMessage.commentRead) &&
       self.hasDataStatus == otherMessage.hasDataStatus &&
       (!self.hasDataStatus || self.dataStatus == otherMessage.dataStatus) &&
       self.hasCreatedDate == otherMessage.hasCreatedDate &&
@@ -1334,8 +1380,14 @@ static FscSnsMsgPb* defaultFscSnsMsgPbInstance = nil;
   if (self.hasPraiseCount) {
     hashCode = hashCode * 31 + [[NSNumber numberWithLongLong:self.praiseCount] hash];
   }
+  if (self.hasPraiseRead) {
+    hashCode = hashCode * 31 + [[NSNumber numberWithLongLong:self.praiseRead] hash];
+  }
   if (self.hasCommentCount) {
     hashCode = hashCode * 31 + [[NSNumber numberWithLongLong:self.commentCount] hash];
+  }
+  if (self.hasCommentRead) {
+    hashCode = hashCode * 31 + [[NSNumber numberWithLongLong:self.commentRead] hash];
   }
   if (self.hasDataStatus) {
     hashCode = hashCode * 31 + [[NSNumber numberWithInteger:self.dataStatus] hash];
@@ -1422,8 +1474,14 @@ static FscSnsMsgPb* defaultFscSnsMsgPbInstance = nil;
   if (other.hasPraiseCount) {
     [self setPraiseCount:other.praiseCount];
   }
+  if (other.hasPraiseRead) {
+    [self setPraiseRead:other.praiseRead];
+  }
   if (other.hasCommentCount) {
     [self setCommentCount:other.commentCount];
+  }
+  if (other.hasCommentRead) {
+    [self setCommentRead:other.commentRead];
   }
   if (other.hasDataStatus) {
     [self setDataStatus:other.dataStatus];
@@ -1506,48 +1564,56 @@ static FscSnsMsgPb* defaultFscSnsMsgPbInstance = nil;
         break;
       }
       case 48: {
-        [self setCommentCount:[input readInt64]];
+        [self setPraiseRead:[input readInt64]];
         break;
       }
       case 56: {
-        [self setDataStatus:[input readInt32]];
+        [self setCommentCount:[input readInt64]];
         break;
       }
       case 64: {
-        [self setCreatedDate:[input readInt64]];
+        [self setCommentRead:[input readInt64]];
         break;
       }
       case 72: {
-        [self setCreatedBy:[input readInt64]];
+        [self setDataStatus:[input readInt32]];
         break;
       }
       case 80: {
+        [self setCreatedDate:[input readInt64]];
+        break;
+      }
+      case 88: {
+        [self setCreatedBy:[input readInt64]];
+        break;
+      }
+      case 96: {
         [self setTimestamp:[input readInt64]];
         break;
       }
-      case 90: {
+      case 106: {
         FscSnsPraisePbBuilder* subBuilder = [FscSnsPraisePb builder];
         [input readMessage:subBuilder extensionRegistry:extensionRegistry];
         [self addFscSnsPraisePb:[subBuilder buildPartial]];
         break;
       }
-      case 98: {
+      case 114: {
         FscSnsCommentPbBuilder* subBuilder = [FscSnsCommentPb builder];
         [input readMessage:subBuilder extensionRegistry:extensionRegistry];
         [self addFscSnsCommentPb:[subBuilder buildPartial]];
         break;
       }
-      case 106: {
+      case 122: {
         FscSnsMsgImgPbBuilder* subBuilder = [FscSnsMsgImgPb builder];
         [input readMessage:subBuilder extensionRegistry:extensionRegistry];
         [self addFscSnsMsgImgPb:[subBuilder buildPartial]];
         break;
       }
-      case 112: {
+      case 128: {
         [self setSinaId:[input readInt64]];
         break;
       }
-      case 122: {
+      case 138: {
         [self setSource:[input readString]];
         break;
       }
@@ -1634,6 +1700,22 @@ static FscSnsMsgPb* defaultFscSnsMsgPbInstance = nil;
   resultFscSnsMsgPb.praiseCount = 0L;
   return self;
 }
+- (BOOL) hasPraiseRead {
+  return resultFscSnsMsgPb.hasPraiseRead;
+}
+- (SInt64) praiseRead {
+  return resultFscSnsMsgPb.praiseRead;
+}
+- (FscSnsMsgPbBuilder*) setPraiseRead:(SInt64) value {
+  resultFscSnsMsgPb.hasPraiseRead = YES;
+  resultFscSnsMsgPb.praiseRead = value;
+  return self;
+}
+- (FscSnsMsgPbBuilder*) clearPraiseRead {
+  resultFscSnsMsgPb.hasPraiseRead = NO;
+  resultFscSnsMsgPb.praiseRead = 0L;
+  return self;
+}
 - (BOOL) hasCommentCount {
   return resultFscSnsMsgPb.hasCommentCount;
 }
@@ -1648,6 +1730,22 @@ static FscSnsMsgPb* defaultFscSnsMsgPbInstance = nil;
 - (FscSnsMsgPbBuilder*) clearCommentCount {
   resultFscSnsMsgPb.hasCommentCount = NO;
   resultFscSnsMsgPb.commentCount = 0L;
+  return self;
+}
+- (BOOL) hasCommentRead {
+  return resultFscSnsMsgPb.hasCommentRead;
+}
+- (SInt64) commentRead {
+  return resultFscSnsMsgPb.commentRead;
+}
+- (FscSnsMsgPbBuilder*) setCommentRead:(SInt64) value {
+  resultFscSnsMsgPb.hasCommentRead = YES;
+  resultFscSnsMsgPb.commentRead = value;
+  return self;
+}
+- (FscSnsMsgPbBuilder*) clearCommentRead {
+  resultFscSnsMsgPb.hasCommentRead = NO;
+  resultFscSnsMsgPb.commentRead = 0L;
   return self;
 }
 - (BOOL) hasDataStatus {

@@ -2,7 +2,7 @@
 //  FSCUserStudent.m
 //  
 //
-//  Created by laborchu on 15/7/29.
+//  Created by laborchu on 15/10/11.
 //
 //
 
@@ -10,14 +10,8 @@
 #import "FSCTeachNode.h"
 #import "FSCUser.h"
 
-
 @implementation FSCUserStudent
 
-@dynamic classId;
-@dynamic gradeId;
-@dynamic id;
-@dynamic name;
-@dynamic teachNodes;
-@dynamic whoChlid;
+// Insert code here to add functionality to your managed object subclass
 
 @end

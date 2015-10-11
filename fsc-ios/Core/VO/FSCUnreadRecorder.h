@@ -2,7 +2,7 @@
 //  FSCUnreadRecorder.h
 //  
 //
-//  Created by laborchu on 15/7/29.
+//  Created by laborchu on 15/10/11.
 //
 //
 
@@ -11,12 +11,14 @@
 
 @class FSCUser;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface FSCUnreadRecorder : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * id;
-@property (nonatomic, retain) NSNumber * notify;
-@property (nonatomic, retain) NSNumber * recorderType;
-@property (nonatomic, retain) NSNumber * sessionId;
-@property (nonatomic, retain) FSCUser *whoUnRead;
+// Insert code here to declare functionality of your managed object subclass
 
 @end
+
+NS_ASSUME_NONNULL_END
+
+#import "FSCUnreadRecorder+CoreDataProperties.h"

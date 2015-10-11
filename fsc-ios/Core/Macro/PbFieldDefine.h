@@ -9,7 +9,8 @@
 #ifndef fsc_ios_PbFieldDefine____FILEEXTENSION___
 #define fsc_ios_PbFieldDefine____FILEEXTENSION___
 
-#define PB_USER_FIELDS  @[@"id", @"schoolId", @"uuid", @"username", @"portrait", @"password", @"name", @"userType", @"phaseId", @"gender", @"address", @"email", @"token", @"schoolName"]
+#define PB_USER_FIELDS  @[@"id", @"schoolId", @"uuid", @"username", @"portrait", @"password", @"name", @"userType", @"phaseId", @"gender", @"address", @"email", @"token", @"schoolName",@"hasInitPwd"]
+#define PB_SCHOOL_FIELDS @[@"id",@"domain", @"name", @"year", @"semester"]
 #define PB_CLASS_FIELDS  @[@"id", @"year", @"semester", @"className:classname", @"gradeId", @"gradeName", @"monitorUrl"]
 #define PB_STUDENT_FIELDS  @[@"id", @"name", @"classId", @"gradeId"]
 #define LINKMAN_FIELDS @[@"id", @"name", @"userType", @"portrait",@"gender", @"email", @"createdDate", @"schoolName", @"mobile", @"title", @"subjectName", @"status", @"modifiedDate", @"timestamp"]
@@ -23,7 +24,6 @@
 #define FSC_FUNC_STAT_FIELDS @[@"userId", @"code", @"createdDate"]
 
 #define USER_FIELDS @[@"id", @"schoolId", @"uuid", @"username", @"portrait", @"password","name", @"userType", @"phaseId", @"gender", @"address", @"email", @"token", @"schoolName", @"file"]
-#define SCHOOL_FIELDS @[@"id", @"name", @"year", @"semester"]
 #define FUNC_CTRL_FIELDS @[@"schoolId", @"funcCode", @"status"]
 #define FSC_USER_FIELDS @[@"id", @"name", @"gender", @"userType", @"portrait", @"schoolName"]
 

@@ -2,23 +2,15 @@
 //  FSCGroupUser.m
 //  
 //
-//  Created by laborchu on 15/8/26.
+//  Created by laborchu on 15/10/11.
 //
 //
 
 #import "FSCGroupUser.h"
 #import "FSCGroupSession.h"
 
-
 @implementation FSCGroupUser
 
-@dynamic createdDate;
-@dynamic inviterId;
-@dynamic modifiedDate;
-@dynamic sessionId;
-@dynamic status;
-@dynamic timestamp;
-@dynamic userId;
-@dynamic gSession;
+// Insert code here to add functionality to your managed object subclass
 
 @end

@@ -232,7 +232,9 @@
 #define FscSnsMsgPb_msg @"msg"
 #define FscSnsMsgPb_resPath @"resPath"
 #define FscSnsMsgPb_praiseCount @"praiseCount"
+#define FscSnsMsgPb_praiseRead @"praiseRead"
 #define FscSnsMsgPb_commentCount @"commentCount"
+#define FscSnsMsgPb_commentRead @"commentRead"
 #define FscSnsMsgPb_dataStatus @"dataStatus"
 #define FscSnsMsgPb_createdDate @"createdDate"
 #define FscSnsMsgPb_createdBy @"createdBy"
@@ -246,7 +248,9 @@
 @private
   BOOL hasId_:1;
   BOOL hasPraiseCount_:1;
+  BOOL hasPraiseRead_:1;
   BOOL hasCommentCount_:1;
+  BOOL hasCommentRead_:1;
   BOOL hasCreatedDate_:1;
   BOOL hasCreatedBy_:1;
   BOOL hasTimestamp_:1;
@@ -258,7 +262,9 @@
   BOOL hasSource_:1;
   SInt64 id;
   SInt64 praiseCount;
+  SInt64 praiseRead;
   SInt64 commentCount;
+  SInt64 commentRead;
   SInt64 createdDate;
   SInt64 createdBy;
   SInt64 timestamp;
@@ -277,7 +283,9 @@
 - (BOOL) hasMsg;
 - (BOOL) hasResPath;
 - (BOOL) hasPraiseCount;
+- (BOOL) hasPraiseRead;
 - (BOOL) hasCommentCount;
+- (BOOL) hasCommentRead;
 - (BOOL) hasDataStatus;
 - (BOOL) hasCreatedDate;
 - (BOOL) hasCreatedBy;
@@ -289,7 +297,9 @@
 @property (readonly, strong) NSString* msg;
 @property (readonly, strong) NSString* resPath;
 @property (readonly) SInt64 praiseCount;
+@property (readonly) SInt64 praiseRead;
 @property (readonly) SInt64 commentCount;
+@property (readonly) SInt64 commentRead;
 @property (readonly) SInt32 dataStatus;
 @property (readonly) SInt64 createdDate;
 @property (readonly) SInt64 createdBy;
@@ -363,10 +373,20 @@
 - (FscSnsMsgPbBuilder*) setPraiseCount:(SInt64) value;
 - (FscSnsMsgPbBuilder*) clearPraiseCount;
 
+- (BOOL) hasPraiseRead;
+- (SInt64) praiseRead;
+- (FscSnsMsgPbBuilder*) setPraiseRead:(SInt64) value;
+- (FscSnsMsgPbBuilder*) clearPraiseRead;
+
 - (BOOL) hasCommentCount;
 - (SInt64) commentCount;
 - (FscSnsMsgPbBuilder*) setCommentCount:(SInt64) value;
 - (FscSnsMsgPbBuilder*) clearCommentCount;
+
+- (BOOL) hasCommentRead;
+- (SInt64) commentRead;
+- (FscSnsMsgPbBuilder*) setCommentRead:(SInt64) value;
+- (FscSnsMsgPbBuilder*) clearCommentRead;
 
 - (BOOL) hasDataStatus;
 - (SInt32) dataStatus;

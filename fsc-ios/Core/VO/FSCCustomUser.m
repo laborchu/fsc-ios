@@ -2,25 +2,14 @@
 //  FSCCustomUser.m
 //  
 //
-//  Created by laborchu on 15/7/29.
+//  Created by laborchu on 15/10/11.
 //
 //
 
 #import "FSCCustomUser.h"
 
-
 @implementation FSCCustomUser
 
-@dynamic addStatus;
-@dynamic classId;
-@dynamic file;
-@dynamic gender;
-@dynamic id;
-@dynamic keyword;
-@dynamic linkmanId;
-@dynamic name;
-@dynamic portait;
-@dynamic schoolName;
-@dynamic userType;
+// Insert code here to add functionality to your managed object subclass
 
 @end

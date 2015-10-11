@@ -2,23 +2,15 @@
 //  FSCClassChatUser.m
 //  
 //
-//  Created by laborchu on 15/7/29.
+//  Created by laborchu on 15/10/11.
 //
 //
 
 #import "FSCClassChatUser.h"
 #import "FSCClassSession.h"
 
-
 @implementation FSCClassChatUser
 
-@dynamic createdDate;
-@dynamic inviterId;
-@dynamic modifiedDate;
-@dynamic sessionId;
-@dynamic status;
-@dynamic timestamp;
-@dynamic userId;
-@dynamic whoJoin;
+// Insert code here to add functionality to your managed object subclass
 
 @end

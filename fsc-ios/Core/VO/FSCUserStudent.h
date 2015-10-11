@@ -2,7 +2,7 @@
 //  FSCUserStudent.h
 //  
 //
-//  Created by laborchu on 15/7/29.
+//  Created by laborchu on 15/10/11.
 //
 //
 
@@ -11,21 +11,14 @@
 
 @class FSCTeachNode, FSCUser;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface FSCUserStudent : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * classId;
-@property (nonatomic, retain) NSNumber * gradeId;
-@property (nonatomic, retain) NSNumber * id;
-@property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSSet *teachNodes;
-@property (nonatomic, retain) FSCUser *whoChlid;
-@end
-
-@interface FSCUserStudent (CoreDataGeneratedAccessors)
-
-- (void)addTeachNodesObject:(FSCTeachNode *)value;
-- (void)removeTeachNodesObject:(FSCTeachNode *)value;
-- (void)addTeachNodes:(NSSet *)values;
-- (void)removeTeachNodes:(NSSet *)values;
+// Insert code here to declare functionality of your managed object subclass
 
 @end
+
+NS_ASSUME_NONNULL_END
+
+#import "FSCUserStudent+CoreDataProperties.h"

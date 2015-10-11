@@ -2,7 +2,7 @@
 //  FSCSnsComment.h
 //  
 //
-//  Created by laborchu on 15/7/29.
+//  Created by laborchu on 15/10/11.
 //
 //
 
@@ -11,15 +11,14 @@
 
 @class FSCSnsMsg;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface FSCSnsComment : NSManagedObject
 
-@property (nonatomic, retain) NSString * comment;
-@property (nonatomic, retain) NSNumber * dataStatus;
-@property (nonatomic, retain) NSNumber * fromUser;
-@property (nonatomic, retain) NSNumber * id;
-@property (nonatomic, retain) NSNumber * msgId;
-@property (nonatomic, retain) NSNumber * timestamp;
-@property (nonatomic, retain) NSNumber * toUser;
-@property (nonatomic, retain) FSCSnsMsg *whoHave;
+// Insert code here to declare functionality of your managed object subclass
 
 @end
+
+NS_ASSUME_NONNULL_END
+
+#import "FSCSnsComment+CoreDataProperties.h"

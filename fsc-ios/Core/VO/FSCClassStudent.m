@@ -2,26 +2,15 @@
 //  FSCClassStudent.m
 //  
 //
-//  Created by laborchu on 15/8/25.
+//  Created by laborchu on 15/10/11.
 //
 //
 
 #import "FSCClassStudent.h"
 #import "FSCClass.h"
 
-
 @implementation FSCClassStudent
 
-@dynamic classId;
-@dynamic dataStatus;
-@dynamic gradeId;
-@dynamic id;
-@dynamic modifiedDate;
-@dynamic name;
-@dynamic userType;
-@dynamic gender;
-@dynamic schoolName;
-@dynamic portrait;
-@dynamic fscClass;
+// Insert code here to add functionality to your managed object subclass
 
 @end

@@ -2,8 +2,17 @@
 
 #import <ProtocolBuffers/ProtocolBuffers.h>
 
+#import "FscTeachNode.pb.h"
 // @@protoc_insertion_point(imports)
 
+@class TeachNodeContentPb;
+@class TeachNodeContentPbBuilder;
+@class TeachNodeDetailsPb;
+@class TeachNodeDetailsPbBuilder;
+@class TeachNodeListPb;
+@class TeachNodeListPbBuilder;
+@class TeachNodePb;
+@class TeachNodePbBuilder;
 @class TeachPlanImgPb;
 @class TeachPlanImgPbBuilder;
 @class TeachPlanNodePb;
@@ -79,37 +88,46 @@
 - (TeachPlanPbBuilder*) clearPlanName;
 @end
 
+#define TeachPlanNodePb_id @"id"
 #define TeachPlanNodePb_classIds @"classIds"
 #define TeachPlanNodePb_nodeDate @"nodeDate"
-#define TeachPlanNodePb_text @"text"
 #define TeachPlanNodePb_title @"title"
+#define TeachPlanNodePb_nodeContentPb @"nodeContentPb"
 #define TeachPlanNodePb_teachPlanImgPb @"teachPlanImgPb"
 #define TeachPlanNodePb_teachPlanVoice @"teachPlanVoice"
+#define TeachPlanNodePb_imgPath @"imgPath"
 @interface TeachPlanNodePb : PBGeneratedMessage<GeneratedMessageProtocol> {
 @private
+  BOOL hasId_:1;
   BOOL hasNodeDate_:1;
   BOOL hasClassIds_:1;
-  BOOL hasText_:1;
   BOOL hasTitle_:1;
+  BOOL hasImgPath_:1;
   BOOL hasTeachPlanVoice_:1;
+  SInt64 id;
   SInt64 nodeDate;
   NSString* classIds;
-  NSString* text;
   NSString* title;
+  NSString* imgPath;
   NSData* teachPlanVoice;
+  NSMutableArray * nodeContentPbArray;
   NSMutableArray * teachPlanImgPbArray;
 }
+- (BOOL) hasId;
 - (BOOL) hasClassIds;
 - (BOOL) hasNodeDate;
-- (BOOL) hasText;
 - (BOOL) hasTitle;
 - (BOOL) hasTeachPlanVoice;
+- (BOOL) hasImgPath;
+@property (readonly) SInt64 id;
 @property (readonly, strong) NSString* classIds;
 @property (readonly) SInt64 nodeDate;
-@property (readonly, strong) NSString* text;
 @property (readonly, strong) NSString* title;
+@property (readonly, strong) NSArray * nodeContentPb;
 @property (readonly, strong) NSArray * teachPlanImgPb;
 @property (readonly, strong) NSData* teachPlanVoice;
+@property (readonly, strong) NSString* imgPath;
+- (TeachNodeContentPb*)nodeContentPbAtIndex:(NSUInteger)index;
 - (TeachPlanImgPb*)teachPlanImgPbAtIndex:(NSUInteger)index;
 
 + (instancetype) defaultInstance;
@@ -147,6 +165,11 @@
 - (TeachPlanNodePbBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
 - (TeachPlanNodePbBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 
+- (BOOL) hasId;
+- (SInt64) id;
+- (TeachPlanNodePbBuilder*) setId:(SInt64) value;
+- (TeachPlanNodePbBuilder*) clearId;
+
 - (BOOL) hasClassIds;
 - (NSString*) classIds;
 - (TeachPlanNodePbBuilder*) setClassIds:(NSString*) value;
@@ -157,15 +180,16 @@
 - (TeachPlanNodePbBuilder*) setNodeDate:(SInt64) value;
 - (TeachPlanNodePbBuilder*) clearNodeDate;
 
-- (BOOL) hasText;
-- (NSString*) text;
-- (TeachPlanNodePbBuilder*) setText:(NSString*) value;
-- (TeachPlanNodePbBuilder*) clearText;
-
 - (BOOL) hasTitle;
 - (NSString*) title;
 - (TeachPlanNodePbBuilder*) setTitle:(NSString*) value;
 - (TeachPlanNodePbBuilder*) clearTitle;
+
+- (NSMutableArray *)nodeContentPb;
+- (TeachNodeContentPb*)nodeContentPbAtIndex:(NSUInteger)index;
+- (TeachPlanNodePbBuilder *)addNodeContentPb:(TeachNodeContentPb*)value;
+- (TeachPlanNodePbBuilder *)setNodeContentPbArray:(NSArray *)array;
+- (TeachPlanNodePbBuilder *)clearNodeContentPb;
 
 - (NSMutableArray *)teachPlanImgPb;
 - (TeachPlanImgPb*)teachPlanImgPbAtIndex:(NSUInteger)index;
@@ -177,6 +201,11 @@
 - (NSData*) teachPlanVoice;
 - (TeachPlanNodePbBuilder*) setTeachPlanVoice:(NSData*) value;
 - (TeachPlanNodePbBuilder*) clearTeachPlanVoice;
+
+- (BOOL) hasImgPath;
+- (NSString*) imgPath;
+- (TeachPlanNodePbBuilder*) setImgPath:(NSString*) value;
+- (TeachPlanNodePbBuilder*) clearImgPath;
 @end
 
 #define TeachPlanImgPb_imgByte @"imgByte"

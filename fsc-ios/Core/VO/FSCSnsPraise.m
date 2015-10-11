@@ -2,21 +2,15 @@
 //  FSCSnsPraise.m
 //  
 //
-//  Created by laborchu on 15/7/29.
+//  Created by laborchu on 15/10/11.
 //
 //
 
 #import "FSCSnsPraise.h"
 #import "FSCSnsMsg.h"
 
-
 @implementation FSCSnsPraise
 
-@dynamic dataStatus;
-@dynamic id;
-@dynamic msgId;
-@dynamic timestamp;
-@dynamic userId;
-@dynamic whoGet;
+// Insert code here to add functionality to your managed object subclass
 
 @end

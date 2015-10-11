@@ -22,25 +22,30 @@
 #define LoginPb_password @"password"
 #define LoginPb_token @"token"
 #define LoginPb_phoneInfo @"phoneInfo"
+#define LoginPb_name @"name"
 @interface LoginPb : PBGeneratedMessage<GeneratedMessageProtocol> {
 @private
   BOOL hasLoginName_:1;
   BOOL hasPassword_:1;
   BOOL hasToken_:1;
+  BOOL hasName_:1;
   BOOL hasPhoneInfo_:1;
   NSString* loginName;
   NSString* password;
   NSString* token;
+  NSString* name;
   PhoneInfoPb* phoneInfo;
 }
 - (BOOL) hasLoginName;
 - (BOOL) hasPassword;
 - (BOOL) hasToken;
 - (BOOL) hasPhoneInfo;
+- (BOOL) hasName;
 @property (readonly, strong) NSString* loginName;
 @property (readonly, strong) NSString* password;
 @property (readonly, strong) NSString* token;
 @property (readonly, strong) PhoneInfoPb* phoneInfo;
+@property (readonly, strong) NSString* name;
 
 + (instancetype) defaultInstance;
 - (instancetype) defaultInstance;
@@ -98,6 +103,11 @@
 - (LoginPbBuilder*) setPhoneInfoBuilder:(PhoneInfoPbBuilder*) builderForValue;
 - (LoginPbBuilder*) mergePhoneInfo:(PhoneInfoPb*) value;
 - (LoginPbBuilder*) clearPhoneInfo;
+
+- (BOOL) hasName;
+- (NSString*) name;
+- (LoginPbBuilder*) setName:(NSString*) value;
+- (LoginPbBuilder*) clearName;
 @end
 
 

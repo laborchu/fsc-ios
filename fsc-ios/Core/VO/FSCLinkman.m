@@ -2,31 +2,15 @@
 //  FSCLinkman.m
 //  
 //
-//  Created by laborchu on 15/8/9.
+//  Created by laborchu on 15/10/11.
 //
 //
 
 #import "FSCLinkman.h"
 #import "FSCUser.h"
 
-
 @implementation FSCLinkman
 
-@dynamic createdDate;
-@dynamic email;
-@dynamic gender;
-@dynamic id;
-@dynamic mobile;
-@dynamic modifiedDate;
-@dynamic name;
-@dynamic portrait;
-@dynamic schoolName;
-@dynamic status;
-@dynamic subjectName;
-@dynamic timestamp;
-@dynamic title;
-@dynamic usename;
-@dynamic userType;
-@dynamic fscUser;
+// Insert code here to add functionality to your managed object subclass
 
 @end

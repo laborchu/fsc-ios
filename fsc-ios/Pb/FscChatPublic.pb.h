@@ -17,6 +17,8 @@
 @class PUserListPbBuilder;
 @class PUserPb;
 @class PUserPbBuilder;
+@class TeachNodeContentPb;
+@class TeachNodeContentPbBuilder;
 @class TeachNodeDetailsPb;
 @class TeachNodeDetailsPbBuilder;
 @class TeachNodeListPb;

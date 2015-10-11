@@ -2,7 +2,7 @@
 //  FSCNotice.h
 //  
 //
-//  Created by laborchu on 15/7/29.
+//  Created by laborchu on 15/10/11.
 //
 //
 
@@ -11,16 +11,14 @@
 
 @class FSCPublicRecorder, FSCUser;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface FSCNotice : NSManagedObject
 
-@property (nonatomic, retain) NSString * coverImg;
-@property (nonatomic, retain) NSNumber * createdDate;
-@property (nonatomic, retain) NSNumber * id;
-@property (nonatomic, retain) NSNumber * modifiedDate;
-@property (nonatomic, retain) NSString * noticeType;
-@property (nonatomic, retain) NSString * summary;
-@property (nonatomic, retain) NSString * title;
-@property (nonatomic, retain) FSCPublicRecorder *whichRecorder;
-@property (nonatomic, retain) FSCUser *whoCanLook;
+// Insert code here to declare functionality of your managed object subclass
 
 @end
+
+NS_ASSUME_NONNULL_END
+
+#import "FSCNotice+CoreDataProperties.h"

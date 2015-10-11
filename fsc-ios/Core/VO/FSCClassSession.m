@@ -2,7 +2,7 @@
 //  FSCClassSession.m
 //  
 //
-//  Created by laborchu on 15/7/29.
+//  Created by laborchu on 15/10/11.
 //
 //
 
@@ -11,16 +11,8 @@
 #import "FSCClassRecorder.h"
 #import "FSCSession.h"
 
-
 @implementation FSCClassSession
 
-@dynamic classId;
-@dynamic createdDate;
-@dynamic id;
-@dynamic name;
-@dynamic timestamp;
-@dynamic parentSession;
-@dynamic recorders;
-@dynamic users;
+// Insert code here to add functionality to your managed object subclass
 
 @end

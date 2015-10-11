@@ -2,7 +2,7 @@
 //  FSCSession.h
 //  
 //
-//  Created by laborchu on 15/8/26.
+//  Created by laborchu on 15/10/11.
 //
 //
 
@@ -11,28 +11,14 @@
 
 @class FSCClassSession, FSCGroupSession, FSCPublicSession, FSCTrgSession, FSCUser, FSCUserSession;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface FSCSession : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * dataStatus;
-@property (nonatomic, retain) NSNumber * id;
-@property (nonatomic, retain) NSNumber * isDisturb;
-@property (nonatomic, retain) NSNumber * isTop;
-@property (nonatomic, retain) NSNumber * lastId;
-@property (nonatomic, retain) NSNumber * modifiedDate;
-@property (nonatomic, retain) NSNumber * msId;
-@property (nonatomic, retain) NSString * msName;
-@property (nonatomic, retain) NSNumber * readId;
-@property (nonatomic, retain) NSNumber * sessionId;
-@property (nonatomic, retain) NSNumber * timestamp;
-@property (nonatomic, retain) NSNumber * type;
-@property (nonatomic, retain) NSNumber * userId;
-@property (nonatomic, retain) NSNumber * unreadCount;
-@property (nonatomic, retain) NSString * lastMsg;
-@property (nonatomic, retain) FSCClassSession *csession;
-@property (nonatomic, retain) FSCGroupSession *gsession;
-@property (nonatomic, retain) FSCPublicSession *psession;
-@property (nonatomic, retain) FSCTrgSession *tsession;
-@property (nonatomic, retain) FSCUserSession *usession;
-@property (nonatomic, retain) FSCUser *fscUser;
+// Insert code here to declare functionality of your managed object subclass
 
 @end
+
+NS_ASSUME_NONNULL_END
+
+#import "FSCSession+CoreDataProperties.h"

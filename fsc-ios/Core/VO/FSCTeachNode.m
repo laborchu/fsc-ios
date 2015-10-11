@@ -2,7 +2,7 @@
 //  FSCTeachNode.m
 //  
 //
-//  Created by laborchu on 15/7/29.
+//  Created by laborchu on 15/10/11.
 //
 //
 
@@ -10,29 +10,8 @@
 #import "FSCUser.h"
 #import "FSCUserStudent.h"
 
-
 @implementation FSCTeachNode
 
-@dynamic classId;
-@dynamic corrected;
-@dynamic dataStatus;
-@dynamic id;
-@dynamic imgText;
-@dynamic modifiedDate;
-@dynamic name;
-@dynamic nodeStatus;
-@dynamic resId;
-@dynamic schoolId;
-@dynamic score;
-@dynamic startTime;
-@dynamic step;
-@dynamic studentId;
-@dynamic subjectId;
-@dynamic submitted;
-@dynamic teacherName;
-@dynamic total;
-@dynamic type;
-@dynamic whichStudent;
-@dynamic whosNode;
+// Insert code here to add functionality to your managed object subclass
 
 @end
