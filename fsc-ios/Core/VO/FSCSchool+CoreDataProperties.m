@@ -2,7 +2,7 @@
 //  FSCSchool+CoreDataProperties.m
 //  
 //
-//  Created by laborchu on 15/10/11.
+//  Created by laborchu on 15/10/12.
 //
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -17,6 +17,7 @@
 @dynamic domain;
 @dynamic year;
 @dynamic semester;
+@dynamic name;
 @dynamic fscUser;
 
 @end

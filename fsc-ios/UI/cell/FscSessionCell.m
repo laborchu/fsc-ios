@@ -12,7 +12,7 @@
 #import "FscConstants.h"
 #import "LcUtils.h"
 #import "FSCLinkman.h"
-#import "FSCGroupSession.h"
+#import "FSCGroupSession+CoreDataProperties.h"
 #import "FSCImageAssembled.h"
 #import "FscDataManager.h"
 #import "FSCGroupUser.h"

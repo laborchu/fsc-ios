@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -17,6 +17,7 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WvQ-Ru-eac">
                         <rect key="frame" x="268" y="8" width="40" height="40"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="40" id="YLs-uU-ep5"/>
                             <constraint firstAttribute="height" constant="40" id="bLn-4m-h49"/>
@@ -27,15 +28,17 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="chat_right_bubble" translatesAutoresizingMaskIntoConstraints="NO" id="zCZ-04-ESo">
                                 <rect key="frame" x="0.0" y="0.0" width="70" height="40"/>
+                                <animations/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="内容" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KLH-VU-cZI" customClass="FSCChatLabel">
                                 <rect key="frame" x="10" y="5" width="45" height="22"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <animations/>
                         <constraints>
                             <constraint firstItem="KLH-VU-cZI" firstAttribute="top" secondItem="Ltl-GT-RJF" secondAttribute="top" constant="5" id="7cw-MO-qQa"/>
                             <constraint firstAttribute="bottom" secondItem="KLH-VU-cZI" secondAttribute="bottom" constant="5" id="AeH-AN-jGz"/>
@@ -48,6 +51,7 @@
                         </constraints>
                     </view>
                 </subviews>
+                <animations/>
                 <constraints>
                     <constraint firstItem="Ltl-GT-RJF" firstAttribute="top" secondItem="eb3-px-cWc" secondAttribute="topMargin" constant="25" id="4eP-Bh-BXd"/>
                     <constraint firstItem="WvQ-Ru-eac" firstAttribute="top" secondItem="eb3-px-cWc" secondAttribute="topMargin" id="Ek8-qa-dYv"/>
@@ -64,6 +68,8 @@
                     </mask>
                 </variation>
             </tableViewCellContentView>
+            <animations/>
+            <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="avatarImg" destination="WvQ-Ru-eac" id="SoU-j6-9Vq"/>
                 <outlet property="msgLabel" destination="KLH-VU-cZI" id="PK8-YW-7vY"/>

@@ -10,7 +10,6 @@
 #import "User.pb.h"
 #import "CmdSign.pb.h"
 #import "PbTransfer.h"
-#import "FSCUser.h"
 #import "PbFieldDefine.h"
 #import "FscDataManager.h"
 #import "LcFscUserGetCmd.h"
@@ -21,6 +20,7 @@
 #import "MsgCode.h"
 #import "FscAppDelegate.h"
 #import "FSCSchool.h"
+
 #import "FSCUser+CoreDataProperties.h"
 
 @implementation RsSessionPostCmd

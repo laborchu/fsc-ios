@@ -107,4 +107,8 @@
     [super savaData];
 }
 
+- (NSString *)getCmdCode {
+    return FSC_CLASS_USER_LIST;
+}
+
 @end

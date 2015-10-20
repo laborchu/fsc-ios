@@ -279,6 +279,7 @@ static TeachPlanPb* defaultTeachPlanPbInstance = nil;
 @interface TeachPlanNodePb ()
 @property SInt64 id;
 @property (strong) NSString* classIds;
+@property SInt64 subjectId;
 @property SInt64 nodeDate;
 @property (strong) NSString* title;
 @property (strong) NSMutableArray * nodeContentPbArray;
@@ -303,6 +304,13 @@ static TeachPlanPb* defaultTeachPlanPbInstance = nil;
   hasClassIds_ = !!_value_;
 }
 @synthesize classIds;
+- (BOOL) hasSubjectId {
+  return !!hasSubjectId_;
+}
+- (void) setHasSubjectId:(BOOL) _value_ {
+  hasSubjectId_ = !!_value_;
+}
+@synthesize subjectId;
 - (BOOL) hasNodeDate {
   return !!hasNodeDate_;
 }
@@ -339,6 +347,7 @@ static TeachPlanPb* defaultTeachPlanPbInstance = nil;
   if ((self = [super init])) {
     self.id = 0L;
     self.classIds = @"";
+    self.subjectId = 0L;
     self.nodeDate = 0L;
     self.title = @"";
     self.teachPlanVoice = [NSData data];
@@ -380,23 +389,26 @@ static TeachPlanNodePb* defaultTeachPlanNodePbInstance = nil;
   if (self.hasClassIds) {
     [output writeString:2 value:self.classIds];
   }
+  if (self.hasSubjectId) {
+    [output writeInt64:3 value:self.subjectId];
+  }
   if (self.hasNodeDate) {
-    [output writeInt64:3 value:self.nodeDate];
+    [output writeInt64:4 value:self.nodeDate];
   }
   if (self.hasTitle) {
-    [output writeString:4 value:self.title];
+    [output writeString:5 value:self.title];
   }
   [self.nodeContentPbArray enumerateObjectsUsingBlock:^(TeachNodeContentPb *element, NSUInteger idx, BOOL *stop) {
-    [output writeMessage:5 value:element];
-  }];
-  [self.teachPlanImgPbArray enumerateObjectsUsingBlock:^(TeachPlanImgPb *element, NSUInteger idx, BOOL *stop) {
     [output writeMessage:6 value:element];
   }];
+  [self.teachPlanImgPbArray enumerateObjectsUsingBlock:^(TeachPlanImgPb *element, NSUInteger idx, BOOL *stop) {
+    [output writeMessage:7 value:element];
+  }];
   if (self.hasTeachPlanVoice) {
-    [output writeData:7 value:self.teachPlanVoice];
+    [output writeData:8 value:self.teachPlanVoice];
   }
   if (self.hasImgPath) {
-    [output writeString:8 value:self.imgPath];
+    [output writeString:9 value:self.imgPath];
   }
   [self.unknownFields writeToCodedOutputStream:output];
 }
@@ -413,23 +425,26 @@ static TeachPlanNodePb* defaultTeachPlanNodePbInstance = nil;
   if (self.hasClassIds) {
     size_ += computeStringSize(2, self.classIds);
   }
+  if (self.hasSubjectId) {
+    size_ += computeInt64Size(3, self.subjectId);
+  }
   if (self.hasNodeDate) {
-    size_ += computeInt64Size(3, self.nodeDate);
+    size_ += computeInt64Size(4, self.nodeDate);
   }
   if (self.hasTitle) {
-    size_ += computeStringSize(4, self.title);
+    size_ += computeStringSize(5, self.title);
   }
   [self.nodeContentPbArray enumerateObjectsUsingBlock:^(TeachNodeContentPb *element, NSUInteger idx, BOOL *stop) {
-    size_ += computeMessageSize(5, element);
-  }];
-  [self.teachPlanImgPbArray enumerateObjectsUsingBlock:^(TeachPlanImgPb *element, NSUInteger idx, BOOL *stop) {
     size_ += computeMessageSize(6, element);
   }];
+  [self.teachPlanImgPbArray enumerateObjectsUsingBlock:^(TeachPlanImgPb *element, NSUInteger idx, BOOL *stop) {
+    size_ += computeMessageSize(7, element);
+  }];
   if (self.hasTeachPlanVoice) {
-    size_ += computeDataSize(7, self.teachPlanVoice);
+    size_ += computeDataSize(8, self.teachPlanVoice);
   }
   if (self.hasImgPath) {
-    size_ += computeStringSize(8, self.imgPath);
+    size_ += computeStringSize(9, self.imgPath);
   }
   size_ += self.unknownFields.serializedSize;
   memoizedSerializedSize = size_;
@@ -472,6 +487,9 @@ static TeachPlanNodePb* defaultTeachPlanNodePbInstance = nil;
   if (self.hasClassIds) {
     [output appendFormat:@"%@%@: %@\n", indent, @"classIds", self.classIds];
   }
+  if (self.hasSubjectId) {
+    [output appendFormat:@"%@%@: %@\n", indent, @"subjectId", [NSNumber numberWithLongLong:self.subjectId]];
+  }
   if (self.hasNodeDate) {
     [output appendFormat:@"%@%@: %@\n", indent, @"nodeDate", [NSNumber numberWithLongLong:self.nodeDate]];
   }
@@ -504,6 +522,9 @@ static TeachPlanNodePb* defaultTeachPlanNodePbInstance = nil;
   }
   if (self.hasClassIds) {
     [dictionary setObject: self.classIds forKey: @"classIds"];
+  }
+  if (self.hasSubjectId) {
+    [dictionary setObject: [NSNumber numberWithLongLong:self.subjectId] forKey: @"subjectId"];
   }
   if (self.hasNodeDate) {
     [dictionary setObject: [NSNumber numberWithLongLong:self.nodeDate] forKey: @"nodeDate"];
@@ -542,6 +563,8 @@ static TeachPlanNodePb* defaultTeachPlanNodePbInstance = nil;
       (!self.hasId || self.id == otherMessage.id) &&
       self.hasClassIds == otherMessage.hasClassIds &&
       (!self.hasClassIds || [self.classIds isEqual:otherMessage.classIds]) &&
+      self.hasSubjectId == otherMessage.hasSubjectId &&
+      (!self.hasSubjectId || self.subjectId == otherMessage.subjectId) &&
       self.hasNodeDate == otherMessage.hasNodeDate &&
       (!self.hasNodeDate || self.nodeDate == otherMessage.nodeDate) &&
       self.hasTitle == otherMessage.hasTitle &&
@@ -561,6 +584,9 @@ static TeachPlanNodePb* defaultTeachPlanNodePbInstance = nil;
   }
   if (self.hasClassIds) {
     hashCode = hashCode * 31 + [self.classIds hash];
+  }
+  if (self.hasSubjectId) {
+    hashCode = hashCode * 31 + [[NSNumber numberWithLongLong:self.subjectId] hash];
   }
   if (self.hasNodeDate) {
     hashCode = hashCode * 31 + [[NSNumber numberWithLongLong:self.nodeDate] hash];
@@ -629,6 +655,9 @@ static TeachPlanNodePb* defaultTeachPlanNodePbInstance = nil;
   if (other.hasClassIds) {
     [self setClassIds:other.classIds];
   }
+  if (other.hasSubjectId) {
+    [self setSubjectId:other.subjectId];
+  }
   if (other.hasNodeDate) {
     [self setNodeDate:other.nodeDate];
   }
@@ -685,30 +714,34 @@ static TeachPlanNodePb* defaultTeachPlanNodePbInstance = nil;
         break;
       }
       case 24: {
+        [self setSubjectId:[input readInt64]];
+        break;
+      }
+      case 32: {
         [self setNodeDate:[input readInt64]];
         break;
       }
-      case 34: {
+      case 42: {
         [self setTitle:[input readString]];
         break;
       }
-      case 42: {
+      case 50: {
         TeachNodeContentPbBuilder* subBuilder = [TeachNodeContentPb builder];
         [input readMessage:subBuilder extensionRegistry:extensionRegistry];
         [self addNodeContentPb:[subBuilder buildPartial]];
         break;
       }
-      case 50: {
+      case 58: {
         TeachPlanImgPbBuilder* subBuilder = [TeachPlanImgPb builder];
         [input readMessage:subBuilder extensionRegistry:extensionRegistry];
         [self addTeachPlanImgPb:[subBuilder buildPartial]];
         break;
       }
-      case 58: {
+      case 66: {
         [self setTeachPlanVoice:[input readData]];
         break;
       }
-      case 66: {
+      case 74: {
         [self setImgPath:[input readString]];
         break;
       }
@@ -745,6 +778,22 @@ static TeachPlanNodePb* defaultTeachPlanNodePbInstance = nil;
 - (TeachPlanNodePbBuilder*) clearClassIds {
   resultTeachPlanNodePb.hasClassIds = NO;
   resultTeachPlanNodePb.classIds = @"";
+  return self;
+}
+- (BOOL) hasSubjectId {
+  return resultTeachPlanNodePb.hasSubjectId;
+}
+- (SInt64) subjectId {
+  return resultTeachPlanNodePb.subjectId;
+}
+- (TeachPlanNodePbBuilder*) setSubjectId:(SInt64) value {
+  resultTeachPlanNodePb.hasSubjectId = YES;
+  resultTeachPlanNodePb.subjectId = value;
+  return self;
+}
+- (TeachPlanNodePbBuilder*) clearSubjectId {
+  resultTeachPlanNodePb.hasSubjectId = NO;
+  resultTeachPlanNodePb.subjectId = 0L;
   return self;
 }
 - (BOOL) hasNodeDate {

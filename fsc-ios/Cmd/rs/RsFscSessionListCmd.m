@@ -435,4 +435,8 @@
     }
 }
 
+- (NSString *)getCmdCode {
+    return FSC_SESSION_LIST;
+}
+
 @end

@@ -2,7 +2,7 @@
 //  FSCSchool+CoreDataProperties.h
 //  
 //
-//  Created by laborchu on 15/10/11.
+//  Created by laborchu on 15/10/12.
 //
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSString *domain;
 @property (nullable, nonatomic, retain) NSNumber *year;
 @property (nullable, nonatomic, retain) NSNumber *semester;
+@property (nullable, nonatomic, retain) NSString *name;
 @property (nullable, nonatomic, retain) FSCUser *fscUser;
 
 @end

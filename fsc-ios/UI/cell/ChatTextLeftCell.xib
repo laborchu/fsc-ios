@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -17,6 +17,7 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OI4-79-Aij">
                         <rect key="frame" x="8" y="8" width="40" height="40"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="40" id="EAa-jT-rEm"/>
                             <constraint firstAttribute="height" constant="40" id="Nk0-Ih-ATB"/>
@@ -27,6 +28,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="chat_left_bubble" translatesAutoresizingMaskIntoConstraints="NO" id="9Id-gT-g2z">
                                 <rect key="frame" x="0.0" y="0.0" width="70" height="40"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="NXq-DS-3xq"/>
                                     <constraint firstAttribute="width" constant="70" id="yXO-I5-2V5"/>
@@ -40,12 +42,13 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="内容" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sS5-gq-HH8" customClass="FSCChatLabel">
                                 <rect key="frame" x="10" y="5" width="45" height="22"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <animations/>
                         <constraints>
                             <constraint firstItem="sS5-gq-HH8" firstAttribute="leading" secondItem="oLM-qu-LgH" secondAttribute="leading" constant="10" id="I9L-GL-YXA"/>
                             <constraint firstItem="9Id-gT-g2z" firstAttribute="leading" secondItem="oLM-qu-LgH" secondAttribute="leading" id="JAY-HK-wSK"/>
@@ -59,6 +62,7 @@
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XWD-Vl-wdA">
                         <rect key="frame" x="56" y="8" width="42" height="21"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="42" id="C13-I8-aov"/>
                             <constraint firstAttribute="height" constant="21" id="To9-CQ-8wy"/>
@@ -68,6 +72,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <animations/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="oLM-qu-LgH" secondAttribute="trailing" constant="195" id="2QW-R1-Kk3"/>
                     <constraint firstItem="OI4-79-Aij" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="4VA-c1-z8l"/>
@@ -86,6 +91,8 @@
                     </mask>
                 </variation>
             </tableViewCellContentView>
+            <animations/>
+            <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="avatarImg" destination="OI4-79-Aij" id="VFD-ra-4J2"/>
                 <outlet property="msgLabel" destination="sS5-gq-HH8" id="qze-zq-pmJ"/>

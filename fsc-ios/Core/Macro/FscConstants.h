@@ -11,7 +11,7 @@
 
 //服务器地址
 #define DEFAULT_SERVER_IP @"laborc.oicp.net" //测试
-//#define DEFAULT_SERVER_IP @"115.231.93.40" //测试
+//#define DEFAULT_SERVER_IP @"192.168.2.112" //测试
 //服务器端口号
 #define DEFAULT_SERVER_PORT 41422
 //服务器资源路径
@@ -43,5 +43,12 @@
 #define PUBLIC_SYS_ACT_VOTE  @"SYS_ACT_VOTE"
 #define PUBLIC_SYS_RRT_HELPER @"SYS_RRT_HELPER"
 
+
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+#define SCREEN_320_WIDTH 320
+#define SCREEN_375_WIDTH 375
+#define SCREEN_414_WIDTH 414
 
 #endif

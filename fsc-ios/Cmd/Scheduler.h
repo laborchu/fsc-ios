@@ -15,4 +15,6 @@
 +(id) exeLc:(ALcCmd *)cmd;
 
 + (void)doCmd;
+
++ (void)unLockExe;
 @end

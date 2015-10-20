@@ -90,6 +90,7 @@
 
 #define TeachPlanNodePb_id @"id"
 #define TeachPlanNodePb_classIds @"classIds"
+#define TeachPlanNodePb_subjectId @"subjectId"
 #define TeachPlanNodePb_nodeDate @"nodeDate"
 #define TeachPlanNodePb_title @"title"
 #define TeachPlanNodePb_nodeContentPb @"nodeContentPb"
@@ -99,12 +100,14 @@
 @interface TeachPlanNodePb : PBGeneratedMessage<GeneratedMessageProtocol> {
 @private
   BOOL hasId_:1;
+  BOOL hasSubjectId_:1;
   BOOL hasNodeDate_:1;
   BOOL hasClassIds_:1;
   BOOL hasTitle_:1;
   BOOL hasImgPath_:1;
   BOOL hasTeachPlanVoice_:1;
   SInt64 id;
+  SInt64 subjectId;
   SInt64 nodeDate;
   NSString* classIds;
   NSString* title;
@@ -115,12 +118,14 @@
 }
 - (BOOL) hasId;
 - (BOOL) hasClassIds;
+- (BOOL) hasSubjectId;
 - (BOOL) hasNodeDate;
 - (BOOL) hasTitle;
 - (BOOL) hasTeachPlanVoice;
 - (BOOL) hasImgPath;
 @property (readonly) SInt64 id;
 @property (readonly, strong) NSString* classIds;
+@property (readonly) SInt64 subjectId;
 @property (readonly) SInt64 nodeDate;
 @property (readonly, strong) NSString* title;
 @property (readonly, strong) NSArray * nodeContentPb;
@@ -174,6 +179,11 @@
 - (NSString*) classIds;
 - (TeachPlanNodePbBuilder*) setClassIds:(NSString*) value;
 - (TeachPlanNodePbBuilder*) clearClassIds;
+
+- (BOOL) hasSubjectId;
+- (SInt64) subjectId;
+- (TeachPlanNodePbBuilder*) setSubjectId:(SInt64) value;
+- (TeachPlanNodePbBuilder*) clearSubjectId;
 
 - (BOOL) hasNodeDate;
 - (SInt64) nodeDate;

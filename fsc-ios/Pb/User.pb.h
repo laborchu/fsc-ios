@@ -527,6 +527,7 @@
 #define TeacherPb_subjectName @"subjectName"
 #define TeacherPb_classPb @"classPb"
 #define TeacherPb_teachPlanPb @"teachPlanPb"
+#define TeacherPb_subject @"subject"
 @interface TeacherPb : PBGeneratedMessage<GeneratedMessageProtocol> {
 @private
   BOOL hasSubjectId_:1;
@@ -537,6 +538,7 @@
   NSString* mobile;
   NSString* title;
   NSString* subjectName;
+  PBAppendableArray * subjectArray;
   NSMutableArray * classPbArray;
   NSMutableArray * teachPlanPbArray;
 }
@@ -550,8 +552,10 @@
 @property (readonly, strong) NSString* subjectName;
 @property (readonly, strong) NSArray * classPb;
 @property (readonly, strong) NSArray * teachPlanPb;
+@property (readonly, strong) PBArray * subject;
 - (FscClassPb*)classPbAtIndex:(NSUInteger)index;
 - (TeachPlanPb*)teachPlanPbAtIndex:(NSUInteger)index;
+- (SInt64)subjectAtIndex:(NSUInteger)index;
 
 + (instancetype) defaultInstance;
 - (instancetype) defaultInstance;
@@ -619,6 +623,13 @@
 - (TeacherPbBuilder *)addTeachPlanPb:(TeachPlanPb*)value;
 - (TeacherPbBuilder *)setTeachPlanPbArray:(NSArray *)array;
 - (TeacherPbBuilder *)clearTeachPlanPb;
+
+- (PBAppendableArray *)subject;
+- (SInt64)subjectAtIndex:(NSUInteger)index;
+- (TeacherPbBuilder *)addSubject:(SInt64)value;
+- (TeacherPbBuilder *)setSubjectArray:(NSArray *)array;
+- (TeacherPbBuilder *)setSubjectValues:(const SInt64 *)values count:(NSUInteger)count;
+- (TeacherPbBuilder *)clearSubject;
 @end
 
 #define StudentPb_id @"id"

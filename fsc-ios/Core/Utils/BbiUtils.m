@@ -5,6 +5,9 @@
 
 #import "BbiUtils.h"
 
+static NSMutableArray *_emojiArray;
+static NSMutableDictionary *_emojiDic;
+static NSMutableSet *_emojiSet;
 
 @implementation BbiUtils {
 }
@@ -70,6 +73,38 @@
 
 +(NSURL *)getResImgUrl:(NSString *)imgPath{
     return [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", RES_SERVER, imgPath]];
+}
+
+
++(NSMutableArray *)getEmojiArray{
+    if (!_emojiArray) {
+        [BbiUtils initEmoji];
+    }
+    return _emojiArray;
+}
++(NSMutableSet *)getEmojiSet{
+    if (!_emojiSet) {
+        [BbiUtils initEmoji];
+    }
+    return _emojiSet;
+}
++(void)initEmoji{
+    _emojiArray = [NSMutableArray array];
+    _emojiDic = [NSMutableDictionary dictionary];
+    _emojiSet = [NSMutableSet set];
+    NSString* fileRoot = [[NSBundle mainBundle] pathForResource:@"emoji" ofType:@"txt"];
+    NSString* fileContents = [NSString stringWithContentsOfFile:fileRoot encoding:NSUTF8StringEncoding error:nil];
+    NSArray* allLinedStrings = [fileContents componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+
+    for (NSString *line in allLinedStrings) {
+        NSArray *array = [line componentsSeparatedByString:@","];
+        if(array.count==2){
+            [_emojiArray addObject:line];
+            NSString *key = array[0];
+            _emojiDic[key] = array[1];
+            [_emojiSet addObject:array[1]];
+        }
+    }
 }
 
 @end

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -17,6 +17,7 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="InH-NB-1bn">
                         <rect key="frame" x="10" y="8" width="40" height="40"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="89M-mN-5KN"/>
                             <constraint firstAttribute="width" constant="40" id="hXX-tS-qpP"/>
@@ -24,6 +25,7 @@
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Df4-xC-haO">
                         <rect key="frame" x="56" y="8" width="42" height="21"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="Ozb-jl-Rmn"/>
                             <constraint firstAttribute="width" constant="42" id="Zra-KZ-wIb"/>
@@ -34,12 +36,14 @@
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tnu-AP-prC">
                         <rect key="frame" x="56" y="32" width="70" height="40"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="100" id="DNP-RR-6Sn"/>
                             <constraint firstAttribute="width" constant="70" id="v4A-gP-CLF"/>
                         </constraints>
                     </imageView>
                 </subviews>
+                <animations/>
                 <constraints>
                     <constraint firstItem="InH-NB-1bn" firstAttribute="top" secondItem="3TE-0f-D5h" secondAttribute="topMargin" id="22G-Kh-JoT"/>
                     <constraint firstItem="tnu-AP-prC" firstAttribute="top" secondItem="Df4-xC-haO" secondAttribute="bottom" constant="5" id="JJe-0m-eV4"/>
@@ -56,6 +60,8 @@
                     </mask>
                 </variation>
             </tableViewCellContentView>
+            <animations/>
+            <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="avatarImg" destination="InH-NB-1bn" id="jsW-NO-VBi"/>
                 <outlet property="msgImg" destination="tnu-AP-prC" id="4Gm-sB-b6w"/>

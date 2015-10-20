@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -17,6 +17,7 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YY9-0A-mRv">
                         <rect key="frame" x="272" y="8" width="40" height="40"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="40" id="Ct6-5d-Jcc"/>
                             <constraint firstAttribute="height" constant="40" id="ZLJ-WZ-pHZ"/>
@@ -27,12 +28,14 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat_right_bubble" translatesAutoresizingMaskIntoConstraints="NO" id="Z4h-dm-rP2">
                                 <rect key="frame" x="0.0" y="0.0" width="70" height="40"/>
+                                <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sound_left_max" translatesAutoresizingMaskIntoConstraints="NO" id="ivO-Kl-2o1">
                                 <rect key="frame" x="32" y="0.0" width="30" height="40"/>
+                                <animations/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <animations/>
                         <constraints>
                             <constraint firstItem="ivO-Kl-2o1" firstAttribute="leading" secondItem="neE-kb-jPa" secondAttribute="leading" constant="32" id="8ks-be-fHN"/>
                             <constraint firstItem="ivO-Kl-2o1" firstAttribute="trailing" secondItem="neE-kb-jPa" secondAttribute="trailingMargin" id="EJm-iY-09k"/>
@@ -45,6 +48,7 @@
                         </constraints>
                     </view>
                 </subviews>
+                <animations/>
                 <constraints>
                     <constraint firstItem="YY9-0A-mRv" firstAttribute="top" secondItem="Ca3-wj-y7B" secondAttribute="topMargin" id="766-g0-70g"/>
                     <constraint firstAttribute="trailingMargin" secondItem="YY9-0A-mRv" secondAttribute="trailing" id="DTE-0H-l5e"/>
@@ -59,6 +63,8 @@
                     </mask>
                 </variation>
             </tableViewCellContentView>
+            <animations/>
+            <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="avatarImg" destination="YY9-0A-mRv" id="abp-yk-Vm7"/>
             </connections>

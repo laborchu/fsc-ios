@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:fsc-ios/Core/VO/FSCSchool+CoreDataProperties.h">
+   </FileRef>
+   <FileRef
+      location = "group:fsc-ios/Core/VO/FSCSchool+CoreDataProperties.m">
+   </FileRef>
+   <FileRef
       location = "group:fsc-ios.xcodeproj">
    </FileRef>
    <FileRef

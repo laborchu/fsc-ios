@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -17,6 +17,7 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uD6-QW-u5L">
                         <rect key="frame" x="268" y="8" width="40" height="40"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="40" id="Y9b-PX-7Zc"/>
                             <constraint firstAttribute="height" constant="40" id="nUu-Rk-qRp"/>
@@ -24,6 +25,7 @@
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wql-e2-H9F">
                         <rect key="frame" x="189" y="33" width="70" height="40"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="70" id="TIg-Xi-vxf"/>
                             <constraint firstAttribute="width" constant="70" id="ib8-XL-JwG"/>
@@ -35,6 +37,7 @@
                         </variation>
                     </imageView>
                 </subviews>
+                <animations/>
                 <constraints>
                     <constraint firstAttribute="bottomMargin" secondItem="wql-e2-H9F" secondAttribute="bottom" constant="3" id="4Ge-yy-Kfk"/>
                     <constraint firstItem="uD6-QW-u5L" firstAttribute="top" secondItem="Ikw-6E-beW" secondAttribute="topMargin" id="9pv-c6-eNA"/>
@@ -49,6 +52,8 @@
                     </mask>
                 </variation>
             </tableViewCellContentView>
+            <animations/>
+            <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="avatarImg" destination="uD6-QW-u5L" id="1L8-SR-8ch"/>
                 <outlet property="msgImg" destination="wql-e2-H9F" id="8f2-lt-Zhl"/>

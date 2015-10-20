@@ -41,12 +41,17 @@ static NSOperationQueue *queue = nil;
         [cmdStack removeLastObject];
         [queue addOperation:[NSBlockOperation blockOperationWithBlock:^{
             [cmd req];
-            exeLock = NO;
+            NSLog(@"cmd %@ req", [cmd getCmdCode]);
             if(!cmd.doSend){
+                [Scheduler unLockExe];
                 [Scheduler doCmd];
             }
         }]];
     }
+}
+
++(void)unLockExe{
+    exeLock = NO;
 }
 
 @end

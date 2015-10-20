@@ -245,6 +245,7 @@
     <entity name="FSCSchool" representedClassName="FSCSchool" syncable="YES">
         <attribute name="domain" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="semester" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="year" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <relationship name="fscUser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FSCUser" inverseName="school" inverseEntity="FSCUser" syncable="YES"/>
@@ -514,6 +515,6 @@
         <element name="FSCUserSession" positionX="232" positionY="39" width="128" height="165"/>
         <element name="FSCUserStudent" positionX="-585" positionY="-376" width="128" height="133"/>
         <element name="FSCVote" positionX="-461" positionY="-1836" width="128" height="208"/>
-        <element name="FSCSchool" positionX="-684" positionY="-1692" width="128" height="120"/>
+        <element name="FSCSchool" positionX="-684" positionY="-1692" width="128" height="135"/>
     </elements>
 </model>

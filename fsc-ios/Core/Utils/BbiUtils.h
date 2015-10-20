@@ -9,9 +9,15 @@
 
 @interface BbiUtils : NSObject
 
++ (NSMutableSet *)getEmojiSet;
+
++ (void *)initEmoji;
+
 + (NSString *)getPublicIcon:(NSString *)code;
 
 + (NSString *)getFileIcon:(NSString *)fileType;
 
 + (NSURL *)getResImgUrl:(NSString *)imgPath;
+
++ (NSMutableArray *)getEmojiArray;
 @end

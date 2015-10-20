@@ -28,185 +28,308 @@
 		1DDC50791BAADF2500F61BA0 /* ChatImgRightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDC50771BAADF2500F61BA0 /* ChatImgRightCell.m */; };
 		1DDC507A1BAADF2500F61BA0 /* ChatImgRightCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDC50781BAADF2500F61BA0 /* ChatImgRightCell.xib */; };
 		35BDDC147454FB045910B76F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E0C2F16B0D3DDCDC44C7A07 /* libPods.a */; };
-		BDD0800B2971F0ACC33E6429 /* FscWork.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08FAD1522C1BBF2420BB0 /* FscWork.pb.m */; };
+		BDD08023B8A774317BD5F375 /* emoji_5.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD086BDF8AD5FD478F86E0F /* emoji_5.png */; };
 		BDD080240BFF0B19D65A4149 /* ChatCell+Right.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08032ABBCADB8542E2ADF /* ChatCell+Right.m */; };
 		BDD08028A63F9FD4CFE234E5 /* LcFscChatTrgUserListCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD083E0AEF1B271C47A481F /* LcFscChatTrgUserListCmd.m */; };
-		BDD080672953018F9EC149D0 /* FscActivity.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08CE66FC9C8DDE203568E /* FscActivity.pb.m */; };
+		BDD0803DAFA8DBF56E0E22C4 /* emoji_209.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08008DE28EBE246D57400 /* emoji_209.png */; };
+		BDD08051C6317DE6292CA238 /* emoji_34.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08D57E9C4F1870393F0D3 /* emoji_34.png */; };
+		BDD08066BA8C60BD6A77E2B7 /* FscTestMsg.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD084E2D5F1120FC9C188C6 /* FscTestMsg.pb.m */; };
 		BDD0807A6F09482FAE086AC0 /* FSCTeacher.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08F63C1230557D0ADB375 /* FSCTeacher.m */; };
-		BDD0807ED985AC48D3533F77 /* FscTeachNode.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08F91671FDA1963FC3953 /* FscTeachNode.pb.m */; };
-		BDD08082729671C5549F6A27 /* Login.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0863FB0964232BD07763C /* Login.pb.m */; };
+		BDD08087DDB5C9BAEF80BAFD /* emoji_61.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD082200C0479317555731B /* emoji_61.png */; };
 		BDD0809B1366C4F43F7B1ECB /* DataCache.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD088DEF0E368A0DB142549 /* DataCache.m */; };
-		BDD080AEAFB1BC9C930D67E5 /* FscSns.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08F38646B5588CDF92BE8 /* FscSns.pb.m */; };
+		BDD080AA0C8A9A3D26F122B4 /* emoji_27.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08836F84DE127C088C31A /* emoji_27.png */; };
+		BDD080AA4028717D905E60D6 /* FscQues.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08039F9415D7D2801E37D /* FscQues.pb.m */; };
 		BDD080BB0CF646DA1BDD7517 /* RsFscTeacherListCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08C9A9B3C02A0A30E430F /* RsFscTeacherListCmd.m */; };
+		BDD080C3AA21FC9DD1E7ADAA /* emoji_195.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD0884B56F1F5CAF61665C0 /* emoji_195.png */; };
+		BDD080C66381187E9D1C066A /* emoji_17.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08E17A4A56608942EB4FF /* emoji_17.png */; };
 		BDD080D0CBDB7472F5186619 /* FSCTeacher+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD083D957DDFF4C0A0A005B /* FSCTeacher+CoreDataProperties.m */; };
 		BDD080D9F19AA72D44A37CEF /* LcUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08F3B793C028F296035E3 /* LcUtils.m */; };
+		BDD080DD73A22FAD4DE8BE48 /* emoji_44.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08F5A1F79E286535FA0DA /* emoji_44.png */; };
+		BDD080EEF1998E042F7F65FB /* emoji_38.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD085D95BB8E3A83CADD8B9 /* emoji_38.png */; };
 		BDD08109AE738F672470930F /* FSCNotice+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08A32B81A24AD20E9D681 /* FSCNotice+CoreDataProperties.m */; };
+		BDD0810D82A89AA349F124F5 /* emoji_31.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD086CF96B54426B695C808 /* emoji_31.png */; };
 		BDD081164F72CAB7CEE331D8 /* FSCUserRecorder+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08D6AF55AAE7F814F8A3F /* FSCUserRecorder+CoreDataProperties.m */; };
 		BDD0812AEE497810DF6B4A5F /* FSCLoginViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08C3FE93209E1B4A1D358 /* FSCLoginViewCtrl.m */; };
+		BDD08134E754E074D24D350E /* emoji_28.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08089A1399AC08C7BEF65 /* emoji_28.png */; };
 		BDD081377D6B1A4CE467CF8F /* FSCTeachNode.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08B29B77CDA41CBBC3300 /* FSCTeachNode.m */; };
+		BDD0814E83C0DE08226F8E1D /* emoji_188.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08C9AC9E48152B7022252 /* emoji_188.png */; };
+		BDD08152C32EC09B48E09F76 /* emoji_184.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08BE7AF21AD4B76552E6E /* emoji_184.png */; };
+		BDD08161E2C1A95CE0E3AAAB /* FscMsg.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0886553E76204664C82EE /* FscMsg.pb.m */; };
 		BDD081659B0EFA93ECB3D0FF /* FSCSnsComment+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0819A442C525B317D6120 /* FSCSnsComment+CoreDataProperties.m */; };
-		BDD08168A7A332E1CD355F05 /* FscAnswer.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD082B44A1A9DB1EBE1800D /* FscAnswer.pb.m */; };
+		BDD08167AAB0E51909606688 /* emoji_14.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD0870069E8AEB1D0D7A6AE /* emoji_14.png */; };
+		BDD08169A0103E3720780BC3 /* emoji_193.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD0873AFC152716972D3AB3 /* emoji_193.png */; };
+		BDD0816EB9D24D590D3C9CCC /* emoji_213.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08DAFB592AFD1642DBBF3 /* emoji_213.png */; };
 		BDD08176B7F7B46AFDA59B57 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD0831D593122CE9478E41E /* MediaPlayer.framework */; };
 		BDD0817D06E8487A02D21B39 /* FSCImageAssembled.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08165F0AA75B9C21B77FE /* FSCImageAssembled.m */; };
+		BDD0818029EFF394C347F2BA /* emoji_63.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD084E84E9CBD477793486D /* emoji_63.png */; };
+		BDD0818089637C96EAA6C947 /* emoji_29.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08CE6EEFC1CDF2BD5B871 /* emoji_29.png */; };
+		BDD0819F6066D1964F3CD5A4 /* emoji_197.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD0843778C20FE47BAB17AA /* emoji_197.png */; };
+		BDD081A47A337C541212D9F4 /* emoji_189.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08BF1012F1B396116B70F /* emoji_189.png */; };
+		BDD081C32B858926FEE9A2E7 /* FaceBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0828E104EAF4AC3F92217 /* FaceBtn.m */; };
 		BDD081DC33E7421E4A568731 /* FscAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08DBA854E51CB29D86B32 /* FscAppDelegate.m */; };
 		BDD081DEB53BCCE258D5C793 /* LocationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08C71448F34D779973556 /* LocationModel.m */; };
+		BDD081EF91F45B98463909AF /* emoji_220.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD081817272F3D4E996FA64 /* emoji_220.png */; };
 		BDD081F399D36691D3F9341D /* FSCGroupSession.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08CE2A7562179E4B42585 /* FSCGroupSession.m */; };
+		BDD081F6CD15BF7739F8860C /* User.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD080AA682CA9B56BE944E3 /* User.pb.m */; };
 		BDD082026CE8E9233D4F12F2 /* FscSessionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08BC0AB9D4F5F44BFD991 /* FscSessionCell.m */; };
 		BDD0822205358FBD7B608A44 /* ClassChatHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08B5F3C436027F62F7296 /* ClassChatHandler.m */; };
 		BDD0822B6FF29CA043A94328 /* FSCSnsMsg.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD084E4C538736472E487CE /* FSCSnsMsg.m */; };
+		BDD08242CAECC9BF5EA5616B /* emoji_47.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD0835FE8FE2AE3E8747D0A /* emoji_47.png */; };
+		BDD0824A704B074D4291CB90 /* FscSession.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08B92B6D4DDC3E5B7DE84 /* FscSession.pb.m */; };
 		BDD082624A18696D6C816015 /* BbiUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD085A0EF334779518C6C0C /* BbiUtils.m */; };
-		BDD0828903F52D557E5B6B4C /* FscTeacher.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD084CB433FC1B1035E51BC /* FscTeacher.pb.m */; };
-		BDD082A4435232C2FC4716BD /* FscBbi.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08FE5FBBA503D87F34916 /* FscBbi.pb.m */; };
+		BDD0826882D4148F58C5555F /* FscChatUser.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08E4268676D6F51CC4C08 /* FscChatUser.pb.m */; };
+		BDD082705585663588CFABCE /* FscActivity.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0810EE5D574F136FACB77 /* FscActivity.pb.m */; };
+		BDD0829D080CE240121FE562 /* TipLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0848605095650EAEF1C6A /* TipLabel.m */; };
 		BDD082A76851D95BD91517C4 /* FSCTeachPlan.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08459AF0CF8F94DAC1CAE /* FSCTeachPlan.m */; };
 		BDD082C6A5189F71DAB8546A /* LcFscChatUserSessionListCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD080D8078C470BB1809309 /* LcFscChatUserSessionListCmd.m */; };
 		BDD082C9F421BBC31622B7AD /* FSCClassUser+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08E9FDE94069C20FE31EA /* FSCClassUser+CoreDataProperties.m */; };
 		BDD082D5143F04584B4339F3 /* FscSocketClient.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0847A2CA16B25AEED89AE /* FscSocketClient.m */; };
-		BDD082D6DCF9F18B5627AAA0 /* FscSession.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD084292F34B76DF356C0E1 /* FscSession.pb.m */; };
+		BDD082EBBFB5406F75F3A57C /* emoji_196.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08F1CF9FA8894B5055C9A /* emoji_196.png */; };
 		BDD08301EAA0A0EF71C42E68 /* FSCSchool+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08D2B567ABCF5E575BADC /* FSCSchool+CoreDataProperties.m */; };
+		BDD083046AB2B423860D20B4 /* emoji_40.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD087B2CB73A32E738E99F4 /* emoji_40.png */; };
 		BDD08305A7D277A2CA7EF359 /* FSCGroupSession+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08A9DFBFC3D9D3905D8F0 /* FSCGroupSession+CoreDataProperties.m */; };
 		BDD0830A17DC9B7F63D0CB1E /* FSCUser+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0889F8379426A042F60AA /* FSCUser+CoreDataProperties.m */; };
+		BDD0830A86C280D2D04DA745 /* emoji_36.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08C4829177E94CA0781F2 /* emoji_36.png */; };
 		BDD0830B40DEE97AA9125E45 /* FSCUserSession.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD088A079745B63F99834E4 /* FSCUserSession.m */; };
+		BDD083155D3DDD1C5715DE96 /* emoji_51.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD081344023430969779B7C /* emoji_51.png */; };
 		BDD0831955D866D3D467B7B1 /* fsc_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0871E8D4DAE93FE4BFF85 /* fsc_iosTests.m */; };
+		BDD0831C36F1E95EC00DEAF6 /* emoji_201.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08E31607389CE60D59966 /* emoji_201.png */; };
 		BDD0832DBBA1EE6CFBC068E1 /* FSCTrgRecorder+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08F0FF6DE342D7D071F6A /* FSCTrgRecorder+CoreDataProperties.m */; };
+		BDD0833B1B605CE54C3A245F /* FscFuncStat.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD084E2F9995FFBDD57B835 /* FscFuncStat.pb.m */; };
+		BDD08354D003045AF6EC6E58 /* FscChatPublic.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD082FB6310454A05F90E53 /* FscChatPublic.pb.m */; };
 		BDD0837B8650E39B68E23539 /* FSCClassStudent+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0869E592C62E0E3A47A6A /* FSCClassStudent+CoreDataProperties.m */; };
 		BDD0838C926A0DFD8E84A63D /* FscChatRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD081821741E297F7E605A1 /* FscChatRecorder.m */; };
+		BDD083914A10EBB8A7620ED6 /* emoji_41.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08CB3EC0ADA6981D0D3EE /* emoji_41.png */; };
 		BDD08394B6A00BF04E8A6361 /* FSCClassSession+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08800616CB9F80B473C07 /* FSCClassSession+CoreDataProperties.m */; };
 		BDD083C517BEFC819E26F182 /* FSCUserRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08518172DC937BA2EC16F /* FSCUserRecorder.m */; };
 		BDD083C966FF667D8336A88C /* ARsCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08A548699818E3DD9B7D6 /* ARsCmd.m */; };
-		BDD083FB5F110D2970922F15 /* FscLinkman.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08BEFF49B98B7CFD4E9B3 /* FscLinkman.pb.m */; };
+		BDD083F1B32B3B06AD5FEF24 /* emoji_25.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD0867971CFFF20728EACEE /* emoji_25.png */; };
 		BDD084000249BAE319F379E1 /* FSCLinkman.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08FC0834B52615136623D /* FSCLinkman.m */; };
+		BDD0840BB55A04FDF6920EA5 /* FscUser.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08F31496954AECDBF21EE /* FscUser.pb.m */; };
+		BDD0840E413D82BEA18157D7 /* emoji_30.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD086288FCD12B69C5A7D10 /* emoji_30.png */; };
 		BDD08419205B9C4C12FAE366 /* FSCGroupUser.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08C7F33BB36E9A19C3C2F /* FSCGroupUser.m */; };
 		BDD08423B87FCB3C31B26C47 /* FSCApply+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08C190C42E66B004FE44C /* FSCApply+CoreDataProperties.m */; };
+		BDD08434C8995337C47BBB4C /* emoji_211.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD085928796AEC602866304 /* emoji_211.png */; };
 		BDD0843AB71962BF1C956590 /* LcFscClassStudentListCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0843E240435CBAD6D5D7A /* LcFscClassStudentListCmd.m */; };
 		BDD0843D94160648D59DF08F /* FSCVote+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0892FAB357892C74F0F7F /* FSCVote+CoreDataProperties.m */; };
+		BDD0844C6F765C69891B7202 /* emoji_16.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD0865ED013A492D8A7BF69 /* emoji_16.png */; };
+		BDD084650C5019C8C2026093 /* emoji_67.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD085B1EAA1FF52F85B19F1 /* emoji_67.png */; };
 		BDD08472CFCDEEB9AE5F92C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD089567F5E35AE665E6445 /* main.m */; };
-		BDD08477EA7BC1CCA97F17AA /* FscQues.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08C5AFC74A83C48152D1F /* FscQues.pb.m */; };
+		BDD0848294D1E0AB70C25E85 /* FacialView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD081B1B704A76842F4F989 /* FacialView.m */; };
+		BDD084888EAA8BE3002D6506 /* emoji_202.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD086FF0639661CE969206F /* emoji_202.png */; };
 		BDD0849229D7C453250BB168 /* FSCVote.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0883AFA0D56CD8CE35D0A /* FSCVote.m */; };
-		BDD084A9B3E58143F0762A53 /* FscFuncStat.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0834E3F880A5F99E09AD5 /* FscFuncStat.pb.m */; };
+		BDD084A5854C9B1D8CF75591 /* emoji_54.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD082B5E0113211918F35AE /* emoji_54.png */; };
 		BDD084C3958F89D941F24588 /* FSCClassRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08D8E4BC0845FB1CD81C7 /* FSCClassRecorder.m */; };
+		BDD084DB0DE6C7A9C38CC33C /* emoji_192.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD0877E42526E54E3B05290 /* emoji_192.png */; };
 		BDD084E3D52DFE144C07C182 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDD08A480F49A32CE320A9A8 /* LaunchScreen.xib */; };
+		BDD084F23561982965D12B0D /* emoji_224.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08AC03E3872D911589ED8 /* emoji_224.png */; };
 		BDD084F36C6FE56C21CA2EEB /* FSCClassStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08F6469159AADD958C512 /* FSCClassStudent.m */; };
+		BDD085020D1770CA2191E50E /* emoji_58.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08684A3A86FF080DFB520 /* emoji_58.png */; };
 		BDD0850E315CBA3FB3F71917 /* TintUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08577A300560B1564E46D /* TintUtils.m */; };
 		BDD08511C5A4767364C20E2C /* LcFscClassListCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0899DA313D49FC9861858 /* LcFscClassListCmd.m */; };
 		BDD0853657A9D767E5CFFB18 /* FSCLinkman+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08514DF294BD2D150223B /* FSCLinkman+CoreDataProperties.m */; };
-		BDD08548F602189AF494C454 /* FscChatPublic.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD086DE5E87D155CF8226EB /* FscChatPublic.pb.m */; };
+		BDD0855B19946B41D058DA4F /* emoji_24.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD081F053E5C1F82C86A07A /* emoji_24.png */; };
+		BDD08560739C003898A82191 /* FscError.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0801BEEA0B737F765F9A6 /* FscError.pb.m */; };
 		BDD08560C003B6D1EE328E18 /* FSCTrgSession.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08DEA69C43BC9C423F37D /* FSCTrgSession.m */; };
 		BDD0856D0672AAB00B7C99A5 /* LcFscUserGetCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD082C2250C3EC8C44C23F4 /* LcFscUserGetCmd.m */; };
 		BDD085712A11A7A943CA8194 /* ChatCell+Img.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0895D8EB8B4FA646D2C2E /* ChatCell+Img.m */; };
+		BDD0857DBE24AA87E601EC54 /* FscSns.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08798F9D8FEC67D61B8AD /* FscSns.pb.m */; };
 		BDD0857EA6EA169F6F3B5884 /* FSCUnreadRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08661E50279949BA20C9E /* FSCUnreadRecorder.m */; };
 		BDD0858344E456072BE46801 /* LcFscChatGroupRecorderListCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08BBEF5E610CF53D0ED32 /* LcFscChatGroupRecorderListCmd.m */; };
 		BDD085932128D36D1C147C39 /* FSCSnsPraise+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD086A7688F7B4BDCFA5DBE /* FSCSnsPraise+CoreDataProperties.m */; };
-		BDD0859A272B5E9091A2E4BA /* FscError.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD082539924ED027D5AFEAB /* FscError.pb.m */; };
 		BDD0859A41282A90C5CDE505 /* AChatHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08C10CA28018DE832CAFC /* AChatHandler.m */; };
+		BDD0859F9CF8A2225287E443 /* emoji_70.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08267378729AC85E50780 /* emoji_70.png */; };
 		BDD085C05683C3CDA0DF46C3 /* FSCUserSession+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08C2923B58CE585E5CD46 /* FSCUserSession+CoreDataProperties.m */; };
-		BDD085FE430B29C8B20BD9B1 /* FSCChatLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08D00E0D10A6D5B6757AA /* FSCChatLabel.m */; };
-		BDD08605F1969127F0ED4770 /* FscChatClass.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08ECFCB73A3189AE83C2F /* FscChatClass.pb.m */; };
+		BDD085F154B134F3709F7019 /* FscBbi.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08EFC63DC5D334F61D790 /* FscBbi.pb.m */; };
+		BDD085FB906031437FE15517 /* emoji_182.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08AD5FEB4A812FAFCA9B8 /* emoji_182.png */; };
+		BDD085FDDDA0F7F7DC72C427 /* FscClassUser.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08F0855DE36AE36D4FC8F /* FscClassUser.pb.m */; };
 		BDD08623307920163FB43F00 /* LcFscChatUserRecorderListCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08A2DFFA25B2C881E55AB /* LcFscChatUserRecorderListCmd.m */; };
+		BDD08627F29916847CBDDB72 /* emoji_62.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD0851BA7CBB85E37962310 /* emoji_62.png */; };
 		BDD0863277125E40F4A534E2 /* FSCGroupRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD081C5B8F9FFCEA18C09E6 /* FSCGroupRecorder.m */; };
+		BDD0863903CA806F9FEE34F1 /* FscChatTrg.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08E2FA3153B19FDB163B4 /* FscChatTrg.pb.m */; };
 		BDD08642F0AEAED313EBEBBA /* FSCApply.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08F5EDC41F8A9E665675A /* FSCApply.m */; };
+		BDD0864DD1D55B9DB7B0CF25 /* FscChatClass.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD080E6333F111C0A183E5E /* FscChatClass.pb.m */; };
 		BDD0864F998C53E0E3E25EBE /* LcFscChatClassRecorderListCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08945C20CD366D8FD29D3 /* LcFscChatClassRecorderListCmd.m */; };
 		BDD0865044F67CF9F48BCF9D /* PublicChatHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD081CF5F9574F27F1F430B /* PublicChatHandler.m */; };
 		BDD0865414586C626211CDA3 /* FscSessionCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD083C6640DA71F0A223228 /* FscSessionCtrl.m */; };
-		BDD0867A33F60CE676D109B8 /* FscNotice.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08A1FC214A004C96E1A0A /* FscNotice.pb.m */; };
-		BDD086873063CA1528E15B00 /* FscChatUser.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08ED1E994922CBAAC0278 /* FscChatUser.pb.m */; };
+		BDD08663EF3C4072695D09BF /* emoji_42.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08FA615DC510D0343B3A3 /* emoji_42.png */; };
 		BDD0868EEA9A1189F6CD715F /* FSCUserStudent+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08E14B960673EAB53530C /* FSCUserStudent+CoreDataProperties.m */; };
+		BDD0868F62F4B55922331676 /* emoji_11.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD085A6A1F18CAD5E82D35C /* emoji_11.png */; };
+		BDD086935F596954253887D8 /* emoji_200.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD0884655E259DF84975C70 /* emoji_200.png */; };
+		BDD0869D21FC07D15F864089 /* emoji_183.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD084BD96A1F683AFB5E88F /* emoji_183.png */; };
+		BDD086AA9D2E4F5F0719E4E3 /* FscClass.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD081FC0DAB3799E5F298F3 /* FscClass.pb.m */; };
+		BDD086C561B7C6ADCB51B9D0 /* emoji_217.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD0871DC06F00D5A7666417 /* emoji_217.png */; };
 		BDD086E882FE5061A7F0EA72 /* FSCTeachPlan+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08B09111A3B7DFE8746AC /* FSCTeachPlan+CoreDataProperties.m */; };
 		BDD086F1DAC8DA6428638978 /* ALcCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08126E8395354DDC0D11B /* ALcCmd.m */; };
 		BDD086F31396AE8CC35C670D /* FscChatCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD088F450E666A61C37566D /* FscChatCtrl.m */; };
 		BDD086FA62284B58F9BAC2EE /* FSCTrgUser.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08D55D5413EC04579DB76 /* FSCTrgUser.m */; };
-		BDD086FB38C7A6804F6A903C /* TipLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08D747F3EE05BFDCD0068 /* TipLabel.m */; };
 		BDD08702C27A191E17507992 /* FSCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD081EA6D2B82E87A05415B /* FSCUser.m */; };
+		BDD0871065D61B512961CAD2 /* emoji_21.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08C0E3B89BE929F640757 /* emoji_21.png */; };
 		BDD087159C35038F90EDAEE3 /* FSCTrgRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0854A9F8421991872B1D6 /* FSCTrgRecorder.m */; };
-		BDD0872536CBC38DD525BA22 /* FscKnowl.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08605631A10D0CBFFE910 /* FscKnowl.pb.m */; };
+		BDD0871841C4D49DE4E4E8BA /* emoji_33.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08D5E71D2E7F9C085E4DC /* emoji_33.png */; };
 		BDD0873DDDA588A110FCF515 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD085F99754D6C0B50DE0D3 /* CoreData.framework */; };
+		BDD087425EBD86B4597D8E65 /* FscTimetable.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0868E905DCA683BE3DB7D /* FscTimetable.pb.m */; };
 		BDD0875F73D18D0AB07EED74 /* FSCClassChatUser+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08C59FB424BAE1F35B2DC /* FSCClassChatUser+CoreDataProperties.m */; };
+		BDD0876895AB64AFE6DF4AC6 /* FscLinkman.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0847609D9C79A56926E33 /* FscLinkman.pb.m */; };
+		BDD08776B7EDE1ED4E51DDA0 /* emoji_7.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD0863E3D9181B53C306367 /* emoji_7.png */; };
+		BDD08787E5A7520576194F5A /* emoji_190.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD0886ED4649BCB7216D990 /* emoji_190.png */; };
+		BDD0879A4FFC83DE583AD15A /* FscScore.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0819554F3B4E3E7E36137 /* FscScore.pb.m */; };
 		BDD087A0351D2FF761B12D62 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD08D2FEE66D900859363AB /* CoreMotion.framework */; };
+		BDD087A9A35FB65A62FFE07A /* FscWork.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD088E0AC0B3D87E7F3D602 /* FscWork.pb.m */; };
+		BDD087B3747D6C7F202FFC7E /* emoji_194.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08B63CCE55BA162E7F651 /* emoji_194.png */; };
+		BDD087BCB8BCCEA296A85D40 /* emoji_191.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD0808BBEC07D1D76E5A086 /* emoji_191.png */; };
 		BDD087BDDB66EA87BD8216B3 /* FSCClassUser.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD080C02536A048E8D37006 /* FSCClassUser.m */; };
 		BDD087D0AAA47B0D9F13405D /* LcFscTeacherListCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD088FC18CDAE1449F0E95C /* LcFscTeacherListCmd.m */; };
-		BDD087F5F43873D87C3006E6 /* FscTeachPlan.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08F0C78A34F0A5EB17F91 /* FscTeachPlan.pb.m */; };
+		BDD087D2680EF22F539D0471 /* emoji_222.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD088A21FED45659E12E775 /* emoji_222.png */; };
+		BDD087F35A8B1A03825D1586 /* emoji_37.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD089F20BC61EF588A0FB0C /* emoji_37.png */; };
 		BDD08802D00646B617ABEDB7 /* FSCNotice.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08974FF6598460CA0C1BA /* FSCNotice.m */; };
 		BDD08808DEE36F61E7A9A2ED /* FscContactsCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD087F330F872A2BD8CDD2D /* FscContactsCtrl.m */; };
+		BDD088185F5F20C909A3DCD1 /* emoji_22.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD0861E6888BA7C1383069B /* emoji_22.png */; };
+		BDD0881D2937E1643E5DC2CD /* emoji_199.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08536F07FAB23C8A8355E /* emoji_199.png */; };
 		BDD088280AD380586E4FBAB1 /* FSCSnsPraise.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08325371F76B233AAF9FE /* FSCSnsPraise.m */; };
+		BDD0883758624223042B169E /* emoji_18.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD0893B4D5E9CCF2567AEB4 /* emoji_18.png */; };
 		BDD08854A272BAB16538A435 /* FscDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08BA043DBDB793D1A87E1 /* FscDataManager.m */; };
 		BDD0885AFFAA56E8DD703826 /* ChineseToPinyin.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08D5CBF90C909CE2B64A9 /* ChineseToPinyin.m */; };
+		BDD0885F19D72659C26B11BE /* emoji_179.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08C0ADD758917CBBED8EB /* emoji_179.png */; };
 		BDD08863231B49B1A789F7ED /* FSCPublicSession.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0874636F01A36030FC925 /* FSCPublicSession.m */; };
-		BDD0887E659C276F2CAE934B /* FscClassUser.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0871BF44A654ADA69835E /* FscClassUser.pb.m */; };
-		BDD088AB92C0016B89D18BAE /* PhoneInfo.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08E2DCB6F282FFD3C5B74 /* PhoneInfo.pb.m */; };
+		BDD0887548C0C84245CCC695 /* emoji_6.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD088313C3A0DBEBD020601 /* emoji_6.png */; };
+		BDD0889FDB411E97130E00CA /* FscChatGroup.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08831C845EBF4DB975FCD /* FscChatGroup.pb.m */; };
 		BDD088BA0733C3F525291B52 /* TrgChatHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08B0D5AC0E222317052AF /* TrgChatHandler.m */; };
 		BDD088BC1AEBBAA78B28EDDE /* ChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD085A1ABF3D102FB704430 /* ChatCell.m */; };
+		BDD088DE3A3F79A9499181F1 /* emoji_60.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD085B8D54B1BCCBBF5D4DC /* emoji_60.png */; };
+		BDD088E79CCAD666FA1082AA /* FscSessionList.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0823F42C2119F9C343757 /* FscSessionList.pb.m */; };
 		BDD088F47039EF337A9DEF68 /* FSCClassSession.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08B91A902CFA669A4E510 /* FSCClassSession.m */; };
 		BDD08907818595D74F705559 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD08BF94C58116A97AD313A /* Images.xcassets */; };
 		BDD08916A7DFB2A231C9327F /* FSCSchool.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08642B04E485CA35D08D8 /* FSCSchool.m */; };
-		BDD08922D85258BF8A24CF1A /* CmdSign.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0820DDB13CA25ECB4384C /* CmdSign.pb.m */; };
+		BDD08929E1350B8B0F827BFB /* emoji_208.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD0858C46092F7F9BFDEBE0 /* emoji_208.png */; };
 		BDD0894B65DEA0AEC9742D55 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD086D519DD61C93BC44B2C /* SystemConfiguration.framework */; };
-		BDD089562B390DD255B2757E /* User.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08747944B86218E99C242 /* User.pb.m */; };
-		BDD0896D901BDBAE4FF337EE /* FscChatGroup.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08806F3727E03A94D7890 /* FscChatGroup.pb.m */; };
+		BDD0897743CB69869871DF85 /* FscTeachNode.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0893256E924C7D436BE04 /* FscTeachNode.pb.m */; };
 		BDD0897D40B7175D188ECE14 /* FSCGroupUser+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08D32ABA001DCCA44E38C /* FSCGroupUser+CoreDataProperties.m */; };
 		BDD0898207D78CE23AFD09E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD083ECD0E1FB33846F0F24 /* Main.storyboard */; };
+		BDD08982DB3C76F734C21EDB /* emoji_198.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD081F6713D39103071710F /* emoji_198.png */; };
+		BDD0899349D9F15710E9C337 /* emoji_12.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08BEC429AFC63B2E68BCD /* emoji_12.png */; };
+		BDD089A992DD63BC2427F667 /* emoji_39.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08AB5F68EF69257017D1D /* emoji_39.png */; };
+		BDD089B00663E6FA9B503C62 /* PhoneInfo.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08B3ABF37EF3D51C58855 /* PhoneInfo.pb.m */; };
 		BDD089B0A1FA008A30BF9E25 /* FSCActivity+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08A39C2EA9AFAF9459F34 /* FSCActivity+CoreDataProperties.m */; };
+		BDD089B37882F8D998CC4D3F /* emoji_214.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD082289E3D4F9FF653E321 /* emoji_214.png */; };
+		BDD089B7923020415194F9FB /* emoji_181.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08EE0C88E7CC338CD7D24 /* emoji_181.png */; };
 		BDD089C77BB00E6B4639D85F /* FSCActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD084E569C2B5670E653E58 /* FSCActivity.m */; };
-		BDD089D4207FA24F94CEC1D9 /* FscTimetable.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08BF4490AACF07F91B215 /* FscTimetable.pb.m */; };
 		BDD089E58465C2A4E0E81C60 /* ChatCell+Left.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD083FEB836AB8E33AD235E /* ChatCell+Left.m */; };
 		BDD089F45479A4C7B6025355 /* FSCPublicUser.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08BE6DFAFC28A978E88AC /* FSCPublicUser.m */; };
+		BDD089F653246794B7D09D89 /* FscExam.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08502E2538B0A4F7CC91F /* FscExam.pb.m */; };
 		BDD08A03C782376A27EB41D3 /* FSCSnsMsg+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD089C3957C12C275F4EA7F /* FSCSnsMsg+CoreDataProperties.m */; };
+		BDD08A0C73B1057CBE653B1B /* emoji_55.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08D83A297A17F1CAEE19D /* emoji_55.png */; };
 		BDD08A0F7FB92F0849AB0478 /* FSCPublicRecorder+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD081146E0AEC6EE89D8A45 /* FSCPublicRecorder+CoreDataProperties.m */; };
+		BDD08A12FB723EEB526D9DC2 /* emoji_3.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08D6B59CB0A632BC8A33F /* emoji_3.png */; };
 		BDD08A135A647845B47C477A /* UserChatHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08D5908CC5DDCF371F868 /* UserChatHandler.m */; };
-		BDD08A17423CAB36ECE6D15E /* FscScore.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08970D9FAEA8CCD36E472 /* FscScore.pb.m */; };
+		BDD08A1679467A9562C18E3B /* emoji_186.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD080303C1B17F938CD9F06 /* emoji_186.png */; };
+		BDD08A19940C567726EB0C11 /* emoji_216.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08930C53CA97B1F6B3952 /* emoji_216.png */; };
 		BDD08A38F0DC233D52BC65B2 /* Scheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08B5C6693CFF87F6D86F9 /* Scheduler.m */; };
+		BDD08A3C1B3392656ED3AE5C /* emoji_13.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08FDDA755C4EE99D0BC38 /* emoji_13.png */; };
 		BDD08A4B69D1CD1038EF2E6C /* ChatFileModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0890BF912753A345094C6 /* ChatFileModel.m */; };
+		BDD08A6F1A162D0434A245E4 /* emoji_66.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD089D635E705F036ADF5E2 /* emoji_66.png */; };
+		BDD08A702A71EBC8C5DAB981 /* emoji_180.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD0807E5F0F16398A62B6CD /* emoji_180.png */; };
+		BDD08A736946E5FCB530F242 /* emoji_215.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD0847A7DD674F7FCDF1705 /* emoji_215.png */; };
 		BDD08A7F56114F16132B57E2 /* FSCTrgUser+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08415364B213FD261105C /* FSCTrgUser+CoreDataProperties.m */; };
+		BDD08A82CA797341D6E4D453 /* emoji_203.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD088C46855A49101DBF0CE /* emoji_203.png */; };
+		BDD08A875202264ACF844AAB /* emoji_1.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08DED9FFE1AF886A9F317 /* emoji_1.png */; };
 		BDD08AB3F7D66F7CCC642BAA /* FSCSession+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08C5479CB661EB22E88FA /* FSCSession+CoreDataProperties.m */; };
+		BDD08AB7762B42656E9629B6 /* FscKnowl.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08C53BB5A1F7ABB8BBC9C /* FscKnowl.pb.m */; };
+		BDD08AC74D6992E58F41F355 /* emoji_219.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD0856F995D79525B741D5E /* emoji_219.png */; };
+		BDD08AD670BD77D9E1D18F55 /* FscNotice.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08EC31A8B720D80B5E20E /* FscNotice.pb.m */; };
 		BDD08AD9012CB80A9FA0C49B /* RsFscSessionListCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08746E9C5FCD54715076D /* RsFscSessionListCmd.m */; };
+		BDD08AFCC3F1DD94695E4420 /* emoji_46.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD084E97C2EDD011957ADF7 /* emoji_46.png */; };
 		BDD08B092AA0BEF188E9DDE8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD088CF1631B5363C603182 /* AVFoundation.framework */; };
+		BDD08B0CC9AA93AAB6BA9CC9 /* emoji_19.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD080C8A6627CAC1752AF39 /* emoji_19.png */; };
 		BDD08B104DFFDD6F354FC724 /* FSCSession.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08AFCDF41C94D57DE90D5 /* FSCSession.m */; };
+		BDD08B2E997787C245B55FD8 /* Login.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0843965A65A6C5FDBE243 /* Login.pb.m */; };
 		BDD08B2F905824817487B3C9 /* LcFscClassUserListCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD080C907134A3971EA4C65 /* LcFscClassUserListCmd.m */; };
-		BDD08B3413EA29962EE9CDBC /* FscSessionList.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD083471E6EA8D2CFE784B4 /* FscSessionList.pb.m */; };
 		BDD08B4174452DB3068D87E3 /* FSCPublicMenu+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08228973F6268E397BA96 /* FSCPublicMenu+CoreDataProperties.m */; };
-		BDD08B850CD0BB98FDDBC9DE /* FscMsg.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0812E528020F823DD7F0B /* FscMsg.pb.m */; };
+		BDD08B60D4D7D3F5D36E5761 /* emoji_20.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD080F956C0D8609612B813 /* emoji_20.png */; };
+		BDD08B63FA692C4F3A977A86 /* emoji_45.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD085D7FAD6E7672A6277D7 /* emoji_45.png */; };
+		BDD08B6B0996F1A912503362 /* emoji_218.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08001C2C1B88FAD4F32AB /* emoji_218.png */; };
+		BDD08B6EE8846BE8D1E79BF1 /* emoji_53.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08F2F3D453946F2A086EC /* emoji_53.png */; };
+		BDD08B710EB9A0AC4542F4CC /* emoji_59.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08A6BA7E31DA88CDF764C /* emoji_59.png */; };
 		BDD08B880FC19E4FBCC9FF64 /* RsSessionPostCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08812DFEB9E9B3DA6EEB4 /* RsSessionPostCmd.m */; };
+		BDD08B8FF8F9B225D2E8B640 /* emoji_68.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08643806983A982FD23F8 /* emoji_68.png */; };
 		BDD08B98776A0468ED7E29F0 /* LcFscChatPublicRecorderListCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD081234B23A18BCBB134BB /* LcFscChatPublicRecorderListCmd.m */; };
 		BDD08BA1217040AB21A8CF52 /* FSCPublicRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD084818B7CCD1B7F3F5D02 /* FSCPublicRecorder.m */; };
+		BDD08BA4150BDF7CF9934B6F /* FscVote.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08B19D69CB2E61B2E7AF6 /* FscVote.pb.m */; };
 		BDD08BA616F5A02F071C40E2 /* LcFscSessionListCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD089E6528B7DD58DABC1A9 /* LcFscSessionListCmd.m */; };
+		BDD08BB6417D516F6E7DBD24 /* UIButton+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD085A488B6B20EF64E9DB6 /* UIButton+BackgroundColor.m */; };
+		BDD08BBF120F6D1AA6D31CF6 /* emoji.txt in Resources */ = {isa = PBXBuildFile; fileRef = BDD0818D08DDCB86EBC86CCB /* emoji.txt */; };
 		BDD08BED16307621BDCBE32E /* LcFscPublicUserListCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08CAC9F86E50FB06F63D1 /* LcFscPublicUserListCmd.m */; };
-		BDD08BF5026CC17E8B43CA78 /* FscTestMsg.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0863F915DEA9607D569DD /* FscTestMsg.pb.m */; };
+		BDD08BF1D4C9D24EF413AFD8 /* emoji_69.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08719A309A39DD7AE1BE4 /* emoji_69.png */; };
+		BDD08C308B10D388BCBB5DE6 /* emoji_223.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08CC3DE9FB63459A6A9C6 /* emoji_223.png */; };
+		BDD08C338D9F7ED5D72EDD46 /* face_del_ico_dafeult.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08AB56CB01B00C94D01B0 /* face_del_ico_dafeult.png */; };
 		BDD08C3B24FB12CCB5F4097F /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD082D7C7B891D9B98EDCAE /* SceneKit.framework */; };
 		BDD08C40650CEF1E6F3FD5A4 /* FSCSubPubUnreadRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD080C463A74F1238A0D4F7 /* FSCSubPubUnreadRecorder.m */; };
+		BDD08C422ABCE2C87E0CE844 /* emoji_204.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08DEC1248B0578282C7EB /* emoji_204.png */; };
 		BDD08C4A1BF19815AAE03963 /* ChatTipCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD085C89CAA154C4F27C286 /* ChatTipCell.m */; };
+		BDD08C58CE37CB4D6627DB05 /* emoji_210.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD0811713D3F8C35C8919E3 /* emoji_210.png */; };
 		BDD08C5C9B7C8E9A982CFAE1 /* FSCPublicUser+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08BD3BC9528222BD50F60 /* FSCPublicUser+CoreDataProperties.m */; };
+		BDD08C6B97B29334B6ABFE9D /* emoji_187.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08823FB64828865F9745F /* emoji_187.png */; };
+		BDD08C8A6D1BE7507D5061B3 /* emoji_4.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD0806C177BEA1C209D7384 /* emoji_4.png */; };
 		BDD08C8E6EE678F851D481D9 /* FSCTrgSession+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD082237CB21C0FC7B28823 /* FSCTrgSession+CoreDataProperties.m */; };
-		BDD08CB33B60504A06DA5094 /* FscExam.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08BA843F88FE6A1018EDA /* FscExam.pb.m */; };
+		BDD08C9D3691B75D53BA23EE /* CmdSign.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0856DBD1AD1156527842E /* CmdSign.pb.m */; };
+		BDD08CABAAD09A96595606DC /* EmojiBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08D261B8FAC9BD149FE49 /* EmojiBtn.m */; };
 		BDD08CB3F731B3ADF45C5E6C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD081CEEDDB3E08BCF92941 /* AudioToolbox.framework */; };
+		BDD08CC2AA01049D91A81174 /* emoji_23.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08986342127CD0F27218B /* emoji_23.png */; };
+		BDD08CCF330BADF340505741 /* emoji_50.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08E4C6D4AA9CF2C2BE4BA /* emoji_50.png */; };
+		BDD08CD1D8960F8C8A79D56E /* emoji_48.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08BEE09B7ECD0AEBA0962 /* emoji_48.png */; };
 		BDD08CD51ED56DA0C385165C /* FSCCustomUser+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08366638779C885C445F9 /* FSCCustomUser+CoreDataProperties.m */; };
+		BDD08CDA31941ADA51BF33ED /* emoji_71.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD089D1953EB1FE1F0BCD6E /* emoji_71.png */; };
+		BDD08CEBC818438AC5A501A3 /* emoji_56.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD0886F7FEAE14EF24E8846 /* emoji_56.png */; };
+		BDD08D0764E223DF7754F395 /* emoji_52.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD087A996F740FABAAFD65A /* emoji_52.png */; };
+		BDD08D0780A096172FBD70B0 /* emoji_221.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08B9E71E5CFEC8F80EC25 /* emoji_221.png */; };
 		BDD08D1ED5102FDD3539FA2A /* RsFscPublicUserListCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0882F4DAA93FE6D978302 /* RsFscPublicUserListCmd.m */; };
 		BDD08D215B0F676A66AF7A90 /* ChatTipCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDD081344832DC3E1F8A9516 /* ChatTipCell.xib */; };
 		BDD08D2D56A123A5B51D12AC /* LcFscPublicMenuListCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08F3832EAE3C8B99AFBC5 /* LcFscPublicMenuListCmd.m */; };
+		BDD08D2F4FC4D4DB55C875E8 /* emoji_32.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08C917E586675A23B534B /* emoji_32.png */; };
+		BDD08D4749D49D00D27035D7 /* emoji_206.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08A758B4C2EDAD24BF56C /* emoji_206.png */; };
 		BDD08D5AE7C4239AD57B2AD6 /* LcFscChatGroupUserListCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD081829FF6C65BABBB2A7A /* LcFscChatGroupUserListCmd.m */; };
+		BDD08D61E6D02E5769E1425B /* emoji_35.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD085C12C2B34EE6B28CE77 /* emoji_35.png */; };
 		BDD08D63457EF281826AAB8F /* FSCUserStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08842AAC2AE2DFE133800 /* FSCUserStudent.m */; };
+		BDD08D700BAF197206215E93 /* emoji_2.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD083D643C3E8652F4A1B54 /* emoji_2.png */; };
 		BDD08D77A3C4FB1AA84E12B9 /* FSCPublicMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD087A2E4100306C07800D0 /* FSCPublicMenu.m */; };
 		BDD08D8B6AFE75D2498F3F2C /* ContactsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD081304624227E0885D16E /* ContactsCell.m */; };
+		BDD08D8F9F7D4D9F2599433A /* emoji_205.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08EA910647F76DC95E36F /* emoji_205.png */; };
+		BDD08D99815A3BFB0E4BA500 /* FscTeachPlan.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD088A6B016EDE39CB5F313 /* FscTeachPlan.pb.m */; };
 		BDD08DA10104F600CD415828 /* FSCGroupRecorder+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0821A58352CDCD084AF9F /* FSCGroupRecorder+CoreDataProperties.m */; };
+		BDD08DAD3899DE3A3199E12E /* emoji_49.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD0840818F48BADD1CFF4E2 /* emoji_49.png */; };
 		BDD08DAE1F1EDA88A36DA20F /* FSCPublicSession+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD088269321FDF6C02934BF /* FSCPublicSession+CoreDataProperties.m */; };
-		BDD08DDB3540A689B4704D13 /* FscVote.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08ADA656F7ADFD1AAED2C /* FscVote.pb.m */; };
-		BDD08DEA2B8D86334DE7BB7E /* FscUser.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0878196BDAE8F0CEACC26 /* FscUser.pb.m */; };
+		BDD08DB1A85C18ECFF72018C /* FSCChatLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD089BEA630C1856755A175 /* FSCChatLabel.m */; };
+		BDD08DC12A2B9E40758A9F6F /* emoji_64.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD082F5F4D0F83776945481 /* emoji_64.png */; };
+		BDD08DC9F63821F747075CE1 /* emoji_43.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD0891CE2A330C0E014B292 /* emoji_43.png */; };
 		BDD08DFECD5F33728545C300 /* FSCSnsComment.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08A517070EA999C6605D7 /* FSCSnsComment.m */; };
 		BDD08E120A597C66040E5769 /* FSCData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BDD08CF034D8AF6527871B22 /* FSCData.xcdatamodeld */; };
 		BDD08E149BA59FE1C476FAE1 /* FSCClass+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08404F52C192AE8DA7E3E /* FSCClass+CoreDataProperties.m */; };
 		BDD08E19EDCB0DB65AADD054 /* GroupChatHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD080444C4CADCB0AF72003 /* GroupChatHandler.m */; };
+		BDD08E36EA11942E3E7D9B11 /* FscDiskFile.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08E9BBF04DE40C8842F51 /* FscDiskFile.pb.m */; };
 		BDD08E38601696C4F0414CCC /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08CE58B71162E5E62F890 /* UIColor+Hex.m */; };
 		BDD08E4507FFF1AFABAB732B /* RsFscClassUserListCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08FFEC1AA3C16CF6F338E /* RsFscClassUserListCmd.m */; };
+		BDD08E5B3E991E074CC0DC45 /* emoji_10.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD0816EA9138D643FD49D4E /* emoji_10.png */; };
 		BDD08E85D9A74848B486F854 /* FSCClassRecorder+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD080F5996F1232477101F1 /* FSCClassRecorder+CoreDataProperties.m */; };
-		BDD08EC6749257BC8364B4CA /* FscClass.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD087E4459D8F3CDDB4D64B /* FscClass.pb.m */; };
 		BDD08ECDC1FA4A745B9D13DD /* FSCTeachNode+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08A1BEBF45C35783D508C /* FSCTeachNode+CoreDataProperties.m */; };
-		BDD08EFC33ECD0ADF79A91AB /* FscDiskFile.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08B20582F95F7AE052729 /* FscDiskFile.pb.m */; };
+		BDD08ED8362AAE5DE4F55844 /* emoji_185.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD0897FB21F797905A12131 /* emoji_185.png */; };
+		BDD08EF9CF0755736C3E7FE7 /* emoji_207.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08D0ED513BD8D54A2E03A /* emoji_207.png */; };
 		BDD08F0E8A31F678993BAD95 /* IosUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08A80D2D630D0C657493C /* IosUtils.m */; };
 		BDD08F21B9EE53A439BC4A43 /* RsFscLinkmanListCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0848C1E250C9549579801 /* RsFscLinkmanListCmd.m */; };
 		BDD08F2B012B8A0652FA3765 /* FscMainCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD083AFDA8DBA56059D7BC6 /* FscMainCtrl.m */; };
 		BDD08F40CFA292373E0B7EA5 /* FSCCustomUser.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD084A0D9B5C218FF793B83 /* FSCCustomUser.m */; };
 		BDD08F4342DBFAA20C9D4FB4 /* LcFscLinkmanListCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08301D38BBFCDFAB5F6C7 /* LcFscLinkmanListCmd.m */; };
-		BDD08F5579F91A675B042C62 /* FscChatTrg.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08DF14DEBC149689E0166 /* FscChatTrg.pb.m */; };
+		BDD08F436904D6D5D618F220 /* emoji_26.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08268E6C0E88D6AD51052 /* emoji_26.png */; };
 		BDD08F6093CAA8B09C732A41 /* FSCSubPubUnreadRecorder+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08EC895FE45130F7E3F3D /* FSCSubPubUnreadRecorder+CoreDataProperties.m */; };
+		BDD08F6A3EFB1AF545840A56 /* emoji_8.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD0823CA4753994674E4489 /* emoji_8.png */; };
 		BDD08F76077A7AA885221C1E /* LcFscChatTrgRecorderListCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08639102A5F3BF948B884 /* LcFscChatTrgRecorderListCmd.m */; };
+		BDD08F7AC5C6F5DB8AD83D08 /* emoji_65.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08E70FA94321EA17B6C9E /* emoji_65.png */; };
 		BDD08F8D0E33A58674970C8D /* UITabBarItem+CustomBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08AFE848B151A56AF0F69 /* UITabBarItem+CustomBadge.m */; };
+		BDD08F8E187C30743D8764E4 /* FscAnswer.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08B5F6B4924629E06CD68 /* FscAnswer.pb.m */; };
+		BDD08FA7D7D410D700FDD439 /* emoji_9.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08CB5CFDE8CB36EB5B30A /* emoji_9.png */; };
+		BDD08FA8C718D5BF1E21157C /* FscTeacher.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0808C283DDD1D5BED791E /* FscTeacher.pb.m */; };
+		BDD08FBD1B99FE132E11BFBC /* emoji_15.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08F7F01F9C223CFE5D247 /* emoji_15.png */; };
+		BDD08FC348E7E98AD35E30D1 /* emoji_212.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08DA9142600260FDD2038 /* emoji_212.png */; };
+		BDD08FE9A07E2DD8EEF88666 /* emoji_57.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD0817AEFCB83A3970B7CF3 /* emoji_57.png */; };
 		BDD08FEAE3E4E27AC05BE58A /* FSCClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0823B7A6AB854062A4F36 /* FSCClass.m */; };
 		BDD08FEB774A664848FCA518 /* FSCClassChatUser.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08B873CE2EDD1715ECBB4 /* FSCClassChatUser.m */; };
 		BDD08FED2670D0EE308C2346 /* FSCUnreadRecorder+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0878145EFAD940B8C5341 /* FSCUnreadRecorder+CoreDataProperties.m */; };
@@ -257,263 +380,363 @@
 		2BE8CF184B233F6E0E5D3EB7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8E0C2F16B0D3DDCDC44C7A07 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ED53C2CCB98B6FBE21FF1E8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		BDD08001C2C1B88FAD4F32AB /* emoji_218.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_218.png; sourceTree = "<group>"; };
 		BDD0800651AE720A256CACCE /* FSCLinkman+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FSCLinkman+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BDD08008DE28EBE246D57400 /* emoji_209.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_209.png; sourceTree = "<group>"; };
+		BDD0801BEEA0B737F765F9A6 /* FscError.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscError.pb.m; sourceTree = "<group>"; };
 		BDD08029090A8747B61C6F6C /* FSCUser+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FSCUser+CoreDataProperties.h"; sourceTree = "<group>"; };
 		BDD080300C86BB069FBA9471 /* RsFscLinkmanListCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RsFscLinkmanListCmd.h; sourceTree = "<group>"; };
-		BDD08030D796CDFC9A63BC9B /* FscWork.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscWork.pb.h; sourceTree = "<group>"; };
+		BDD080303C1B17F938CD9F06 /* emoji_186.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_186.png; sourceTree = "<group>"; };
 		BDD08032ABBCADB8542E2ADF /* ChatCell+Right.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ChatCell+Right.m"; sourceTree = "<group>"; };
 		BDD08038EC8190A65D67DAA6 /* FSCTeachPlan+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FSCTeachPlan+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BDD08039F9415D7D2801E37D /* FscQues.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscQues.pb.m; sourceTree = "<group>"; };
 		BDD080444C4CADCB0AF72003 /* GroupChatHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupChatHandler.m; sourceTree = "<group>"; };
 		BDD0805FEE656F07CA0FAD01 /* ChatCell+Left.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ChatCell+Left.h"; sourceTree = "<group>"; };
+		BDD0806C177BEA1C209D7384 /* emoji_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_4.png; sourceTree = "<group>"; };
+		BDD0807E5F0F16398A62B6CD /* emoji_180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_180.png; sourceTree = "<group>"; };
 		BDD08080CDD216787E15691A /* DataCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataCache.h; sourceTree = "<group>"; };
+		BDD08089A1399AC08C7BEF65 /* emoji_28.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_28.png; sourceTree = "<group>"; };
+		BDD0808BBEC07D1D76E5A086 /* emoji_191.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_191.png; sourceTree = "<group>"; };
+		BDD0808C283DDD1D5BED791E /* FscTeacher.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscTeacher.pb.m; sourceTree = "<group>"; };
 		BDD0808DBE4A9A34CF76D3E6 /* RsSessionPostCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RsSessionPostCmd.h; sourceTree = "<group>"; };
 		BDD08094342E529F1DE2ED3D /* GroupChatHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupChatHandler.h; sourceTree = "<group>"; };
 		BDD0809F75F4427170A3A934 /* FSCApply+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FSCApply+CoreDataProperties.h"; sourceTree = "<group>"; };
 		BDD080A2E62E5D4CD29BA622 /* ContactsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsCell.h; sourceTree = "<group>"; };
+		BDD080AA682CA9B56BE944E3 /* User.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.pb.m; sourceTree = "<group>"; };
 		BDD080AC01144B0F8F7D6733 /* FscChatCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscChatCtrl.h; sourceTree = "<group>"; };
 		BDD080C02536A048E8D37006 /* FSCClassUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCClassUser.m; sourceTree = "<group>"; };
 		BDD080C463A74F1238A0D4F7 /* FSCSubPubUnreadRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCSubPubUnreadRecorder.m; sourceTree = "<group>"; };
+		BDD080C8A6627CAC1752AF39 /* emoji_19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_19.png; sourceTree = "<group>"; };
 		BDD080C907134A3971EA4C65 /* LcFscClassUserListCmd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LcFscClassUserListCmd.m; sourceTree = "<group>"; };
 		BDD080CCBCEC8B19B648737B /* FSCSubPubUnreadRecorder+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FSCSubPubUnreadRecorder+CoreDataProperties.h"; sourceTree = "<group>"; };
-		BDD080D2A7DD451581D24094 /* FscSession.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscSession.pb.h; sourceTree = "<group>"; };
 		BDD080D8078C470BB1809309 /* LcFscChatUserSessionListCmd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LcFscChatUserSessionListCmd.m; sourceTree = "<group>"; };
-		BDD080E05506FA879512991E /* FscChatUser.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscChatUser.pb.h; sourceTree = "<group>"; };
+		BDD080E6333F111C0A183E5E /* FscChatClass.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscChatClass.pb.m; sourceTree = "<group>"; };
 		BDD080F5996F1232477101F1 /* FSCClassRecorder+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCClassRecorder+CoreDataProperties.m"; sourceTree = "<group>"; };
 		BDD080F8E3E47482F3B4CF91 /* FSCPublicRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCPublicRecorder.h; sourceTree = "<group>"; };
+		BDD080F956C0D8609612B813 /* emoji_20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_20.png; sourceTree = "<group>"; };
+		BDD0810EE5D574F136FACB77 /* FscActivity.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscActivity.pb.m; sourceTree = "<group>"; };
 		BDD081146E0AEC6EE89D8A45 /* FSCPublicRecorder+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCPublicRecorder+CoreDataProperties.m"; sourceTree = "<group>"; };
+		BDD0811713D3F8C35C8919E3 /* emoji_210.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_210.png; sourceTree = "<group>"; };
 		BDD081234B23A18BCBB134BB /* LcFscChatPublicRecorderListCmd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LcFscChatPublicRecorderListCmd.m; sourceTree = "<group>"; };
 		BDD08126E8395354DDC0D11B /* ALcCmd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALcCmd.m; sourceTree = "<group>"; };
-		BDD0812E528020F823DD7F0B /* FscMsg.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscMsg.pb.m; sourceTree = "<group>"; };
 		BDD081304624227E0885D16E /* ContactsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsCell.m; sourceTree = "<group>"; };
+		BDD081344023430969779B7C /* emoji_51.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_51.png; sourceTree = "<group>"; };
 		BDD081344832DC3E1F8A9516 /* ChatTipCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatTipCell.xib; sourceTree = "<group>"; };
 		BDD0814E60F1586DE380F22A /* FSCPublicUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCPublicUser.h; sourceTree = "<group>"; };
 		BDD0815528E9F3517838D4DD /* FSCUserSession+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FSCUserSession+CoreDataProperties.h"; sourceTree = "<group>"; };
 		BDD081586306E96F84E3E2FF /* ChatTipCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatTipCell.h; sourceTree = "<group>"; };
-		BDD0815B82091B02615C44F6 /* FscAnswer.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscAnswer.pb.h; sourceTree = "<group>"; };
 		BDD0815E8F0F86EFBDFE6B87 /* FSCUserRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCUserRecorder.h; sourceTree = "<group>"; };
-		BDD081603F8304A25D0839F0 /* FscError.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscError.pb.h; sourceTree = "<group>"; };
 		BDD08165F0AA75B9C21B77FE /* FSCImageAssembled.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCImageAssembled.m; sourceTree = "<group>"; };
 		BDD08167DA2FA85777A75E10 /* FSCSnsPraise+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FSCSnsPraise+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BDD0816EA9138D643FD49D4E /* emoji_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_10.png; sourceTree = "<group>"; };
 		BDD0817AAADA4391E5ACF356 /* FSCVote+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FSCVote+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BDD0817AEFCB83A3970B7CF3 /* emoji_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_57.png; sourceTree = "<group>"; };
+		BDD081817272F3D4E996FA64 /* emoji_220.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_220.png; sourceTree = "<group>"; };
 		BDD081821741E297F7E605A1 /* FscChatRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscChatRecorder.m; sourceTree = "<group>"; };
 		BDD081829FF6C65BABBB2A7A /* LcFscChatGroupUserListCmd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LcFscChatGroupUserListCmd.m; sourceTree = "<group>"; };
+		BDD0818D08DDCB86EBC86CCB /* emoji.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.conf; name = emoji.txt; path = Images/emoji/emoji.txt; sourceTree = "<group>"; };
 		BDD0819404B69AEE986209EE /* FscColorDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscColorDefine.h; sourceTree = "<group>"; };
-		BDD08196022D6705AFA485B9 /* FscUser.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscUser.pb.h; sourceTree = "<group>"; };
+		BDD0819554F3B4E3E7E36137 /* FscScore.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscScore.pb.m; sourceTree = "<group>"; };
 		BDD0819A442C525B317D6120 /* FSCSnsComment+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCSnsComment+CoreDataProperties.m"; sourceTree = "<group>"; };
+		BDD0819E9E984BC102251930 /* FscScore.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscScore.pb.h; sourceTree = "<group>"; };
 		BDD0819EFAB1A112FBD39CBE /* RsFscPublicUserListCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RsFscPublicUserListCmd.h; sourceTree = "<group>"; };
+		BDD081A306753B5F2C33531B /* FaceBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceBtn.h; sourceTree = "<group>"; };
+		BDD081B1B704A76842F4F989 /* FacialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacialView.m; sourceTree = "<group>"; };
 		BDD081C5B8F9FFCEA18C09E6 /* FSCGroupRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCGroupRecorder.m; sourceTree = "<group>"; };
 		BDD081CEEDDB3E08BCF92941 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		BDD081CF5F9574F27F1F430B /* PublicChatHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicChatHandler.m; sourceTree = "<group>"; };
+		BDD081D3FF65035253861633 /* FscClass.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscClass.pb.h; sourceTree = "<group>"; };
 		BDD081DEE6D2220FA0883C63 /* LcFscSessionListCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LcFscSessionListCmd.h; sourceTree = "<group>"; };
 		BDD081EA6D2B82E87A05415B /* FSCUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCUser.m; sourceTree = "<group>"; };
-		BDD081F8825159D78AD64617 /* FscFuncStat.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscFuncStat.pb.h; sourceTree = "<group>"; };
-		BDD0820DDB13CA25ECB4384C /* CmdSign.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CmdSign.pb.m; sourceTree = "<group>"; };
+		BDD081F053E5C1F82C86A07A /* emoji_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_24.png; sourceTree = "<group>"; };
+		BDD081F6713D39103071710F /* emoji_198.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_198.png; sourceTree = "<group>"; };
+		BDD081FC0DAB3799E5F298F3 /* FscClass.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscClass.pb.m; sourceTree = "<group>"; };
 		BDD0821A58352CDCD084AF9F /* FSCGroupRecorder+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCGroupRecorder+CoreDataProperties.m"; sourceTree = "<group>"; };
+		BDD082200C0479317555731B /* emoji_61.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_61.png; sourceTree = "<group>"; };
 		BDD082237CB21C0FC7B28823 /* FSCTrgSession+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCTrgSession+CoreDataProperties.m"; sourceTree = "<group>"; };
 		BDD08228973F6268E397BA96 /* FSCPublicMenu+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCPublicMenu+CoreDataProperties.m"; sourceTree = "<group>"; };
+		BDD082289E3D4F9FF653E321 /* emoji_214.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_214.png; sourceTree = "<group>"; };
 		BDD0823B7A6AB854062A4F36 /* FSCClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCClass.m; sourceTree = "<group>"; };
-		BDD082539924ED027D5AFEAB /* FscError.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscError.pb.m; sourceTree = "<group>"; };
-		BDD08260FBB682516B8278B3 /* FscTeacher.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscTeacher.pb.h; sourceTree = "<group>"; };
+		BDD0823CA4753994674E4489 /* emoji_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_8.png; sourceTree = "<group>"; };
+		BDD0823F42C2119F9C343757 /* FscSessionList.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscSessionList.pb.m; sourceTree = "<group>"; };
+		BDD08267378729AC85E50780 /* emoji_70.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_70.png; sourceTree = "<group>"; };
+		BDD08268E6C0E88D6AD51052 /* emoji_26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_26.png; sourceTree = "<group>"; };
+		BDD0827CC92F4429E785C0C2 /* FscChatUser.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscChatUser.pb.h; sourceTree = "<group>"; };
 		BDD08287D2DE9AC2689780FA /* LcFscUserGetCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LcFscUserGetCmd.h; sourceTree = "<group>"; };
+		BDD0828E104EAF4AC3F92217 /* FaceBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceBtn.m; sourceTree = "<group>"; };
 		BDD082AB4D4244132C003A26 /* FSCImageAssembled.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCImageAssembled.h; sourceTree = "<group>"; };
 		BDD082B34D1294DA1EA13842 /* IosUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IosUtils.h; sourceTree = "<group>"; };
-		BDD082B44A1A9DB1EBE1800D /* FscAnswer.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscAnswer.pb.m; sourceTree = "<group>"; };
+		BDD082B5E0113211918F35AE /* emoji_54.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_54.png; sourceTree = "<group>"; };
 		BDD082C2250C3EC8C44C23F4 /* LcFscUserGetCmd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LcFscUserGetCmd.m; sourceTree = "<group>"; };
 		BDD082CE2CB162B92B545501 /* FscConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscConstants.h; sourceTree = "<group>"; };
 		BDD082D7C7B891D9B98EDCAE /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
-		BDD082DE4EF280DA4A9CC02B /* FscKnowl.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscKnowl.pb.h; sourceTree = "<group>"; };
+		BDD082F5F4D0F83776945481 /* emoji_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_64.png; sourceTree = "<group>"; };
+		BDD082FB6310454A05F90E53 /* FscChatPublic.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscChatPublic.pb.m; sourceTree = "<group>"; };
 		BDD08301D38BBFCDFAB5F6C7 /* LcFscLinkmanListCmd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LcFscLinkmanListCmd.m; sourceTree = "<group>"; };
 		BDD0831D593122CE9478E41E /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		BDD08325371F76B233AAF9FE /* FSCSnsPraise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCSnsPraise.m; sourceTree = "<group>"; };
-		BDD08329BB682DFB4CEDFC1C /* FscSessionList.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscSessionList.pb.h; sourceTree = "<group>"; };
+		BDD08326A689C98ED5C6916E /* FscSessionList.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscSessionList.pb.h; sourceTree = "<group>"; };
 		BDD0832E2F1EDF99A734FAF1 /* FSCSnsPraise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCSnsPraise.h; sourceTree = "<group>"; };
 		BDD0832F8243A20F3AD34B13 /* FSCPublicRecorder+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FSCPublicRecorder+CoreDataProperties.h"; sourceTree = "<group>"; };
 		BDD08340687B1514B21DF7C9 /* LcFscClassUserListCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LcFscClassUserListCmd.h; sourceTree = "<group>"; };
+		BDD08340BA1812B78F6EAC9E /* UIButton+BackgroundColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+BackgroundColor.h"; sourceTree = "<group>"; };
 		BDD08343A767E982849359F5 /* FSCUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCUser.h; sourceTree = "<group>"; };
-		BDD083471E6EA8D2CFE784B4 /* FscSessionList.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscSessionList.pb.m; sourceTree = "<group>"; };
-		BDD0834E3F880A5F99E09AD5 /* FscFuncStat.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscFuncStat.pb.m; sourceTree = "<group>"; };
-		BDD08363D19FCE4465756F76 /* CmdSign.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CmdSign.pb.h; sourceTree = "<group>"; };
+		BDD0835FE8FE2AE3E8747D0A /* emoji_47.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_47.png; sourceTree = "<group>"; };
 		BDD08366638779C885C445F9 /* FSCCustomUser+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCCustomUser+CoreDataProperties.m"; sourceTree = "<group>"; };
-		BDD0836AEBE4D2777004F00C /* FscSns.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscSns.pb.h; sourceTree = "<group>"; };
 		BDD0836DDB87034E7D7E53C5 /* FSCUserStudent+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FSCUserStudent+CoreDataProperties.h"; sourceTree = "<group>"; };
 		BDD0839C3054CB6ED1B80692 /* AChatHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AChatHandler.h; sourceTree = "<group>"; };
 		BDD083AFDA8DBA56059D7BC6 /* FscMainCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscMainCtrl.m; sourceTree = "<group>"; };
+		BDD083B41D6594AD4DC74144 /* TipLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipLabel.h; sourceTree = "<group>"; };
 		BDD083C6640DA71F0A223228 /* FscSessionCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscSessionCtrl.m; sourceTree = "<group>"; };
+		BDD083D643C3E8652F4A1B54 /* emoji_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_2.png; sourceTree = "<group>"; };
 		BDD083D957DDFF4C0A0A005B /* FSCTeacher+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCTeacher+CoreDataProperties.m"; sourceTree = "<group>"; };
 		BDD083E0AEF1B271C47A481F /* LcFscChatTrgUserListCmd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LcFscChatTrgUserListCmd.m; sourceTree = "<group>"; };
+		BDD083F7EBFE0E4FF92A91B8 /* FscChatGroup.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscChatGroup.pb.h; sourceTree = "<group>"; };
 		BDD083FEB836AB8E33AD235E /* ChatCell+Left.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ChatCell+Left.m"; sourceTree = "<group>"; };
 		BDD08404F52C192AE8DA7E3E /* FSCClass+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCClass+CoreDataProperties.m"; sourceTree = "<group>"; };
+		BDD0840818F48BADD1CFF4E2 /* emoji_49.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_49.png; sourceTree = "<group>"; };
 		BDD08415364B213FD261105C /* FSCTrgUser+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCTrgUser+CoreDataProperties.m"; sourceTree = "<group>"; };
-		BDD084292F34B76DF356C0E1 /* FscSession.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscSession.pb.m; sourceTree = "<group>"; };
+		BDD0843778C20FE47BAB17AA /* emoji_197.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_197.png; sourceTree = "<group>"; };
+		BDD0843965A65A6C5FDBE243 /* Login.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Login.pb.m; sourceTree = "<group>"; };
 		BDD0843E240435CBAD6D5D7A /* LcFscClassStudentListCmd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LcFscClassStudentListCmd.m; sourceTree = "<group>"; };
 		BDD084455AA6AACE5AA5D9E9 /* FSCSubPubUnreadRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCSubPubUnreadRecorder.h; sourceTree = "<group>"; };
 		BDD08459AF0CF8F94DAC1CAE /* FSCTeachPlan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCTeachPlan.m; sourceTree = "<group>"; };
 		BDD08466085EC9E8FE93277D /* UserChatHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserChatHandler.h; sourceTree = "<group>"; };
+		BDD0847609D9C79A56926E33 /* FscLinkman.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscLinkman.pb.m; sourceTree = "<group>"; };
 		BDD0847A2CA16B25AEED89AE /* FscSocketClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscSocketClient.m; sourceTree = "<group>"; };
+		BDD0847A7DD674F7FCDF1705 /* emoji_215.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_215.png; sourceTree = "<group>"; };
 		BDD0847EAF4A9A7E40244EF5 /* FSCTrgRecorder+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FSCTrgRecorder+CoreDataProperties.h"; sourceTree = "<group>"; };
 		BDD084818B7CCD1B7F3F5D02 /* FSCPublicRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCPublicRecorder.m; sourceTree = "<group>"; };
+		BDD0848605095650EAEF1C6A /* TipLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipLabel.m; sourceTree = "<group>"; };
 		BDD0848C1E250C9549579801 /* RsFscLinkmanListCmd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RsFscLinkmanListCmd.m; sourceTree = "<group>"; };
 		BDD084A0D9B5C218FF793B83 /* FSCCustomUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCCustomUser.m; sourceTree = "<group>"; };
 		BDD084A0F704C7F31BDAB1A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		BDD084A53E790C6B8CF18AE1 /* FSCGroupRecorder+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FSCGroupRecorder+CoreDataProperties.h"; sourceTree = "<group>"; };
 		BDD084B2102CDA4903ACE892 /* LcFscChatClassRecorderListCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LcFscChatClassRecorderListCmd.h; sourceTree = "<group>"; };
 		BDD084B41E9A965707E2BA94 /* FSCTrgSession+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FSCTrgSession+CoreDataProperties.h"; sourceTree = "<group>"; };
-		BDD084CB433FC1B1035E51BC /* FscTeacher.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscTeacher.pb.m; sourceTree = "<group>"; };
+		BDD084BD96A1F683AFB5E88F /* emoji_183.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_183.png; sourceTree = "<group>"; };
 		BDD084CB447F69A17C6212C6 /* ChatCell+Img.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ChatCell+Img.h"; sourceTree = "<group>"; };
+		BDD084D597E4E87B874C5DC0 /* FscSession.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscSession.pb.h; sourceTree = "<group>"; };
+		BDD084E2D5F1120FC9C188C6 /* FscTestMsg.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscTestMsg.pb.m; sourceTree = "<group>"; };
+		BDD084E2F9995FFBDD57B835 /* FscFuncStat.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscFuncStat.pb.m; sourceTree = "<group>"; };
 		BDD084E4C538736472E487CE /* FSCSnsMsg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCSnsMsg.m; sourceTree = "<group>"; };
 		BDD084E569C2B5670E653E58 /* FSCActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCActivity.m; sourceTree = "<group>"; };
 		BDD084E787A930E45140D083 /* FSCSnsComment+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FSCSnsComment+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BDD084E84E9CBD477793486D /* emoji_63.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_63.png; sourceTree = "<group>"; };
+		BDD084E97C2EDD011957ADF7 /* emoji_46.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_46.png; sourceTree = "<group>"; };
 		BDD084EB7764DAF524E085DA /* PbTransfer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PbTransfer.h; sourceTree = "<group>"; };
+		BDD08502E2538B0A4F7CC91F /* FscExam.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscExam.pb.m; sourceTree = "<group>"; };
 		BDD085066E4324EDE9837885 /* UITabBarItem+CustomBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarItem+CustomBadge.h"; sourceTree = "<group>"; };
 		BDD08514DF294BD2D150223B /* FSCLinkman+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCLinkman+CoreDataProperties.m"; sourceTree = "<group>"; };
 		BDD08518172DC937BA2EC16F /* FSCUserRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCUserRecorder.m; sourceTree = "<group>"; };
 		BDD08519C7E4DEFA549EA860 /* FscAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscAppDelegate.h; sourceTree = "<group>"; };
+		BDD0851BA7CBB85E37962310 /* emoji_62.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_62.png; sourceTree = "<group>"; };
 		BDD0851F68A05448B02E1FD8 /* FSCGroupUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCGroupUser.h; sourceTree = "<group>"; };
 		BDD08520C565A0B84A41886B /* FscSessionCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscSessionCtrl.h; sourceTree = "<group>"; };
 		BDD08522C612352714E8106A /* FSCPublicSession+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FSCPublicSession+CoreDataProperties.h"; sourceTree = "<group>"; };
 		BDD0852DE03F3544C2C5E008 /* FSCApply.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCApply.h; sourceTree = "<group>"; };
+		BDD08536F07FAB23C8A8355E /* emoji_199.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_199.png; sourceTree = "<group>"; };
 		BDD0854A9F8421991872B1D6 /* FSCTrgRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCTrgRecorder.m; sourceTree = "<group>"; };
 		BDD0855773B1B127F4ED575E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
-		BDD085684DB3F443807809B0 /* FscChatPublic.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscChatPublic.pb.h; sourceTree = "<group>"; };
+		BDD0856DBD1AD1156527842E /* CmdSign.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CmdSign.pb.m; sourceTree = "<group>"; };
+		BDD0856F995D79525B741D5E /* emoji_219.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_219.png; sourceTree = "<group>"; };
 		BDD08577A300560B1564E46D /* TintUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TintUtils.m; sourceTree = "<group>"; };
+		BDD0858C46092F7F9BFDEBE0 /* emoji_208.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_208.png; sourceTree = "<group>"; };
+		BDD085928796AEC602866304 /* emoji_211.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_211.png; sourceTree = "<group>"; };
 		BDD085A0EF334779518C6C0C /* BbiUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BbiUtils.m; sourceTree = "<group>"; };
 		BDD085A1ABF3D102FB704430 /* ChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatCell.m; sourceTree = "<group>"; };
+		BDD085A488B6B20EF64E9DB6 /* UIButton+BackgroundColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+BackgroundColor.m"; sourceTree = "<group>"; };
+		BDD085A6A1F18CAD5E82D35C /* emoji_11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_11.png; sourceTree = "<group>"; };
 		BDD085AB3BAD2C8A0943B76C /* LcFscClassListCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LcFscClassListCmd.h; sourceTree = "<group>"; };
+		BDD085B0643F142089D7B2F5 /* FscQues.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscQues.pb.h; sourceTree = "<group>"; };
+		BDD085B1EAA1FF52F85B19F1 /* emoji_67.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_67.png; sourceTree = "<group>"; };
+		BDD085B8D54B1BCCBBF5D4DC /* emoji_60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_60.png; sourceTree = "<group>"; };
+		BDD085C12C2B34EE6B28CE77 /* emoji_35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_35.png; sourceTree = "<group>"; };
 		BDD085C89CAA154C4F27C286 /* ChatTipCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatTipCell.m; sourceTree = "<group>"; };
+		BDD085D5899E3D7F5F1624B6 /* FscVote.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscVote.pb.h; sourceTree = "<group>"; };
+		BDD085D7FAD6E7672A6277D7 /* emoji_45.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_45.png; sourceTree = "<group>"; };
+		BDD085D95BB8E3A83CADD8B9 /* emoji_38.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_38.png; sourceTree = "<group>"; };
 		BDD085E4760AD39E15CF263D /* FSCPublicSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCPublicSession.h; sourceTree = "<group>"; };
 		BDD085F5B18BC5B9711C7A45 /* FSCUserStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCUserStudent.h; sourceTree = "<group>"; };
 		BDD085F99754D6C0B50DE0D3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		BDD086037E2841C98183085A /* TintUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TintUtils.h; sourceTree = "<group>"; };
-		BDD08605631A10D0CBFFE910 /* FscKnowl.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscKnowl.pb.m; sourceTree = "<group>"; };
+		BDD0861CA42C8DBA053456EE /* FscTeacher.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscTeacher.pb.h; sourceTree = "<group>"; };
+		BDD0861E6888BA7C1383069B /* emoji_22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_22.png; sourceTree = "<group>"; };
+		BDD086288FCD12B69C5A7D10 /* emoji_30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_30.png; sourceTree = "<group>"; };
 		BDD08639102A5F3BF948B884 /* LcFscChatTrgRecorderListCmd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LcFscChatTrgRecorderListCmd.m; sourceTree = "<group>"; };
-		BDD0863F915DEA9607D569DD /* FscTestMsg.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscTestMsg.pb.m; sourceTree = "<group>"; };
-		BDD0863FB0964232BD07763C /* Login.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Login.pb.m; sourceTree = "<group>"; };
+		BDD0863E3D9181B53C306367 /* emoji_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_7.png; sourceTree = "<group>"; };
 		BDD08642B04E485CA35D08D8 /* FSCSchool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCSchool.m; sourceTree = "<group>"; };
-		BDD086441D95404553C830B1 /* FscChatClass.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscChatClass.pb.h; sourceTree = "<group>"; };
+		BDD08643806983A982FD23F8 /* emoji_68.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_68.png; sourceTree = "<group>"; };
 		BDD08646FED60214C7968381 /* FSCSession+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FSCSession+CoreDataProperties.h"; sourceTree = "<group>"; };
 		BDD086474078E0FC3D48F5CC /* LcFscChatPublicRecorderListCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LcFscChatPublicRecorderListCmd.h; sourceTree = "<group>"; };
-		BDD0864A8F6E7FF04A973CFC /* FscDiskFile.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscDiskFile.pb.h; sourceTree = "<group>"; };
 		BDD0864CDA20A7610F2EB0E9 /* ChineseToPinyin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseToPinyin.h; sourceTree = "<group>"; };
+		BDD0865ED013A492D8A7BF69 /* emoji_16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_16.png; sourceTree = "<group>"; };
 		BDD08661E50279949BA20C9E /* FSCUnreadRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCUnreadRecorder.m; sourceTree = "<group>"; };
+		BDD0867971CFFF20728EACEE /* emoji_25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_25.png; sourceTree = "<group>"; };
 		BDD0867E36B3E5B2A2891117 /* FSCLinkman.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCLinkman.h; sourceTree = "<group>"; };
+		BDD08684A3A86FF080DFB520 /* emoji_58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_58.png; sourceTree = "<group>"; };
 		BDD08684BF8679799DACF705 /* PublicChatHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicChatHandler.h; sourceTree = "<group>"; };
 		BDD08687D751B43C8A5CF6B4 /* FscMainCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscMainCtrl.h; sourceTree = "<group>"; };
+		BDD0868E905DCA683BE3DB7D /* FscTimetable.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscTimetable.pb.m; sourceTree = "<group>"; };
 		BDD08695E8E4AA94DF02B9ED /* ChatFileModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatFileModel.h; sourceTree = "<group>"; };
 		BDD08696B1F79B0DD26FDAFB /* Scheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scheduler.h; sourceTree = "<group>"; };
 		BDD0869E592C62E0E3A47A6A /* FSCClassStudent+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCClassStudent+CoreDataProperties.m"; sourceTree = "<group>"; };
+		BDD0869E9B14D1C562DD7807 /* FscDiskFile.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscDiskFile.pb.h; sourceTree = "<group>"; };
 		BDD086A7688F7B4BDCFA5DBE /* FSCSnsPraise+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCSnsPraise+CoreDataProperties.m"; sourceTree = "<group>"; };
+		BDD086A97F2BFA628E55FD95 /* FscAnswer.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscAnswer.pb.h; sourceTree = "<group>"; };
 		BDD086AB285A1445B754930A /* FSCClassSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCClassSession.h; sourceTree = "<group>"; };
+		BDD086BDF8AD5FD478F86E0F /* emoji_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_5.png; sourceTree = "<group>"; };
+		BDD086CF96B54426B695C808 /* emoji_31.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_31.png; sourceTree = "<group>"; };
 		BDD086D519DD61C93BC44B2C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		BDD086DE5E87D155CF8226EB /* FscChatPublic.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscChatPublic.pb.m; sourceTree = "<group>"; };
-		BDD0871BF44A654ADA69835E /* FscClassUser.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscClassUser.pb.m; sourceTree = "<group>"; };
+		BDD086F0F82FCA93472685D5 /* FSCChatLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCChatLabel.h; sourceTree = "<group>"; };
+		BDD086FF0639661CE969206F /* emoji_202.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_202.png; sourceTree = "<group>"; };
+		BDD0870069E8AEB1D0D7A6AE /* emoji_14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_14.png; sourceTree = "<group>"; };
+		BDD08719A309A39DD7AE1BE4 /* emoji_69.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_69.png; sourceTree = "<group>"; };
+		BDD0871DC06F00D5A7666417 /* emoji_217.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_217.png; sourceTree = "<group>"; };
 		BDD0871E8D4DAE93FE4BFF85 /* fsc_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fsc_iosTests.m; sourceTree = "<group>"; };
+		BDD08732E07D1404E6807753 /* FscChatPublic.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscChatPublic.pb.h; sourceTree = "<group>"; };
+		BDD0873AFC152716972D3AB3 /* emoji_193.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_193.png; sourceTree = "<group>"; };
 		BDD0874636F01A36030FC925 /* FSCPublicSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCPublicSession.m; sourceTree = "<group>"; };
 		BDD08746E9C5FCD54715076D /* RsFscSessionListCmd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RsFscSessionListCmd.m; sourceTree = "<group>"; };
-		BDD08747944B86218E99C242 /* User.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.pb.m; sourceTree = "<group>"; };
-		BDD0874C9ABADDCAB9882554 /* PhoneInfo.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneInfo.pb.h; sourceTree = "<group>"; };
+		BDD0874DFDBC236D94F5A6C2 /* FscClassUser.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscClassUser.pb.h; sourceTree = "<group>"; };
 		BDD0874EBE2CB91D59C2EBF0 /* FSCData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FSCData.xcdatamodel; sourceTree = "<group>"; };
-		BDD087598508A99DD1597BDF /* FscExam.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscExam.pb.h; sourceTree = "<group>"; };
 		BDD08762C7E8B28B58127621 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		BDD087630946858E3A550D69 /* FSCClassSession+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FSCClassSession+CoreDataProperties.h"; sourceTree = "<group>"; };
 		BDD087676E6586B8BC484F53 /* FSCTrgRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCTrgRecorder.h; sourceTree = "<group>"; };
+		BDD0877E42526E54E3B05290 /* emoji_192.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_192.png; sourceTree = "<group>"; };
+		BDD0877F715D5FE08B3963BA /* FscFuncStat.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscFuncStat.pb.h; sourceTree = "<group>"; };
 		BDD0878145EFAD940B8C5341 /* FSCUnreadRecorder+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCUnreadRecorder+CoreDataProperties.m"; sourceTree = "<group>"; };
-		BDD0878196BDAE8F0CEACC26 /* FscUser.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscUser.pb.m; sourceTree = "<group>"; };
 		BDD08782B68BC76348BF1B14 /* FSCClassUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCClassUser.h; sourceTree = "<group>"; };
 		BDD0878C29F4638079CF867F /* BbiUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BbiUtils.h; sourceTree = "<group>"; };
 		BDD08796865754985670AB5F /* RsFscTeacherListCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RsFscTeacherListCmd.h; sourceTree = "<group>"; };
+		BDD08798F9D8FEC67D61B8AD /* FscSns.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscSns.pb.m; sourceTree = "<group>"; };
 		BDD087A2E4100306C07800D0 /* FSCPublicMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCPublicMenu.m; sourceTree = "<group>"; };
-		BDD087E4459D8F3CDDB4D64B /* FscClass.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscClass.pb.m; sourceTree = "<group>"; };
+		BDD087A996F740FABAAFD65A /* emoji_52.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_52.png; sourceTree = "<group>"; };
+		BDD087AF1550A27C72E3C990 /* FscChatClass.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscChatClass.pb.h; sourceTree = "<group>"; };
+		BDD087B2CB73A32E738E99F4 /* emoji_40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_40.png; sourceTree = "<group>"; };
+		BDD087BAEBA77A4B1615A644 /* FscWork.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscWork.pb.h; sourceTree = "<group>"; };
 		BDD087ED1C528AA12666DA96 /* FscDeviceVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscDeviceVersion.h; sourceTree = "<group>"; };
 		BDD087F330F872A2BD8CDD2D /* FscContactsCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscContactsCtrl.m; sourceTree = "<group>"; };
 		BDD08800616CB9F80B473C07 /* FSCClassSession+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCClassSession+CoreDataProperties.m"; sourceTree = "<group>"; };
-		BDD08803FB4F823262649079 /* FscClass.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscClass.pb.h; sourceTree = "<group>"; };
-		BDD08806F3727E03A94D7890 /* FscChatGroup.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscChatGroup.pb.m; sourceTree = "<group>"; };
 		BDD08812DFEB9E9B3DA6EEB4 /* RsSessionPostCmd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RsSessionPostCmd.m; sourceTree = "<group>"; };
 		BDD088150DF18AF96634AB78 /* FSCClassRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCClassRecorder.h; sourceTree = "<group>"; };
+		BDD08817F778A8DB7ADA2590 /* EmojiBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmojiBtn.h; sourceTree = "<group>"; };
+		BDD0881E571A6BA8150D041D /* PhoneInfo.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneInfo.pb.h; sourceTree = "<group>"; };
 		BDD088201B5939B53352C508 /* FSCGroupUser+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FSCGroupUser+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BDD08823FB64828865F9745F /* emoji_187.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_187.png; sourceTree = "<group>"; };
 		BDD088269321FDF6C02934BF /* FSCPublicSession+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCPublicSession+CoreDataProperties.m"; sourceTree = "<group>"; };
 		BDD0882F4DAA93FE6D978302 /* RsFscPublicUserListCmd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RsFscPublicUserListCmd.m; sourceTree = "<group>"; };
+		BDD088313C3A0DBEBD020601 /* emoji_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_6.png; sourceTree = "<group>"; };
+		BDD08831C845EBF4DB975FCD /* FscChatGroup.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscChatGroup.pb.m; sourceTree = "<group>"; };
 		BDD08834BE9C1F90C1044F26 /* FSCUnreadRecorder+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FSCUnreadRecorder+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BDD08836F84DE127C088C31A /* emoji_27.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_27.png; sourceTree = "<group>"; };
 		BDD0883AFA0D56CD8CE35D0A /* FSCVote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCVote.m; sourceTree = "<group>"; };
 		BDD08842AAC2AE2DFE133800 /* FSCUserStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCUserStudent.m; sourceTree = "<group>"; };
+		BDD0884655E259DF84975C70 /* emoji_200.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_200.png; sourceTree = "<group>"; };
 		BDD088487C591C4B24E21880 /* LcFscChatTrgRecorderListCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LcFscChatTrgRecorderListCmd.h; sourceTree = "<group>"; };
-		BDD0885193E79DD9A0FCC094 /* FscVote.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscVote.pb.h; sourceTree = "<group>"; };
-		BDD08867E3A45897A22E7EA9 /* FscNotice.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscNotice.pb.h; sourceTree = "<group>"; };
+		BDD0884B56F1F5CAF61665C0 /* emoji_195.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_195.png; sourceTree = "<group>"; };
+		BDD0885182130908A95A94D9 /* FscActivity.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscActivity.pb.h; sourceTree = "<group>"; };
+		BDD0886553E76204664C82EE /* FscMsg.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscMsg.pb.m; sourceTree = "<group>"; };
+		BDD0886ED4649BCB7216D990 /* emoji_190.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_190.png; sourceTree = "<group>"; };
+		BDD0886F7FEAE14EF24E8846 /* emoji_56.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_56.png; sourceTree = "<group>"; };
 		BDD0887165C91842ED382B25 /* FSCSnsMsg+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FSCSnsMsg+CoreDataProperties.h"; sourceTree = "<group>"; };
 		BDD088984DF38EB642D56E29 /* FSCGroupSession+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FSCGroupSession+CoreDataProperties.h"; sourceTree = "<group>"; };
 		BDD0889B7A018452E9234EC6 /* LcFscChatGroupUserListCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LcFscChatGroupUserListCmd.h; sourceTree = "<group>"; };
 		BDD0889F8379426A042F60AA /* FSCUser+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCUser+CoreDataProperties.m"; sourceTree = "<group>"; };
 		BDD088A079745B63F99834E4 /* FSCUserSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCUserSession.m; sourceTree = "<group>"; };
+		BDD088A21FED45659E12E775 /* emoji_222.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_222.png; sourceTree = "<group>"; };
+		BDD088A6B016EDE39CB5F313 /* FscTeachPlan.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscTeachPlan.pb.m; sourceTree = "<group>"; };
+		BDD088C46855A49101DBF0CE /* emoji_203.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_203.png; sourceTree = "<group>"; };
 		BDD088CF1631B5363C603182 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		BDD088DEF0E368A0DB142549 /* DataCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataCache.m; sourceTree = "<group>"; };
+		BDD088E0AC0B3D87E7F3D602 /* FscWork.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscWork.pb.m; sourceTree = "<group>"; };
+		BDD088ED27403E50F51DBC9F /* FscSns.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscSns.pb.h; sourceTree = "<group>"; };
 		BDD088F450E666A61C37566D /* FscChatCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscChatCtrl.m; sourceTree = "<group>"; };
 		BDD088FC18CDAE1449F0E95C /* LcFscTeacherListCmd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LcFscTeacherListCmd.m; sourceTree = "<group>"; };
 		BDD08900A92C4DDD25AB499B /* LcFscChatTrgUserListCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LcFscChatTrgUserListCmd.h; sourceTree = "<group>"; };
+		BDD0890612485828069095D3 /* FscBbi.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscBbi.pb.h; sourceTree = "<group>"; };
 		BDD08907A7D01DA215AA48BA /* CmdCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CmdCode.h; sourceTree = "<group>"; };
 		BDD0890BF912753A345094C6 /* ChatFileModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatFileModel.m; sourceTree = "<group>"; };
+		BDD0891CE2A330C0E014B292 /* emoji_43.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_43.png; sourceTree = "<group>"; };
 		BDD089263F943797498F15DA /* FSCPublicMenu+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FSCPublicMenu+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BDD089289A70736F6284B5AC /* FscLinkman.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscLinkman.pb.h; sourceTree = "<group>"; };
 		BDD0892FAB357892C74F0F7F /* FSCVote+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCVote+CoreDataProperties.m"; sourceTree = "<group>"; };
+		BDD08930C53CA97B1F6B3952 /* emoji_216.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_216.png; sourceTree = "<group>"; };
+		BDD0893256E924C7D436BE04 /* FscTeachNode.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscTeachNode.pb.m; sourceTree = "<group>"; };
 		BDD089326C13D3C86DA6343A /* ClassChatHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassChatHandler.h; sourceTree = "<group>"; };
-		BDD0893C68F716AC2CAFEAAB /* FSCChatLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCChatLabel.h; sourceTree = "<group>"; };
-		BDD0894554C4C15C4952000B /* FscQues.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscQues.pb.h; sourceTree = "<group>"; };
+		BDD0893B4D5E9CCF2567AEB4 /* emoji_18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_18.png; sourceTree = "<group>"; };
 		BDD08945C20CD366D8FD29D3 /* LcFscChatClassRecorderListCmd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LcFscChatClassRecorderListCmd.m; sourceTree = "<group>"; };
 		BDD089567F5E35AE665E6445 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BDD0895910AFFF1912DAADDD /* FSCClass+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FSCClass+CoreDataProperties.h"; sourceTree = "<group>"; };
 		BDD0895D8EB8B4FA646D2C2E /* ChatCell+Img.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ChatCell+Img.m"; sourceTree = "<group>"; };
-		BDD08970D9FAEA8CCD36E472 /* FscScore.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscScore.pb.m; sourceTree = "<group>"; };
 		BDD08974FF6598460CA0C1BA /* FSCNotice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCNotice.m; sourceTree = "<group>"; };
-		BDD08989005699CB34EFEB84 /* FscBbi.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscBbi.pb.h; sourceTree = "<group>"; };
+		BDD0897FB21F797905A12131 /* emoji_185.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_185.png; sourceTree = "<group>"; };
+		BDD08986342127CD0F27218B /* emoji_23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_23.png; sourceTree = "<group>"; };
 		BDD0898F9E82413FD2249A04 /* PbTransfer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PbTransfer.m; sourceTree = "<group>"; };
+		BDD089977802C374DC7CA49B /* FscTestMsg.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscTestMsg.pb.h; sourceTree = "<group>"; };
 		BDD0899DA313D49FC9861858 /* LcFscClassListCmd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LcFscClassListCmd.m; sourceTree = "<group>"; };
+		BDD089A4998ECC3774A5AE8C /* FacialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacialView.h; sourceTree = "<group>"; };
 		BDD089BA243CD6B10E28C59E /* FSCTrgSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCTrgSession.h; sourceTree = "<group>"; };
 		BDD089BD68B806A52BAA9159 /* LcFscChatUserSessionListCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LcFscChatUserSessionListCmd.h; sourceTree = "<group>"; };
+		BDD089BEA630C1856755A175 /* FSCChatLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCChatLabel.m; sourceTree = "<group>"; };
 		BDD089C1A480B60E88A63BFB /* FSCCustomUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCCustomUser.h; sourceTree = "<group>"; };
 		BDD089C31451EB25DB3A925E /* FSCSnsMsg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCSnsMsg.h; sourceTree = "<group>"; };
 		BDD089C3957C12C275F4EA7F /* FSCSnsMsg+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCSnsMsg+CoreDataProperties.m"; sourceTree = "<group>"; };
-		BDD089C492F4A9A84B65E1E4 /* FscTeachPlan.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscTeachPlan.pb.h; sourceTree = "<group>"; };
 		BDD089C6790288F6B031BAFB /* FSCClassUser+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FSCClassUser+CoreDataProperties.h"; sourceTree = "<group>"; };
-		BDD089CF0EB036688A4AC922 /* FscChatGroup.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscChatGroup.pb.h; sourceTree = "<group>"; };
+		BDD089D1953EB1FE1F0BCD6E /* emoji_71.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_71.png; sourceTree = "<group>"; };
 		BDD089D1AF50CF22D1D60262 /* FSCTrgUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCTrgUser.h; sourceTree = "<group>"; };
+		BDD089D635E705F036ADF5E2 /* emoji_66.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_66.png; sourceTree = "<group>"; };
 		BDD089D9DF987ADE74086148 /* LcFscChatGroupRecorderListCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LcFscChatGroupRecorderListCmd.h; sourceTree = "<group>"; };
 		BDD089E6528B7DD58DABC1A9 /* LcFscSessionListCmd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LcFscSessionListCmd.m; sourceTree = "<group>"; };
-		BDD08A0A9C885134AE73B0AB /* TipLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipLabel.h; sourceTree = "<group>"; };
+		BDD089F20BC61EF588A0FB0C /* emoji_37.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_37.png; sourceTree = "<group>"; };
 		BDD08A1BEBF45C35783D508C /* FSCTeachNode+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCTeachNode+CoreDataProperties.m"; sourceTree = "<group>"; };
 		BDD08A1E5355A38B8C1181D7 /* TrgChatHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrgChatHandler.h; sourceTree = "<group>"; };
-		BDD08A1FC214A004C96E1A0A /* FscNotice.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscNotice.pb.m; sourceTree = "<group>"; };
 		BDD08A2BC83460C3299A9EED /* LcUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LcUtils.h; sourceTree = "<group>"; };
 		BDD08A2DFFA25B2C881E55AB /* LcFscChatUserRecorderListCmd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LcFscChatUserRecorderListCmd.m; sourceTree = "<group>"; };
 		BDD08A32B81A24AD20E9D681 /* FSCNotice+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCNotice+CoreDataProperties.m"; sourceTree = "<group>"; };
 		BDD08A39C2EA9AFAF9459F34 /* FSCActivity+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCActivity+CoreDataProperties.m"; sourceTree = "<group>"; };
+		BDD08A3B8321540B4B6B57EA /* FscTimetable.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscTimetable.pb.h; sourceTree = "<group>"; };
 		BDD08A3BCF43D10DD7C6C289 /* ALcCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALcCmd.h; sourceTree = "<group>"; };
 		BDD08A517070EA999C6605D7 /* FSCSnsComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCSnsComment.m; sourceTree = "<group>"; };
 		BDD08A548699818E3DD9B7D6 /* ARsCmd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARsCmd.m; sourceTree = "<group>"; };
 		BDD08A60D09F51F7A640473D /* FSCGroupRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCGroupRecorder.h; sourceTree = "<group>"; };
 		BDD08A6ABCA47B57F26BC98C /* FscDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscDataManager.h; sourceTree = "<group>"; };
+		BDD08A6BA7E31DA88CDF764C /* emoji_59.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_59.png; sourceTree = "<group>"; };
 		BDD08A73CFE0FF9B85560EC4 /* LcFscClassStudentListCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LcFscClassStudentListCmd.h; sourceTree = "<group>"; };
-		BDD08A741188406329B36A3D /* FscScore.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscScore.pb.h; sourceTree = "<group>"; };
+		BDD08A758B4C2EDAD24BF56C /* emoji_206.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_206.png; sourceTree = "<group>"; };
 		BDD08A80D2D630D0C657493C /* IosUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IosUtils.m; sourceTree = "<group>"; };
+		BDD08A8F0B315DCEA662EC27 /* FscExam.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscExam.pb.h; sourceTree = "<group>"; };
+		BDD08A95D1A0C68F773CA666 /* FscTeachNode.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscTeachNode.pb.h; sourceTree = "<group>"; };
 		BDD08A9DFBFC3D9D3905D8F0 /* FSCGroupSession+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCGroupSession+CoreDataProperties.m"; sourceTree = "<group>"; };
-		BDD08AA16260DBFA0269B4BE /* FscClassUser.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscClassUser.pb.h; sourceTree = "<group>"; };
-		BDD08ADA656F7ADFD1AAED2C /* FscVote.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscVote.pb.m; sourceTree = "<group>"; };
+		BDD08AB56CB01B00C94D01B0 /* face_del_ico_dafeult.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = face_del_ico_dafeult.png; sourceTree = "<group>"; };
+		BDD08AB5F68EF69257017D1D /* emoji_39.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_39.png; sourceTree = "<group>"; };
+		BDD08AC03E3872D911589ED8 /* emoji_224.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_224.png; sourceTree = "<group>"; };
+		BDD08AD5FEB4A812FAFCA9B8 /* emoji_182.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_182.png; sourceTree = "<group>"; };
 		BDD08AE4CFAD2BD38F5AAE0C /* fsc-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fsc-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD08AFCDF41C94D57DE90D5 /* FSCSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCSession.m; sourceTree = "<group>"; };
+		BDD08AFE190B10F517AD1863 /* FscKnowl.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscKnowl.pb.h; sourceTree = "<group>"; };
 		BDD08AFE848B151A56AF0F69 /* UITabBarItem+CustomBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarItem+CustomBadge.m"; sourceTree = "<group>"; };
 		BDD08B09111A3B7DFE8746AC /* FSCTeachPlan+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCTeachPlan+CoreDataProperties.m"; sourceTree = "<group>"; };
 		BDD08B0D5AC0E222317052AF /* TrgChatHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrgChatHandler.m; sourceTree = "<group>"; };
-		BDD08B20582F95F7AE052729 /* FscDiskFile.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscDiskFile.pb.m; sourceTree = "<group>"; };
+		BDD08B19D69CB2E61B2E7AF6 /* FscVote.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscVote.pb.m; sourceTree = "<group>"; };
 		BDD08B29B77CDA41CBBC3300 /* FSCTeachNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCTeachNode.m; sourceTree = "<group>"; };
+		BDD08B3ABF37EF3D51C58855 /* PhoneInfo.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneInfo.pb.m; sourceTree = "<group>"; };
 		BDD08B43F1D2EF5DD3974626 /* FSCTeachNode+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FSCTeachNode+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BDD08B46A1897F5CCE212A4F /* FscChatTrg.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscChatTrg.pb.h; sourceTree = "<group>"; };
 		BDD08B49B7B1A4791349FF07 /* FscSocketClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscSocketClient.h; sourceTree = "<group>"; };
 		BDD08B4C5F564888EA6A0A59 /* MsgCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgCode.h; sourceTree = "<group>"; };
 		BDD08B5C6693CFF87F6D86F9 /* Scheduler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scheduler.m; sourceTree = "<group>"; };
 		BDD08B5F3C436027F62F7296 /* ClassChatHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassChatHandler.m; sourceTree = "<group>"; };
+		BDD08B5F6B4924629E06CD68 /* FscAnswer.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscAnswer.pb.m; sourceTree = "<group>"; };
+		BDD08B63CCE55BA162E7F651 /* emoji_194.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_194.png; sourceTree = "<group>"; };
 		BDD08B6BAD0F691768D6B268 /* fsc-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fsc-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD08B873CE2EDD1715ECBB4 /* FSCClassChatUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCClassChatUser.m; sourceTree = "<group>"; };
 		BDD08B911D366CCE671CFD1D /* LcFscLinkmanListCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LcFscLinkmanListCmd.h; sourceTree = "<group>"; };
 		BDD08B91A902CFA669A4E510 /* FSCClassSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCClassSession.m; sourceTree = "<group>"; };
+		BDD08B92B6D4DDC3E5B7DE84 /* FscSession.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscSession.pb.m; sourceTree = "<group>"; };
+		BDD08B9E71E5CFEC8F80EC25 /* emoji_221.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_221.png; sourceTree = "<group>"; };
 		BDD08BA043DBDB793D1A87E1 /* FscDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscDataManager.m; sourceTree = "<group>"; };
 		BDD08BA4B33E3843E0183B41 /* LcFscPublicUserListCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LcFscPublicUserListCmd.h; sourceTree = "<group>"; };
-		BDD08BA843F88FE6A1018EDA /* FscExam.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscExam.pb.m; sourceTree = "<group>"; };
 		BDD08BA9DE5AD160CB9387AE /* FSCTeachNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCTeachNode.h; sourceTree = "<group>"; };
 		BDD08BAB3110BDC9FC1D21B5 /* FscContactsCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscContactsCtrl.h; sourceTree = "<group>"; };
 		BDD08BB2298D6A71A6CDB0A7 /* LcFscPublicMenuListCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LcFscPublicMenuListCmd.h; sourceTree = "<group>"; };
@@ -523,102 +746,129 @@
 		BDD08BD3BC9528222BD50F60 /* FSCPublicUser+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCPublicUser+CoreDataProperties.m"; sourceTree = "<group>"; };
 		BDD08BE49884BFFB8653707E /* PCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCmd.h; sourceTree = "<group>"; };
 		BDD08BE6DFAFC28A978E88AC /* FSCPublicUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCPublicUser.m; sourceTree = "<group>"; };
-		BDD08BEFF49B98B7CFD4E9B3 /* FscLinkman.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscLinkman.pb.m; sourceTree = "<group>"; };
+		BDD08BE7AF21AD4B76552E6E /* emoji_184.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_184.png; sourceTree = "<group>"; };
+		BDD08BEC429AFC63B2E68BCD /* emoji_12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_12.png; sourceTree = "<group>"; };
+		BDD08BEE09B7ECD0AEBA0962 /* emoji_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_48.png; sourceTree = "<group>"; };
+		BDD08BF1012F1B396116B70F /* emoji_189.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_189.png; sourceTree = "<group>"; };
 		BDD08BF1A926FE8E2C116D68 /* FSCSnsComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCSnsComment.h; sourceTree = "<group>"; };
-		BDD08BF4490AACF07F91B215 /* FscTimetable.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscTimetable.pb.m; sourceTree = "<group>"; };
+		BDD08BF6DF75F41919DC74EF /* CmdSign.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CmdSign.pb.h; sourceTree = "<group>"; };
 		BDD08BF94C58116A97AD313A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BDD08BF94CE95C0D4E8050FB /* ARsCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARsCmd.h; sourceTree = "<group>"; };
 		BDD08C03418B5102DF989054 /* FSCPublicMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCPublicMenu.h; sourceTree = "<group>"; };
+		BDD08C0ADD758917CBBED8EB /* emoji_179.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_179.png; sourceTree = "<group>"; };
+		BDD08C0E3B89BE929F640757 /* emoji_21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_21.png; sourceTree = "<group>"; };
 		BDD08C10CA28018DE832CAFC /* AChatHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AChatHandler.m; sourceTree = "<group>"; };
 		BDD08C178C6AC92451FB67C1 /* FSCVote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCVote.h; sourceTree = "<group>"; };
 		BDD08C190C42E66B004FE44C /* FSCApply+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCApply+CoreDataProperties.m"; sourceTree = "<group>"; };
+		BDD08C2240D3E9B425084E1E /* Login.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Login.pb.h; sourceTree = "<group>"; };
 		BDD08C2923B58CE585E5CD46 /* FSCUserSession+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCUserSession+CoreDataProperties.m"; sourceTree = "<group>"; };
 		BDD08C363C1B97B5027E4167 /* FSCEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCEnum.h; sourceTree = "<group>"; };
 		BDD08C3FE93209E1B4A1D358 /* FSCLoginViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCLoginViewCtrl.m; sourceTree = "<group>"; };
-		BDD08C48AE059CFB1239263C /* User.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.pb.h; sourceTree = "<group>"; };
+		BDD08C4829177E94CA0781F2 /* emoji_36.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_36.png; sourceTree = "<group>"; };
 		BDD08C4F6AB051C0A39A72B8 /* FSCSchool+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FSCSchool+CoreDataProperties.h"; sourceTree = "<group>"; };
 		BDD08C52A47EEBB3210C3743 /* FscChatRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscChatRecorder.h; sourceTree = "<group>"; };
+		BDD08C53BB5A1F7ABB8BBC9C /* FscKnowl.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscKnowl.pb.m; sourceTree = "<group>"; };
 		BDD08C5479CB661EB22E88FA /* FSCSession+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCSession+CoreDataProperties.m"; sourceTree = "<group>"; };
 		BDD08C59FB424BAE1F35B2DC /* FSCClassChatUser+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCClassChatUser+CoreDataProperties.m"; sourceTree = "<group>"; };
-		BDD08C5AEBE5CD666F50C72E /* FscActivity.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscActivity.pb.h; sourceTree = "<group>"; };
-		BDD08C5AFC74A83C48152D1F /* FscQues.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscQues.pb.m; sourceTree = "<group>"; };
 		BDD08C71448F34D779973556 /* LocationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationModel.m; sourceTree = "<group>"; };
 		BDD08C7F33BB36E9A19C3C2F /* FSCGroupUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCGroupUser.m; sourceTree = "<group>"; };
 		BDD08C8728AE41ECC276DB63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "fsc-ios/Base.lproj/Main.storyboard"; sourceTree = SOURCE_ROOT; };
 		BDD08C903A2F503D4DE9FAEE /* FscSessionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscSessionCell.h; sourceTree = "<group>"; };
+		BDD08C917E586675A23B534B /* emoji_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_32.png; sourceTree = "<group>"; };
+		BDD08C92160DB780D89D9066 /* FscUser.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscUser.pb.h; sourceTree = "<group>"; };
 		BDD08C9A9B3C02A0A30E430F /* RsFscTeacherListCmd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RsFscTeacherListCmd.m; sourceTree = "<group>"; };
+		BDD08C9AC9E48152B7022252 /* emoji_188.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_188.png; sourceTree = "<group>"; };
 		BDD08CA4B90862DE9344338F /* FSCClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCClass.h; sourceTree = "<group>"; };
 		BDD08CAC9F86E50FB06F63D1 /* LcFscPublicUserListCmd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LcFscPublicUserListCmd.m; sourceTree = "<group>"; };
+		BDD08CB3EC0ADA6981D0D3EE /* emoji_41.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_41.png; sourceTree = "<group>"; };
+		BDD08CB5CFDE8CB36EB5B30A /* emoji_9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_9.png; sourceTree = "<group>"; };
+		BDD08CC3DE9FB63459A6A9C6 /* emoji_223.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_223.png; sourceTree = "<group>"; };
 		BDD08CC59B2CB747DBB08C29 /* FSCLoginViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCLoginViewCtrl.h; sourceTree = "<group>"; };
 		BDD08CCFF868D17243319F59 /* FSCUserRecorder+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FSCUserRecorder+CoreDataProperties.h"; sourceTree = "<group>"; };
 		BDD08CE2A7562179E4B42585 /* FSCGroupSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCGroupSession.m; sourceTree = "<group>"; };
 		BDD08CE58B71162E5E62F890 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
-		BDD08CE66FC9C8DDE203568E /* FscActivity.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscActivity.pb.m; sourceTree = "<group>"; };
+		BDD08CE6EEFC1CDF2BD5B871 /* emoji_29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_29.png; sourceTree = "<group>"; };
 		BDD08CE9A301FE549FA34E0C /* LcFscChatUserRecorderListCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LcFscChatUserRecorderListCmd.h; sourceTree = "<group>"; };
-		BDD08D00E0D10A6D5B6757AA /* FSCChatLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCChatLabel.m; sourceTree = "<group>"; };
-		BDD08D06E901EEF5040A9F5D /* FscMsg.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscMsg.pb.h; sourceTree = "<group>"; };
+		BDD08D0ED513BD8D54A2E03A /* emoji_207.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_207.png; sourceTree = "<group>"; };
+		BDD08D261B8FAC9BD149FE49 /* EmojiBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmojiBtn.m; sourceTree = "<group>"; };
 		BDD08D2B567ABCF5E575BADC /* FSCSchool+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCSchool+CoreDataProperties.m"; sourceTree = "<group>"; };
 		BDD08D2FEE66D900859363AB /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		BDD08D32ABA001DCCA44E38C /* FSCGroupUser+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCGroupUser+CoreDataProperties.m"; sourceTree = "<group>"; };
-		BDD08D3416BD5D28CFD57389 /* FscChatTrg.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscChatTrg.pb.h; sourceTree = "<group>"; };
 		BDD08D55D5413EC04579DB76 /* FSCTrgUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCTrgUser.m; sourceTree = "<group>"; };
+		BDD08D57E9C4F1870393F0D3 /* emoji_34.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_34.png; sourceTree = "<group>"; };
 		BDD08D5908CC5DDCF371F868 /* UserChatHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserChatHandler.m; sourceTree = "<group>"; };
 		BDD08D5CBF90C909CE2B64A9 /* ChineseToPinyin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseToPinyin.m; sourceTree = "<group>"; };
+		BDD08D5E71D2E7F9C085E4DC /* emoji_33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_33.png; sourceTree = "<group>"; };
 		BDD08D6470B50733F3289C21 /* FSCPublicUser+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FSCPublicUser+CoreDataProperties.h"; sourceTree = "<group>"; };
 		BDD08D6AF55AAE7F814F8A3F /* FSCUserRecorder+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCUserRecorder+CoreDataProperties.m"; sourceTree = "<group>"; };
-		BDD08D747F3EE05BFDCD0068 /* TipLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipLabel.m; sourceTree = "<group>"; };
+		BDD08D6B59CB0A632BC8A33F /* emoji_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_3.png; sourceTree = "<group>"; };
+		BDD08D83A297A17F1CAEE19D /* emoji_55.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_55.png; sourceTree = "<group>"; };
 		BDD08D8E4BC0845FB1CD81C7 /* FSCClassRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCClassRecorder.m; sourceTree = "<group>"; };
 		BDD08DA16292AE707D32ABA8 /* RsFscSessionListCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RsFscSessionListCmd.h; sourceTree = "<group>"; };
+		BDD08DA9142600260FDD2038 /* emoji_212.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_212.png; sourceTree = "<group>"; };
+		BDD08DAFB592AFD1642DBBF3 /* emoji_213.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_213.png; sourceTree = "<group>"; };
 		BDD08DBA854E51CB29D86B32 /* FscAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscAppDelegate.m; sourceTree = "<group>"; };
 		BDD08DD1922FD5ACBEBDC253 /* FSCClassRecorder+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FSCClassRecorder+CoreDataProperties.h"; sourceTree = "<group>"; };
 		BDD08DDC95C87D8901F50622 /* RsFscClassUserListCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RsFscClassUserListCmd.h; sourceTree = "<group>"; };
 		BDD08DEA69C43BC9C423F37D /* FSCTrgSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCTrgSession.m; sourceTree = "<group>"; };
-		BDD08DF14DEBC149689E0166 /* FscChatTrg.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscChatTrg.pb.m; sourceTree = "<group>"; };
-		BDD08DFB2E886CAD16B24905 /* FscTeachNode.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscTeachNode.pb.h; sourceTree = "<group>"; };
-		BDD08E0650C72882308A2AF5 /* FscTestMsg.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscTestMsg.pb.h; sourceTree = "<group>"; };
+		BDD08DEC1248B0578282C7EB /* emoji_204.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_204.png; sourceTree = "<group>"; };
+		BDD08DED9FFE1AF886A9F317 /* emoji_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_1.png; sourceTree = "<group>"; };
+		BDD08E0C0F24586E21961A85 /* FscTeachPlan.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscTeachPlan.pb.h; sourceTree = "<group>"; };
 		BDD08E0C650EA6BC95417A7B /* FSCTeacher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCTeacher.h; sourceTree = "<group>"; };
 		BDD08E14B960673EAB53530C /* FSCUserStudent+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCUserStudent+CoreDataProperties.m"; sourceTree = "<group>"; };
-		BDD08E2DCB6F282FFD3C5B74 /* PhoneInfo.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneInfo.pb.m; sourceTree = "<group>"; };
+		BDD08E17A4A56608942EB4FF /* emoji_17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_17.png; sourceTree = "<group>"; };
 		BDD08E2E423B0A970EB04A88 /* FSCNotice+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FSCNotice+CoreDataProperties.h"; sourceTree = "<group>"; };
-		BDD08E441B0EAB9B31D19817 /* FscLinkman.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscLinkman.pb.h; sourceTree = "<group>"; };
+		BDD08E2FA3153B19FDB163B4 /* FscChatTrg.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscChatTrg.pb.m; sourceTree = "<group>"; };
+		BDD08E31607389CE60D59966 /* emoji_201.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_201.png; sourceTree = "<group>"; };
+		BDD08E4268676D6F51CC4C08 /* FscChatUser.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscChatUser.pb.m; sourceTree = "<group>"; };
 		BDD08E4B62CE46DBD04FBEB3 /* FSCNotice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCNotice.h; sourceTree = "<group>"; };
+		BDD08E4C6D4AA9CF2C2BE4BA /* emoji_50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_50.png; sourceTree = "<group>"; };
+		BDD08E4D902635B3CD7BD357 /* User.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.pb.h; sourceTree = "<group>"; };
 		BDD08E505C5DE28D9574B3D0 /* FSCClassChatUser+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FSCClassChatUser+CoreDataProperties.h"; sourceTree = "<group>"; };
 		BDD08E54A9E4E559F814EAC5 /* LocationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationModel.h; sourceTree = "<group>"; };
-		BDD08E58304E9D54B6A97D7C /* Login.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Login.pb.h; sourceTree = "<group>"; };
 		BDD08E6BC14821BD3357788B /* FSCTeachPlan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCTeachPlan.h; sourceTree = "<group>"; };
 		BDD08E6D3C2E84F23690A424 /* ChatCell+Right.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ChatCell+Right.h"; sourceTree = "<group>"; };
+		BDD08E70FA94321EA17B6C9E /* emoji_65.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_65.png; sourceTree = "<group>"; };
 		BDD08E744D7399E446A0B236 /* FSCActivity+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FSCActivity+CoreDataProperties.h"; sourceTree = "<group>"; };
 		BDD08E8E3EB4946F6343452C /* FSCClassChatUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCClassChatUser.h; sourceTree = "<group>"; };
+		BDD08E9BBF04DE40C8842F51 /* FscDiskFile.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscDiskFile.pb.m; sourceTree = "<group>"; };
 		BDD08E9BE8BD2A36C79B74C8 /* FSCActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCActivity.h; sourceTree = "<group>"; };
 		BDD08E9FDE94069C20FE31EA /* FSCClassUser+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCClassUser+CoreDataProperties.m"; sourceTree = "<group>"; };
+		BDD08EA910647F76DC95E36F /* emoji_205.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_205.png; sourceTree = "<group>"; };
 		BDD08EAC5DE5A259F6467626 /* FSCClassStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCClassStudent.h; sourceTree = "<group>"; };
+		BDD08EC31A8B720D80B5E20E /* FscNotice.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscNotice.pb.m; sourceTree = "<group>"; };
 		BDD08EC895FE45130F7E3F3D /* FSCSubPubUnreadRecorder+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCSubPubUnreadRecorder+CoreDataProperties.m"; sourceTree = "<group>"; };
-		BDD08ECFCB73A3189AE83C2F /* FscChatClass.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscChatClass.pb.m; sourceTree = "<group>"; };
-		BDD08ED1E994922CBAAC0278 /* FscChatUser.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscChatUser.pb.m; sourceTree = "<group>"; };
 		BDD08ED9CD5FC7665F21A2EC /* FSCSchool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCSchool.h; sourceTree = "<group>"; };
+		BDD08EE0C88E7CC338CD7D24 /* emoji_181.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_181.png; sourceTree = "<group>"; };
+		BDD08EE49F40DB0D4D89E2CA /* FscMsg.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscMsg.pb.h; sourceTree = "<group>"; };
 		BDD08EFB503E25FDE344D265 /* FSCCustomUser+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FSCCustomUser+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BDD08EFC63DC5D334F61D790 /* FscBbi.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscBbi.pb.m; sourceTree = "<group>"; };
 		BDD08EFD39811635D1C77A32 /* LcFscTeacherListCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LcFscTeacherListCmd.h; sourceTree = "<group>"; };
 		BDD08EFD4D40941B96C810EE /* FSCTeacher+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FSCTeacher+CoreDataProperties.h"; sourceTree = "<group>"; };
-		BDD08F0C78A34F0A5EB17F91 /* FscTeachPlan.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscTeachPlan.pb.m; sourceTree = "<group>"; };
+		BDD08F045D9A5CF2142FD31A /* FscError.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscError.pb.h; sourceTree = "<group>"; };
+		BDD08F0855DE36AE36D4FC8F /* FscClassUser.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscClassUser.pb.m; sourceTree = "<group>"; };
 		BDD08F0FF6DE342D7D071F6A /* FSCTrgRecorder+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCTrgRecorder+CoreDataProperties.m"; sourceTree = "<group>"; };
 		BDD08F1C6C3CFF25A2929853 /* FSCGroupSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCGroupSession.h; sourceTree = "<group>"; };
+		BDD08F1CF9FA8894B5055C9A /* emoji_196.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_196.png; sourceTree = "<group>"; };
 		BDD08F2A230981849AA4D2C6 /* PbFieldDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PbFieldDefine.h; sourceTree = "<group>"; };
+		BDD08F2F3D453946F2A086EC /* emoji_53.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_53.png; sourceTree = "<group>"; };
+		BDD08F31496954AECDBF21EE /* FscUser.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscUser.pb.m; sourceTree = "<group>"; };
 		BDD08F3832EAE3C8B99AFBC5 /* LcFscPublicMenuListCmd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LcFscPublicMenuListCmd.m; sourceTree = "<group>"; };
-		BDD08F38646B5588CDF92BE8 /* FscSns.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscSns.pb.m; sourceTree = "<group>"; };
 		BDD08F3B793C028F296035E3 /* LcUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LcUtils.m; sourceTree = "<group>"; };
 		BDD08F404B8B2B3025EDD0C1 /* FSCTrgUser+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FSCTrgUser+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BDD08F5A1F79E286535FA0DA /* emoji_44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_44.png; sourceTree = "<group>"; };
 		BDD08F5EDC41F8A9E665675A /* FSCApply.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCApply.m; sourceTree = "<group>"; };
 		BDD08F63C1230557D0ADB375 /* FSCTeacher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCTeacher.m; sourceTree = "<group>"; };
 		BDD08F6469159AADD958C512 /* FSCClassStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCClassStudent.m; sourceTree = "<group>"; };
 		BDD08F69ACF4368F09E5AEF9 /* FSCClassStudent+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FSCClassStudent+CoreDataProperties.h"; sourceTree = "<group>"; };
 		BDD08F6A09C40BD9DA1A85BB /* FSCSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCSession.h; sourceTree = "<group>"; };
+		BDD08F7F01F9C223CFE5D247 /* emoji_15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_15.png; sourceTree = "<group>"; };
 		BDD08F8080E38408C0C7805A /* FSCUserSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCUserSession.h; sourceTree = "<group>"; };
-		BDD08F91671FDA1963FC3953 /* FscTeachNode.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscTeachNode.pb.m; sourceTree = "<group>"; };
-		BDD08FAD1522C1BBF2420BB0 /* FscWork.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscWork.pb.m; sourceTree = "<group>"; };
-		BDD08FC022AE12A2C24CD5F3 /* FscTimetable.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscTimetable.pb.h; sourceTree = "<group>"; };
+		BDD08FA615DC510D0343B3A3 /* emoji_42.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_42.png; sourceTree = "<group>"; };
 		BDD08FC0834B52615136623D /* FSCLinkman.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCLinkman.m; sourceTree = "<group>"; };
+		BDD08FC0C52576D90D8C33D8 /* FscNotice.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscNotice.pb.h; sourceTree = "<group>"; };
 		BDD08FD40E2B8EA04EF13C9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		BDD08FE5FBBA503D87F34916 /* FscBbi.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FscBbi.pb.m; sourceTree = "<group>"; };
+		BDD08FDDA755C4EE99D0BC38 /* emoji_13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_13.png; sourceTree = "<group>"; };
 		BDD08FF55884B71DE6FFB6C0 /* ChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatCell.h; sourceTree = "<group>"; };
 		BDD08FFEC1AA3C16CF6F338E /* RsFscClassUserListCmd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RsFscClassUserListCmd.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -680,6 +930,7 @@
 				BDD083B4E6E51BA1692588DE /* Cmd */,
 				BDD08B65A542624B4CD643E3 /* UI */,
 				BDD08FD7F7F5744DD9F00E51 /* Model */,
+				BDD0836972824B2D8D3B0549 /* Images */,
 			);
 			path = "fsc-ios";
 			sourceTree = "<group>";
@@ -709,6 +960,14 @@
 				BDD08684BF8679799DACF705 /* PublicChatHandler.h */,
 			);
 			path = chat;
+			sourceTree = "<group>";
+		};
+		BDD0836972824B2D8D3B0549 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				BDD085A436C8BC8E5D9FC9F4 /* emoji */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		BDD083B4E6E51BA1692588DE /* Cmd */ = {
@@ -760,6 +1019,131 @@
 			path = Ctrl;
 			sourceTree = "<group>";
 		};
+		BDD085A436C8BC8E5D9FC9F4 /* emoji */ = {
+			isa = PBXGroup;
+			children = (
+				BDD08DED9FFE1AF886A9F317 /* emoji_1.png */,
+				BDD083D643C3E8652F4A1B54 /* emoji_2.png */,
+				BDD08D6B59CB0A632BC8A33F /* emoji_3.png */,
+				BDD0806C177BEA1C209D7384 /* emoji_4.png */,
+				BDD086BDF8AD5FD478F86E0F /* emoji_5.png */,
+				BDD088313C3A0DBEBD020601 /* emoji_6.png */,
+				BDD0863E3D9181B53C306367 /* emoji_7.png */,
+				BDD0823CA4753994674E4489 /* emoji_8.png */,
+				BDD08CB5CFDE8CB36EB5B30A /* emoji_9.png */,
+				BDD0816EA9138D643FD49D4E /* emoji_10.png */,
+				BDD085A6A1F18CAD5E82D35C /* emoji_11.png */,
+				BDD08BEC429AFC63B2E68BCD /* emoji_12.png */,
+				BDD08FDDA755C4EE99D0BC38 /* emoji_13.png */,
+				BDD0870069E8AEB1D0D7A6AE /* emoji_14.png */,
+				BDD08F7F01F9C223CFE5D247 /* emoji_15.png */,
+				BDD0865ED013A492D8A7BF69 /* emoji_16.png */,
+				BDD08E17A4A56608942EB4FF /* emoji_17.png */,
+				BDD0893B4D5E9CCF2567AEB4 /* emoji_18.png */,
+				BDD080C8A6627CAC1752AF39 /* emoji_19.png */,
+				BDD080F956C0D8609612B813 /* emoji_20.png */,
+				BDD08C0E3B89BE929F640757 /* emoji_21.png */,
+				BDD0861E6888BA7C1383069B /* emoji_22.png */,
+				BDD08986342127CD0F27218B /* emoji_23.png */,
+				BDD081F053E5C1F82C86A07A /* emoji_24.png */,
+				BDD0867971CFFF20728EACEE /* emoji_25.png */,
+				BDD08268E6C0E88D6AD51052 /* emoji_26.png */,
+				BDD08836F84DE127C088C31A /* emoji_27.png */,
+				BDD08089A1399AC08C7BEF65 /* emoji_28.png */,
+				BDD08CE6EEFC1CDF2BD5B871 /* emoji_29.png */,
+				BDD086288FCD12B69C5A7D10 /* emoji_30.png */,
+				BDD086CF96B54426B695C808 /* emoji_31.png */,
+				BDD08C917E586675A23B534B /* emoji_32.png */,
+				BDD08D5E71D2E7F9C085E4DC /* emoji_33.png */,
+				BDD08D57E9C4F1870393F0D3 /* emoji_34.png */,
+				BDD085C12C2B34EE6B28CE77 /* emoji_35.png */,
+				BDD08C4829177E94CA0781F2 /* emoji_36.png */,
+				BDD089F20BC61EF588A0FB0C /* emoji_37.png */,
+				BDD085D95BB8E3A83CADD8B9 /* emoji_38.png */,
+				BDD08AB5F68EF69257017D1D /* emoji_39.png */,
+				BDD087B2CB73A32E738E99F4 /* emoji_40.png */,
+				BDD08CB3EC0ADA6981D0D3EE /* emoji_41.png */,
+				BDD08FA615DC510D0343B3A3 /* emoji_42.png */,
+				BDD0891CE2A330C0E014B292 /* emoji_43.png */,
+				BDD08F5A1F79E286535FA0DA /* emoji_44.png */,
+				BDD085D7FAD6E7672A6277D7 /* emoji_45.png */,
+				BDD084E97C2EDD011957ADF7 /* emoji_46.png */,
+				BDD0835FE8FE2AE3E8747D0A /* emoji_47.png */,
+				BDD08BEE09B7ECD0AEBA0962 /* emoji_48.png */,
+				BDD0840818F48BADD1CFF4E2 /* emoji_49.png */,
+				BDD08E4C6D4AA9CF2C2BE4BA /* emoji_50.png */,
+				BDD081344023430969779B7C /* emoji_51.png */,
+				BDD087A996F740FABAAFD65A /* emoji_52.png */,
+				BDD08F2F3D453946F2A086EC /* emoji_53.png */,
+				BDD082B5E0113211918F35AE /* emoji_54.png */,
+				BDD08D83A297A17F1CAEE19D /* emoji_55.png */,
+				BDD0886F7FEAE14EF24E8846 /* emoji_56.png */,
+				BDD0817AEFCB83A3970B7CF3 /* emoji_57.png */,
+				BDD08684A3A86FF080DFB520 /* emoji_58.png */,
+				BDD08A6BA7E31DA88CDF764C /* emoji_59.png */,
+				BDD085B8D54B1BCCBBF5D4DC /* emoji_60.png */,
+				BDD082200C0479317555731B /* emoji_61.png */,
+				BDD0851BA7CBB85E37962310 /* emoji_62.png */,
+				BDD084E84E9CBD477793486D /* emoji_63.png */,
+				BDD082F5F4D0F83776945481 /* emoji_64.png */,
+				BDD08E70FA94321EA17B6C9E /* emoji_65.png */,
+				BDD089D635E705F036ADF5E2 /* emoji_66.png */,
+				BDD085B1EAA1FF52F85B19F1 /* emoji_67.png */,
+				BDD08643806983A982FD23F8 /* emoji_68.png */,
+				BDD08719A309A39DD7AE1BE4 /* emoji_69.png */,
+				BDD08267378729AC85E50780 /* emoji_70.png */,
+				BDD089D1953EB1FE1F0BCD6E /* emoji_71.png */,
+				BDD08C0ADD758917CBBED8EB /* emoji_179.png */,
+				BDD0807E5F0F16398A62B6CD /* emoji_180.png */,
+				BDD08EE0C88E7CC338CD7D24 /* emoji_181.png */,
+				BDD08AD5FEB4A812FAFCA9B8 /* emoji_182.png */,
+				BDD084BD96A1F683AFB5E88F /* emoji_183.png */,
+				BDD08BE7AF21AD4B76552E6E /* emoji_184.png */,
+				BDD0897FB21F797905A12131 /* emoji_185.png */,
+				BDD080303C1B17F938CD9F06 /* emoji_186.png */,
+				BDD08823FB64828865F9745F /* emoji_187.png */,
+				BDD08C9AC9E48152B7022252 /* emoji_188.png */,
+				BDD08BF1012F1B396116B70F /* emoji_189.png */,
+				BDD0886ED4649BCB7216D990 /* emoji_190.png */,
+				BDD0808BBEC07D1D76E5A086 /* emoji_191.png */,
+				BDD0877E42526E54E3B05290 /* emoji_192.png */,
+				BDD0873AFC152716972D3AB3 /* emoji_193.png */,
+				BDD08B63CCE55BA162E7F651 /* emoji_194.png */,
+				BDD0884B56F1F5CAF61665C0 /* emoji_195.png */,
+				BDD08F1CF9FA8894B5055C9A /* emoji_196.png */,
+				BDD0843778C20FE47BAB17AA /* emoji_197.png */,
+				BDD081F6713D39103071710F /* emoji_198.png */,
+				BDD08536F07FAB23C8A8355E /* emoji_199.png */,
+				BDD0884655E259DF84975C70 /* emoji_200.png */,
+				BDD08E31607389CE60D59966 /* emoji_201.png */,
+				BDD086FF0639661CE969206F /* emoji_202.png */,
+				BDD088C46855A49101DBF0CE /* emoji_203.png */,
+				BDD08DEC1248B0578282C7EB /* emoji_204.png */,
+				BDD08EA910647F76DC95E36F /* emoji_205.png */,
+				BDD08A758B4C2EDAD24BF56C /* emoji_206.png */,
+				BDD08D0ED513BD8D54A2E03A /* emoji_207.png */,
+				BDD0858C46092F7F9BFDEBE0 /* emoji_208.png */,
+				BDD08008DE28EBE246D57400 /* emoji_209.png */,
+				BDD0811713D3F8C35C8919E3 /* emoji_210.png */,
+				BDD085928796AEC602866304 /* emoji_211.png */,
+				BDD08DA9142600260FDD2038 /* emoji_212.png */,
+				BDD08DAFB592AFD1642DBBF3 /* emoji_213.png */,
+				BDD082289E3D4F9FF653E321 /* emoji_214.png */,
+				BDD0847A7DD674F7FCDF1705 /* emoji_215.png */,
+				BDD08930C53CA97B1F6B3952 /* emoji_216.png */,
+				BDD0871DC06F00D5A7666417 /* emoji_217.png */,
+				BDD08001C2C1B88FAD4F32AB /* emoji_218.png */,
+				BDD0856F995D79525B741D5E /* emoji_219.png */,
+				BDD081817272F3D4E996FA64 /* emoji_220.png */,
+				BDD08B9E71E5CFEC8F80EC25 /* emoji_221.png */,
+				BDD088A21FED45659E12E775 /* emoji_222.png */,
+				BDD08CC3DE9FB63459A6A9C6 /* emoji_223.png */,
+				BDD08AC03E3872D911589ED8 /* emoji_224.png */,
+				BDD08AB56CB01B00C94D01B0 /* face_del_ico_dafeult.png */,
+			);
+			path = emoji;
+			sourceTree = "<group>";
+		};
 		BDD085EC0924964A6F77DC30 /* rs */ = {
 			isa = PBXGroup;
 			children = (
@@ -784,76 +1168,76 @@
 		BDD0861628E57EC167EFF453 /* Pb */ = {
 			isa = PBXGroup;
 			children = (
-				BDD08363D19FCE4465756F76 /* CmdSign.pb.h */,
-				BDD0820DDB13CA25ECB4384C /* CmdSign.pb.m */,
-				BDD08C5AEBE5CD666F50C72E /* FscActivity.pb.h */,
-				BDD08CE66FC9C8DDE203568E /* FscActivity.pb.m */,
-				BDD0815B82091B02615C44F6 /* FscAnswer.pb.h */,
-				BDD082B44A1A9DB1EBE1800D /* FscAnswer.pb.m */,
-				BDD08989005699CB34EFEB84 /* FscBbi.pb.h */,
-				BDD08FE5FBBA503D87F34916 /* FscBbi.pb.m */,
-				BDD086441D95404553C830B1 /* FscChatClass.pb.h */,
-				BDD08ECFCB73A3189AE83C2F /* FscChatClass.pb.m */,
-				BDD089CF0EB036688A4AC922 /* FscChatGroup.pb.h */,
-				BDD08806F3727E03A94D7890 /* FscChatGroup.pb.m */,
-				BDD085684DB3F443807809B0 /* FscChatPublic.pb.h */,
-				BDD086DE5E87D155CF8226EB /* FscChatPublic.pb.m */,
-				BDD08D3416BD5D28CFD57389 /* FscChatTrg.pb.h */,
-				BDD08DF14DEBC149689E0166 /* FscChatTrg.pb.m */,
-				BDD080E05506FA879512991E /* FscChatUser.pb.h */,
-				BDD08ED1E994922CBAAC0278 /* FscChatUser.pb.m */,
-				BDD08803FB4F823262649079 /* FscClass.pb.h */,
-				BDD087E4459D8F3CDDB4D64B /* FscClass.pb.m */,
-				BDD08AA16260DBFA0269B4BE /* FscClassUser.pb.h */,
-				BDD0871BF44A654ADA69835E /* FscClassUser.pb.m */,
-				BDD0864A8F6E7FF04A973CFC /* FscDiskFile.pb.h */,
-				BDD08B20582F95F7AE052729 /* FscDiskFile.pb.m */,
-				BDD081603F8304A25D0839F0 /* FscError.pb.h */,
-				BDD082539924ED027D5AFEAB /* FscError.pb.m */,
-				BDD087598508A99DD1597BDF /* FscExam.pb.h */,
-				BDD08BA843F88FE6A1018EDA /* FscExam.pb.m */,
-				BDD081F8825159D78AD64617 /* FscFuncStat.pb.h */,
-				BDD0834E3F880A5F99E09AD5 /* FscFuncStat.pb.m */,
-				BDD082DE4EF280DA4A9CC02B /* FscKnowl.pb.h */,
-				BDD08605631A10D0CBFFE910 /* FscKnowl.pb.m */,
-				BDD08E441B0EAB9B31D19817 /* FscLinkman.pb.h */,
-				BDD08BEFF49B98B7CFD4E9B3 /* FscLinkman.pb.m */,
-				BDD08D06E901EEF5040A9F5D /* FscMsg.pb.h */,
-				BDD0812E528020F823DD7F0B /* FscMsg.pb.m */,
-				BDD08867E3A45897A22E7EA9 /* FscNotice.pb.h */,
-				BDD08A1FC214A004C96E1A0A /* FscNotice.pb.m */,
-				BDD0894554C4C15C4952000B /* FscQues.pb.h */,
-				BDD08C5AFC74A83C48152D1F /* FscQues.pb.m */,
-				BDD08A741188406329B36A3D /* FscScore.pb.h */,
-				BDD08970D9FAEA8CCD36E472 /* FscScore.pb.m */,
-				BDD080D2A7DD451581D24094 /* FscSession.pb.h */,
-				BDD084292F34B76DF356C0E1 /* FscSession.pb.m */,
-				BDD08329BB682DFB4CEDFC1C /* FscSessionList.pb.h */,
-				BDD083471E6EA8D2CFE784B4 /* FscSessionList.pb.m */,
-				BDD0836AEBE4D2777004F00C /* FscSns.pb.h */,
-				BDD08F38646B5588CDF92BE8 /* FscSns.pb.m */,
-				BDD08260FBB682516B8278B3 /* FscTeacher.pb.h */,
-				BDD084CB433FC1B1035E51BC /* FscTeacher.pb.m */,
-				BDD08DFB2E886CAD16B24905 /* FscTeachNode.pb.h */,
-				BDD08F91671FDA1963FC3953 /* FscTeachNode.pb.m */,
-				BDD089C492F4A9A84B65E1E4 /* FscTeachPlan.pb.h */,
-				BDD08F0C78A34F0A5EB17F91 /* FscTeachPlan.pb.m */,
-				BDD08E0650C72882308A2AF5 /* FscTestMsg.pb.h */,
-				BDD0863F915DEA9607D569DD /* FscTestMsg.pb.m */,
-				BDD08FC022AE12A2C24CD5F3 /* FscTimetable.pb.h */,
-				BDD08BF4490AACF07F91B215 /* FscTimetable.pb.m */,
-				BDD08196022D6705AFA485B9 /* FscUser.pb.h */,
-				BDD0878196BDAE8F0CEACC26 /* FscUser.pb.m */,
-				BDD0885193E79DD9A0FCC094 /* FscVote.pb.h */,
-				BDD08ADA656F7ADFD1AAED2C /* FscVote.pb.m */,
-				BDD08030D796CDFC9A63BC9B /* FscWork.pb.h */,
-				BDD08FAD1522C1BBF2420BB0 /* FscWork.pb.m */,
-				BDD08E58304E9D54B6A97D7C /* Login.pb.h */,
-				BDD0863FB0964232BD07763C /* Login.pb.m */,
-				BDD0874C9ABADDCAB9882554 /* PhoneInfo.pb.h */,
-				BDD08E2DCB6F282FFD3C5B74 /* PhoneInfo.pb.m */,
-				BDD08C48AE059CFB1239263C /* User.pb.h */,
-				BDD08747944B86218E99C242 /* User.pb.m */,
+				BDD08BF6DF75F41919DC74EF /* CmdSign.pb.h */,
+				BDD0856DBD1AD1156527842E /* CmdSign.pb.m */,
+				BDD0885182130908A95A94D9 /* FscActivity.pb.h */,
+				BDD0810EE5D574F136FACB77 /* FscActivity.pb.m */,
+				BDD086A97F2BFA628E55FD95 /* FscAnswer.pb.h */,
+				BDD08B5F6B4924629E06CD68 /* FscAnswer.pb.m */,
+				BDD0890612485828069095D3 /* FscBbi.pb.h */,
+				BDD08EFC63DC5D334F61D790 /* FscBbi.pb.m */,
+				BDD087AF1550A27C72E3C990 /* FscChatClass.pb.h */,
+				BDD080E6333F111C0A183E5E /* FscChatClass.pb.m */,
+				BDD083F7EBFE0E4FF92A91B8 /* FscChatGroup.pb.h */,
+				BDD08831C845EBF4DB975FCD /* FscChatGroup.pb.m */,
+				BDD08732E07D1404E6807753 /* FscChatPublic.pb.h */,
+				BDD082FB6310454A05F90E53 /* FscChatPublic.pb.m */,
+				BDD08B46A1897F5CCE212A4F /* FscChatTrg.pb.h */,
+				BDD08E2FA3153B19FDB163B4 /* FscChatTrg.pb.m */,
+				BDD0827CC92F4429E785C0C2 /* FscChatUser.pb.h */,
+				BDD08E4268676D6F51CC4C08 /* FscChatUser.pb.m */,
+				BDD081D3FF65035253861633 /* FscClass.pb.h */,
+				BDD081FC0DAB3799E5F298F3 /* FscClass.pb.m */,
+				BDD0874DFDBC236D94F5A6C2 /* FscClassUser.pb.h */,
+				BDD08F0855DE36AE36D4FC8F /* FscClassUser.pb.m */,
+				BDD0869E9B14D1C562DD7807 /* FscDiskFile.pb.h */,
+				BDD08E9BBF04DE40C8842F51 /* FscDiskFile.pb.m */,
+				BDD08F045D9A5CF2142FD31A /* FscError.pb.h */,
+				BDD0801BEEA0B737F765F9A6 /* FscError.pb.m */,
+				BDD08A8F0B315DCEA662EC27 /* FscExam.pb.h */,
+				BDD08502E2538B0A4F7CC91F /* FscExam.pb.m */,
+				BDD0877F715D5FE08B3963BA /* FscFuncStat.pb.h */,
+				BDD084E2F9995FFBDD57B835 /* FscFuncStat.pb.m */,
+				BDD08AFE190B10F517AD1863 /* FscKnowl.pb.h */,
+				BDD08C53BB5A1F7ABB8BBC9C /* FscKnowl.pb.m */,
+				BDD089289A70736F6284B5AC /* FscLinkman.pb.h */,
+				BDD0847609D9C79A56926E33 /* FscLinkman.pb.m */,
+				BDD08EE49F40DB0D4D89E2CA /* FscMsg.pb.h */,
+				BDD0886553E76204664C82EE /* FscMsg.pb.m */,
+				BDD08FC0C52576D90D8C33D8 /* FscNotice.pb.h */,
+				BDD08EC31A8B720D80B5E20E /* FscNotice.pb.m */,
+				BDD085B0643F142089D7B2F5 /* FscQues.pb.h */,
+				BDD08039F9415D7D2801E37D /* FscQues.pb.m */,
+				BDD0819E9E984BC102251930 /* FscScore.pb.h */,
+				BDD0819554F3B4E3E7E36137 /* FscScore.pb.m */,
+				BDD084D597E4E87B874C5DC0 /* FscSession.pb.h */,
+				BDD08B92B6D4DDC3E5B7DE84 /* FscSession.pb.m */,
+				BDD08326A689C98ED5C6916E /* FscSessionList.pb.h */,
+				BDD0823F42C2119F9C343757 /* FscSessionList.pb.m */,
+				BDD088ED27403E50F51DBC9F /* FscSns.pb.h */,
+				BDD08798F9D8FEC67D61B8AD /* FscSns.pb.m */,
+				BDD0861CA42C8DBA053456EE /* FscTeacher.pb.h */,
+				BDD0808C283DDD1D5BED791E /* FscTeacher.pb.m */,
+				BDD08A95D1A0C68F773CA666 /* FscTeachNode.pb.h */,
+				BDD0893256E924C7D436BE04 /* FscTeachNode.pb.m */,
+				BDD08E0C0F24586E21961A85 /* FscTeachPlan.pb.h */,
+				BDD088A6B016EDE39CB5F313 /* FscTeachPlan.pb.m */,
+				BDD089977802C374DC7CA49B /* FscTestMsg.pb.h */,
+				BDD084E2D5F1120FC9C188C6 /* FscTestMsg.pb.m */,
+				BDD08A3B8321540B4B6B57EA /* FscTimetable.pb.h */,
+				BDD0868E905DCA683BE3DB7D /* FscTimetable.pb.m */,
+				BDD08C92160DB780D89D9066 /* FscUser.pb.h */,
+				BDD08F31496954AECDBF21EE /* FscUser.pb.m */,
+				BDD085D5899E3D7F5F1624B6 /* FscVote.pb.h */,
+				BDD08B19D69CB2E61B2E7AF6 /* FscVote.pb.m */,
+				BDD087BAEBA77A4B1615A644 /* FscWork.pb.h */,
+				BDD088E0AC0B3D87E7F3D602 /* FscWork.pb.m */,
+				BDD08C2240D3E9B425084E1E /* Login.pb.h */,
+				BDD0843965A65A6C5FDBE243 /* Login.pb.m */,
+				BDD0881E571A6BA8150D041D /* PhoneInfo.pb.h */,
+				BDD08B3ABF37EF3D51C58855 /* PhoneInfo.pb.m */,
+				BDD08E4D902635B3CD7BD357 /* User.pb.h */,
+				BDD080AA682CA9B56BE944E3 /* User.pb.m */,
 			);
 			path = Pb;
 			sourceTree = "<group>";
@@ -865,6 +1249,8 @@
 				BDD08762C7E8B28B58127621 /* UIColor+Hex.h */,
 				BDD08AFE848B151A56AF0F69 /* UITabBarItem+CustomBadge.m */,
 				BDD085066E4324EDE9837885 /* UITabBarItem+CustomBadge.h */,
+				BDD085A488B6B20EF64E9DB6 /* UIButton+BackgroundColor.m */,
+				BDD08340BA1812B78F6EAC9E /* UIButton+BackgroundColor.h */,
 			);
 			path = Cat;
 			sourceTree = "<group>";
@@ -1116,10 +1502,7 @@
 			isa = PBXGroup;
 			children = (
 				BDD08F654E58A81DC28BA704 /* cell */,
-				BDD08D747F3EE05BFDCD0068 /* TipLabel.m */,
-				BDD08A0A9C885134AE73B0AB /* TipLabel.h */,
-				BDD08D00E0D10A6D5B6757AA /* FSCChatLabel.m */,
-				BDD0893C68F716AC2CAFEAAB /* FSCChatLabel.h */,
+				BDD08ED34828AA12D1EE9792 /* chat */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -1170,8 +1553,26 @@
 				BDD089567F5E35AE665E6445 /* main.m */,
 				BDD08519C7E4DEFA549EA860 /* FscAppDelegate.h */,
 				BDD08DBA854E51CB29D86B32 /* FscAppDelegate.m */,
+				BDD0818D08DDCB86EBC86CCB /* emoji.txt */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BDD08ED34828AA12D1EE9792 /* chat */ = {
+			isa = PBXGroup;
+			children = (
+				BDD089A4998ECC3774A5AE8C /* FacialView.h */,
+				BDD081B1B704A76842F4F989 /* FacialView.m */,
+				BDD08817F778A8DB7ADA2590 /* EmojiBtn.h */,
+				BDD08D261B8FAC9BD149FE49 /* EmojiBtn.m */,
+				BDD0828E104EAF4AC3F92217 /* FaceBtn.m */,
+				BDD081A306753B5F2C33531B /* FaceBtn.h */,
+				BDD083B41D6594AD4DC74144 /* TipLabel.h */,
+				BDD089BEA630C1856755A175 /* FSCChatLabel.m */,
+				BDD086F0F82FCA93472685D5 /* FSCChatLabel.h */,
+				BDD0848605095650EAEF1C6A /* TipLabel.m */,
+			);
+			path = chat;
 			sourceTree = "<group>";
 		};
 		BDD08F42236ED529C0BBB9E8 /* Data */ = {
@@ -1352,6 +1753,125 @@
 				BDD08D215B0F676A66AF7A90 /* ChatTipCell.xib in Resources */,
 				1DB3D60E1BB023EE00886405 /* ChatVoiceRightCell.xib in Resources */,
 				1D10284D1BB9800500243661 /* ChatMapRightCell.xib in Resources */,
+				BDD08A875202264ACF844AAB /* emoji_1.png in Resources */,
+				BDD08D700BAF197206215E93 /* emoji_2.png in Resources */,
+				BDD08A12FB723EEB526D9DC2 /* emoji_3.png in Resources */,
+				BDD08C8A6D1BE7507D5061B3 /* emoji_4.png in Resources */,
+				BDD08023B8A774317BD5F375 /* emoji_5.png in Resources */,
+				BDD0887548C0C84245CCC695 /* emoji_6.png in Resources */,
+				BDD08776B7EDE1ED4E51DDA0 /* emoji_7.png in Resources */,
+				BDD08F6A3EFB1AF545840A56 /* emoji_8.png in Resources */,
+				BDD08FA7D7D410D700FDD439 /* emoji_9.png in Resources */,
+				BDD08E5B3E991E074CC0DC45 /* emoji_10.png in Resources */,
+				BDD0868F62F4B55922331676 /* emoji_11.png in Resources */,
+				BDD0899349D9F15710E9C337 /* emoji_12.png in Resources */,
+				BDD08A3C1B3392656ED3AE5C /* emoji_13.png in Resources */,
+				BDD08167AAB0E51909606688 /* emoji_14.png in Resources */,
+				BDD08FBD1B99FE132E11BFBC /* emoji_15.png in Resources */,
+				BDD0844C6F765C69891B7202 /* emoji_16.png in Resources */,
+				BDD080C66381187E9D1C066A /* emoji_17.png in Resources */,
+				BDD0883758624223042B169E /* emoji_18.png in Resources */,
+				BDD08B0CC9AA93AAB6BA9CC9 /* emoji_19.png in Resources */,
+				BDD08B60D4D7D3F5D36E5761 /* emoji_20.png in Resources */,
+				BDD0871065D61B512961CAD2 /* emoji_21.png in Resources */,
+				BDD088185F5F20C909A3DCD1 /* emoji_22.png in Resources */,
+				BDD08CC2AA01049D91A81174 /* emoji_23.png in Resources */,
+				BDD0855B19946B41D058DA4F /* emoji_24.png in Resources */,
+				BDD083F1B32B3B06AD5FEF24 /* emoji_25.png in Resources */,
+				BDD08F436904D6D5D618F220 /* emoji_26.png in Resources */,
+				BDD080AA0C8A9A3D26F122B4 /* emoji_27.png in Resources */,
+				BDD08134E754E074D24D350E /* emoji_28.png in Resources */,
+				BDD0818089637C96EAA6C947 /* emoji_29.png in Resources */,
+				BDD0840E413D82BEA18157D7 /* emoji_30.png in Resources */,
+				BDD0810D82A89AA349F124F5 /* emoji_31.png in Resources */,
+				BDD08D2F4FC4D4DB55C875E8 /* emoji_32.png in Resources */,
+				BDD0871841C4D49DE4E4E8BA /* emoji_33.png in Resources */,
+				BDD08051C6317DE6292CA238 /* emoji_34.png in Resources */,
+				BDD08D61E6D02E5769E1425B /* emoji_35.png in Resources */,
+				BDD0830A86C280D2D04DA745 /* emoji_36.png in Resources */,
+				BDD087F35A8B1A03825D1586 /* emoji_37.png in Resources */,
+				BDD080EEF1998E042F7F65FB /* emoji_38.png in Resources */,
+				BDD089A992DD63BC2427F667 /* emoji_39.png in Resources */,
+				BDD083046AB2B423860D20B4 /* emoji_40.png in Resources */,
+				BDD083914A10EBB8A7620ED6 /* emoji_41.png in Resources */,
+				BDD08663EF3C4072695D09BF /* emoji_42.png in Resources */,
+				BDD08DC9F63821F747075CE1 /* emoji_43.png in Resources */,
+				BDD080DD73A22FAD4DE8BE48 /* emoji_44.png in Resources */,
+				BDD08B63FA692C4F3A977A86 /* emoji_45.png in Resources */,
+				BDD08AFCC3F1DD94695E4420 /* emoji_46.png in Resources */,
+				BDD08242CAECC9BF5EA5616B /* emoji_47.png in Resources */,
+				BDD08CD1D8960F8C8A79D56E /* emoji_48.png in Resources */,
+				BDD08DAD3899DE3A3199E12E /* emoji_49.png in Resources */,
+				BDD08CCF330BADF340505741 /* emoji_50.png in Resources */,
+				BDD083155D3DDD1C5715DE96 /* emoji_51.png in Resources */,
+				BDD08D0764E223DF7754F395 /* emoji_52.png in Resources */,
+				BDD08B6EE8846BE8D1E79BF1 /* emoji_53.png in Resources */,
+				BDD084A5854C9B1D8CF75591 /* emoji_54.png in Resources */,
+				BDD08A0C73B1057CBE653B1B /* emoji_55.png in Resources */,
+				BDD08CEBC818438AC5A501A3 /* emoji_56.png in Resources */,
+				BDD08FE9A07E2DD8EEF88666 /* emoji_57.png in Resources */,
+				BDD085020D1770CA2191E50E /* emoji_58.png in Resources */,
+				BDD08B710EB9A0AC4542F4CC /* emoji_59.png in Resources */,
+				BDD088DE3A3F79A9499181F1 /* emoji_60.png in Resources */,
+				BDD08087DDB5C9BAEF80BAFD /* emoji_61.png in Resources */,
+				BDD08627F29916847CBDDB72 /* emoji_62.png in Resources */,
+				BDD0818029EFF394C347F2BA /* emoji_63.png in Resources */,
+				BDD08DC12A2B9E40758A9F6F /* emoji_64.png in Resources */,
+				BDD08F7AC5C6F5DB8AD83D08 /* emoji_65.png in Resources */,
+				BDD08A6F1A162D0434A245E4 /* emoji_66.png in Resources */,
+				BDD084650C5019C8C2026093 /* emoji_67.png in Resources */,
+				BDD08B8FF8F9B225D2E8B640 /* emoji_68.png in Resources */,
+				BDD08BF1D4C9D24EF413AFD8 /* emoji_69.png in Resources */,
+				BDD0859F9CF8A2225287E443 /* emoji_70.png in Resources */,
+				BDD08CDA31941ADA51BF33ED /* emoji_71.png in Resources */,
+				BDD0885F19D72659C26B11BE /* emoji_179.png in Resources */,
+				BDD08A702A71EBC8C5DAB981 /* emoji_180.png in Resources */,
+				BDD089B7923020415194F9FB /* emoji_181.png in Resources */,
+				BDD085FB906031437FE15517 /* emoji_182.png in Resources */,
+				BDD0869D21FC07D15F864089 /* emoji_183.png in Resources */,
+				BDD08152C32EC09B48E09F76 /* emoji_184.png in Resources */,
+				BDD08ED8362AAE5DE4F55844 /* emoji_185.png in Resources */,
+				BDD08A1679467A9562C18E3B /* emoji_186.png in Resources */,
+				BDD08C6B97B29334B6ABFE9D /* emoji_187.png in Resources */,
+				BDD0814E83C0DE08226F8E1D /* emoji_188.png in Resources */,
+				BDD081A47A337C541212D9F4 /* emoji_189.png in Resources */,
+				BDD08787E5A7520576194F5A /* emoji_190.png in Resources */,
+				BDD087BCB8BCCEA296A85D40 /* emoji_191.png in Resources */,
+				BDD084DB0DE6C7A9C38CC33C /* emoji_192.png in Resources */,
+				BDD08169A0103E3720780BC3 /* emoji_193.png in Resources */,
+				BDD087B3747D6C7F202FFC7E /* emoji_194.png in Resources */,
+				BDD080C3AA21FC9DD1E7ADAA /* emoji_195.png in Resources */,
+				BDD082EBBFB5406F75F3A57C /* emoji_196.png in Resources */,
+				BDD0819F6066D1964F3CD5A4 /* emoji_197.png in Resources */,
+				BDD08982DB3C76F734C21EDB /* emoji_198.png in Resources */,
+				BDD0881D2937E1643E5DC2CD /* emoji_199.png in Resources */,
+				BDD086935F596954253887D8 /* emoji_200.png in Resources */,
+				BDD0831C36F1E95EC00DEAF6 /* emoji_201.png in Resources */,
+				BDD084888EAA8BE3002D6506 /* emoji_202.png in Resources */,
+				BDD08A82CA797341D6E4D453 /* emoji_203.png in Resources */,
+				BDD08C422ABCE2C87E0CE844 /* emoji_204.png in Resources */,
+				BDD08D8F9F7D4D9F2599433A /* emoji_205.png in Resources */,
+				BDD08D4749D49D00D27035D7 /* emoji_206.png in Resources */,
+				BDD08EF9CF0755736C3E7FE7 /* emoji_207.png in Resources */,
+				BDD08929E1350B8B0F827BFB /* emoji_208.png in Resources */,
+				BDD0803DAFA8DBF56E0E22C4 /* emoji_209.png in Resources */,
+				BDD08C58CE37CB4D6627DB05 /* emoji_210.png in Resources */,
+				BDD08434C8995337C47BBB4C /* emoji_211.png in Resources */,
+				BDD08FC348E7E98AD35E30D1 /* emoji_212.png in Resources */,
+				BDD0816EB9D24D590D3C9CCC /* emoji_213.png in Resources */,
+				BDD089B37882F8D998CC4D3F /* emoji_214.png in Resources */,
+				BDD08A736946E5FCB530F242 /* emoji_215.png in Resources */,
+				BDD08A19940C567726EB0C11 /* emoji_216.png in Resources */,
+				BDD086C561B7C6ADCB51B9D0 /* emoji_217.png in Resources */,
+				BDD08B6B0996F1A912503362 /* emoji_218.png in Resources */,
+				BDD08AC74D6992E58F41F355 /* emoji_219.png in Resources */,
+				BDD081EF91F45B98463909AF /* emoji_220.png in Resources */,
+				BDD08D0780A096172FBD70B0 /* emoji_221.png in Resources */,
+				BDD087D2680EF22F539D0471 /* emoji_222.png in Resources */,
+				BDD08C308B10D388BCBB5DE6 /* emoji_223.png in Resources */,
+				BDD084F23561982965D12B0D /* emoji_224.png in Resources */,
+				BDD08BBF120F6D1AA6D31CF6 /* emoji.txt in Resources */,
+				BDD08C338D9F7ED5D72EDD46 /* face_del_ico_dafeult.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1463,8 +1983,6 @@
 				BDD088BC1AEBBAA78B28EDDE /* ChatCell.m in Sources */,
 				BDD08C4A1BF19815AAE03963 /* ChatTipCell.m in Sources */,
 				BDD0838C926A0DFD8E84A63D /* FscChatRecorder.m in Sources */,
-				BDD086FB38C7A6804F6A903C /* TipLabel.m in Sources */,
-				BDD085FE430B29C8B20BD9B1 /* FSCChatLabel.m in Sources */,
 				BDD0859A41282A90C5CDE505 /* AChatHandler.m in Sources */,
 				BDD08A135A647845B47C477A /* UserChatHandler.m in Sources */,
 				BDD08E19EDCB0DB65AADD054 /* GroupChatHandler.m in Sources */,
@@ -1478,41 +1996,6 @@
 				BDD089E58465C2A4E0E81C60 /* ChatCell+Left.m in Sources */,
 				BDD081DEB53BCCE258D5C793 /* LocationModel.m in Sources */,
 				BDD08A4B69D1CD1038EF2E6C /* ChatFileModel.m in Sources */,
-				BDD08922D85258BF8A24CF1A /* CmdSign.pb.m in Sources */,
-				BDD080672953018F9EC149D0 /* FscActivity.pb.m in Sources */,
-				BDD08168A7A332E1CD355F05 /* FscAnswer.pb.m in Sources */,
-				BDD082A4435232C2FC4716BD /* FscBbi.pb.m in Sources */,
-				BDD08605F1969127F0ED4770 /* FscChatClass.pb.m in Sources */,
-				BDD0896D901BDBAE4FF337EE /* FscChatGroup.pb.m in Sources */,
-				BDD08548F602189AF494C454 /* FscChatPublic.pb.m in Sources */,
-				BDD08F5579F91A675B042C62 /* FscChatTrg.pb.m in Sources */,
-				BDD086873063CA1528E15B00 /* FscChatUser.pb.m in Sources */,
-				BDD08EC6749257BC8364B4CA /* FscClass.pb.m in Sources */,
-				BDD0887E659C276F2CAE934B /* FscClassUser.pb.m in Sources */,
-				BDD08EFC33ECD0ADF79A91AB /* FscDiskFile.pb.m in Sources */,
-				BDD0859A272B5E9091A2E4BA /* FscError.pb.m in Sources */,
-				BDD08CB33B60504A06DA5094 /* FscExam.pb.m in Sources */,
-				BDD084A9B3E58143F0762A53 /* FscFuncStat.pb.m in Sources */,
-				BDD0872536CBC38DD525BA22 /* FscKnowl.pb.m in Sources */,
-				BDD083FB5F110D2970922F15 /* FscLinkman.pb.m in Sources */,
-				BDD08B850CD0BB98FDDBC9DE /* FscMsg.pb.m in Sources */,
-				BDD0867A33F60CE676D109B8 /* FscNotice.pb.m in Sources */,
-				BDD08477EA7BC1CCA97F17AA /* FscQues.pb.m in Sources */,
-				BDD08A17423CAB36ECE6D15E /* FscScore.pb.m in Sources */,
-				BDD082D6DCF9F18B5627AAA0 /* FscSession.pb.m in Sources */,
-				BDD08B3413EA29962EE9CDBC /* FscSessionList.pb.m in Sources */,
-				BDD080AEAFB1BC9C930D67E5 /* FscSns.pb.m in Sources */,
-				BDD0828903F52D557E5B6B4C /* FscTeacher.pb.m in Sources */,
-				BDD0807ED985AC48D3533F77 /* FscTeachNode.pb.m in Sources */,
-				BDD087F5F43873D87C3006E6 /* FscTeachPlan.pb.m in Sources */,
-				BDD08BF5026CC17E8B43CA78 /* FscTestMsg.pb.m in Sources */,
-				BDD089D4207FA24F94CEC1D9 /* FscTimetable.pb.m in Sources */,
-				BDD08DEA2B8D86334DE7BB7E /* FscUser.pb.m in Sources */,
-				BDD08DDB3540A689B4704D13 /* FscVote.pb.m in Sources */,
-				BDD0800B2971F0ACC33E6429 /* FscWork.pb.m in Sources */,
-				BDD08082729671C5549F6A27 /* Login.pb.m in Sources */,
-				BDD088AB92C0016B89D18BAE /* PhoneInfo.pb.m in Sources */,
-				BDD089562B390DD255B2757E /* User.pb.m in Sources */,
 				BDD089B0A1FA008A30BF9E25 /* FSCActivity+CoreDataProperties.m in Sources */,
 				BDD08423B87FCB3C31B26C47 /* FSCApply+CoreDataProperties.m in Sources */,
 				BDD08E149BA59FE1C476FAE1 /* FSCClass+CoreDataProperties.m in Sources */,
@@ -1576,6 +2059,47 @@
 				BDD0868EEA9A1189F6CD715F /* FSCUserStudent+CoreDataProperties.m in Sources */,
 				BDD0849229D7C453250BB168 /* FSCVote.m in Sources */,
 				BDD0843D94160648D59DF08F /* FSCVote+CoreDataProperties.m in Sources */,
+				BDD08BB6417D516F6E7DBD24 /* UIButton+BackgroundColor.m in Sources */,
+				BDD08C9D3691B75D53BA23EE /* CmdSign.pb.m in Sources */,
+				BDD082705585663588CFABCE /* FscActivity.pb.m in Sources */,
+				BDD08F8E187C30743D8764E4 /* FscAnswer.pb.m in Sources */,
+				BDD085F154B134F3709F7019 /* FscBbi.pb.m in Sources */,
+				BDD0864DD1D55B9DB7B0CF25 /* FscChatClass.pb.m in Sources */,
+				BDD0889FDB411E97130E00CA /* FscChatGroup.pb.m in Sources */,
+				BDD08354D003045AF6EC6E58 /* FscChatPublic.pb.m in Sources */,
+				BDD0863903CA806F9FEE34F1 /* FscChatTrg.pb.m in Sources */,
+				BDD0826882D4148F58C5555F /* FscChatUser.pb.m in Sources */,
+				BDD086AA9D2E4F5F0719E4E3 /* FscClass.pb.m in Sources */,
+				BDD085FDDDA0F7F7DC72C427 /* FscClassUser.pb.m in Sources */,
+				BDD08E36EA11942E3E7D9B11 /* FscDiskFile.pb.m in Sources */,
+				BDD08560739C003898A82191 /* FscError.pb.m in Sources */,
+				BDD089F653246794B7D09D89 /* FscExam.pb.m in Sources */,
+				BDD0833B1B605CE54C3A245F /* FscFuncStat.pb.m in Sources */,
+				BDD08AB7762B42656E9629B6 /* FscKnowl.pb.m in Sources */,
+				BDD0876895AB64AFE6DF4AC6 /* FscLinkman.pb.m in Sources */,
+				BDD08161E2C1A95CE0E3AAAB /* FscMsg.pb.m in Sources */,
+				BDD08AD670BD77D9E1D18F55 /* FscNotice.pb.m in Sources */,
+				BDD080AA4028717D905E60D6 /* FscQues.pb.m in Sources */,
+				BDD0879A4FFC83DE583AD15A /* FscScore.pb.m in Sources */,
+				BDD0824A704B074D4291CB90 /* FscSession.pb.m in Sources */,
+				BDD088E79CCAD666FA1082AA /* FscSessionList.pb.m in Sources */,
+				BDD0857DBE24AA87E601EC54 /* FscSns.pb.m in Sources */,
+				BDD08FA8C718D5BF1E21157C /* FscTeacher.pb.m in Sources */,
+				BDD0897743CB69869871DF85 /* FscTeachNode.pb.m in Sources */,
+				BDD08D99815A3BFB0E4BA500 /* FscTeachPlan.pb.m in Sources */,
+				BDD08066BA8C60BD6A77E2B7 /* FscTestMsg.pb.m in Sources */,
+				BDD087425EBD86B4597D8E65 /* FscTimetable.pb.m in Sources */,
+				BDD0840BB55A04FDF6920EA5 /* FscUser.pb.m in Sources */,
+				BDD08BA4150BDF7CF9934B6F /* FscVote.pb.m in Sources */,
+				BDD087A9A35FB65A62FFE07A /* FscWork.pb.m in Sources */,
+				BDD08B2E997787C245B55FD8 /* Login.pb.m in Sources */,
+				BDD089B00663E6FA9B503C62 /* PhoneInfo.pb.m in Sources */,
+				BDD081F6CD15BF7739F8860C /* User.pb.m in Sources */,
+				BDD0848294D1E0AB70C25E85 /* FacialView.m in Sources */,
+				BDD08CABAAD09A96595606DC /* EmojiBtn.m in Sources */,
+				BDD081C32B858926FEE9A2E7 /* FaceBtn.m in Sources */,
+				BDD08DB1A85C18ECFF72018C /* FSCChatLabel.m in Sources */,
+				BDD0829D080CE240121FE562 /* TipLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

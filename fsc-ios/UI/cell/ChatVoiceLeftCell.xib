@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -17,6 +17,7 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zlo-oe-RFX">
                         <rect key="frame" x="8" y="8" width="40" height="40"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="C6j-gf-IcN"/>
                             <constraint firstAttribute="width" constant="40" id="fHi-NL-Hpk"/>
@@ -27,6 +28,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat_left_bubble" translatesAutoresizingMaskIntoConstraints="NO" id="uUU-QT-6UV">
                                 <rect key="frame" x="0.0" y="0.0" width="70" height="30"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="4MX-KL-bO5"/>
                                     <constraint firstAttribute="height" constant="40" id="WeV-QY-8fM"/>
@@ -40,9 +42,10 @@
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sound_right_max" translatesAutoresizingMaskIntoConstraints="NO" id="KNg-sQ-h4W">
                                 <rect key="frame" x="7" y="0.0" width="30" height="30"/>
+                                <animations/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="70" id="Dew-LX-UFD"/>
                             <constraint firstAttribute="trailing" secondItem="uUU-QT-6UV" secondAttribute="trailing" id="FW1-rD-dpU"/>
@@ -64,6 +67,7 @@
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dzm-im-Zfb">
                         <rect key="frame" x="56" y="8" width="42" height="33"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="42" id="bpy-bM-oEC"/>
                         </constraints>
@@ -72,6 +76,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <animations/>
                 <constraints>
                     <constraint firstItem="Zlo-oe-RFX" firstAttribute="leading" secondItem="vjf-Vy-UyJ" secondAttribute="leadingMargin" id="36z-sa-sgo"/>
                     <constraint firstItem="COD-fc-1W3" firstAttribute="leading" secondItem="Zlo-oe-RFX" secondAttribute="trailing" constant="7" id="3d0-eB-j57"/>
@@ -92,6 +97,8 @@
                     </mask>
                 </variation>
             </tableViewCellContentView>
+            <animations/>
+            <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="avatarImg" destination="Zlo-oe-RFX" id="hsq-aw-ISk"/>
                 <outlet property="nameLabel" destination="Dzm-im-Zfb" id="y8W-Fv-CYa"/>

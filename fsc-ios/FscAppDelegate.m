@@ -19,6 +19,7 @@
 #import "RsFscTeacherListCmd.h"
 #import "RsFscPublicUserListCmd.h"
 #import "RsFscSessionListCmd.h"
+#import "BbiUtils.h"
 
 @interface FscAppDelegate()
 
@@ -69,6 +70,8 @@
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginHandler:) name:LOGIN_CODE object:nil];
 
+
+    FscSocketClient *client = [FscSocketClient getClient];
 
     return YES;
 }

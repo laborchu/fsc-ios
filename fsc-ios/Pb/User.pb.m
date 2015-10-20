@@ -2293,6 +2293,7 @@ static ParentsPb* defaultParentsPbInstance = nil;
 @property (strong) NSString* subjectName;
 @property (strong) NSMutableArray * classPbArray;
 @property (strong) NSMutableArray * teachPlanPbArray;
+@property (strong) PBAppendableArray * subjectArray;
 @end
 
 @implementation TeacherPb
@@ -2329,6 +2330,8 @@ static ParentsPb* defaultParentsPbInstance = nil;
 @dynamic classPb;
 @synthesize teachPlanPbArray;
 @dynamic teachPlanPb;
+@synthesize subjectArray;
+@dynamic subject;
 - (instancetype) init {
   if ((self = [super init])) {
     self.mobile = @"";
@@ -2362,6 +2365,12 @@ static TeacherPb* defaultTeacherPbInstance = nil;
 - (TeachPlanPb*)teachPlanPbAtIndex:(NSUInteger)index {
   return [teachPlanPbArray objectAtIndex:index];
 }
+- (PBArray *)subject {
+  return subjectArray;
+}
+- (SInt64)subjectAtIndex:(NSUInteger)index {
+  return [subjectArray int64AtIndex:index];
+}
 - (BOOL) isInitialized {
   return YES;
 }
@@ -2384,6 +2393,13 @@ static TeacherPb* defaultTeacherPbInstance = nil;
   [self.teachPlanPbArray enumerateObjectsUsingBlock:^(TeachPlanPb *element, NSUInteger idx, BOOL *stop) {
     [output writeMessage:6 value:element];
   }];
+  const NSUInteger subjectArrayCount = self.subjectArray.count;
+  if (subjectArrayCount > 0) {
+    const SInt64 *values = (const SInt64 *)self.subjectArray.data;
+    for (NSUInteger i = 0; i < subjectArrayCount; ++i) {
+      [output writeInt64:7 value:values[i]];
+    }
+  }
   [self.unknownFields writeToCodedOutputStream:output];
 }
 - (SInt32) serializedSize {
@@ -2411,6 +2427,16 @@ static TeacherPb* defaultTeacherPbInstance = nil;
   [self.teachPlanPbArray enumerateObjectsUsingBlock:^(TeachPlanPb *element, NSUInteger idx, BOOL *stop) {
     size_ += computeMessageSize(6, element);
   }];
+  {
+    __block SInt32 dataSize = 0;
+    const NSUInteger count = self.subjectArray.count;
+    const SInt64 *values = (const SInt64 *)self.subjectArray.data;
+    for (NSUInteger i = 0; i < count; ++i) {
+      dataSize += computeInt64SizeNoTag(values[i]);
+    }
+    size_ += dataSize;
+    size_ += (SInt32)(1 * count);
+  }
   size_ += self.unknownFields.serializedSize;
   memoizedSerializedSize = size_;
   return size_;
@@ -2470,6 +2496,9 @@ static TeacherPb* defaultTeacherPbInstance = nil;
                      withIndent:[NSString stringWithFormat:@"%@  ", indent]];
     [output appendFormat:@"%@}\n", indent];
   }];
+  [self.subjectArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+    [output appendFormat:@"%@%@: %@\n", indent, @"subject", obj];
+  }];
   [self.unknownFields writeDescriptionTo:output withIndent:indent];
 }
 - (void) storeInDictionary:(NSMutableDictionary *)dictionary {
@@ -2495,6 +2524,12 @@ static TeacherPb* defaultTeacherPbInstance = nil;
     [element storeInDictionary:elementDictionary];
     [dictionary setObject:[NSDictionary dictionaryWithDictionary:elementDictionary] forKey:@"teachPlanPb"];
   }
+  NSMutableArray * subjectArrayArray = [NSMutableArray new];
+  NSUInteger subjectArrayCount=self.subjectArray.count;
+  for(int i=0;i<subjectArrayCount;i++){
+    [subjectArrayArray addObject: @([self.subjectArray int64AtIndex:i])];
+  }
+  [dictionary setObject: subjectArrayArray forKey: @"subject"];
   [self.unknownFields storeInDictionary:dictionary];
 }
 - (BOOL) isEqual:(id)other {
@@ -2516,6 +2551,7 @@ static TeacherPb* defaultTeacherPbInstance = nil;
       (!self.hasSubjectName || [self.subjectName isEqual:otherMessage.subjectName]) &&
       [self.classPbArray isEqualToArray:otherMessage.classPbArray] &&
       [self.teachPlanPbArray isEqualToArray:otherMessage.teachPlanPbArray] &&
+      [self.subjectArray isEqualToArray:otherMessage.subjectArray] &&
       (self.unknownFields == otherMessage.unknownFields || (self.unknownFields != nil && [self.unknownFields isEqual:otherMessage.unknownFields]));
 }
 - (NSUInteger) hash {
@@ -2537,6 +2573,9 @@ static TeacherPb* defaultTeacherPbInstance = nil;
   }];
   [self.teachPlanPbArray enumerateObjectsUsingBlock:^(TeachPlanPb *element, NSUInteger idx, BOOL *stop) {
     hashCode = hashCode * 31 + [element hash];
+  }];
+  [self.subjectArray enumerateObjectsUsingBlock:^(NSNumber *obj, NSUInteger idx, BOOL *stop) {
+    hashCode = hashCode * 31 + [obj longValue];
   }];
   hashCode = hashCode * 31 + [self.unknownFields hash];
   return hashCode;
@@ -2607,6 +2646,13 @@ static TeacherPb* defaultTeacherPbInstance = nil;
       [resultTeacherPb.teachPlanPbArray addObjectsFromArray:other.teachPlanPbArray];
     }
   }
+  if (other.subjectArray.count > 0) {
+    if (resultTeacherPb.subjectArray == nil) {
+      resultTeacherPb.subjectArray = [other.subjectArray copy];
+    } else {
+      [resultTeacherPb.subjectArray appendArray:other.subjectArray];
+    }
+  }
   [self mergeUnknownFields:other.unknownFields];
   return self;
 }
@@ -2654,6 +2700,10 @@ static TeacherPb* defaultTeacherPbInstance = nil;
         TeachPlanPbBuilder* subBuilder = [TeachPlanPb builder];
         [input readMessage:subBuilder extensionRegistry:extensionRegistry];
         [self addTeachPlanPb:[subBuilder buildPartial]];
+        break;
+      }
+      case 56: {
+        [self addSubject:[input readInt64]];
         break;
       }
     }
@@ -2763,6 +2813,31 @@ static TeacherPb* defaultTeacherPbInstance = nil;
 }
 - (TeacherPbBuilder *)clearTeachPlanPb {
   resultTeacherPb.teachPlanPbArray = nil;
+  return self;
+}
+- (PBAppendableArray *)subject {
+  return resultTeacherPb.subjectArray;
+}
+- (SInt64)subjectAtIndex:(NSUInteger)index {
+  return [resultTeacherPb subjectAtIndex:index];
+}
+- (TeacherPbBuilder *)addSubject:(SInt64)value {
+  if (resultTeacherPb.subjectArray == nil) {
+    resultTeacherPb.subjectArray = [PBAppendableArray arrayWithValueType:PBArrayValueTypeInt64];
+  }
+  [resultTeacherPb.subjectArray addInt64:value];
+  return self;
+}
+- (TeacherPbBuilder *)setSubjectArray:(NSArray *)array {
+  resultTeacherPb.subjectArray = [PBAppendableArray arrayWithArray:array valueType:PBArrayValueTypeInt64];
+  return self;
+}
+- (TeacherPbBuilder *)setSubjectValues:(const SInt64 *)values count:(NSUInteger)count {
+  resultTeacherPb.subjectArray = [PBAppendableArray arrayWithValues:values count:count valueType:PBArrayValueTypeInt64];
+  return self;
+}
+- (TeacherPbBuilder *)clearSubject {
+  resultTeacherPb.subjectArray = nil;
   return self;
 }
 @end

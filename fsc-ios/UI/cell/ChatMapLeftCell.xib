@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -17,6 +17,7 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KEk-GJ-7dM">
                         <rect key="frame" x="8" y="8" width="40" height="40"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="40" id="VwH-hN-Nhc"/>
                             <constraint firstAttribute="height" constant="40" id="fNW-tD-HjL"/>
@@ -24,6 +25,7 @@
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="姓名" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kg5-Oc-TLY">
                         <rect key="frame" x="56" y="8" width="42" height="17"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="42" id="4Hb-Qx-Ty3"/>
                             <constraint firstAttribute="height" constant="21" id="M3k-xp-s2d"/>
@@ -34,6 +36,7 @@
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="chat_map" translatesAutoresizingMaskIntoConstraints="NO" id="96z-bX-0EW">
                         <rect key="frame" x="58" y="30" width="161" height="100"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="161" id="QB5-Jh-fWW"/>
                             <constraint firstAttribute="height" constant="100" id="TIp-aa-UMK"/>
@@ -41,11 +44,13 @@
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HP0-NU-xIa">
                         <rect key="frame" x="69" y="107" width="139" height="21"/>
+                        <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <animations/>
                 <constraints>
                     <constraint firstItem="Kg5-Oc-TLY" firstAttribute="top" secondItem="KEk-GJ-7dM" secondAttribute="top" id="7AR-xQ-69w"/>
                     <constraint firstItem="96z-bX-0EW" firstAttribute="leading" secondItem="KEk-GJ-7dM" secondAttribute="trailing" constant="10" id="CbS-4n-Tbu"/>
@@ -64,6 +69,8 @@
                     </mask>
                 </variation>
             </tableViewCellContentView>
+            <animations/>
+            <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="avatarImg" destination="KEk-GJ-7dM" id="Mxn-uF-uMQ"/>
                 <outlet property="mapLabel" destination="HP0-NU-xIa" id="hKC-PV-E5M"/>

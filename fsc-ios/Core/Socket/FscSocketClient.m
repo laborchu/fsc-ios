@@ -51,10 +51,12 @@ static FscSocketClient *client = nil;
             //判断是服务器直接发送还是有请求响应
             CmdSignPb *signPb = [CmdSignPb parseFromData:_responseData];
             ARsCmd *cmd = _commandMap[[signPb token]];
+            NSLog(@"cmd %@ resp", [cmd getCmdCode]);
             if (cmd) {
                 [cmd resp:signPb];
                 [_commandMap removeObjectForKey:[signPb token]];
             }
+            [Scheduler unLockExe];
             [Scheduler doCmd];
         }else{
         }
