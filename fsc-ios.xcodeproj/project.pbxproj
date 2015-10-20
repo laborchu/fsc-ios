@@ -39,6 +39,7 @@
 		BDD0809B1366C4F43F7B1ECB /* DataCache.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD088DEF0E368A0DB142549 /* DataCache.m */; };
 		BDD080AA0C8A9A3D26F122B4 /* emoji_27.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08836F84DE127C088C31A /* emoji_27.png */; };
 		BDD080AA4028717D905E60D6 /* FscQues.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08039F9415D7D2801E37D /* FscQues.pb.m */; };
+		BDD080AC3D8D480F60BD64F2 /* MoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08BEFFFC37E5E202AE47A /* MoreView.m */; };
 		BDD080BB0CF646DA1BDD7517 /* RsFscTeacherListCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08C9A9B3C02A0A30E430F /* RsFscTeacherListCmd.m */; };
 		BDD080C3AA21FC9DD1E7ADAA /* emoji_195.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD0884B56F1F5CAF61665C0 /* emoji_195.png */; };
 		BDD080C66381187E9D1C066A /* emoji_17.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08E17A4A56608942EB4FF /* emoji_17.png */; };
@@ -65,7 +66,7 @@
 		BDD0818089637C96EAA6C947 /* emoji_29.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08CE6EEFC1CDF2BD5B871 /* emoji_29.png */; };
 		BDD0819F6066D1964F3CD5A4 /* emoji_197.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD0843778C20FE47BAB17AA /* emoji_197.png */; };
 		BDD081A47A337C541212D9F4 /* emoji_189.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD08BF1012F1B396116B70F /* emoji_189.png */; };
-		BDD081C32B858926FEE9A2E7 /* FaceBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0828E104EAF4AC3F92217 /* FaceBtn.m */; };
+		BDD081C32B858926FEE9A2E7 /* ResponderBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0828E104EAF4AC3F92217 /* ResponderBtn.m */; };
 		BDD081DC33E7421E4A568731 /* FscAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08DBA854E51CB29D86B32 /* FscAppDelegate.m */; };
 		BDD081DEB53BCCE258D5C793 /* LocationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD08C71448F34D779973556 /* LocationModel.m */; };
 		BDD081EF91F45B98463909AF /* emoji_220.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD081817272F3D4E996FA64 /* emoji_220.png */; };
@@ -440,7 +441,7 @@
 		BDD0819A442C525B317D6120 /* FSCSnsComment+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCSnsComment+CoreDataProperties.m"; sourceTree = "<group>"; };
 		BDD0819E9E984BC102251930 /* FscScore.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscScore.pb.h; sourceTree = "<group>"; };
 		BDD0819EFAB1A112FBD39CBE /* RsFscPublicUserListCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RsFscPublicUserListCmd.h; sourceTree = "<group>"; };
-		BDD081A306753B5F2C33531B /* FaceBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceBtn.h; sourceTree = "<group>"; };
+		BDD081A306753B5F2C33531B /* ResponderBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponderBtn.h; sourceTree = "<group>"; };
 		BDD081B1B704A76842F4F989 /* FacialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacialView.m; sourceTree = "<group>"; };
 		BDD081C5B8F9FFCEA18C09E6 /* FSCGroupRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCGroupRecorder.m; sourceTree = "<group>"; };
 		BDD081CEEDDB3E08BCF92941 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -463,7 +464,7 @@
 		BDD08268E6C0E88D6AD51052 /* emoji_26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_26.png; sourceTree = "<group>"; };
 		BDD0827CC92F4429E785C0C2 /* FscChatUser.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FscChatUser.pb.h; sourceTree = "<group>"; };
 		BDD08287D2DE9AC2689780FA /* LcFscUserGetCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LcFscUserGetCmd.h; sourceTree = "<group>"; };
-		BDD0828E104EAF4AC3F92217 /* FaceBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceBtn.m; sourceTree = "<group>"; };
+		BDD0828E104EAF4AC3F92217 /* ResponderBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponderBtn.m; sourceTree = "<group>"; };
 		BDD082AB4D4244132C003A26 /* FSCImageAssembled.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCImageAssembled.h; sourceTree = "<group>"; };
 		BDD082B34D1294DA1EA13842 /* IosUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IosUtils.h; sourceTree = "<group>"; };
 		BDD082B5E0113211918F35AE /* emoji_54.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_54.png; sourceTree = "<group>"; };
@@ -710,6 +711,7 @@
 		BDD08A9DFBFC3D9D3905D8F0 /* FSCGroupSession+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCGroupSession+CoreDataProperties.m"; sourceTree = "<group>"; };
 		BDD08AB56CB01B00C94D01B0 /* face_del_ico_dafeult.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = face_del_ico_dafeult.png; sourceTree = "<group>"; };
 		BDD08AB5F68EF69257017D1D /* emoji_39.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_39.png; sourceTree = "<group>"; };
+		BDD08ABDE32650DED73EFD1E /* MoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreView.h; sourceTree = "<group>"; };
 		BDD08AC03E3872D911589ED8 /* emoji_224.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_224.png; sourceTree = "<group>"; };
 		BDD08AD5FEB4A812FAFCA9B8 /* emoji_182.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_182.png; sourceTree = "<group>"; };
 		BDD08AE4CFAD2BD38F5AAE0C /* fsc-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fsc-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -749,6 +751,7 @@
 		BDD08BE7AF21AD4B76552E6E /* emoji_184.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_184.png; sourceTree = "<group>"; };
 		BDD08BEC429AFC63B2E68BCD /* emoji_12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_12.png; sourceTree = "<group>"; };
 		BDD08BEE09B7ECD0AEBA0962 /* emoji_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_48.png; sourceTree = "<group>"; };
+		BDD08BEFFFC37E5E202AE47A /* MoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreView.m; sourceTree = "<group>"; };
 		BDD08BF1012F1B396116B70F /* emoji_189.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_189.png; sourceTree = "<group>"; };
 		BDD08BF1A926FE8E2C116D68 /* FSCSnsComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCSnsComment.h; sourceTree = "<group>"; };
 		BDD08BF6DF75F41919DC74EF /* CmdSign.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CmdSign.pb.h; sourceTree = "<group>"; };
@@ -1565,12 +1568,14 @@
 				BDD081B1B704A76842F4F989 /* FacialView.m */,
 				BDD08817F778A8DB7ADA2590 /* EmojiBtn.h */,
 				BDD08D261B8FAC9BD149FE49 /* EmojiBtn.m */,
-				BDD0828E104EAF4AC3F92217 /* FaceBtn.m */,
-				BDD081A306753B5F2C33531B /* FaceBtn.h */,
+				BDD0828E104EAF4AC3F92217 /* ResponderBtn.m */,
+				BDD081A306753B5F2C33531B /* ResponderBtn.h */,
 				BDD083B41D6594AD4DC74144 /* TipLabel.h */,
 				BDD089BEA630C1856755A175 /* FSCChatLabel.m */,
 				BDD086F0F82FCA93472685D5 /* FSCChatLabel.h */,
 				BDD0848605095650EAEF1C6A /* TipLabel.m */,
+				BDD08BEFFFC37E5E202AE47A /* MoreView.m */,
+				BDD08ABDE32650DED73EFD1E /* MoreView.h */,
 			);
 			path = chat;
 			sourceTree = "<group>";
@@ -2097,9 +2102,10 @@
 				BDD081F6CD15BF7739F8860C /* User.pb.m in Sources */,
 				BDD0848294D1E0AB70C25E85 /* FacialView.m in Sources */,
 				BDD08CABAAD09A96595606DC /* EmojiBtn.m in Sources */,
-				BDD081C32B858926FEE9A2E7 /* FaceBtn.m in Sources */,
+				BDD081C32B858926FEE9A2E7 /* ResponderBtn.m in Sources */,
 				BDD08DB1A85C18ECFF72018C /* FSCChatLabel.m in Sources */,
 				BDD0829D080CE240121FE562 /* TipLabel.m in Sources */,
+				BDD080AC3D8D480F60BD64F2 /* MoreView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

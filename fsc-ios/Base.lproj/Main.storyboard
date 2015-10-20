@@ -143,7 +143,7 @@
                                             <constraint firstAttribute="width" constant="30" id="HiM-pi-OxO"/>
                                         </constraints>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Lf-hO-0aL" customClass="FaceBtn">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Lf-hO-0aL" customClass="ResponderBtn">
                                         <rect key="frame" x="525" y="5" width="30" height="30"/>
                                         <animations/>
                                         <constraints>
@@ -151,7 +151,7 @@
                                             <constraint firstAttribute="height" constant="30" id="zvR-AK-GwE"/>
                                         </constraints>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9y-IA-DDl">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9y-IA-DDl" customClass="ResponderBtn">
                                         <rect key="frame" x="563" y="5" width="30" height="30"/>
                                         <animations/>
                                         <constraints>

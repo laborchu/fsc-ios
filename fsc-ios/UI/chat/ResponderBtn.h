@@ -6,6 +6,6 @@
 #import <UIKit/UIKit.h>
 
 
-@interface FaceBtn : UIButton
+@interface ResponderBtn : UIButton
 @property (readwrite, nonatomic, strong) UIView *inputView;
 @end

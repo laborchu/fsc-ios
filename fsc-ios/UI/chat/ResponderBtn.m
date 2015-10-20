@@ -3,10 +3,10 @@
 // Copyright (c) 2015 laborc. All rights reserved.
 //
 
-#import "FaceBtn.h"
+#import "ResponderBtn.h"
 
 
-@implementation FaceBtn {
+@implementation ResponderBtn {
 
 }
 

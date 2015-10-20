@@ -22,15 +22,16 @@
 #import "UIColor+Hex.h"
 #import "UIButton+BackgroundColor.h"
 #import "FacialView.h"
-#import "FaceBtn.h"
+#import "ResponderBtn.h"
 #import "BbiUtils.h"
+#import "MoreView.h"
 
 
 @interface FscChatCtrl () <UITableViewDataSource, UITableViewDelegate,AVAudioRecorderDelegate,FacialViewDelegate,UITextViewDelegate>
 @property(weak, nonatomic) IBOutlet UITableView *chatTableView;
 @property(weak, nonatomic) IBOutlet UIButton *textVoiceBtn;
-@property(weak, nonatomic) IBOutlet FaceBtn *faceBtn;
-@property(weak, nonatomic) IBOutlet UIButton *moreBtn;
+@property(weak, nonatomic) IBOutlet ResponderBtn *faceBtn;
+@property(weak, nonatomic) IBOutlet ResponderBtn *moreBtn;
 @property(weak, nonatomic) IBOutlet NSLayoutConstraint *bottomConstraint;
 @property(weak, nonatomic) IBOutlet UIButton *voiceBtn;
 @property(weak, nonatomic) IBOutlet UITextView *textView;
@@ -40,8 +41,9 @@
 @property (weak, nonatomic) IBOutlet UIView *inputView;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *inputViewConstraint;
-//表情盘
-@property (nonatomic, retain) FacialView *faceView;
+
+@property (nonatomic, retain) FacialView *faceView;//表情
+@property (nonatomic, retain) MoreView *moreView;//更多
 
 @end
 
@@ -83,16 +85,49 @@ static NSString *chatMapRightCell = @"ChatMapRightCell";
 
 // 点击table
 - (void)tableTouch {
+    [self.faceBtn setBackgroundImage:[UIImage imageNamed:@"chat_input_face"] forState:UIControlStateNormal];
     [self.view endEditing:YES];
 }
 
-- (void)textVoiceBtnClick:(UIButton *)sender {
-    self.voiceBtn.hidden = !self.voiceBtn.hidden;
-    self.textView.hidden = !self.textView.hidden;
-    if (self.textView.hidden) {
-        [self.view endEditing:YES];
-    }
+// 文字输入状态
+-(void)showInputState{
+    self.voiceBtn.hidden = YES;
+    self.textView.hidden = NO;
+    [self.textView becomeFirstResponder];//显示键盘
+    [self.textVoiceBtn setBackgroundImage:[UIImage imageNamed:@"chat_input_voice"] forState:UIControlStateNormal];
+    [self.textVoiceBtn setBackgroundImage:[UIImage imageNamed:@"chat_input_voice_press"] forState:UIControlStateHighlighted];
+    [self.faceBtn setBackgroundImage:[UIImage imageNamed:@"chat_input_face"] forState:UIControlStateNormal];
 }
+// 语音输入状态
+-(void)showVoiceState{
+    self.voiceBtn.hidden = NO;
+    self.textView.hidden = YES;
+    [self.view endEditing:YES];//隐藏键盘
+    [self.textVoiceBtn setBackgroundImage:[UIImage imageNamed:@"chat_input_text"] forState:UIControlStateNormal];
+    [self.textVoiceBtn setBackgroundImage:[UIImage imageNamed:@"chat_input_text_press"] forState:UIControlStateHighlighted];
+    [self.faceBtn setBackgroundImage:[UIImage imageNamed:@"chat_input_face"] forState:UIControlStateNormal];
+}
+// 表情输入状态
+-(void)showFaceState{
+    self.voiceBtn.hidden = YES;
+    self.textView.hidden = NO;
+    [self.faceBtn becomeFirstResponder];//显示表情
+    [self.textVoiceBtn setBackgroundImage:[UIImage imageNamed:@"chat_input_voice"] forState:UIControlStateNormal];
+    [self.textVoiceBtn setBackgroundImage:[UIImage imageNamed:@"chat_input_voice_press"] forState:UIControlStateHighlighted];
+    [self.faceBtn setBackgroundImage:[UIImage imageNamed:@"chat_input_face_select"] forState:UIControlStateNormal];
+}
+// 表情输入状态
+-(void)showMoreState{
+    self.voiceBtn.hidden = YES;
+    self.textView.hidden = NO;
+    [self.moreBtn becomeFirstResponder];//显示表情
+    [self.textVoiceBtn setBackgroundImage:[UIImage imageNamed:@"chat_input_voice"] forState:UIControlStateNormal];
+    [self.textVoiceBtn setBackgroundImage:[UIImage imageNamed:@"chat_input_voice_press"] forState:UIControlStateHighlighted];
+    [self.faceBtn setBackgroundImage:[UIImage imageNamed:@"chat_input_face"] forState:UIControlStateNormal];
+
+}
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -117,11 +152,8 @@ static NSString *chatMapRightCell = @"ChatMapRightCell";
     //文字语音切换按钮
     [self initTextVoiceBtn];
 
-
     //更多按钮
-    [self.moreBtn setBackgroundImage:[UIImage imageNamed:@"chat_input_plus"] forState:UIControlStateNormal];
-    [self.moreBtn setBackgroundImage:[UIImage imageNamed:@"chat_input_plus_press"] forState:UIControlStateHighlighted];
-
+    [self initMoreBtn];
     //表情按钮
     [self initFaceBtn];
     //语音按钮
@@ -144,6 +176,7 @@ static NSString *chatMapRightCell = @"ChatMapRightCell";
     }
     _chatHandler.fscSession = self.fscSession;
     chatRecorderArray = [NSMutableArray array];
+
     NSArray *recorders = [_chatHandler getRecorderList:nil];
     for (id recorder in recorders) {
         FscChatRecorder *chatRecorder = [_chatHandler buildChatRecorder:recorder];
@@ -151,21 +184,29 @@ static NSString *chatMapRightCell = @"ChatMapRightCell";
     }
 }
 
+/****************更多  Start******************/
+- (void)initMoreBtn {
+    //表情按钮
+    [self.moreBtn setBackgroundImage:[UIImage imageNamed:@"chat_input_plus"] forState:UIControlStateNormal];
+    [self.moreBtn setBackgroundImage:[UIImage imageNamed:@"chat_input_plus_press"] forState:UIControlStateHighlighted];
+    [self.moreBtn addTarget:self action:@selector(showMoreState) forControlEvents:UIControlEventTouchUpInside];
+    self.moreView = [[MoreView alloc ]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 80)];
+    self.moreView.backgroundColor = [UIColor colorWithHexString:@"#F6F6F8"];
+    [self.moreView loadMoreView];
+    [self.moreBtn setInputView:self.moreView];
+}
+/****************更多  End******************/
+
 /****************表情  Start******************/
 - (void)initFaceBtn {
     //表情按钮
     [self.faceBtn setBackgroundImage:[UIImage imageNamed:@"chat_input_face"] forState:UIControlStateNormal];
-    [self.faceBtn addTarget:self action:@selector(showEmoji:) forControlEvents:UIControlEventTouchUpInside];
+    [self.faceBtn addTarget:self action:@selector(showFaceState) forControlEvents:UIControlEventTouchUpInside];
     self.faceView = [[FacialView alloc ]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 160)];
     self.faceView.backgroundColor = [UIColor colorWithHexString:@"#F6F6F8"];
-    [self.faceView loadFacialView:1 size:CGSizeMake(30, 30)];
+    [self.faceView loadFacialView];
     self.faceView.delegate = self;
     [self.faceBtn setInputView:self.faceView];
-}
-
-//显示表情
-- (void)showEmoji:(UIButton *)sender{
-    [self.faceBtn becomeFirstResponder];
 }
 
 #pragma mark - Face View
@@ -187,13 +228,6 @@ static NSString *chatMapRightCell = @"ChatMapRightCell";
     }
 }
 
-- (void)sendFace{
-//    [self.delegate sendFace:self.textInputView.text];
-//    self.textInputView.text = @"";
-//    self.textInputView.frame = CGRectMake(Control_Space * 2 + Button_Width, Control_Space - 2, View_Width - 5 * Control_Space - 3 * Button_Width, 34);
-//    CGFloat selfNewHeight = self.textInputView.frame.size.height + 2 * Control_Space - 4;
-//    [self.delegate changeSendHelperViewFrame:selfNewHeight];
-}
 
 /****************表情  Start******************/
 
@@ -236,6 +270,11 @@ static NSString *chatMapRightCell = @"ChatMapRightCell";
     }
     return YES;
 }
+- (BOOL)textViewShouldBeginEditing:(UITextView *)aTextView
+{
+    [self.faceBtn setBackgroundImage:[UIImage imageNamed:@"chat_input_face"] forState:UIControlStateNormal];
+    return YES;
+}
 /****************输入框  End******************/
 
 /****************初始化组件  Start******************/
@@ -243,6 +282,14 @@ static NSString *chatMapRightCell = @"ChatMapRightCell";
     [self.textVoiceBtn setBackgroundImage:[UIImage imageNamed:@"chat_input_voice"] forState:UIControlStateNormal];
     [self.textVoiceBtn setBackgroundImage:[UIImage imageNamed:@"chat_input_voice_press"] forState:UIControlStateHighlighted];
     [self.textVoiceBtn addTarget:self action:@selector(textVoiceBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)textVoiceBtnClick:(UIButton *)sender {
+    if(self.voiceBtn.hidden){
+        [self showVoiceState];
+    }else{
+        [self showInputState];
+    }
 }
 
 //录音按钮

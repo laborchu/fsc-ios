@@ -32,7 +32,7 @@
 
 
 //给faces设置位置
-- (void)loadFacialView:(int)page size:(CGSize)size {
+- (void)loadFacialView{
 
     NSMutableArray *emojiArray = [BbiUtils getEmojiArray];
     int row = 3;

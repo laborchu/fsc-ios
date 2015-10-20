@@ -72,6 +72,7 @@
 
 
     FscSocketClient *client = [FscSocketClient getClient];
+    [BbiUtils initEmoji];
 
     return YES;
 }

@@ -27,6 +27,6 @@
 
 @property(nonatomic) id<FacialViewDelegate> delegate;
 
--(void)loadFacialView:(int)page size:(CGSize)size;
+-(void)loadFacialView;
 
 @end
