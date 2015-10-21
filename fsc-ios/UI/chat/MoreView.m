@@ -6,8 +6,10 @@
 #import "MoreView.h"
 #import "UIColor+Hex.h"
 #import "UIButton+BackgroundColor.h"
+#import "IosUtils.h"
 
-
+@interface MoreView ()<UIImagePickerControllerDelegate>
+@end
 @implementation MoreView {
 
 }
@@ -16,6 +18,8 @@
     //发送图片
     UIButton *imgBtn = [[UIButton alloc] initWithFrame:CGRectMake(leftPadding, 10, btnSize, btnSize)];
     [self setBtn:imgBtn imgName:@"send_image"];
+    [imgBtn addTarget:self action:@selector(openPicLibrary) forControlEvents:UIControlEventTouchUpInside];
+
     [self addSubview:imgBtn];
 
     //发送位置
@@ -37,6 +41,35 @@
     [btn.layer setBorderColor:[[UIColor colorWithHexString:@"#B1B1B3"] CGColor]];
     [btn.layer setCornerRadius:8];
     [btn.layer setBorderWidth:1];
+}
+
+-(void)openPicLibrary{
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
+        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+        picker.delegate = self;
+        picker.allowsEditing = NO;
+        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        [[IosUtils getMainTabCtrl] presentViewController:picker animated:YES completion:nil];
+    }
+}
+
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    UIImage *image = info[UIImagePickerControllerOriginalImage];
+    [[IosUtils getMainTabCtrl] dismissViewControllerAnimated:YES completion:^{
+        //用当前时间作为图片名
+        NSString *imageName = [NSString stringWithFormat:@"/%lld.png",(SInt64)[NSDate date].timeIntervalSince1970];
+        //图片转换
+        NSData *data;
+        if (UIImagePNGRepresentation(image)) {
+            data = UIImageJPEGRepresentation(image, 0.5);
+        }else{
+            data = UIImagePNGRepresentation(image);
+        }
+        if (_delegate) {
+            [_delegate sendImg:data];
+        }
+
+    }];
 }
 
 @end

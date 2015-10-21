@@ -6,7 +6,17 @@
 #import <UIKit/UIKit.h>
 
 
+@protocol MoreViewDelegate
+
+@optional
+-(void)sendImg:(NSData*)data;
+
+@end
+
 @interface MoreView : UIView
+
+
+@property(nonatomic) id<MoreViewDelegate> delegate;
 
 -(void)loadMoreView;
 

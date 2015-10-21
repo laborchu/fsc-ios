@@ -27,7 +27,8 @@
 #import "MoreView.h"
 
 
-@interface FscChatCtrl () <UITableViewDataSource, UITableViewDelegate,AVAudioRecorderDelegate,FacialViewDelegate,UITextViewDelegate>
+@interface FscChatCtrl () <UITableViewDataSource, UITableViewDelegate,AVAudioRecorderDelegate,
+        FacialViewDelegate,UITextViewDelegate,MoreViewDelegate>
 @property(weak, nonatomic) IBOutlet UITableView *chatTableView;
 @property(weak, nonatomic) IBOutlet UIButton *textVoiceBtn;
 @property(weak, nonatomic) IBOutlet ResponderBtn *faceBtn;
@@ -191,9 +192,14 @@ static NSString *chatMapRightCell = @"ChatMapRightCell";
     [self.moreBtn setBackgroundImage:[UIImage imageNamed:@"chat_input_plus_press"] forState:UIControlStateHighlighted];
     [self.moreBtn addTarget:self action:@selector(showMoreState) forControlEvents:UIControlEventTouchUpInside];
     self.moreView = [[MoreView alloc ]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 80)];
+    self.moreView.delegate = self;
     self.moreView.backgroundColor = [UIColor colorWithHexString:@"#F6F6F8"];
     [self.moreView loadMoreView];
     [self.moreBtn setInputView:self.moreView];
+}
+
+-(void)sendImg:(NSData*)data{
+
 }
 /****************更多  End******************/
 
